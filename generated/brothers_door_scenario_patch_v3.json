@@ -1,0 +1,610 @@
+{
+  "title": "Brothers' Door Stairwell – Revelation Mission Room",
+  "design_goal": "Deploy a Revelation mission room centering on the stairwell as fatal funnel, blending the 'sin at the door' motif with casualty evacuation under smoke and false all-clear, backed by visible accountability and delayed aftermath.",
+  "events": [
+    {
+      "room_id": "brothers_door_stairwell",
+      "event": {
+        "id": "brothers_stairwell_root_choice",
+        "type": "choice",
+        "speaker": "system",
+        "line_1": "Stairwell C, east civic block. Door propped open, burn tape beside the threshold. Official all-clear signed off, but the accountability roster shows three resident names unresolved. Light smoke haze distorts badge cams. The ground at the landing is stained; a civilian wristband sticks to the tile. The live roster repeats, 'Account not resolved.'",
+        "line_2": "False all-clear—fatal funnel remains. Team must address unresolved names, visible evidence, and decision stress under smoke. Whose plan do you back?",
+        "visible_text": "Stairwell: Officially cleared, visibly unsafe. Three named civilians on the roster not checked off; ground testifies underfoot. Assign the next move.",
+        "buttons": [
+          {
+            "label": "Brooks secures stairwell, confirms roster",
+            "action": "brooks_handles",
+            "voice_aliases": [
+              "brooks handles",
+              "secure and confirm",
+              "brooks secures",
+              "secures stairwell",
+              "stairwell confirms"
+            ]
+          },
+          {
+            "label": "Saye audits casualty reports, observes for error",
+            "action": "observe",
+            "voice_aliases": [
+              "saye observes",
+              "audit records",
+              "observe",
+              "audits casualty",
+              "casualty reports"
+            ]
+          },
+          {
+            "label": "Specialist Park evacuates down-funnel, risks rapid extraction",
+            "action": "recover",
+            "voice_aliases": [
+              "park recovers",
+              "evacuate civilians",
+              "recover",
+              "evacuates down",
+              "park evacuates"
+            ]
+          },
+          {
+            "label": "Torah invokes keeper threshold, pauses for accountability count",
+            "action": "torah_speaks",
+            "voice_aliases": [
+              "torah speaks",
+              "pause for count",
+              "invokes keeper",
+              "keeper threshold",
+              "torah invokes"
+            ]
+          }
+        ],
+        "operation_plans": [
+          {
+            "action": "brooks_handles",
+            "officer_id": "brooks",
+            "primary_skill": "leadership",
+            "base_success": 0.72,
+            "yield": "roster_reconciled",
+            "risk": "smoke_stress, delayed evacuation",
+            "outcomes": {
+              "strong_success": {
+                "lines": "Brooks locks down both doors, cross-checks all unresolved names. A lost wristband is matched; false clearance corrected. Team secures the stairwell and retrieves one survivor cowering below landing.",
+                "environment_state_changes": {
+                  "character.brooks.stress": -1,
+                  "evidence.accountability_roster": "updated",
+                  "environment.stairwell": "secured"
+                }
+              },
+              "success": {
+                "lines": "Brooks confirms missing civilians never exited. One body is located on lower stair, evidence and tags preserved.",
+                "environment_state_changes": {
+                  "character.brooks.stress": 0,
+                  "evidence.casualty_tagged": true
+                }
+              },
+              "partial": {
+                "lines": "Brooks hesitates in the smoke; roster remains inconclusive. Site marked as incomplete and new evidence sealed for later.",
+                "environment_state_changes": {
+                  "character.brooks.stress": 1,
+                  "evidence.inconclusive": true
+                }
+              },
+              "failure": {
+                "lines": "Conflicting reports. Brooks is caught by a surge of smoke and slips; team is forced back, casualty evidence lost to fire.",
+                "environment_state_changes": {
+                  "character.brooks.stress": 2,
+                  "character.brooks.fatigue": 1,
+                  "evidence.lost_due_to_fire": true
+                }
+              },
+              "catastrophe": {
+                "lines": "Disorientation and stress in the fatal funnel. Brooks sustains minor injury and the accountability roster is lost in the retreat.",
+                "environment_state_changes": {
+                  "character.brooks.stress": 3,
+                  "character.brooks.injury": 1,
+                  "evidence.accountability_roster": "lost"
+                }
+              }
+            }
+          },
+          {
+            "action": "observe",
+            "officer_id": "dr_lenora_saye",
+            "primary_skill": "forensics",
+            "base_success": 0.68,
+            "yield": "error_detection",
+            "risk": "delayed action, morale",
+            "outcomes": {
+              "strong_success": {
+                "lines": "Saye locates the original all-clear order and cross-checks body camera drift; confirms protocol staging error and physically marks false report with red tape.",
+                "environment_state_changes": {
+                  "character.dr_lenora_saye.stress": -1,
+                  "evidence.false_all_clear": "marked",
+                  "morale.team": 1
+                }
+              },
+              "success": {
+                "lines": "Saye discovers a badge cam inconsistency. Signals command to correct records; site remains tense but less haunted.",
+                "environment_state_changes": {
+                  "character.dr_lenora_saye.stress": 0,
+                  "evidence.record_corrected": true
+                }
+              },
+              "partial": {
+                "lines": "Analysis slowed by smoke drift. Only ambiguous error located; Saye requests further review.",
+                "environment_state_changes": {
+                  "character.dr_lenora_saye.stress": 1
+                }
+              },
+              "failure": {
+                "lines": "A false visual—Saye is caught by a partial visibility collapse, recording device dims and evidence is corrupted.",
+                "environment_state_changes": {
+                  "character.dr_lenora_saye.stress": 2,
+                  "evidence.device_corrupted": true
+                }
+              },
+              "catastrophe": {
+                "lines": "Data loop inflicts recursive stress. Saye locks up, unable to resolve records. Confidence in official evidence falls.",
+                "environment_state_changes": {
+                  "character.dr_lenora_saye.stress": 3,
+                  "team.confidence": -1
+                }
+              }
+            }
+          },
+          {
+            "action": "recover",
+            "officer_id": "specialist_mina_park",
+            "primary_skill": "rescue",
+            "base_success": 0.57,
+            "yield": "civilian_extraction",
+            "risk": "exposure, physical injury",
+            "outcomes": {
+              "strong_success": {
+                "lines": "Park surges ahead through smoke, locates and evacuates two civilians at landing, tags both. Casualty route is marked by her exit.",
+                "environment_state_changes": {
+                  "character.specialist_mina_park.stress": 0,
+                  "evidence.civilian_rescued": 2
+                }
+              },
+              "success": {
+                "lines": "Park finds and evacuates one civilian, marks others missing. Zone marked as partially cleared.",
+                "environment_state_changes": {
+                  "character.specialist_mina_park.stress": 1,
+                  "evidence.partial_evacuation": true
+                }
+              },
+              "partial": {
+                "lines": "Visibility and disorientation risk a misstep; Park evacuates one quickly, but the last name stays unresolved, possible additional exposure.",
+                "environment_state_changes": {
+                  "character.specialist_mina_park.stress": 2,
+                  "character.specialist_mina_park.fatigue": 1,
+                  "evidence.unresolved_name": true
+                }
+              },
+              "failure": {
+                "lines": "Smoke surges, Park suffers coughing and confusion. No civilians safely located before withdrawal.",
+                "environment_state_changes": {
+                  "character.specialist_mina_park.stress": 2,
+                  "character.specialist_mina_park.injury": 1
+                }
+              },
+              "catastrophe": {
+                "lines": "Park loses orientation, is separated from team, and sustains injury; last civilian remains lost.",
+                "environment_state_changes": {
+                  "character.specialist_mina_park.stress": 3,
+                  "character.specialist_mina_park.injury": 2,
+                  "morale.team": -1
+                }
+              }
+            }
+          },
+          {
+            "action": "torah_speaks",
+            "officer_id": "torah",
+            "primary_skill": "accountability",
+            "base_success": 0.6,
+            "yield": "accountability_freeze",
+            "risk": "initiative_delay, pressure",
+            "outcomes": {
+              "strong_success": {
+                "lines": "Torah halts movement at the threshold, reading each unresolved name aloud at the landing. The ground neutralizes for crossing: smoke dissipates, a survivor answers to their name.",
+                "environment_state_changes": {
+                  "character.torah.stress": -1,
+                  "environment.stairwell": "ritual_stable",
+                  "evidence.accounted_names": 3
+                }
+              },
+              "success": {
+                "lines": "Pause for accountability—Torah's count forces team recalculation. Movement reorders; survivor is heard below.",
+                "environment_state_changes": {
+                  "character.torah.stress": 0,
+                  "evidence.audible_survivor": true
+                }
+              },
+              "partial": {
+                "lines": "The ritual is only partially respected; delay frustrates team, but tension at threshold does not escalate.",
+                "environment_state_changes": {
+                  "character.torah.stress": 1,
+                  "team.morale": 0
+                }
+              },
+              "failure": {
+                "lines": "The pause increases pressure; smoke worsens, and civilian voices go silent. Torah is visibly shaken.",
+                "environment_state_changes": {
+                  "character.torah.stress": 2
+                }
+              },
+              "catastrophe": {
+                "lines": "A name is called, but only echo answers; ground beneath threshold stains further. Torah suffers a sharp stress event.",
+                "environment_state_changes": {
+                  "character.torah.stress": 3,
+                  "evidence.stairwell_marked": "stained"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {},
+        "story_followups": {
+          "brothers_stairwell_resolve": {
+            "trigger_key": "resolve",
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00005",
+            "anchor_role": "religious_what",
+            "source_fingerprint": "GEN4_cain_abel_keeper_door_ground_accuser",
+            "playable_transform": "accountability roster, unresolved civilian names; ground at threshold records stain; ritual name call at threshold",
+            "required_visible_details": [
+              "burn tape crossing the threshold",
+              "accountability roster (tape-bound clipboard, three unresolved names)",
+              "civilian wristband on the floor"
+            ],
+            "followup_payoff": "New event triggers for resolved/unresolved names, visible threshold evidence remains in after-action."
+          },
+          {
+            "source_id": "army_ranger_handbook_sh_21_76",
+            "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+            "anchor_role": "procedural_how",
+            "source_fingerprint": "stairwell_fatal_funnel_site_exploitation_casualty_evac",
+            "playable_transform": "fatal funnel stairwell, visible site marking, evidence custody tag",
+            "required_visible_details": [
+              "burn tape on entry",
+              "evidence tag near body or survivor location"
+            ],
+            "followup_payoff": "Marked evidence or residue updates room/mission record; delayed cleanup or missed evidence escalates."
+          },
+          {
+            "source_id": "lovecraft_colour_out_of_space_pg68236",
+            "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+            "anchor_role": "weird_fiction_structure",
+            "source_fingerprint": "official_clearance_report_site_stain_delayed_realization",
+            "playable_transform": "all-clear document, physical mark, recurring audio cue",
+            "required_visible_details": [
+              "all-clear printout clipped above stairwell",
+              "persistent stain at crossing"
+            ],
+            "followup_payoff": "Site stigma may reappear later in narrative as persistent anomaly."
+          }
+        ],
+        "corpus_influences": [
+          {
+            "source_chunk_id": "world_english_bible:00005",
+            "source_fingerprint": "GEN4_accusing_ground_unresolved_keeper",
+            "structural_transfer": "official abandonment triggers threshold hazard; accountability requires personal action at passage",
+            "required_visible_details": [
+              "roster with unanswered names",
+              "wristband at landing"
+            ],
+            "followup_payoff": "If roster resolved, passage clears. If unresolved, mark persists in aftermath."
+          },
+          {
+            "source_chunk_id": "enoch_laurence_gutenberg_77815:00028",
+            "source_fingerprint": "accusing_voice_separated_space",
+            "structural_transfer": "voices, record echo, or evidence persists until specific names answered in situ",
+            "required_visible_details": [
+              "audio: repeating called names",
+              "badge cam echo from landing below"
+            ],
+            "followup_payoff": "Unresolved names replay after mission, influences officer stress or incident archive."
+          },
+          {
+            "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+            "source_fingerprint": "stairwell_fatal_funnel_procedure",
+            "structural_transfer": "fatal funnel procedure enforces constrained movement, high risk, need for casualty marking",
+            "required_visible_details": [
+              "burn tape on the stair door",
+              "evidence custody tag"
+            ],
+            "followup_payoff": "Procedural success or failure directly affects exposure and evidence outcomes."
+          },
+          {
+            "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+            "source_fingerprint": "unresolved_evidence_site_stain",
+            "structural_transfer": "physical stain persists beyond official clearance; site remains marked",
+            "required_visible_details": [
+              "persistent brown stain at stairwell crossing",
+              "red tape marking"
+            ],
+            "followup_payoff": "Visible site stigma escalates if evidence/casualties remain unfairly resolved."
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "brothers_stairwell_resolve",
+      "type": "story",
+      "speaker": "system",
+      "line_1": "Team has exited stairwell sector, recording all visible names on the revised accountability roster. Marked stain and wristband are bagged as evidence. Site remains classed as tentatively clear—pending review of the recursive audio anomaly and physical residue.",
+      "line_2": "Command notes the neat official closure conflicts with the physical testimony still on site. Review interlude and clinic debrief recommended before case file closed.",
+      "visible_text": "Resolution filed: roster updated, survivor status catalogued, anomaly persists in stairwell fabric.",
+      "buttons": [
+        {
+          "label": "Debrief and record site state",
+          "action": "observe",
+          "voice_aliases": [
+            "Debrief",
+            "Observe aftermath"
+          ]
+        }
+      ],
+      "action_results": {},
+      "story_followups": {
+        "brothers_stairwell_cooldown_interlude": {
+          "trigger_key": "cooldown",
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "operation_plans": [],
+      "corpus_influences": [
+        {
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+          "source_fingerprint": "after_action_physical_stain_official_uncertainty",
+          "structural_transfer": "resolution text references irreducible conflict between file note and on-site evidence",
+          "required_visible_details": [
+            "stain at stairwell crossing",
+            "conflicting closure order"
+          ],
+          "followup_payoff": "Site remains marked, may affect morale or future deck draw."
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00005",
+          "anchor_role": "hidden_state_resolution",
+          "source_fingerprint": "keeper_rule_resolution_accusing_ground",
+          "playable_transform": "update to roster, bagged wristband evidence, presence/absence of survivor",
+          "required_visible_details": [
+            "revised accountability roster",
+            "bagged civilian wristband"
+          ],
+          "followup_payoff": "Review influences next interlude and case closure."
+        }
+      ]
+    },
+    {
+      "id": "brothers_stairwell_cooldown_interlude",
+      "type": "interlude",
+      "speaker": "system",
+      "line_1": "Clinic passage, post-incident. Brooks sits in silence with a clipboard, Specialist Park stares at gloved hands, Saye quietly updates the file, Torah paces. The last survivor’s name is marked in red beside those lost. Brown stain lingers on boots and uniform tape—easy to miss, difficult to ignore.",
+      "line_2": "All-clear feels rehearsed. The institutional voice on the comm repeats: 'Sector secure. No outstanding accounts.'",
+      "visible_text": "Interlude: Officers process the failed threshold. Visual and stress readouts inform reflected state.",
+      "buttons": [
+        {
+          "label": "Proceed to next assignment",
+          "action": "proceed",
+          "voice_aliases": [
+            "Proceed",
+            "Advance"
+          ]
+        }
+      ],
+      "action_results": {},
+      "interlude_type": "post-mission reflection",
+      "state_reads": [
+        "character.brooks.stress",
+        "character.specialist_mina_park.stress",
+        "character.dr_lenora_saye.stress",
+        "character.torah.stress"
+      ],
+      "state_writes": [
+        "morale.team",
+        "character.<id>.mental_state"
+      ],
+      "featured_characters": [
+        "brooks",
+        "specialist_mina_park",
+        "dr_lenora_saye",
+        "torah"
+      ],
+      "outcomes": [
+        {
+          "criteria": "If any officer has stress 2+",
+          "lines": "Officers show advanced fatigue. Command notes higher risk for next assignment, recommends individual evaluation."
+        },
+        {
+          "criteria": "If accountability roster fully resolved",
+          "lines": "There’s brief relief in the team—one small trust restored, stain regarded as field cost."
+        },
+        {
+          "criteria": "If survivor lost or evidence left unresolved",
+          "lines": "Unresolved names echo in the debrief. Institutional voice feels more hollow. Team morale dips."
+        }
+      ],
+      "followup_hooks": [],
+      "corpus_anchors": [
+        {
+          "source_id": "enoch_laurence_gutenberg_77815",
+          "source_chunk_id": "enoch_laurence_gutenberg_77815:00028",
+          "anchor_role": "weird_fiction_structure",
+          "source_fingerprint": "accusing_voice_aftermath_reflection",
+          "playable_transform": "red-marked roster, silent team, stain on equipment",
+          "required_visible_details": [
+            "clinic roster copy with red names",
+            "brown stain left on boots"
+          ],
+          "followup_payoff": "Next interlude retains trace of unresolved accountability pressure, affecting officer state."
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "brothers_door_stairwell",
+      "name": "Brothers' Door Stairwell",
+      "type": "mission_room",
+      "description": "A municipal stairwell where official all-clear went out, but visible evidence and the accountability roster contradict. Burn tape marks the landing; ground stain persists. Evacuation, evidence, and roster actions proceed under smoke and procedural stress.",
+      "first_visit_description": "Threshold crossed with burn tape, accountability roster clipped beside. Light smoke drifts, a civilian wristband on the tile, official all-clear printout above—the ground stained where accountability faltered.",
+      "return_description": "Stairwell marked by prior hold—burn tape, competing evidence, updated all-clear. Stain and echo persist if names left unresolved.",
+      "detection_report": "Sensors detect residual smoke, unsealed evidence tag, and civilian wristband at stairwell landing. Accountability roster signals unresolved.",
+      "current_situation": "Procedural conflict: all-clear file and visible evidence at odds. Officer team faces stress and risk at threshold—names unresolved, ground stained.",
+      "scenario_generation_contract": {
+        "what_from": "Cain/Abel keeper responsibility; sin at the door; ground/threshold as witness",
+        "how_from": "Stairwell fatal funnel; live accountability roster; casualty tag; evidence custody; site exploitation",
+        "structure_from": "Official all-clear contravened by physical evidence; resident testimony in record echo; delayed realization; site marked in aftermath",
+        "rule_summary": "Official abandonment of named civilians in threshold zone triggers a persistent threshold hazard until names are formally resolved or acknowledged with evidence."
+      },
+      "religious_subtext": {
+        "motif": "sin at the door / keeper accountability at threshold",
+        "primary_sources": [
+          "Genesis 4 (Cain and Abel)",
+          "Enoch—accusing voice from divided space"
+        ],
+        "subtext": "Responsibility denied at a passage triggers procedural and visible hazard. If names are not resolved, the site keeps marking—ground, tape, and institutional record echo the trespass.",
+        "visible_requirements": [
+          "Threshold burn tape",
+          "Accountability roster",
+          "Ground stain or bagged wristband"
+        ]
+      },
+      "officer_reports": [],
+      "procedure_hooks": [],
+      "corpus_influences": [
+        {
+          "source_chunk_id": "world_english_bible:00005",
+          "source_fingerprint": "keeper_threshold_accountability_abandonment",
+          "structural_transfer": "Site remains hazardous when accountability is denied at a passage. Ground records/marks event.",
+          "required_visible_details": [
+            "threshold burn tape",
+            "unresolved names on roster"
+          ],
+          "followup_payoff": "Players may face future consequences for unresolved accounts."
+        },
+        {
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+          "source_fingerprint": "fatal_funnel_evidence_procedure",
+          "structural_transfer": "Stairwell demands procedural entry, marking, and casualty support for safe passage.",
+          "required_visible_details": [
+            "burn tape",
+            "evidence tag at landing"
+          ],
+          "followup_payoff": "Site exploitation follows for incomplete marking."
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00005",
+          "anchor_role": "religious_what",
+          "source_fingerprint": "keeper_door_ground_archetype",
+          "playable_transform": "accountability roster, burn tape threshold, bagged wristband",
+          "required_visible_details": [
+            "crossing burn tape",
+            "named roster"
+          ],
+          "followup_payoff": "Resolution changes visible state of threshold and after-action file."
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+          "anchor_role": "procedural_how",
+          "source_fingerprint": "stairwell_fatal_funnel",
+          "playable_transform": "burn tape, casualty tag/evidence custody tag, controlled movement",
+          "required_visible_details": [
+            "evidence tag at stairwell",
+            "team helmet cam feed"
+          ],
+          "followup_payoff": "Operator performance tracks visibly to site state and team risk."
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+          "anchor_role": "weird_fiction_structure",
+          "source_fingerprint": "site_stigma_physical_mark",
+          "playable_transform": "brown stain at crossing, echo in record feed",
+          "required_visible_details": [
+            "site report with conflicting evidence",
+            "trace echo (badge cam/comm line)"
+          ],
+          "followup_payoff": "Site remains visibly marked in future missions/interludes."
+        }
+      ],
+      "character_state_stakes": {
+        "officer_stress": [
+          "brooks",
+          "specialist_mina_park",
+          "dr_lenora_saye",
+          "torah"
+        ],
+        "morale": "team",
+        "mental_state": [
+          "brooks",
+          "torah"
+        ]
+      },
+      "interlude_vectors": [
+        "clinic_debrief",
+        "visible roster review",
+        "persistent stain on equipment"
+      ]
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "brothers_door_stairwell"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "Motif of sin at the door and unseen responsibility made embodied as stairwell threshold evidence and procedural risk.",
+    "Stairwell as fatal funnel aligns with doctrine and Ranger Handbook, merged with accountability register and procedural site exploitation.",
+    "Delayed realization and persistent stain/echo channel Lovecraftian 'site stigma' without supernatural arbitrariness."
+  ],
+  "self_critique": [
+    "Button/plan pairs are operationally distinct but could be cross-referenced more tightly—current implementation avoids blended plans.",
+    "Physical objects (burn tape, roster, wristband) are explicit in evidence, but room for layering more cross-plan environmental interaction.",
+    "Future iteration could escalate the motif with additional layers of civilian testimony or failed containment in the aftermath."
+  ],
+  "_validation_errors": [
+    "brothers_stairwell_resolve: single-choice room (1 commandable button)",
+    "special_events[1].brothers_stairwell_cooldown_interlude: corpus_influences must be a non-empty list of source objects",
+    "special_events[1].brothers_stairwell_cooldown_interlude: corpus_anchor_points must be a non-empty list",
+    "special_events[1].brothers_stairwell_cooldown_interlude: interlude missing choices",
+    "special_events[1].brothers_stairwell_cooldown_interlude: interlude missing followup_hooks",
+    "events[0].brothers_stairwell_root_choice.line_1: too long for readable report prose (53 words, max 30)",
+    "events[0].brothers_stairwell_root_choice.line_1: report line lacks a clear ship object, officer, resource, or instrument",
+    "events[0].brothers_stairwell_root_choice.line_1: report line lacks a clear order, test, report, or procedure",
+    "events[0].brothers_stairwell_root_choice.line_2: report line lacks a clear ship object, officer, resource, or instrument",
+    "events[0].brothers_stairwell_root_choice.line_2: report line lacks a clear order, test, report, or procedure",
+    "events[0].brothers_stairwell_root_choice.buttons[1].label: too long for readable report prose (7 words, max 6)",
+    "events[0].brothers_stairwell_root_choice.buttons[2].label: too long for readable report prose (7 words, max 6)",
+    "events[0].brothers_stairwell_root_choice.buttons[3].label: too long for readable report prose (8 words, max 6)",
+    "special_events[0].brothers_stairwell_resolve.line_1: too long for readable report prose (37 words, max 30)",
+    "special_events[0].brothers_stairwell_resolve.line_1: report line lacks a clear ship object, officer, resource, or instrument",
+    "special_events[0].brothers_stairwell_resolve.line_2: report line lacks a clear ship object, officer, resource, or instrument",
+    "special_events[1].brothers_stairwell_cooldown_interlude.line_1: too long for readable report prose (47 words, max 30)",
+    "special_events[1].brothers_stairwell_cooldown_interlude.line_1: report line lacks a clear ship object, officer, resource, or instrument",
+    "special_events[1].brothers_stairwell_cooldown_interlude.line_2: report line lacks a clear ship object, officer, resource, or instrument",
+    "special_events[1].brothers_stairwell_cooldown_interlude.line_2: report line lacks a clear order, test, report, or procedure"
+  ]
+}

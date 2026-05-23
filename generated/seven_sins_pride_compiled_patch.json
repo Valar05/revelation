@@ -1,0 +1,1000 @@
+{
+  "title": "Seven Times Over",
+  "design_goal": "A self-exalting corporate authority figure undergoes active animal-heart degradation inside a sealed executive floor, and the squad must make physical contact with the threat, establish accountability, and close the judgment before the degradation spreads to personnel.",
+  "events": [
+    {
+      "room_id": "room_seven_times_over",
+      "event": {
+        "id": "root_seven_times_over",
+        "type": "choice",
+        "speaker": "lt_mara_owen",
+        "line_1": "Owen reports a halt at the partition glass. The shape in the corner office has moved to the window wall. It is eating.",
+        "line_2": "Park reports the jammer ready. Saye reports three hours and twenty minutes remaining, plus a withdrawal statement no one has requested yet.",
+        "buttons": [
+          {
+            "label": "Breach and fix Voss",
+            "action": "intercept",
+            "preview": "Owen wants to get Voss physically contained before the degradation spreads further and before the seventh..."
+          },
+          {
+            "label": "Jam the broadcast now",
+            "action": "intercept",
+            "preview": "Park wants to cut the audio before the breach so Voss is not actively stimulated by..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Breach and fix Voss",
+            "action": "intercept",
+            "officer_id": "lt_mara_owen",
+            "primary_skill": "tactical entry, threat control under contact",
+            "tactical_step": "React to contact: breach corner office, suppress and fix Voss against the window wall, establish security on all glass panels, evacuate compromised staff while Voss is held",
+            "intent": "Owen wants to get Voss physically contained before the degradation spreads further and before the seventh hour makes containment irrelevant",
+            "base_success": 0.65,
+            "yield": "Voss is fixed against the window wall, compromised staff are moved to the elevator lobby, the floor is clear for the refutation step",
+            "risk": "Voss in full degradation is faster than expected. If Owen's entry is not clean, he exits the office into the open floor and the two compromised staff members are in his path",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Owen goes through the door low and fast. Voss is at the window wall, both hands flat on the glass, head down. He does not turn. She gets a shoulder into him before he can move and pins him against the frame. He makes a sound that is not a word. Park is already pulling the first seated staff member toward the elevator lobby. Brooks confirms stairwell clear on comms. Owen does not let go. Her voice, when she calls the floor clear, is completely level."
+                ],
+                "environment_state_changes": [
+                  "root_seven_times_over.combat.success"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Owen gets through the door. Voss turns faster than the briefing suggested. She gets hold of one arm but he pulls the planter box off the sill and the ceramic goes across the floor. Park takes a cut above the knee from a shard — not deep, but she goes down for a moment. Owen gets Voss against the wall on the second attempt. The staff evacuation is slower. One of the seated individuals has to be carried. Brooks leaves the stairwell to help and the perimeter is open for four minutes."
+                ],
+                "environment_state_changes": [
+                  "root_seven_times_over.combat.partial"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Owen breaches clean but Voss is already moving when the door opens. He goes past her into the corridor. The two compromised staff members do not move out of his path. Owen gets a hand on his collar and he pulls her off her feet. Brooks abandons the stairwell and intercepts at the elevator lobby. It takes all three of them to establish control and by the time the floor is clear, Saye's clock has lost forty minutes. Park is sitting against the wall pressing her sleeve to her forearm. She says she's fine. Owen does not argue with her."
+                ],
+                "environment_state_changes": [
+                  "root_seven_times_over.combat.failure"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+2",
+                  "character.lt_mara_owen.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Jam the broadcast now",
+            "action": "intercept",
+            "officer_id": "specialist_mina_park",
+            "primary_skill": "signal intercept, technical suppression under pressure",
+            "tactical_step": "Suppress and fix: arm the portable jammer to kill broadcast audio across the floor, slowing new degradation onset and reducing Voss's agitation before breach, then hold for Owen's entry",
+            "intent": "Park wants to cut the audio before the breach so Voss is not actively stimulated by his own voice when the door opens, and to stop the two compromised staff members from worsening",
+            "base_success": 0.65,
+            "yield": "Broadcast audio drops. Voss's agitation visibly decreases. The two compromised staff members stop their repetitive behavior. Owen has a cleaner entry window.",
+            "risk": "Park's jammer has a known interference pattern with the building's fire suppression sensors. If the sensor trips, the floor goes into automated lockdown and the service elevator is disabled. The squad is sealed in with no extraction route until Brooks can override from the stairwell panel, which takes time they may not have.",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Park arms the jammer and the audio cuts mid-sentence. The silence on the floor is immediate and strange. The nearest screen's captions keep running but there is no voice behind them. Through the frosted glass, the shape in the corner office goes still. Park watches it for three seconds, then says to Owen: 'You have a window.' Owen moves."
+                ],
+                "environment_state_changes": [
+                  "root_seven_times_over.intercept.success"
+                ],
+                "resource_changes": {
+                  "character.specialist_mina_park.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "The jammer kills the audio but the fire sensor trips two seconds later. A soft alarm begins cycling. The automated lockdown drops a secondary door across the elevator lobby — not the service elevator, but the main corridor. Brooks is on the wrong side of it. He gets to the stairwell panel but the override takes six minutes. Park holds the jammer signal the entire time, watching the clock. When Brooks gets the door up, he looks at Park and she looks at the floor."
+                ],
+                "environment_state_changes": [
+                  "root_seven_times_over.intercept.partial"
+                ],
+                "resource_changes": {
+                  "character.specialist_mina_park.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The jammer arms and the audio cuts, but the interference hits the fire suppression system harder than the spec sheet suggested. The sprinklers on the east side of the floor activate. The two compromised staff members stand up when the water hits them — not recovered, just reactive — and one of them walks directly toward the corner office door. Owen has to redirect to intercept the civilian before she can breach. The window closes. Voss, stimulated by the movement and the noise, puts his shoulder through the frosted glass panel beside the door. Park shuts the jammer down and the audio comes back. Saye's voice on comms is very quiet: 'I'm adjusting the clock. You have two hours and fifty minutes.'"
+                ],
+                "environment_state_changes": [
+                  "root_seven_times_over.intercept.failure"
+                ],
+                "resource_changes": {
+                  "character.specialist_mina_park.stress": "+2",
+                  "character.specialist_mina_park.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Park arms the jammer and the audio cuts mid-sentence. The silence on the floor is immediate and strange. The nearest screen's captions keep running but there is no voice behind them. Through the frosted glass, the shape in the corner office goes still. Park watches it for three seconds, then says to Owen: 'You have a window.' Owen moves."
+            ],
+            "environment_state_changes": [
+              "root_seven_times_over.intercept.success"
+            ],
+            "resource_changes": {
+              "character.specialist_mina_park.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_seven_times_over",
+            "queued_line": "The office door has to open before anything else can happen.",
+            "trigger_key": "resolution_seven_times_over",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:01106",
+            "source_moment": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+            "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+            "room_application": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+            "structural_transfer": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+            "required_visible_details": [
+              "Voss consuming ornamental grass from the planter boxes along the window wall",
+              "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+              "Nails blackened and elongated, posture collapsed to all fours, language gone"
+            ],
+            "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:01107",
+            "source_moment": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+            "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+            "room_application": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+            "structural_transfer": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+            "required_visible_details": [
+              "Every screen on the ceiling grid running the same looped video with live captions",
+              "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+              "The broadcast audio filling the corridor in Voss's own flat, even voice"
+            ],
+            "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:01105",
+            "source_moment": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+            "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+            "room_application": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+            "structural_transfer": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+            "required_visible_details": [
+              "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+              "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+              "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+            ],
+            "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+            "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+            "source_moment": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+            "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+            "room_application": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+            "structural_transfer": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+            "required_visible_details": [
+              "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+              "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+              "Brooks operating on secondhand information: the communication gap that can cost time"
+            ],
+            "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:01106",
+            "anchor_role": "premise",
+            "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+            "playable_transform": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+            "required_visible_details": [
+              "Voss consuming ornamental grass from the planter boxes along the window wall",
+              "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+              "Nails blackened and elongated, posture collapsed to all fours, language gone"
+            ],
+            "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:01107",
+            "anchor_role": "escalation",
+            "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+            "playable_transform": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+            "required_visible_details": [
+              "Every screen on the ceiling grid running the same looped video with live captions",
+              "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+              "The broadcast audio filling the corridor in Voss's own flat, even voice"
+            ],
+            "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:01105",
+            "anchor_role": "evidence",
+            "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+            "playable_transform": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+            "required_visible_details": [
+              "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+              "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+              "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+            ],
+            "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+            "anchor_role": "procedure",
+            "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+            "playable_transform": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+            "required_visible_details": [
+              "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+              "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+              "Brooks operating on secondhand information: the communication gap that can cost time"
+            ],
+            "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_seven_times_over",
+      "type": "resolution",
+      "speaker": "dr_lenora_saye",
+      "line_1": "Saye reports the withdrawal statement ready: one paragraph, legally sufficient. Someone on the floor must read it aloud, on record, now.",
+      "line_2": "Park reports the recorder live. Voss is held or contained. The captions still run, and the refutation has to happen in this room.",
+      "buttons": [
+        {
+          "label": "Read Saye's statement aloud",
+          "action": "full_disclosure",
+          "preview": "Saye wants the refutation on record before the seventh hour. She has written it to be..."
+        },
+        {
+          "label": "Force the server rack down",
+          "action": "destroy",
+          "preview": "Brooks wants to end the broadcast by destroying its source. He has not read the full..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Read Saye's statement aloud",
+          "action": "full_disclosure",
+          "officer_id": "dr_lenora_saye",
+          "primary_skill": "symbolic close, formal accountability on record",
+          "tactical_step": "Symbolic close: Saye transmits the withdrawal statement, Torah or Owen reads it aloud on the floor in Voss's presence, the reading is recorded on Park's field kit, the declaration is formally contested in the space where it was made",
+          "intent": "Saye wants the refutation on record before the seventh hour. She has written it to be legally and symbolically sufficient: it names the declaration, contests its authority, and acknowledges an external standard. She does not need Voss to speak. She needs a witness and a recording.",
+          "base_success": 0.65,
+          "yield": "The broadcast loop stutters and stops. The captions freeze. The two compromised staff members blink and look around as if waking. Voss does not recover immediately, but the degradation halts. The case closes locally with a documented remainder.",
+          "risk": "If Voss is not adequately contained when the statement is read, he responds to the sound of his own declaration being contested. The response is physical. If Owen is not in position, someone gets hurt during the symbolic close.",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Saye transmits the paragraph. Torah reads it into Park's recorder, standing three meters from Voss, who is held against the window wall by Owen. The words are plain and administrative: the declaration made at 08:31 is contested, the authority it claimed is not recognized, the organization is subject to external accountability. Voss makes a sound when the last sentence lands — not a word, but something that was almost one. The nearest screen's captions freeze mid-scroll. The two staff members on the floor look up. One of them says, very quietly, 'What happened?' Owen does not let go of Voss until Park confirms the recording is saved. Then she steps back. Voss slides down the window wall and sits on the floor. He is breathing. He does not look at anyone."
+              ],
+              "environment_state_changes": [
+                "resolution_seven_times_over.full_disclosure.success"
+              ],
+              "resource_changes": {
+                "character.dr_lenora_saye.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Saye transmits the statement and Torah begins reading. Voss reacts at the second sentence — pulls against Owen's hold and gets one hand free. Owen takes a strike to the shoulder before she can re-establish control. Torah finishes the statement. The recording captures everything including the impact. The screens freeze. The compromised staff members recover. Voss is contained but Owen is going to feel that shoulder for a week. In the van afterward, Saye asks if the recording is clean. Park says yes. Saye says good and does not ask about Owen's shoulder, which Owen will remember."
+              ],
+              "environment_state_changes": [
+                "resolution_seven_times_over.full_disclosure.partial"
+              ],
+              "resource_changes": {
+                "character.dr_lenora_saye.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Torah begins reading and Voss breaks contact with Owen entirely. He crosses the floor in three seconds and the recorder goes down. Park recovers it but the first forty seconds of the statement are lost. Torah finishes reading from memory, which Saye did not anticipate and cannot verify as legally sufficient. The screens do not freeze. The captions keep running. The two compromised staff members do not recover. Saye's voice on comms is very controlled: 'The recording is incomplete. The closure is partial. We need to document what we have and get those two individuals to clinic. The remainder is active.' Brooks, from the stairwell, says nothing. He has been listening the whole time."
+              ],
+              "environment_state_changes": [
+                "resolution_seven_times_over.full_disclosure.failure"
+              ],
+              "resource_changes": {
+                "character.dr_lenora_saye.stress": "+2",
+                "character.dr_lenora_saye.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Force the server rack down",
+          "action": "destroy",
+          "officer_id": "brooks",
+          "primary_skill": "structural breach, hardware destruction under time pressure",
+          "tactical_step": "Breach and destroy: Brooks forces the IT closet adjacent to the corner office, physically destroys the broadcast server rack, silences the audio and captions permanently, accepts that this closes the broadcast but not the judgment",
+          "intent": "Brooks wants to end the broadcast by destroying its source. He has not read the full transcript and does not know that destroying the hardware without the refutation accelerates the spread. He is operating on the logic that if the broadcast stops, the effect stops.",
+          "base_success": 0.65,
+          "yield": "The broadcast dies instantly. New degradation onset halts. The two compromised staff members do not worsen. This buys time for the refutation step and gives the squad a cleaner window — but only if the refutation follows within the same hour.",
+          "risk": "Brooks does not know the symbolic rule. If the refutation does not follow the destruction within the hour, the judgment interprets the silence as defiance rather than withdrawal, and the degradation in Voss and the two compromised staff members accelerates to a point clinic cannot address. Brooks will not understand why his action made things worse.",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Brooks puts his shoulder into the IT closet door and it opens on the second hit. The server rack is a standard two-unit tower. He pulls the power feeds and then, when it keeps running on battery backup, he puts it on the floor. The audio stops. The captions freeze. Brooks reports the rack down on comms, matter-of-fact, and returns to the stairwell. He does not know that Saye immediately begins a sixty-minute countdown on her end. When the refutation follows twenty minutes later, the case closes. Brooks learns afterward that his action was load-bearing but not sufficient. He does not say anything about this. He files his equipment report and goes to get coffee."
+              ],
+              "environment_state_changes": [
+                "resolution_seven_times_over.destroy.success"
+              ],
+              "resource_changes": {
+                "character.brooks.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Brooks destroys the rack and the audio stops, but the battery backup keeps the screen captions running for another eleven minutes before Park can kill the display signal. During those eleven minutes, one of the compromised staff members worsens slightly — not irreversibly, but enough that clinic will need to hold them overnight. Saye notes in her file that the destruction-first sequence cost eleven minutes of caption exposure. Brooks reads this in the debrief summary and does not respond to it in writing. Owen notices he does not respond."
+              ],
+              "environment_state_changes": [
+                "resolution_seven_times_over.destroy.partial"
+              ],
+              "resource_changes": {
+                "character.brooks.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Brooks destroys the rack cleanly and reports it. The audio stops. For forty seconds, the floor is quiet. Then the degradation in Voss accelerates visibly: he begins moving faster, covering more of the floor, and the two compromised staff members stand up and begin moving toward him rather than away. Saye's voice on comms cuts through the noise: 'The destruction without refutation is being read as defiance. You have to get the statement read in the next thirty minutes or we lose all three of them.' Brooks, in the IT closet, hears this. He does not say anything on comms. When Owen asks for his status, he says he is returning to position. His voice is completely flat."
+              ],
+              "environment_state_changes": [
+                "resolution_seven_times_over.destroy.failure"
+              ],
+              "resource_changes": {
+                "character.brooks.stress": "+2",
+                "character.brooks.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "full_disclosure": {
+          "lines": [
+            "Saye transmits the paragraph. Torah reads it into Park's recorder, standing three meters from Voss, who is held against the window wall by Owen. The words are plain and administrative: the declaration made at 08:31 is contested, the authority it claimed is not recognized, the organization is subject to external accountability. Voss makes a sound when the last sentence lands — not a word, but something that was almost one. The nearest screen's captions freeze mid-scroll. The two staff members on the floor look up. One of them says, very quietly, 'What happened?' Owen does not let go of Voss until Park confirms the recording is saved. Then she steps back. Voss slides down the window wall and sits on the floor. He is breathing. He does not look at anyone."
+          ],
+          "environment_state_changes": [
+            "resolution_seven_times_over.full_disclosure.success"
+          ],
+          "resource_changes": {
+            "character.dr_lenora_saye.morale": "+1"
+          }
+        },
+        "destroy": {
+          "lines": [
+            "Brooks puts his shoulder into the IT closet door and it opens on the second hit. The server rack is a standard two-unit tower. He pulls the power feeds and then, when it keeps running on battery backup, he puts it on the floor. The audio stops. The captions freeze. Brooks reports the rack down on comms, matter-of-fact, and returns to the stairwell. He does not know that Saye immediately begins a sixty-minute countdown on her end. When the refutation follows twenty minutes later, the case closes. Brooks learns afterward that his action was load-bearing but not sufficient. He does not say anything about this. He files his equipment report and goes to get coffee."
+          ],
+          "environment_state_changes": [
+            "resolution_seven_times_over.destroy.success"
+          ],
+          "resource_changes": {
+            "character.brooks.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "full_disclosure": {
+          "event_id": "cooldown_seven_times_over",
+          "queued_line": "Whatever happens next goes into the permanent case file, and everyone on this floor is a witness.",
+          "trigger_key": "cooldown_seven_times_over",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        },
+        "destroy": {
+          "event_id": "cooldown_seven_times_over",
+          "queued_line": "Whatever happens next goes into the permanent case file, and everyone on this floor is a witness.",
+          "trigger_key": "cooldown_seven_times_over",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01106",
+          "source_moment": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "room_application": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "structural_transfer": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "required_visible_details": [
+            "Voss consuming ornamental grass from the planter boxes along the window wall",
+            "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+            "Nails blackened and elongated, posture collapsed to all fours, language gone"
+          ],
+          "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01107",
+          "source_moment": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "room_application": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "structural_transfer": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "required_visible_details": [
+            "Every screen on the ceiling grid running the same looped video with live captions",
+            "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+            "The broadcast audio filling the corridor in Voss's own flat, even voice"
+          ],
+          "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01105",
+          "source_moment": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "room_application": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "structural_transfer": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "required_visible_details": [
+            "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+            "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+            "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+          ],
+          "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "source_moment": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "room_application": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "structural_transfer": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "required_visible_details": [
+            "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+            "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+            "Brooks operating on secondhand information: the communication gap that can cost time"
+          ],
+          "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01106",
+          "anchor_role": "premise",
+          "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "playable_transform": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "required_visible_details": [
+            "Voss consuming ornamental grass from the planter boxes along the window wall",
+            "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+            "Nails blackened and elongated, posture collapsed to all fours, language gone"
+          ],
+          "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01107",
+          "anchor_role": "escalation",
+          "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "playable_transform": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "required_visible_details": [
+            "Every screen on the ceiling grid running the same looped video with live captions",
+            "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+            "The broadcast audio filling the corridor in Voss's own flat, even voice"
+          ],
+          "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01105",
+          "anchor_role": "evidence",
+          "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "playable_transform": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "required_visible_details": [
+            "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+            "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+            "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+          ],
+          "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "playable_transform": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "required_visible_details": [
+            "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+            "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+            "Brooks operating on secondhand information: the communication gap that can cost time"
+          ],
+          "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_seven_times_over",
+      "type": "interlude",
+      "speaker": "lt_mara_owen",
+      "line_1": "The van is in the parking structure. Owen is not in it yet. Park is sitting on the rear bumper with her field kit open, cleaning the cut on her...",
+      "line_2": "Saye's withdrawal statement is in the case file. Brooks filed his equipment report from the stairwell before the van even left the building. Nobody has said anything about the shoulder.",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Park closes the field kit and looks at the parking structure ceiling. She says: 'The jammer spec sheet was wrong about the sensor interference. I checked it twice before we went in.'",
+            "Owen comes around the corner of the van. She does not sit down. She says: 'I know.'",
+            "Park says: 'That's not an answer.'",
+            "Owen says: 'No. It's not.' She gets in the van.",
+            "Brooks is already inside, in the back row, looking at his phone. He has the equipment report open. He has not submitted it yet. The last line reads: Server rack destroyed per field judgment. He deletes 'per field judgment' and submits it.",
+            "Saye's voice comes through the van's comms speaker, unprompted: 'The two staff members are in clinic intake. Voss is in a secure medical hold. The recording is clean.' A pause. 'Good work.' Another pause. 'Get some sleep.'",
+            "Nobody answers her. The van pulls out of the parking structure into the morning light."
+          ],
+          "environment_state_changes": [
+            "lt_mara_owen.prior_case_pressure — reduced if closure was clean, active if partial",
+            "specialist_mina_park.carries_jammer_decision",
+            "brooks.quiet_after_consequence",
+            "squad.morale — shaped by closure quality"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "debrief",
+      "state_reads": [
+        "lt_mara_owen.fixation",
+        "specialist_mina_park.injury_minor",
+        "brooks.information_gap",
+        "dr_lenora_saye.anticipatory_action"
+      ],
+      "state_writes": [
+        "lt_mara_owen.prior_case_pressure — reduced if closure was clean, active if partial",
+        "specialist_mina_park.carries_jammer_decision",
+        "brooks.quiet_after_consequence",
+        "squad.morale — shaped by closure quality"
+      ],
+      "featured_characters": [
+        "lt_mara_owen",
+        "specialist_mina_park",
+        "brooks"
+      ],
+      "visible_text": [
+        "Park closes the field kit and looks at the parking structure ceiling. She says: 'The jammer spec sheet was wrong about the sensor interference. I checked it twice before we went in.'",
+        "Owen comes around the corner of the van. She does not sit down. She says: 'I know.'",
+        "Park says: 'That's not an answer.'",
+        "Owen says: 'No. It's not.' She gets in the van.",
+        "Brooks is already inside, in the back row, looking at his phone. He has the equipment report open. He has not submitted it yet. The last line reads: Server rack destroyed per field judgment. He deletes 'per field judgment' and submits it.",
+        "Saye's voice comes through the van's comms speaker, unprompted: 'The two staff members are in clinic intake. Voss is in a secure medical hold. The recording is clean.' A pause. 'Good work.' Another pause. 'Get some sleep.'",
+        "Nobody answers her. The van pulls out of the parking structure into the morning light."
+      ],
+      "choices": [
+        "Let Owen have the silence.",
+        "Ask Brooks what he deleted from the report."
+      ],
+      "outcomes": [
+        "Owen's prior case pressure eases slightly. She sleeps four hours, which is more than usual.",
+        "Brooks submits the clean report. He does not think about what he deleted. He thinks about it the next morning instead."
+      ],
+      "followup_hooks": [
+        "Voss's secure medical hold becomes a longer-term Institute custody question: partial recovery, remainder active",
+        "The incomplete recording variant opens a follow-up where the closure is legally contested",
+        "Park's jammer spec sheet discrepancy goes into the equipment file; a later mission may depend on that same jammer",
+        "Saye's anticipatory drafting — the statement written before anyone asked — is noted by someone at the Institute who will ask her about it later"
+      ],
+      "corpus_anchors": [
+        "selected_02",
+        "selected_03",
+        "selected_04"
+      ],
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01106",
+          "source_moment": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "room_application": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "structural_transfer": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "required_visible_details": [
+            "Voss consuming ornamental grass from the planter boxes along the window wall",
+            "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+            "Nails blackened and elongated, posture collapsed to all fours, language gone"
+          ],
+          "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01107",
+          "source_moment": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "room_application": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "structural_transfer": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "required_visible_details": [
+            "Every screen on the ceiling grid running the same looped video with live captions",
+            "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+            "The broadcast audio filling the corridor in Voss's own flat, even voice"
+          ],
+          "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01105",
+          "source_moment": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "room_application": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "structural_transfer": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "required_visible_details": [
+            "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+            "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+            "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+          ],
+          "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "source_moment": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "room_application": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "structural_transfer": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "required_visible_details": [
+            "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+            "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+            "Brooks operating on secondhand information: the communication gap that can cost time"
+          ],
+          "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01106",
+          "anchor_role": "premise",
+          "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "playable_transform": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "required_visible_details": [
+            "Voss consuming ornamental grass from the planter boxes along the window wall",
+            "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+            "Nails blackened and elongated, posture collapsed to all fours, language gone"
+          ],
+          "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01107",
+          "anchor_role": "escalation",
+          "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "playable_transform": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "required_visible_details": [
+            "Every screen on the ceiling grid running the same looped video with live captions",
+            "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+            "The broadcast audio filling the corridor in Voss's own flat, even voice"
+          ],
+          "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01105",
+          "anchor_role": "evidence",
+          "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "playable_transform": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "required_visible_details": [
+            "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+            "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+            "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+          ],
+          "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "playable_transform": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "required_visible_details": [
+            "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+            "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+            "Brooks operating on secondhand information: the communication gap that can cost time"
+          ],
+          "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "room_seven_times_over",
+      "name": "Executive Floor, Voss Tower — Level 38",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A sealed corporate floor. The director is already gone. The judgment is running.",
+      "first_visit_description": "Torah's team arrives via service elevator to Level 38 of Voss Tower, a glass-and-steel executive floor locked down by building security forty minutes ago after a wellness call went unanswered. Lt. Owen leads the entry stack. Brooks holds the elevator and monitors the stairwell below. Dr. Saye is on comms from the Institute van in the parking structure, pulling Voss's public record and the broadcast transcript. Specialist Park is on Torah's left with a field kit and a portable signal jammer. The floor smells of cut grass and copper. Every screen on the ceiling grid is running the same looped video: Harlan Voss at a podium, two hours ago, telling a packed auditorium that his organization recognizes no authority above its own judgment. The loop is silent but the captions are live. Eleven staff members are visible through the glass partition. Two are seated on the floor. One is pressed against the far window, watching something below the sill. The corner office door is closed. Through the frosted glass panel beside it, a shape moves low and slow.",
+      "return_description": "Level 38 is quieter now. The screens are dark or cycling Institute holding frames. The carpet near the planter boxes is torn. The smell of cut grass has not left.",
+      "detection_report": "Building security flagged an executive wellness call at 09:14. A junior associate reported that Director Voss had not responded to knocks since 08:50, approximately twenty minutes after the all-staff broadcast concluded. Two staff members on the floor reported feeling 'very heavy' and 'unable to think of words' before security locked the floor. Institute monitoring flagged the broadcast transcript at 08:47 as a Category 2 self-sovereignty declaration. Deployment authorized at 09:31.",
+      "current_situation": "Torah's stack is through the service door. Owen has eyes on the corner office. The shape behind the frosted glass is moving on all fours. One of the seated staff members on the floor has begun pulling at the carpet fibers with both hands, slowly, without looking up. The broadcast loop is audible now: a speaker somewhere is running audio. Voss's voice fills the corridor in a flat, even tone. The captions on the nearest screen read: WE ARE THE FINAL AUTHORITY ON WHAT WE ARE.",
+      "action_profile": {
+        "physical_threat": "Voss in full degradation is large, fast on all fours, and does not respond to verbal commands. He has broken the interior glass of his office once already. The two staff members showing early signs will physically resist removal if touched before the broadcast is interrupted. The ornamental planter boxes have been partially demolished; ceramic shards and exposed rebar are on the floor.",
+        "contact_state": "The squad is inside the floor. The threat is behind a closed door eight meters ahead. Two compromised civilians are between the stack and the office. The broadcast audio is live and escalating the effect in real time.",
+        "field_manual_drill": "React to contact on office breach, suppress and fix Voss to prevent injury to staff, clear the floor of compromised civilians via evacuation before full degradation spreads, establish cordon around the office, then execute symbolic close.",
+        "tactical_objective": "Breach the corner office, establish physical control of Voss without lethal force, evacuate compromised staff, and interrupt the broadcast before the seventh hour mark.",
+        "symbolic_close": "The declaration must be formally refuted or withdrawn in the same space. A written retraction read aloud by a witness, or a direct verbal acknowledgment from Voss if cognition partially returns, closes the judgment locally. Destroying the broadcast equipment without the refutation accelerates spread.",
+        "violent_resolution": "The broadcast server rack is in the IT closet adjacent to the corner office. It can be physically destroyed. Doing so silences the audio immediately and slows new degradation onset, but without the spoken refutation, Voss's condition does not reverse and the two compromised staff members do not recover. The rack destruction is a valid tactical step that buys time but does not close the case.",
+        "not_monster_of_week": "This is not a creature. It is a man under a specific judgment for a specific sin, and the judgment is proportional, public, and reversible under one condition. The horror is that everyone on the floor watched him give the speech and said nothing. The spread targets deference, not proximity."
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "lt_mara_owen",
+          "name": "Lt. Mara Owen",
+          "mission_role": "tactical lead, entry stack command",
+          "physical_position": "Point on the entry stack, eight meters from the corner office door",
+          "assigned_reason": "Owen requested the assignment after reviewing the broadcast transcript; she has prior contact with a similar case and does not want a repeat outcome",
+          "visible_state": "Moving with deliberate economy. Has not spoken since the elevator. Her hand keeps returning to the door-breach tool on her vest."
+        },
+        {
+          "officer_id": "brooks",
+          "name": "Brooks",
+          "mission_role": "rear security, elevator and stairwell control",
+          "physical_position": "Service elevator landing, monitoring stairwell B and the floor's secondary exit",
+          "assigned_reason": "Standard rear-security assignment; Brooks knows the building layout from a prior unrelated call",
+          "visible_state": "Calm on comms. Reported the carpet-pulling staff member before Owen did. Has not asked for clarification on the broadcast loop."
+        },
+        {
+          "officer_id": "specialist_mina_park",
+          "name": "Specialist Park",
+          "mission_role": "technical specialist, signal intercept and field medical",
+          "physical_position": "Torah's left, two meters behind Owen, carrying field kit and portable jammer",
+          "assigned_reason": "Park's jammer can interrupt the broadcast audio without destroying hardware, preserving the refutation option",
+          "visible_state": "Has the jammer out but not armed. Watching the seated staff members more than the office door."
+        },
+        {
+          "officer_id": "dr_lenora_saye",
+          "name": "Dr. Saye",
+          "mission_role": "remote analytical consult, broadcast and subject history",
+          "physical_position": "Institute van, parking structure Level B2, on encrypted comms",
+          "assigned_reason": "Saye pulled Voss's file and the broadcast transcript before deployment; she is the fastest path to a legally usable refutation document",
+          "visible_state": "Her voice on comms is precise and slightly faster than usual. She has already drafted a one-paragraph withdrawal statement and is waiting to be told whether to transmit it."
+        }
+      ],
+      "root_sin": "Self-exalting authority: the public declaration that one's own judgment supersedes all external accountability, made before witnesses who were given no standing to object",
+      "modern_incident_logic": "Voss made the declaration in a sealed corporate environment where his authority was total and his subordinates were structurally prevented from dissent. The judgment activates in the space where the declaration was made and remains active as long as the declaration continues to broadcast in that space. The corporate floor is the throne room. The broadcast loop is the standing decree. The planter boxes are the only living things on the floor.",
+      "closure_test": "The broadcast must be interrupted and the declaration formally refuted or withdrawn in the same physical space. A witness must be present. The refutation must be on record.",
+      "religious_pattern": "Daniel 4: the king who built the great city by his own power is given an animal heart until seven times pass and he acknowledges that the highest authority grants dominion. The judgment is not permanent; it is proportional and reversible under one condition.",
+      "anomaly_rule": "The degradation is active and spreading. It targets anyone who affirms or defers to the authority named in the declaration. It accelerates with each hour the broadcast runs. It does not respond to sedation, restraint, or destruction of the subject. It partially pauses if the broadcast audio is interrupted but does not reverse until the refutation is spoken or read aloud in the space.",
+      "forbidden_flat_read": "Do not literalize as a werewolf or animal-possession scenario. The degradation is cognitive and postural, not a physical transformation into an animal. Voss looks wrong, moves wrong, and has lost language, but he is still recognizably human.",
+      "officer_reports": [
+        "Owen, on approach: 'Two down in the corridor. Not injured. Not responding to name. Watch your footing near the planters — ceramic everywhere.'",
+        "Brooks, from the elevator: 'Stairwell B is clear to 36. Building security is holding at 35 and asking for a timeline. I told them we don't have one.'",
+        "Park, quietly: 'The jammer will kill the audio in this wing. It won't touch the server. If someone restarts the feed from downstairs, we're back to zero.'",
+        "Saye, on comms: 'Voss gave this speech at 08:31. It has been running for three hours and forty minutes. I have a withdrawal statement ready. Someone needs to read it on this floor, on record, before the seventh hour. That gives you three hours and twenty minutes.'"
+      ],
+      "procedure_hooks": [
+        "Broadcast intercept: Park's jammer can suppress audio without destroying hardware, buying time for the refutation",
+        "Evacuation of compromised staff before breach: field manual priority — clear civilians before engaging primary threat",
+        "Cordon of corner office: establish security on all glass panels before breach to prevent Voss exiting into the open floor",
+        "Evidence custody: Saye's withdrawal statement must be read aloud on the floor and recorded; the recording is the closure document",
+        "Triage of compromised staff post-closure: clinic referral for the two seated individuals showing early degradation signs"
+      ],
+      "character_state_stakes": {
+        "lt_mara_owen": "Owen's prior contact case ended without closure. If this one closes cleanly, her fixation eases. If it fails or partially closes, she goes quiet in a specific way that the squad has learned to watch for.",
+        "specialist_mina_park": "Park's jammer is her call. If she arms it too early and the refutation window closes, she carries that. If she holds it and someone gets hurt in the delay, she carries that differently.",
+        "brooks": "Brooks is the only person on this mission who has not read the broadcast transcript. He is operating on secondhand information. If the situation requires him to make a judgment call without context, his response will be slower than Owen expects.",
+        "dr_lenora_saye": "Saye drafted the withdrawal statement before anyone asked her to. If it is used and works, she will not mention it in the debrief. If it is not used, she will ask why, once, and then not ask again."
+      },
+      "interlude_vectors": [
+        "Owen does not debrief in the van. She walks the parking structure alone for four minutes before getting in.",
+        "Park checks the jammer's charge log after the mission. She does not explain why.",
+        "Saye's withdrawal statement, used or unused, ends up in the case file. Someone will read it later."
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "Self-exalting authority: the public declaration that one's own judgment supersedes all external accountability, made before witnesses who were given no standing to object",
+        "modern_incident_logic": "Voss made the declaration in a sealed corporate environment where his authority was total and his subordinates were structurally prevented from dissent. The judgment activates in the space where the declaration was made and remains active as long as the declaration continues to broadcast in that space. The corporate floor is the throne room. The broadcast loop is the standing decree. The planter boxes are the only living things on the floor.",
+        "closure_test": "The broadcast must be interrupted and the declaration formally refuted or withdrawn in the same physical space. A witness must be present. The refutation must be on record."
+      },
+      "religious_subtext": {
+        "source_pattern": "Daniel 4: the king who built the great city by his own power is given an animal heart until seven times pass and he acknowledges that the highest authority grants dominion. The judgment is not permanent; it is proportional and reversible under one condition.",
+        "transformed_rule": "The degradation is active and spreading. It targets anyone who affirms or defers to the authority named in the declaration. It accelerates with each hour the broadcast runs. It does not respond to sedation, restraint, or destruction of the subject. It partially pauses if the broadcast audio is interrupted but does not reverse until the refutation is spoken or read aloud in the space.",
+        "forbidden_flat_read": "Do not literalize as a werewolf or animal-possession scenario. The degradation is cognitive and postural, not a physical transformation into an animal. Voss looks wrong, moves wrong, and has lost language, but he is still recognizably human."
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Owen does not debrief in the van. She walks the parking structure alone for four minutes before getting in.",
+        "Park checks the jammer's charge log after the mission. She does not explain why.",
+        "Saye's withdrawal statement, used or unused, ends up in the case file. Someone will read it later."
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "room_seven_times_over",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01106",
+          "source_moment": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "room_application": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "structural_transfer": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "required_visible_details": [
+            "Voss consuming ornamental grass from the planter boxes along the window wall",
+            "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+            "Nails blackened and elongated, posture collapsed to all fours, language gone"
+          ],
+          "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01107",
+          "source_moment": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "room_application": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "structural_transfer": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "required_visible_details": [
+            "Every screen on the ceiling grid running the same looped video with live captions",
+            "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+            "The broadcast audio filling the corridor in Voss's own flat, even voice"
+          ],
+          "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01105",
+          "source_moment": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "room_application": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "structural_transfer": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "required_visible_details": [
+            "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+            "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+            "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+          ],
+          "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "source_moment": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "room_application": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "structural_transfer": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "required_visible_details": [
+            "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+            "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+            "Brooks operating on secondhand information: the communication gap that can cost time"
+          ],
+          "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01106",
+          "anchor_role": "premise",
+          "source_fingerprint": "Driven from men, dwelling with animals, eating grass, seven times passing, until he acknowledges the source of authority",
+          "playable_transform": "Voss is in active degradation on all fours, consuming ornamental grass, in the sealed space where he made his declaration. The seven-hour window is the mission clock.",
+          "required_visible_details": [
+            "Voss consuming ornamental grass from the planter boxes along the window wall",
+            "The seven-hour window counted from the broadcast: Saye's comms line gives the squad three hours and twenty minutes remaining",
+            "Nails blackened and elongated, posture collapsed to all fours, language gone"
+          ],
+          "followup_payoff": "If the squad reaches the seventh hour without closure, the degradation becomes permanent for Voss and the two compromised staff members cannot be recovered by clinic alone"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01107",
+          "anchor_role": "escalation",
+          "source_fingerprint": "The feast where sacred vessels are used for self-glorification, the hand writing on the wall, the king who will not be humbled until the night of judgment",
+          "playable_transform": "The broadcast loop is the feast: Voss's declaration plays on every screen, using the floor's own infrastructure as a monument to his authority. The captions are the writing on the wall.",
+          "required_visible_details": [
+            "Every screen on the ceiling grid running the same looped video with live captions",
+            "The caption line WE ARE THE FINAL AUTHORITY ON WHAT WE ARE visible on the nearest screen",
+            "The broadcast audio filling the corridor in Voss's own flat, even voice"
+          ],
+          "followup_payoff": "Destroying the screens without the refutation mirrors the desecration of the vessels: it accelerates judgment rather than closing it"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01105",
+          "anchor_role": "evidence",
+          "source_fingerprint": "The great tree that sheltered all flesh, whose height reached the sky, cut down until the stump remains bound with iron and bronze",
+          "playable_transform": "Voss's public image — the company's reach, the staff who depended on him, the floor designed to project his authority — is the tree. The degradation is the cutting. The stump is what remains if the squad closes the case: Voss alive, diminished, accountable.",
+          "required_visible_details": [
+            "The ornamental planter boxes demolished, soil and ceramic shards across the floor",
+            "The corner office designed for maximum visibility: glass walls, elevated platform, city view on three sides",
+            "Staff members who depended on Voss's authority now seated on the floor, unable to function"
+          ],
+          "followup_payoff": "A partial closure leaves Voss as the stump: alive, stripped of command, with a remainder that the Institute will need to monitor"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Effective team communication under time pressure requires updating members, anticipating needs, and redirecting strategy before the window closes",
+          "playable_transform": "The squad's coordination under the seven-hour clock is the procedural spine. Saye anticipates the refutation need before anyone asks. Park holds the jammer pending Owen's call. Brooks holds the perimeter without the full picture. The mission fails if communication breaks down between these roles.",
+          "required_visible_details": [
+            "Saye's comms line giving the countdown unprompted: she is already anticipating the team's needs",
+            "Park waiting for Owen's signal before arming the jammer: the redirect moment",
+            "Brooks operating on secondhand information: the communication gap that can cost time"
+          ],
+          "followup_payoff": "If the squad's communication fractures under pressure, the seven-hour window closes before the refutation is on record"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "room_seven_times_over"
+    },
+    {
+      "pool": "action_horror",
+      "room_id": "room_seven_times_over"
+    },
+    {
+      "pool": "straight_noncombat",
+      "room_id": "room_seven_times_over"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "room_seven_times_over"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "Daniel 4 is the only biblical pride narrative with a reversible judgment and a specific interval — the seven times — which gives the mission a real clock without inventing one",
+    "The spread-by-deference rule means the threat is not Voss but the declaration, which keeps the horror structural rather than creature-based",
+    "Brooks's information gap is the hidden character state: he does not know the symbolic rule, so his force option is genuinely consequential rather than obviously wrong",
+    "Saye drafting the statement before being asked is a character tell that pays off in the cooldown"
+  ],
+  "self_critique": [
+    "The Brooks destroy plan requires the player to understand that Brooks lacks information, which is a hidden state dependency; if the runtime does not surface Brooks's information gap before the choice, the backfire reads as arbitrary rather than earned — the first_visit_description and deployment manifest establish this but the compiler must preserve it"
+  ]
+}

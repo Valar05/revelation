@@ -1,0 +1,319 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0yuhc10bsy6t"]
+
+[ext_resource type="Texture2D" uid="uid://b52sxddookoqv" path="res://BloodHunter.png" id="1_2inau"]
+[ext_resource type="Shader" uid="uid://b3ivt3wdfg5tp" path="res://EnemySpriteShader.gdshader" id="1_g53m3"]
+[ext_resource type="Script" uid="uid://bhjplq10hliin" path="res://Enemy.gd" id="1_uqn7o"]
+[ext_resource type="Texture2D" uid="uid://c6t7em2tr5s4g" path="res://BloodHunterAttack.png" id="4_ss64a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uqn7o"]
+shader = ExtResource("1_g53m3")
+shader_parameter/dissolve_progress = 0.0
+shader_parameter/dissolve_noise_scale = 1.0
+shader_parameter/dissolve_noise_offset = Vector2(0, 0)
+shader_parameter/glow_radius = 14.82800070433
+shader_parameter/glow_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color_inner = Color(1, 0.81, 0.81, 1)
+shader_parameter/outline_color_outer = Color(1.137, 0.7103085, 0.6106475, 1)
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/use_gradient_remap = false
+shader_parameter/overall_size = 1.0
+shader_parameter/top_stretch = 0.0
+shader_parameter/bottom_stretch = 0.0
+shader_parameter/left_stretch = 0.0
+shader_parameter/right_stretch = 0.0
+shader_parameter/top_falloff = 0.5
+shader_parameter/bottom_falloff = 0.5
+shader_parameter/left_falloff = 0.5
+shader_parameter/right_falloff = 0.5
+shader_parameter/black_threshold = 0.05
+
+[sub_resource type="Animation" id="Animation_g53m3"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:material:shader_parameter/glow_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [14.82800070433, 14.82800070433]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.27858204, 0.27858204), Vector2(0.2884271, 0.27871734), Vector2(0.27858204, 0.27858204)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.044061776, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.48, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 7), Vector2(-24.64, 7), Vector2(-7, 7)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AttackSprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_uqn7o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:material:shader_parameter/glow_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [14.82800070433]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.27858204, 0.27858204)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 7)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AttackSprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AttackSprite:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.388, 0.327)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AttackSprite:skew")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.18151425]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AttackSprite:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t4hh5"]
+resource_name = "attack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 7), Vector2(31, -26), Vector2(-56, 49.999996), Vector2(-7, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackSprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.045378562, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AttackSprite:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.327, 0.327), Vector2(0.388, 0.327)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AttackSprite:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.18151425]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AttackSprite:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.12, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-43.999996, 62.999996)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ss64a"]
+_data = {
+&"RESET": SubResource("Animation_uqn7o"),
+&"attack": SubResource("Animation_t4hh5"),
+&"idle": SubResource("Animation_g53m3")
+}
+
+[node name="BloodHunter" type="Node2D"]
+script = ExtResource("1_uqn7o")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_uqn7o")
+position = Vector2(-7, 7)
+scale = Vector2(0.27858204, 0.27858204)
+texture = ExtResource("1_2inau")
+
+[node name="AttackSprite" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_uqn7o")
+scale = Vector2(0.388, 0.327)
+skew = -0.18151425
+texture = ExtResource("4_ss64a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ss64a")
+}

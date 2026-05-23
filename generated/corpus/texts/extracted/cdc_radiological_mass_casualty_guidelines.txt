@@ -1,0 +1,2359 @@
+Interim Guidelines for Hospital Response to Mass Casualties
+from a Radiological Incident
+December 2003
+
+                                      Prepared by
+                                 James M. Smith, Ph.D.
+                                  Marie A. Spano, M.S.
+        Division of Environmental Hazards and Health Effects, National Center for
+                                 Environmental Health
+
+
+                                              Summary
+
+On September 11, 2001, U.S. symbols of economic growth and military prowess were attacked and
+thousands of innocent lives were lost. These tragic events exposed our nation’s vulnerability to attack and
+heightened our awareness of potential threats. Further examination of the capabilities of foreign nations
+indicate that terrorist groups worldwide have access to information on the development of radiological
+weapons and the potential to acquire the raw materials necessary to build such weapons. The looming
+threat of attack has highlighted the vital role that public health agencies play in our nation’s response to
+terrorist incidents. Such agencies are responsible for detecting what agent was used (chemical, biological,
+radiological), event surveillance, distribution of necessary medical supplies, assistance with emergency
+medical response, and treatment guidance.
+
+In the event of a terrorist attack involving nuclear or radiological agents, it is one of CDC’s missions to
+insure that our nation is well prepared to respond. In an effort to fulfill this goal, CDC, in collaboration
+with representatives of local and state health and radiation protection departments and many medical and
+radiological professional organizations, has identified practical strategies that hospitals can refer to in
+preparing for and responding to a radiological terrorism event involving mass casualties.
+
+The guidance focuses on six key areas: (1) notification and communication, which emphasizes the
+importance of hospitals working with their communities and public health agencies on developing
+emergency communication plans; (2) triage; (3) patient management, including decontamination,
+treatment, care of special populations, discharge and follow up, and patient mental health concerns; (4)
+healthcare provider protection, including staff training and practitioner mental health concerns; (5)
+surveillance, and (6) community planning.
+
+  Hospital medical personnel can use these basic guidelines in conjunction with their professional training
+ and experience to aid in the effective and efficient treatment of victims. The purpose of the guidelines is
+  not to address all of the possible emergency-related medical care that may be required by the hospital
+   during such an emergency. Rather, the focus is on unique aspects of a nuclear or radiological event
+involving mass casualties for which the hospital’s emergency department may not be adequately prepared
+    or equipped. It should be noted, however, a successful response is dependent not only on written
+  guidelines, but also on the communication of these guidelines along with partnerships between medical
+          personnel and private, state, local and federal public health agencies and organizations.
+
+
+
+                                              December 2003                                    Page 1 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+                                          BACKGROUND
+In May 2002 the Centers for Disease Control and Prevention (CDC) brought together public health,
+medical and other scientific experts to discuss practical strategies that hospitals can use in preparation for
+and managing mass casualties from a radiological incident (see Appendix A for a full list of participants).
+From the discussions of this roundtable and other available literature, CDC has developed a basic set of
+practical strategies to provide guidance to hospitals, health care providers, emergency departments, and
+state and local health departments to aid in managing casualties from a nuclear or radiological incident for
+the purpose of ameliorating injuries and loss of life. It is recognized that mass casualties from any type of
+disaster may involve a variety of injuries and illnesses. The purpose of the present guidelines is not to
+address all of the possible emergency-related medical care that may be required by the hospital during
+such an emergency. Rather, the guidelines focus on the unique aspects of a nuclear or radiological event
+involving mass casualties for which the hospital may not be generally trained, equipped or prepared. As
+an aid to the reader, a Glossary of Terms is provided in the beginning of this document.
+
+There is a variety of potential terrorist incidents involving radiation that could result in mass casualties
+that could present at hospitals in the area near the incident. The following are meant to be examples of
+possible radiological scenarios and are sorted in ascending order of potential health effects:
+
+
+   •   Radiation Dispersal Device – A conventional explosion has scattered radioactive material (“dirty
+       bomb”), saboteurs blew up a truck carrying radioactive material, or an aerosol containing
+       radioactive material has been spread over a large area. There may be tens to hundreds of injured
+       people, and many hundreds of contaminated or exposed people. However, the radiation levels are
+       not sufficient to cause acute radiation sickness in anyone; rather there are immediate psychological
+       effects and an additional risk of long-term health effects.
+
+
+   •   Major event at or near a nuclear facility (such as an airplane crash into a nuclear power plant
+       or spent nuclear fuel pool) – Significant amounts of radioactive material have been released. There
+       are dozens of injured people at the facility, many experiencing symptoms related to acute radiation
+       syndrome, and thousands of contaminated or exposed people in the surrounding area who have an
+       increased probability of long-term health effects.
+
+
+   •   Nuclear detonation – The immediate physical devastation could appear similar to that of the
+       World Trade Center following the events of September 11, 2001. However, the dust and debris
+       from this event will be highly radioactive. There are thousands of people both contaminated and
+       injured at the scene. In addition, there will be thousands of people in a large area potentially
+       extending many miles outward from the initial point of attack with serious radiation exposures
+       although they may have no obvious physical injury or contamination. Radioactive fallout with
+       potential for long-term health effects will extend over a large region far from ground zero. There
+       would likely be many persons experiencing symptoms related to acute radiation syndrome.
+
+
+
+
+                                               December 2003                                     Page 2 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+                                       List of Acronyms
+   •   AFRRI = Armed Forces Radiobiology Research Institute
+   •   CBC = Complete Blood Count
+   •   COBRA = Consolidated Omnibus Budget Reconciliation Act
+   •   EMTALA = Emergency Medical Treatment and Labor Act
+   •   FEMA = Federal Emergency Management Agency
+   •   FRMAC = Federal Radiological Monitoring and Assessment Center
+   •   FRPCC = Federal Radiological Preparedness Coordinating Committee
+   •   HEICS = Hospital Emergency Incident Command Structure
+   •   HIPPA = Health Insurance Portability and Accountability Act
+   •   IAEA = International Atomic Energy Agency
+   •   ICC = Incident Command Center
+   •   NCRP = National Council on Radiation Protection
+       and Measurements
+   •   NRC = Nuclear Regulatory Commission
+   •   REAC/TS = Radiation Emergency Assistance Center/Training Site
+
+
+
+
+                                              December 2003                                     Page 3 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+
+
+                           Glossary of Radiological Terms
+
+Absolute risk: the proportion of a population expected to get a disease over a specified time period. See
+also risk, relative risk.
+
+Absorbed dose: the amount of energy deposited by ionizing radiation in a unit mass of tissue. It is
+expressed in units of joule per kilogram (J/kg), and called “gray” (Gy). For more information, see “Primer
+on Radiation Measurement” at the end of this document.
+
+Activity (radioactivity): the rate of decay of radioactive material expressed as the number of atoms
+breaking down per second measured in units called becquerels or curies.
+
+
+Acute exposure: an exposure to radiation that occurred in a matter of minutes rather than in longer,
+continuing exposure over a period of time. See also chronic exposure, exposure, fractionated exposure.
+
+Acute Radiation Syndrome (ARS): a serious illness caused by receiving a dose greater than 50 rads of
+penetrating radiation to the body in a short time (usually minutes). The earliest symptoms are nausea,
+fatigue, vomiting, and diarrhea. Hair loss, bleeding, swelling of the mouth and throat, and general loss of
+energy may follow. If the exposure has been approximately 1,000 rads or more, death may occur within 2
+– 4 weeks. For more information, see CDC’s fact sheet “Acute Radiation Syndrome” at
+http://www.bt.cdc.gov/radiation/ars.asp.
+
+Air burst: a nuclear weapon explosion that is high enough in the air to keep the fireball from touching the
+ground. Because the fireball does not reach the ground and does not pick up any surface material, the
+radioactivity in the fallout from an air burst is relatively insignificant compared with a surface burst. For
+more information, see Chapter 2 of CDC’s Fallout Report at
+http://www.cdc.gov/nceh/radiation/fallout/falloutreport.pdf.
+
+Alpha particle: the nucleus of a helium atom, made up of two neutrons and two protons with a charge of
++2. Certain radioactive nuclei emit alpha particles. Alpha particles generally carry more energy than
+gamma or beta particles, and deposit that energy very quickly while passing through tissue. Alpha
+particles can be stopped by a thin layer of light material, such as a sheet of paper, and cannot penetrate
+the outer, dead layer of skin. Therefore, they do not damage living tissue when outside the body. When
+alpha-emitting atoms are inhaled or swallowed, however, they are especially damaging because they
+transfer relatively large amounts of ionizing energy to living cells. See also beta particle, gamma ray,
+neutron, x-ray.
+
+Ambient air: the air that surrounds us.
+
+Americium (Am): a silvery metal; it is a man-made element whose isotopes Am-237 through Am-246
+are all radioactive. Am-241 is formed spontaneously by the beta decay of plutonium-241. Trace quantities
+of americium are widely used in smoke detectors, and as neutron sources in neutron moisture gauges.
+
+Atom: the smallest particle of an element that can enter into a chemical reaction.
+
+
+                                              December 2003                                     Page 4 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+
+Atomic number: the total number of protons in the nucleus of an atom.
+
+Atomic mass unit (amu): 1 amu is equal to one twelfth of the mass of a carbon-12 atom.
+
+Atomic mass number: the total number of protons and neutrons in the nucleus of an atom.
+
+Atomic weight: the mass of an atom, expressed in atomic mass units. For example, the atomic number
+of helium-4 is 2, the atomic mass is 4, and the atomic weight is 4.00026.
+
+Background radiation: ionizing radiation from natural sources, such as terrestrial radiation due to
+radionuclides in the soil or cosmic radiation originating in outer space.
+
+Becquerel (Bq): the amount of a radioactive material that will undergo one decay (disintegration) per
+second. For more information, see “Primer on Radiation Measurement” at the end of this document.
+
+Beta particles: electrons ejected from the nucleus of a decaying atom. Although they can be stopped by
+a thin sheet of aluminum, beta particles can penetrate the dead skin layer, potentially causing burns. They
+can pose a serious direct or external radiation threat and can be lethal depending on the amount received.
+They also pose a serious internal radiation threat if beta-emitting atoms are ingested or inhaled. See also
+alpha particle, gamma ray, neutron, x-ray.
+
+Bioassay: an assessment of radioactive materials that may be present inside a person’s body through
+analysis of the person’s blood, urine, feces, or sweat.
+
+Biological Effects of Ionizing Radiation (BEIR) Reports: reports of the National Research Council's
+committee on the Biological Effects of Ionizing Radiation. For more information, see
+http://www.nap.edu/books/0309039959/html/.
+
+Biological half-life: the time required for one half of the amount of a substance, such as a radionuclide,
+to be expelled from the body by natural metabolic processes, not counting radioactive decay, once it has
+been taken in through inhalation, ingestion, or absorption. See also radioactive half-life, effective half-life.
+
+Carcinogen: a cancer-causing substance.
+
+Chain reaction: a process that initiates its own repetition. In a fission chain reaction, a fissile nucleus
+absorbs a neutron and fissions (splits) spontaneously, releasing additional neutrons. These, in turn, can be
+absorbed by other fissile nuclei, releasing still more neutrons. A fission chain reaction is self-sustaining
+when the number of neutrons released in a given time equals or exceeds the number of neutrons lost by
+absorption in non-fissile material or by escape from the system.
+
+Chronic exposure: exposure to a substance over a long period of time, possibly resulting in adverse
+health effects. See also acute exposure, fractionated exposure.
+
+Cobalt (Co): gray, hard, magnetic, and somewhat malleable metal. Cobalt is relatively rare and generally
+obtained as a byproduct of other metals, such as copper. Its most common radioisotope, cobalt-60 (Co-
+60), is used in radiography and medical applications. Cobalt-60 emits beta particles and gamma rays
+during radioactive decay.
+
+                                                December 2003                                      Page 5 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Collective dose: the estimated dose for an area or region multiplied by the estimated population in that
+area or region. For more information, see “Primer on Radiation Measurement” at the end of this
+document.
+
+Committed dose: a dose that accounts for continuing exposures expected to be received over a long
+period of time (such as 30, 50, or 70 years) from radioactive materials that were deposited inside the
+body. For more information, see “Primer on Radiation Measurement” at the end of this document.
+
+Concentration: the ratio of the amount of a specific substance in a given volume or mass of solution to
+the mass or volume of solvent.
+
+Conference of Radiation Control Program Directors (CRCPD): an organization whose members
+represent state radiation protection programs. For more information, see the CRCPD website:
+http://www.crcpd.org.
+
+Contamination (radioactive): the deposition of unwanted radioactive material on the surfaces of
+structures, areas, objects, or people where it may be external or internal. See also decontamination.
+
+Cosmic radiation: radiation produced in outer space when heavy particles from other galaxies (nuclei of
+all known natural elements) bombard the earth. See also background radiation, terrestrial radiation.
+
+Criticality: a fission process where the neutron production rate equals the neutron loss rate to absorption
+or leakage. A nuclear reactor is "critical" when it is operating.
+
+Critical mass: the minimum amount of fissile material that can achieve a self-sustaining nuclear chain
+reaction.
+
+Cumulative dose: the total dose resulting from repeated or continuous exposures of the same portion of
+the body, or of the whole body, to ionizing radiation. For more information, see “Primer on Radiation
+Measurement” at the end of this document.
+
+Curie (Ci): the traditional measure of radioactivity based on the observed decay rate of 1 gram of
+radium. One curie of radioactive material will have 37 billion disintegrations in 1 second. For more
+information, see “Primer on Radiation Measurement” at the end of this document.
+
+Cutaneous Radiation Syndrome (CRS): the complex syndrome resulting from radiation exposure of
+more than 200 rads to the skin. The immediate effects can be reddening and swelling of the exposed area
+(like a severe burn), blisters, ulcers on the skin, hair loss, and severe pain. Very large doses can result in
+permanent hair loss, scarring, altered skin color, deterioration of the affected body part, and death of the
+affected tissue (requiring surgery). For more information, see CDC’s fact sheet “Acute Radiation
+Syndrome,” at http://www.bt.cdc.gov/radiation/ars.asp.
+
+Decay chain (decay series): the series of decays that certain radioisotopes go through before reaching
+a stable form. For example, the decay chain that begins with uranium-238 (U-238) ends in lead-206 (Pb-
+206), after forming isotopes, such as uranium-234 (U-234), thorium-230 (Th-230), radium-226 (Ra-226),
+and radon-222 (Rn-222).
+
+Decay constant: the fraction of a number of atoms of a radioactive nuclide that disintegrates in a unit of
+time. The decay constant is inversely proportional to the radioactive half-life.
+
+                                               December 2003                                     Page 6 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Decay products (or daughter products): the isotopes or elements formed and the particles and high-
+energy electromagnetic radiation emitted by the nuclei of radionuclides during radioactive decay. Also
+known as "decay chain products" or "progeny" (the isotopes and elements). A decay product may be
+either radioactive or stable.
+
+
+Decay, radioactive: disintegration of the nucleus of an unstable atom by the release of radiation.
+
+Decontamination: the reduction or removal of radioactive contamination from a structure, object, or
+person.
+
+Depleted uranium: uranium containing less than 0.7% uranium-235, the amount found in natural
+uranium. See also enriched uranium.
+
+Deposition density: the activity of a radionuclide per unit area of ground. Reported as becquerels per
+square meter or curies per square meter.
+
+Deterministic effects: effects that can be related directly to the radiation dose received. The severity
+increases as the dose increases. A deterministic effect typically has a threshold below which the effect will
+not occur. See also stochastic effect, non-stochastic effect.
+
+Deuterium: a non-radioactive isotope of the hydrogen atom that contains a neutron in its nucleus in
+addition to the one proton normally seen in hydrogen. A deuterium atom is twice as heavy as normal
+hydrogen. See also tritium.
+
+Dirty bomb: a device designed to spread radioactive material by conventional explosives when the bomb
+explodes. A dirty bomb kills or injures people through the initial blast of the conventional explosive and
+spreads radioactive contamination over possibly a large area—hence the term “dirty.” Such bombs could
+be miniature devices or large truck bombs. A dirty bomb is much simpler to make than a true nuclear
+weapon. See also radiological dispersal device.
+
+Dose (radiation): radiation absorbed by person’s body. Several different terms describe radiation dose.
+For more information, see “Primer on Radiation Measurement” at the end of this document.
+
+Dose coefficient: the factor used to convert radionuclide intake to dose. Usually expressed as dose per
+unit intake (e.g., sieverts per becquerel).
+
+Dose equivalent: a quantity used in radiation protection to place all radiation on a common scale for
+calculating tissue damage. Dose equivalent is the absorbed dose in grays times the quality factor. The
+quality factor accounts for differences in radiation effects caused by different types of ionizing radiation.
+Some radiation, including alpha particles, causes a greater amount of damage per unit of absorbed dose
+than other radiation. The sievert (Sv) is the unit used to measure dose equivalent. For more information,
+see “Primer on Radiation Measurement” at the end of this document.
+
+Dose rate: the radiation dose delivered per unit of time.
+
+Dose reconstruction: a scientific study that estimates doses to people from releases of radioactivity or
+other pollutants. The dose is reconstructed by determining the amount of material released, the way
+people came in contact with it, and the amount they absorbed.
+
+                                               December 2003                                     Page 7 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Dosimeter: a small portable instrument (such as a film badge, thermoluminescent dosimeter [TLD], or
+pocket dosimeter) for measuring and recording the total accumulated dose of ionizing radiation a person
+receives.
+
+
+
+Dosimetry: assessment (by measurement or calculation) of radiation dose.
+
+Effective dose: a dosimetric quantity useful for comparing the overall health affects of irradiation of the
+whole body. It takes into account the absorbed doses received by various organs and tissues and weighs
+them according to present knowledge of the sensitivity of each organ to radiation. It also accounts for the
+type of radiation and the potential for each type to inflict biologic damage. The effective dose is used, for
+example, to compare the overall health detriments of different radionuclides in a given mix. The unit of
+effective dose is the sievert (Sv); 1 Sv = 1 J/kg. For more information, see “Primer on Radiation
+Measurement” at the end of this document.
+
+Effective half-life: the time required for the amount of a radionuclide deposited in a living organism to
+be diminished by 50% as a result of the combined action of radioactive decay and biologic elimination.
+See also biological half-life, decay constant, radioactive half-life.
+
+Electron: an elementary particle with a negative electrical charge and a mass 1/1837 that of the proton.
+Electrons surround the nucleus of an atom because of the attraction between their negative charge and
+the positive charge of the nucleus. A stable atom will have as many electrons as it has protons. The
+number of electrons that orbit an atom determine its chemical properties. See also neutron.
+
+Electron volt (eV): a unit of energy equivalent to the amount of energy gained by an electron when it
+passes from a point of low potential to a point one volt higher in potential.
+
+Element: 1) all isotopes of an atom that contain the same number of protons. For example, the element
+uranium has 92 protons, and the different isotopes of this element may contain 134 to 148 neutrons. 2)
+In a reactor, a fuel element is a metal rod containing the fissile material.
+
+Enriched uranium: uranium in which the proportion of the isotope uranium-235 has been increased by
+removing uranium-238 mechanically. See also depleted uranium.
+
+Epidemiology: the study of the distribution and determinants of health-related states or events in
+specified populations; and the application of this study to the control of health problems.
+
+Exposure (radiation): a measure of ionization in air caused by x-rays or gamma rays only. The unit of
+exposure most often used is the roentgen. See also contamination.
+
+Exposure pathway: a route by which a radionuclide or other toxic material can enter the body. The main
+exposure routes are inhalation, ingestion, absorption through the skin, and entry through a cut or wound
+in the skin.
+
+Exposure rate: a measure of the ionization produced in air by x-rays or gamma rays per unit of time
+(frequently expressed in roentgens per hour).
+
+External exposure: exposure to radiation outside of the body.
+
+                                              December 2003                                      Page 8 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Fallout, nuclear: minute particles of radioactive debris that descend slowly from the atmosphere after a
+nuclear explosion. For more information, see Chapter 2 of CDC’s Fallout Report at
+http://www.cdc.gov/nceh/radiation/fallout/falloutreport.pdf.
+
+Fissile material: any material in which neutrons can cause a fission reaction. The three primary fissile
+materials are uranium-233, uranium-235, and plutonium-239.
+
+Fission (fissioning): the splitting of a nucleus into at least two other nuclei that releases a large amount
+of energy. Two or three neutrons are usually released during this transformation. See also fusion.
+
+Fractionated exposure: exposure to radiation that occurs in several small acute exposures, rather than
+continuously as in a chronic exposure.
+
+Fusion: a reaction in which at least one heavier, more stable nucleus is produced from two lighter, less
+stable nuclei. Reactions of this type are responsible for the release of energy in stars or in thermonuclear
+weapons.
+
+Gamma rays: high-energy electromagnetic radiation emitted by certain radionuclides when their nuclei
+transition from a higher to a lower energy state. These rays have high energy and a short wave length. All
+gamma rays emitted from a given isotope have the same energy, a characteristic that enables scientists
+to identify which gamma emitters are present in a sample. Gamma rays penetrate tissue farther than do
+beta or alpha particles, but leave a lower concentration of ions in their path to potentially cause cell
+damage. Gamma rays are very similar to x-rays. See also neutron.
+
+Geiger counter: a radiation detection and measuring instrument consisting of a gas-filled tube containing
+electrodes, between which an electrical voltage but no current flows. When ionizing radiation passes
+through the tube, a short, intense pulse of current passes from the negative electrode to the positive
+electrode and is measured or counted. The number of pulses per second measures the intensity of the
+radiation field. Geiger counters are the most commonly used portable radiation detection instruments.
+
+Genetic effects: hereditary effects (mutations) that can be passed on through reproduction because of
+changes in sperm or ova. See also teratogenic effects, somatic effects.
+
+Gray (Gy): a unit of measurement for absorbed dose. It measures the amount of energy absorbed in a
+material. The unit Gy can be used for any type of radiation, but it does not describe the biological effects
+of the different radiations. For more information, see “Primer on Radiation Measurement” at the end of
+this document.
+
+Half-life: the time any substance takes to decay by half of its original amount. See also biological half-life,
+decay constant, effective half-life, radioactive half-life.
+
+Health physics: a scientific field that focuses on protection of humans and the environment from
+radiation. Health physics uses physics, biology, chemistry, statistics, and electronic instrumentation to
+help protect individuals from any damaging effects of radiation. For more information, see the Health
+Physics Society website: http://www.hps.org/.
+
+High-level radioactive waste: the radioactive material resulting from spent nuclear fuel reprocessing.
+This can include liquid waste directly produced in reprocessing or any solid material derived from the liquid
+wastes having a sufficient concentration of fission products. Other radioactive materials can be designated
+as high-level waste, if they require permanent isolation. This determination is made by the U.S. Nuclear
+                                                December 2003                                      Page 9 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Regulatory Commission on the basis of criteria established in U.S. law. See also low-level waste,
+transuranic waste.
+
+Hot spot: any place where the level of radioactive contamination is considerably greater than the area
+around it.
+
+
+Ingestion: 1) the act of swallowing; 2) in the case of radionuclides or chemicals, swallowing radionuclides
+or chemicals by eating or drinking.
+
+Inhalation: 1) the act of breathing in; 2) in the case of radionuclides or chemicals, breathing in
+radionuclides or chemicals.
+
+Internal exposure: exposure to radioactive material taken into the body.
+
+Iodine: a nonmetallic solid element. There are both radioactive and non-radioactive isotopes of iodine.
+Radioactive isotopes of iodine are widely used in medical applications. Radioactive iodine is a fission
+product and is the largest contributor to people’s radiation dose after an accident at a nuclear reactor.
+
+Ion: an atom that has fewer or more electrons than it has protons causing it to have an electrical charge
+and, therefore, be chemically reactive.
+
+Ionization: the process of adding one or more electrons to, or removing one or more electrons from,
+atoms or molecules, thereby creating ions. High temperatures, electrical discharges, or nuclear radiation
+can cause ionization.
+
+Ionizing radiation: any radiation capable of displacing electrons from atoms, thereby producing ions.
+High doses of ionizing radiation may produce severe skin or tissue damage. See also alpha particle, beta
+particle, gamma ray, neutron, x-ray.
+
+Irradiation: exposure to radiation.
+
+Isotope: a nuclide of an element having the same number of protons but a different number of neutrons.
+
+Kiloton (Kt): the energy of an explosion that is equivalent to an explosion of 1,000 tons of TNT. One
+kiloton equals 1 trillion (1012) calories. See also megaton.
+
+Latent period: the time between exposure to a toxic material and the appearance of a resultant health
+effect.
+
+Lead (Pb): a heavy metal. Several isotopes of lead, such as Pb-210 which emits beta radiation, are in the
+uranium decay chain.
+
+
+
+Lead Federal Agency (LFA): the federal agency that leads and coordinates the emergency response
+activities of other federal agencies during a nuclear emergency. After a nuclear emergency, the Federal
+Radiological Emergency Response Plan (FRERP, available at
+http://www.fas.org/nuke/guide/usa/doctrine/national/frerp.htm) will determine which federal agency will
+be the LFA.
+                                              December 2003                                    Page 10 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+
+Local radiation injury (LRI): acute radiation exposure (more than 1,000 rads) to a small, localized part
+of the body. Most local radiation injuries do not cause death. However, if the exposure is from penetrating
+radiation (neutrons, x-rays, or gamma rays), internal organs may be damaged and some symptoms of
+acute radiation syndrome (ARS), including death, may occur. Local radiation injury invariably involves skin
+damage, and a skin graft or other surgery may be required. See also CDC’s fact sheet “Acute Radiation
+Syndrome” at http://www.bt.cdc.gov/radiation/ars.asp.
+
+
+Low-level waste (LLW): radioactively contaminated industrial or research waste such as paper, rags,
+plastic bags, medical waste, and water-treatment residues. It is waste that does not meet the criteria for
+any of three other categories of radioactive waste: spent nuclear fuel and high-level radioactive waste;
+transuranic radioactive waste; or uranium mill tailings. Its categorization does not depend on the level of
+radioactivity it contains.
+
+Megaton (Mt): the energy of an explosion that is equivalent to an explosion of 1 million tons of TNT. One
+megaton is equal to a quintillion (1018) calories. See also kiloton.
+
+Molecule: a combination of two or more atoms that are chemically bonded. A molecule is the smallest
+unit of a compound that can exist by itself and retain all of its chemical properties.
+
+Neoplastic: pertaining to the pathologic process resulting in the formation and growth of an abnormal
+mass of tissue.
+
+Neutron: a small atomic particle possessing no electrical charge typically found within an atom's nucleus.
+Neutrons are, as the name implies, neutral in their charge. That is, they have neither a positive nor a
+negative charge. A neutron has about the same mass as a proton. See also alpha particle, beta particle,
+gamma ray, nucleon, x-ray.
+
+Non-ionizing radiation: radiation that has lower energy levels and longer wavelengths than ionizing
+radiation. It is not strong enough to affect the structure of atoms it contacts but is strong enough to heat
+tissue and can cause harmful biological effects. Examples include radio waves, microwaves, visible light,
+and infrared from a heat lamp.
+
+Non-stochastic effects: effects that can be related directly to the radiation dose received. The effect is
+more severe with a higher does. It typically has a threshold, below which the effect will not occur. These
+are sometimes called deterministic effects. For example, a skin burn from radiation is a non-stochastic
+effect that worsens as the radiation dose increases. See also stochastic effects.
+
+Nuclear energy: the heat energy produced by the process of nuclear fission within a nuclear reactor or
+by radioactive decay.
+
+Nuclear fuel cycle: the steps involved in supplying fuel for nuclear power plants. It can include mining,
+milling, isotopic enrichment, fabrication of fuel elements, use in reactors, chemical reprocessing to recover
+the fissile material remaining in the spent fuel, reenrichment of the fuel material refabrication into new
+fuel elements, and waste disposal.
+
+Nuclear tracers: radioisotopes that give doctors the ability to "look" inside the body and observe soft
+tissues and organs, in a manner similar to the way x-rays provide images of bones. A radioactive tracer is
+                                              December 2003                                    Page 11 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+chemically attached to a compound that will concentrate naturally in an organ or tissue so that an image
+can be taken.
+
+Nucleon: a proton or a neutron; a constituent of the nucleus of an atom.
+
+
+
+
+Nucleus: the central part of an atom that contains protons and neutrons. The nucleus is the heaviest part
+of the atom.
+
+Nuclide: a general term applicable to all atomic forms of an element. Nuclides are characterized by the
+number of protons and neutrons in the nucleus, as well as by the amount of energy contained within the
+atom.
+
+Pathways: the routes by which people are exposed to radiation or other contaminants. The three basic
+pathways are inhalation, ingestion, and direct external exposure. See also exposure pathway.
+
+Penetrating radiation: radiation that can penetrate the skin and reach internal organs and tissues.
+Photons (gamma rays and x-rays), neutrons, and protons are penetrating radiations. However, alpha
+particles and all but extremely high-energy beta particles are not considered penetrating radiation.
+
+Photon: discrete "packet" of pure electromagnetic energy. Photons have no mass and travel at the speed
+of light. The term "photon" was developed to describe energy when it acts like a particle (causing
+interactions at the molecular or atomic level), rather than a wave. Gamma rays and x-rays are photons.
+
+Pitchblende: a brown to black mineral that has a distinctive luster. It consists mainly of urananite (UO2),
+but also contains radium (Ra). It is the main source of uranium (U) ore.
+
+Plume: the material spreading from a particular source and traveling through environmental media, such
+as air or ground water. For example, a plume could describe the dispersal of particles, gases, vapors, and
+aerosols in the atmosphere, or the movement of contamination through an aquifer (For example, dilution,
+mixing, or adsorption onto soil).
+
+Plutonium (Pu): a heavy, man-made, radioactive metallic element. The most important isotope is Pu-
+239, which has a half-life of 24,000 years. Pu-239 can be used in reactor fuel and is the primary isotope in
+weapons. One kilogram is equivalent to about 22 million kilowatt-hours of heat energy. The complete
+detonation of a kilogram of plutonium produces an explosion equal to about 20,000 tons of chemical
+explosive. All isotopes of plutonium are readily absorbed by the bones and can be lethal depending on the
+dose and exposure time.
+
+Polonium (Po): a radioactive chemical element and a product of radium (Ra) decay. Polonium is found in
+uranium (U) ores.
+
+Prenatal radiation exposure: radiation exposure to an embryo or fetus while it is still in its mother’s
+womb. At certain stages of the pregnancy, the fetus is particularly sensitive to radiation and the health
+consequences could be severe above 5 rads, especially to brain function. For more information, see CDC’s
+fact sheet, “Possible Health Effects of Radiation Exposure on Unborn Babies,” at
+http://www.bt.cdc.gov/radiation/prenatal.asp.
+
+                                              December 2003                                    Page 12 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Protective Action Guide (PAG): a guide that tells state and local authorities at what projected dose
+they should take action to protect people from exposure to unplanned releases of radioactive material into
+the environment.
+
+Proton: a small atomic particle, typically found within an atom's nucleus, that possesses a positive
+electrical charge. Even though protons and neutrons are about 2,000 times heavier than electrons, they
+are tiny. The number of protons is unique for each chemical element. See also nucleon.
+
+Quality factor (Q): the factor by which the absorbed dose (rad or gray) is multiplied to obtain a quantity
+that expresses, on a common scale for all ionizing radiation, the biological damage (rem) to an exposed
+person. It is used because some types of radiation, such as alpha particles, are more biologically
+damaging internally than other types. For more information, see “Primer on Radiation Measurement” at
+the end of this document.
+
+Rad (radiation absorbed dose): a basic unit of absorbed radiation dose. It is a measure of the amount
+of energy absorbed by the body. The rad is the traditional unit of absorbed dose. It is being replaced by
+the unit gray (Gy), which is equivalent to 100 rad. One rad equals the dose delivered to an object of 100
+ergs of energy per gram of material. For more information, see “Primer on Radiation Measurement” at the
+end of this document.
+
+Radiation: energy moving in the form of particles or waves. Familiar radiations are heat, light, radio
+waves, and microwaves. Ionizing radiation is a very high-energy form of electromagnetic radiation.
+
+Radiation sickness: See also acute radiation syndrome (ARS), or the CDC fact sheet “Acute Radiation
+Syndrome,” at http://www.bt.cdc.gov/radiation/ars.asp.
+
+Radiation warning symbol: a symbol prescribed by the Code of Federal Regulations. It is a
+magenta or black trefoil on a yellow background. It must be displayed where certain
+quantities of radioactive materials are present or where certain doses of radiation could be
+received.
+
+Radioactive contamination: the deposition of unwanted radioactive material on the surfaces of
+structures, areas, objects, or people. It can be airborne, external, or internal. See also contamination,
+decontamination.
+
+Radioactive decay: the spontaneous disintegration of the nucleus of an atom.
+
+Radioactive half-life: the time required for a quantity of a radioisotope to decay by half. For example,
+because the half-life of iodine-131 (I-131) is 8 days, a sample of I-131 that has 10 mCi of activity on
+January 1, will have 5 mCi of activity 8 days later, on January 9. See also: biological half-life, decay
+constant, effective half-life.
+
+Radioactive material: material that contains unstable (radioactive) atoms that give off radiation as they
+decay.
+
+Radioactivity: the process of spontaneous transformation of the nucleus, generally with the emission of
+alpha or beta particles often accompanied by gamma rays. This process is referred to as decay or
+disintegration of an atom.
+
+
+
+                                              December 2003                                    Page 13 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Radioassay: a test to determine the amounts of radioactive materials through the detection of ionizing
+radiation. Radioassays will detect transuranic nuclides, uranium, fission and activation products, naturally
+occurring radioactive material, and medical isotopes.
+
+Radiogenic: health effects caused by exposure to ionizing radiation.
+
+Radiography: 1) medical: the use of radiant energy (such as x-rays and gamma rays) to image body
+systems. 2) industrial: the use of radioactive sources to photograph internal structures, such as turbine
+blades in jet engines. A sealed radiation source, usually iridium-192 (Ir-192) or cobalt-60 (Co-60), beams
+gamma rays at the object to be checked. Gamma rays passing through flaws in the metal or incomplete
+welds strike special photographic film (radiographic film) on the opposite side.
+
+Radioisotope (radioactive isotope): isotopes of an element that have an unstable nucleus. Radioactive
+isotopes are commonly used in science, industry, and medicine. The nucleus eventually reaches a stable
+number of protons and neutrons through one or more radioactive decays. Approximately 3,700 natural
+and artificial radioisotopes have been identified.
+
+Radiological or radiologic: related to radioactive materials or radiation. The radiological sciences focus
+on the measurement and effects of radiation.
+
+Radiological dispersal device (RDD): a device that disperses radioactive material by conventional
+explosive or other mechanical means, such as a spray. See also dirty bomb.
+
+Radionuclide: an unstable and therefore radioactive form of a nuclide.
+
+Radium (Ra): a naturally occurring radioactive metal. Radium is a radionuclide formed by the decay of
+uranium (U) and thorium (Th) in the environment. It occurs at low levels in virtually all rock, soil, water,
+plants, and animals. Radon (Rn) is a decay product of radium.
+
+Radon (Rn): a naturally occurring radioactive gas found in soils, rock, and water throughout the United
+States. Radon causes lung cancer and is a threat to health because it tends to collect in homes,
+sometimes to very high concentrations. As a result, radon is the largest source of exposure to people from
+naturally occurring radiation.
+
+Relative risk: the ratio between the risk for disease in an irradiated population to the risk in an
+unexposed population. A relative risk of 1.1 indicates a 10% increase in cancer from radiation, compared
+with the "normal" incidence. See also risk, absolute risk.
+
+Rem (roentgen equivalent, man): a unit of equivalent dose. Not all radiation has the same biological
+effect, even for the same amount of absorbed dose. Rem relates the absorbed dose in human tissue to the
+effective biological damage of the radiation. It is determined by multiplying the number of rads by the
+quality factor, a number reflecting the potential damage caused by the particular type of radiation. The
+rem is the traditional unit of equivalent dose, but it is being replaced by the sievert (Sv), which is equal to
+100 rem. For more information, see “Primer on Radiation Measurement” at the end of this document.
+
+Risk: the probability of injury, disease, or death under specific circumstances and time periods. Risk can
+be expressed as a value that ranges from 0% (no injury or harm will occur) to 100% (harm or injury will
+definitely occur). Risk can be influenced by several factors: personal behavior or lifestyle, environmental
+exposure to other material, or inborn or inherited characteristic known from scientific evidence to be
+
+                                               December 2003                                    Page 14 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+associated with a health effect. Because many risk factors are not exactly measurable, risk estimates are
+uncertain. See also absolute risk, relative risk.
+
+Risk assessment: an evaluation of the risk to human health or the environment by hazards. Risk
+assessments can look at either existing hazards or potential hazards.
+
+Roentgen (R): a unit of exposure to x-rays or gamma rays. One roentgen is the amount of gamma or x-
+rays needed to produce ions carrying 1 electrostatic unit of electrical charge in 1 cubic centimeter of dry
+air under standard conditions.
+
+
+Sensitivity: ability of an analytical method to detect small concentrations of radioactive material.
+
+Shielding: the material between a radiation source and a potentially exposed person that reduces
+exposure.
+
+Sievert (Sv): a unit used to derive a quantity called dose equivalent. This relates the absorbed dose in
+human tissue to the effective biological damage of the radiation. Not all radiation has the same biological
+effect, even for the same amount of absorbed dose. Dose equivalent is often expressed as millionths of a
+sievert, or micro-sieverts (μSv). One sievert is equivalent to 100 rem. For more information, see “Primer
+on Radiation Measurement” at the end of this document.
+
+S.I. units: the Systeme Internationale (or International System) of units and measurements. This system
+of units officially came into being in October 1960 and has been adopted by nearly all countries, although
+the amount of actual usage varies considerably. For more information, see “Primer on Radiation
+Measurement” at the end of this document.
+
+Somatic effects: effects of radiation that are limited to the exposed person, as distinguished from
+genetic effects, which may also affect subsequent generations. See also teratogenic effects.
+
+Stable nucleus: the nucleus of an atom in which the forces among its particles are balanced. See also
+unstable nucleus.
+
+Stochastic effect: effect that occurs on a random basis independent of the size of dose. The effect
+typically has no threshold and is based on probabilities, with the chances of seeing the effect increasing
+with dose. If it occurs, the severity of a stochastic effect is independent of the dose received. Cancer is a
+stochastic effect. See also non-stochastic effect, deterministic effect.
+
+Strontium (Sr): a silvery, soft metal that rapidly turns yellow in air. Sr-90 is one of the radioactive
+fission materials created within a nuclear reactor during its operation. Stronium-90 emits beta particles
+during radioactive decay.
+
+Surface burst: a nuclear weapon explosion that is close enough to the ground for the radius of the
+fireball to vaporize surface material. Fallout from a surface burst contains very high levels of radioactivity.
+See also air burst. For more information, see Chapter 2 of CDC’s Fallout Report at
+http://www.cdc.gov/nceh/radiation/fallout/falloutreport.pdf .
+
+Tailings: waste rock from mining operations that contains concentrations of mineral ore that are too low
+to make typical extraction methods economical.
+
+                                               December 2003                                     Page 15 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Thermonuclear device: a “hydrogen bomb.” A device with explosive energy that comes from fusion of
+small nuclei, as well as fission.
+
+Teratogenic effect: birth defects that are not passed on to future generations, caused by exposure to a
+toxin as a fetus. See also genetic effects, somatic effects.
+
+Terrestrial radiation: radiation emitted by naturally occurring radioactive materials, such as uranium
+(U), thorium (Th), and radon (Rn) in the earth.
+
+Thorium (Th): a naturally occurring radioactive metal found in small amounts in soil, rocks, water,
+plants, and animals. The most common isotopes of thorium are thorium-232 (Th-232), thorium-230 (Th-
+230), and thorium-238 (Th-238).
+
+
+Transuranic: pertaining to elements with atomic numbers higher than uranium (92). For example,
+plutonium (Pu) and americium (Am) are transuranics.
+
+Tritium: (chemical symbol H-3) a radioactive isotope of the element hydrogen (chemical symbol H). See
+also deuterium.
+
+Unstable nucleus: a nucleus that contains an uneven number of protons and neutrons and seeks to
+reach equilibrium between them through radioactive decay (i.e., the nucleus of a radioactive atom). See
+also stable nucleus.
+
+UNSCEAR: United Nations Scientific Committee on the Effects of Atomic Radiation. See also
+http://www.unscear.org/.
+
+Uranium (U): a naturally occurring radioactive element whose principal isotopes are uranium-238 (U-
+238) and uranium-235 (U-235). Natural uranium is a hard, silvery-white, shiny metallic ore that contains
+a minute amount of uranium-234 (U-234).
+
+Uranium mill tailings: naturally radioactive residue from the processing of uranium ore. Although the
+milling process recovers about 95% of the uranium, the residues, or tailings, contain several isotopes of
+naturally occurring radioactive material, including uranium (U), thorium (Th), radium (Ra), polonium (Po),
+and radon (Rn).
+
+Whole body count: the measure and analysis of the radiation being emitted from a person’s entire body,
+detected by a counter external to the body.
+
+Whole body exposure: an exposure of the body to radiation, in which the entire body, rather than an
+isolated part, is irradiated by an external source.
+
+X-ray: electromagnetic radiation caused by deflection of electrons from their original paths, or inner
+orbital electrons that change their orbital levels around the atomic nucleus. X-rays, like gamma rays can
+travel long distances through air and most other materials. Like gamma rays, x-rays require more
+shielding to reduce their intensity than do beta or alpha particles. X-rays and gamma rays differ primarily
+in their origin: x-rays originate in the electronic shell; gamma rays originate in the nucleus. See also
+neutron.
+
+
+
+                                              December 2003                                    Page 16 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Primer on Radiation Measurement
+
+In the aftermath of a radiological emergency the public will see radiation and its potential hazards
+described in many different and sometimes confusing ways. This primer is intended to help journalists and
+community leaders understand these terms.
+
+Activity or radioactivity is measured by the number of atoms disintegrating per unit time. A becquerel is
+1 disintegration per second. A curie is 37 billion disintegrations per second, which is the number of
+disintegrations per second in 1 gram of pure radium. A disintegrating atom can emit a beta particle, an
+alpha particle, a gamma ray, or some combination of all these, so becquerels or curies alone do not
+provide enough information to assess the risk to a person from a radioactive source.
+
+Disintegrating atoms emit different forms of radiation–—alpha particles, beta particles, gamma rays, or x-
+rays. As radiation moves through the body, it dislodges electrons from atoms, disrupting molecules. Each
+time this happens, the radiation loses some energy until it escapes from the body or disappears. The
+energy deposited indicates the number of molecules disrupted. The energy the radiation deposits in tissue
+is called the dose, or more correctly, the absorbed dose. The units of measure for absorbed dose are
+the gray (1 joule per kilogram of tissue) or the rad (1/100 of a gray). The cumulative dose is the total
+absorbed dose or energy deposited by the body or a region of the body from repeated or prolonged
+exposures.
+
+Alpha particles, beta particles, gamma rays, and x-rays affect tissue in different ways. Alpha particles
+disrupt more molecules in a shorter distance than gamma rays. A measure of the biologic risk of the
+energy deposited is the dose equivalent. The units of dose equivalent are sieverts or rem. Dose
+equivalent is calculated by multiplying the absorbed dose by a quality factor.
+
+Sometimes a large number of people have been exposed to a source of ionizing radiation. To assess the
+potential health effects, scientists often multiply the exposure per person by the number of persons and
+call this the collective dose. Collective dose is expressed as “person-rem” or “person-sieverts.”
+
+
+
+Abbreviations for Radiation Measurements
+When the amounts of radiation being measured are less than 1, prefixes are attached to the unit of
+measure as a type of shorthand. This is called scientific notation and is used in many scientific fields. The
+table below shows the prefixes for radiation measurement and their associated numeric notations.
+
+
+
+
+                                               December 2003                                    Page 17 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+       Prefix       Equal to       How Much Is That?         Abbreviation            Example
+
+      atto-       1 X 10-18       .000000000000000001               A                    aCi
+
+      femto-      1 X 10-15       .000000000000001                  F                    fCi
+
+      pico-       1 X 10-12       .000000000001                     p                    pCi
+
+      nano-       1 X 10-9        .000000001                        n                    nCi
+
+      micro-      1 X 10-6        .000001                           μ                    μCi
+
+      milli-      1 X 10-3        .001                             m                    mCi
+
+      centi-      1 x 10-2        .01                               c                   cSv
+
+
+When the amount to be measured is 1,000 (i.e., 1 X 103) or higher, prefixes are attached to the unit of
+measure to shorten very large numbers (also scientific notation). The table below shows the prefixes used
+in radiation measurement and their associated numeric notations.
+
+
+
+         Prefix        Equal to         How Much Is That?        Abbreviation           Example
+
+      kilo-          1 X 103                            1,000           k                  kCi
+
+      mega-          1 X 106                         100,000            M                  MCi
+
+      giga-          1 X 109                     100,000,000            G                 GBq
+
+      tetra-         1 X 1012                100,000,000,000            T                  TBq
+
+      peta-          1 X 1015            100,000,000,000,000            P                  PBq
+
+      exa-           1 x 1018      100,000,000,000,000,000              E                  EBq
+
+
+Health Effects of Radiation Exposure
+Exposure to radiation can cause two kinds of health effects. Deterministic effects are observable health
+effects that occur soon after receipt of large doses. These may include hair loss, skin burns, nausea, or
+death. Stochastic effects are long-term effects, such as cancer. The radiation dose determines the
+severity of a deterministic effect and the probability of a stochastic effect.
+
+
+The object of any radiation control program is to prevent any deterministic effects and minimize the risk
+for stochastic effects. When a person inhales or ingests a radionuclide, the body will absorb different
+amounts of that radionuclide in different organs, so each organ will receive a different organ dose.
+Federal Guidance Report 11 (FGR-11) from the Environmental Protection Agency (EPA) lists dose
+                                               December 2003                                     Page 18 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+conversion factors for all radionuclides. This report can be downloaded from
+http://www.epa.gov/radiation/pubs.htm. The dose conversion factor for each organ is the number of rem
+delivered to that organ by each curie or becquerel of intake of a specific radioisotope.
+
+
+External, Internal, and Absorbed Doses
+
+A person can receive an external dose by standing near a gamma or high-energy beta-emitting source.
+A person can receive an internal dose by ingesting or inhaling radioactive material. The external
+exposure stops when the person leaves the area of the source. The internal exposure continues until the
+radioactive material is flushed from the body by natural processes or decays.
+
+A person who has ingested a radioactive material receives an internal dose to several different organs.
+The absorbed dose to each organ is different, and the sensitivity of each organ to radiation is different.
+FGR-11 assigns a different weighting factor to each organ. To determine a person’s risk for cancer,
+multiply each organ’s dose by its weighting factor, and add the results; the sum is the effective dose
+equivalent (“effective” because it is not really the dose to the whole body, but a sum of the relative risks
+to each organ; and “equivalent” because it is presented in rem or sieverts instead of rads or gray).
+
+
+Committed and Total Effective Dose Equivalents
+
+When a person inhales or ingests a radionuclide, that radionuclide is distributed to different organs and
+stays there for days, months, or years until it decays or is excreted. The radionuclide will deliver a
+radiation dose over a period of time. The dose that a person receives from the time the nuclide enters the
+body until it is gone is the committed dose. FGR-11 calculates doses over a 50-year period and presents
+the committed dose equivalent for each organ plus the committed effective dose equivalent
+(CEDE).
+
+A person can receive both an internal dose and an external dose. The sum of the committed effective dose
+equivalent (CEDE) and the external dose is called the total effective dose equivalent (TEDE).
+
+
+
+
+                                              December 2003                                    Page 19 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+                                           Bibliography
+Agency for Toxic Substances and Disease Registry Glossary [online]. [cited 2002 Aug 5] Available from
+URL: http://www.atsdr.cdc.gov/glossary.html.
+
+
+Birky BK, Slaback LA, Schleien b. Handbook of Health Physics and Radiological Health 3rd Ed. Maryland:
+Williamson and Wilkins, 1998.
+
+Centers for Disease Control and Prevention. Public Health Emergency Preparedness and Response
+[online]. [cited 2002 Sep 3] Available from URL: http://www.bt.cdc.gov/.
+
+Centers for Disease Control and Prevention. The Savannah River Site Dose Reconstruction Project Phase
+II: Source Term Calculation and Ingestion Pathway Data Retrieval April 30 2001, Glossary [online]. [cited
+Sep 12 2002]. Available from URL: www.cdc.gov/nceh/radiation/savannah/glossary.pdf.
+
+Centers for Disease Control and Prevention and the National Cancer Institute. A Feasibility Study of the
+Health Consequences to the American Population from Nuclear Weapons Tests Conducted by the United
+States and Other Nations. Vol. 1, August 2001, Glossary: pp. 234–246.
+
+Council for Foreign Relations. Terrorism: Questions & Answers [online]. [cited 2002 Aug 28]. Available
+from URL: http://www.terrorismanswers.com.
+
+Environmental Protection Agency. Radiation Information [online]. [cited 2002 Oct 1] Available from URL:
+http://www.epa.gov/rpdweb00/terms/index.html.
+
+Federal Emergency Management Agency. Guide for All-Hazard Emergency Operations Planning: State and
+Local Guide (101) FEMA [online]. [cited 2002 Aug 7]. Available from URL:
+http://www.fema.gov/rrr/allhzpln6g.shtm.
+
+Feiner F, Miller DG, Walker FW. Chart of the Nuclides 13th Ed. California: General Electric Corporation,
+1983.
+
+Friis R, Sellers T. Epidemiology for Public Health Practice 2nd Ed. Gaithersburg, Maryland: Aspen
+Publishers, Inc. 1999.
+
+Institute of Medicine. Appendix K Glossary and Acronyms, Biological Threats and Terrorism: Assessing the
+Science and Response Capabilities: Workshop Summary. Washington, DC: National Academy Press: 2002:
+pp.275–286.
+
+New Mexico Department of Public Safety. New Mexico Weapons of Mass Destruction Preparedness
+Glossary [online]. [cited 2002 Aug 5]. Available from URL: http://www.wmd-nm.org/mods/glossary/.
+
+U.S. Department of Transportation. 2000 Emergency Response Guidebook [online]. [cited 2002 Aug 7].
+Available from URL: http://hazmat.dot.gov/gydebook.htm
+
+
+
+
+                                              December 2003                                    Page 20 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+
+FOCUSING PREPAREDNESS ACTIVITIES
+        Rapid response to nuclear or radiological terrorism is crucial. Without special preparation at the
+local and state levels, a large-scale attack involving radiation could overwhelm the local and perhaps
+national public health infrastructure. Large numbers of patients, including both the injured and those
+concerned about potential exposure would seek medical attention, with a corresponding need for medical
+supplies, diagnostic tests, hospital beds, and information and reassurance. In addition, the medical
+services delivery system might become quickly disabled if provider facilities, equipment and personnel
+become significantly contaminated. First responders, hospitals and the Emergency Medical System are
+generally responsible for ensuring that the contaminated, injured, and those concerned about potential
+exposure are medically treated in an efficient manner. The potential for alarm and major disruption of
+everyday life is enormous because of a widespread fear of such an unknown agent as radiation.
+
+Preparedness for radiological terrorism is an essential component of the U.S. public health surveillance
+and response system, which is designed to protect the population against any unusual public health event.
+However, hospitals and public health agencies should prepare for the unique features of radiological
+terrorism, such as mass casualties with blast injuries combined with burns, radioactive contamination, and
+acute radiation syndrome.
+
+KEY FOCUS AREAS
+CDC’s recommendations are based on the following six focus areas:
+   •   Notification and Communication
+   •   Triage
+   •   Patient Management
+   •   Healthcare Provider Protection and Resources
+   •   Surveillance
+   •   Community Planning
+
+
+Notification and Communication
+
+
+The key to a hospital’s capacity to serve the critically ill is to recognize that a hospital is part of a
+community. It is important that hospitals work with their communities and in particular with local and
+state health and radiation protection departments on developing plans for notification and communication.
+The local hospital is an integral part of the community-wide system for emergency response and any
+existing community emergency response plans are a good place to begin. In this regard, hospitals should:
+   •   Understand community plans and resources and specifically:
+       - Determine if there is an existing state or community plan. Consider how the hospital fits into this
+          existing plan. Note that states with nuclear power plants have well-defined plans and an established
+          hierarchy for notification and plan activation.
+       - If there is no existing community plan, participate in the development of one. Include the state
+          radiation protection or radiation control program (this program is usually housed within a state’s
+          public health, environmental control, or professional licensing agency) in the development of any
+          community plans.
+                                              December 2003                                     Page 21 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+       -   Utilize the resources available from FEMA as a means of locating both planning information and state
+           emergency management agencies (www.fema.gov). Also take into consideration the many other
+           organizations and entities that deal with emergency-related services during disasters, such as the
+           National Disaster Medical System (www.oep-ndms.dhhs.gov/ ), the American Burn Association
+           (www.ameriburn.org), Emergency Nurses Association, American College of Emergency Physicians,
+           Society for Emergency Physician Assistants, and American Psychological Association’s Disaster
+           Response Network.
+       -   Use the community’s Poison Control Centers as a resource (to find your local Poison Control Center
+           see: www.aapcc.org/findyour.htm ).
+       -   Know that the radiological community has many recognized experts who can assist in response to
+           plan activation. A good resource for expertise in radiation dose estimation would be a hospital
+           medical physicist or health physicist. One might also find expertise in this area at the following
+           internet sites: www.crcpd.org/contact.asp and www.hps1.org/aahp/members/members.htm
+       -   Determine whether the hospital needs an Incident Command Center (ICC). One useful ICC model is
+           the Hospital Emergency Incident Command Structure (HEICS) system used in California
+           (www.emsa.ca.gov ).
+       -   Assign and prepare staff in advance by:
+           •   Ensuring that roles and responsibilities are clearly defined.
+           •   Assigning a staff person, who is available all hours, responsible for making the proper
+               notifications (externally and internally) regarding the hospital’s response to the incident and
+               ensuring they have an accurate and updated list of experts that the staff can contact for
+               guidance.
+           • Having back-ups for key officers, in case they are not available.
+       -   Use existing resources to:
+           •   Regularly revise and update existing plans for radiological incidents.
+           •   Ensure that hospital personnel are familiar with the community’s ICC and, specifically, who is
+               responsible for what and how it will be established.
+       -   Activate a plan that:
+           •   Uses a confirmed incident, suspicious incident, or expected incident as a trigger for the plan.
+           •   Is cautious about triggering emergency response. There may be graded responses, not just an
+               all or none response. Putting unneeded “All Hazards” contingencies in place may result in
+               slowing down delivery of everyday patient care. The HEICS system (referred to above) is
+               designed for modular activation.
+           •   Considers adopting the concept of modular activation, so that parts of the disaster plan may be
+               activated without activating the entire plan and causing major disruption, especially early on
+               when it may be unclear how much of a disaster exists.
+           •   Establishes a strong link with the ICC during the disaster to determine exactly what is taking
+               place. Know who is in charge of your community’s ICC ahead of time.
+
+Hospital Communications
+
+   •   Phone and cellular circuits are frequently overloaded in disasters, possibly rendering them useless.
+       Therefore, 2-way radios and satellite phones should be available as backup communication methods for
+       key hospital personnel.
+
+                                                 December 2003                                      Page 22 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+   •   A communications plan should be developed in advance for disaster and emergency situations (such as
+       a radiological terrorist event) that outlines the audiences, procedures, and key messages. The plan
+       should be exercised similar to the overall hospital response plan. CDC has a CD-Rom available that
+       outlines the steps for developing a communications plan, called CDCynergy ERC. You can contact Judith
+       Courtney at jcourtney@cdc.gov for a copy of the disc. Training information is also available at
+       http://www.cdc.gov/cdcynergy/emergency/.
+   •   External stakeholders are the key audiences for communications. These include:
+       - First Responders, EMSFire, and , Police who are vital to protecting the hospital’s resources and are
+          priority stakeholders.
+       - Media who can play a key role in providing accurate information and therefore possibly reducing the
+          number of concerned individuals who come to the hospital.
+       - Victims and potential victims
+       - Family members
+       - Community members
+       - Local medical facilities
+       - Health departments
+       - Local elected officials
+       - Local hospital and disaster volunteers
+   •   Ensure that all messages are consistent, immediate, accurate, and open. Key message topics include:
+       - If you think you are exposed …
+       - If you are injured …
+       - Likely effects of radiation contamination include…
+       - To avoid contamination …
+       - Available resources, experts/contacts for medical information include…
+   •   Develop a media relations plan that:
+       - Builds relationships with reporters to ensure accurate and timely reporting. Hospitals should invite
+          the media to participate in pre-planning activities and drills. This is a two-way learning opportunity:
+          media learns about strategic factors in a disaster and medical personnel learn how to work with the
+          media.
+       - Includes media in the community planning process so they understand the hospital’s contingency
+          plans.
+       - Designates a spokesperson and spokes-hospital if multiple hospitals are involved in the incident
+          response. Any spokesperson should have prior training in media relations.
+       - Focuses on what the hospital is doing rather than the disaster. Questions not related to the
+          hospital’s response should be referred to state or local emergency management agencies. Hospital
+          personnel should not contribute to the misinformation by discussing topics outside their areas of
+          expertise.
+       - Designates who is coordinating and integrating information going out to the public.
+       - Informs the media of local and national experts and contacts.
+       - Ensures back-up communication equipment and power sources.
+       -
+   •   Develop prepared information packets in advance. Remember that unique messages are called for in an
+       incident involving radiation.
+   •   Practice rumor control by monitoring the local media reports and addressing and correcting
+       “misinformation” immediately. Rumors will arise to fill gaps in information, so if the hospital does not
+       speak about an issue, someone else will.
+
+
+                                                December 2003                                      Page 23 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+   •   Be certain that the hospital is linked to the community’s emergency alert system (stations are required
+       to have equipment to broadcast emergency alerts). The emergency alert system has fallen into disuse,
+       but it is available for this type of communication. Hospitals can contact their county’s emergency
+       management agency director to develop a Reverse 911 ® program that allows the 911 center to
+       categorize a geographic area and broadcast a specific recorded message to that area.
+   •   Develop a press plan since it is an essential component of any community disaster plan. Credibility is
+       key to effective crisis communication. Spokespersons should remain calm, be empathetic and avoid
+       discussing issues outside their areas of expertise.
+
+
+
+
+Triage
+Triage is the sorting and allocation of treatment to patients, especially disaster victims, according to a
+system of priorities designed to maximize the number of survivors. The diagnosis and mitigation of illness
+and injury caused by radiological terrorism is a complex triage process that involves numerous partners
+and activities. Meeting this challenge will require special emergency preparedness in all communities
+throughout the U.S.
+
+Planning for Triage
+   •   In most mass casualty incidents:
+       - A large majority of people will self-triage and go directly to the closest and most familiar hospitals;
+          they will probably bypass field triage and treatment whether contaminated or not (1). Therefore,
+          hospitals often have little, if any, advance notification of incoming patients.
+       - Most of the individuals who come to the hospital are ambulatory, minimally injured, or those who
+          are concerned about potential contamination.
+       - The general community medical needs to continue despite the occurrence of a disaster.
+   •   Hospitals should have plans in place to transfer patients (if conditions allow) to other hospitals or other
+       medical facilities during disasters according to pre-arranged formal agreements. Hospitals are protected
+       from having to transfer unstable patients under the provisions of the Emergency Medical Treatment and
+       Active Labor Act (EMTALA) (2).
+   •   Every individual involved in the response to a mass casualty incident, especially the Fire and Police,
+       should be familiar with the triage process and how to determine who should be sent to the hospital.
+   •   The triage plan should include a process for establishment of an assessment center, separate from the
+       emergency department. The assessment center can be used to rapidly screen victims for injury and
+       contamination, as well as to serve as a location removed from the emergency department where
+       decontamination of victims can take place. The assessment center should also be used for observation,
+       limited treatment and evaluation and reuniting with family members where possible.
+   •    Consideration should be given to setting up a temporary primary assessment center that would be
+       located on the hospital campus, removed from the Emergency Department, or depending upon logistics
+       and the magnitude of the event, a temporary secondary assessment center that would be located within
+       the community but removed from the hospital. If practical, any outside assessment center should be
+       set-up upwind from the patient arrival area (3).
+
+
+                                                December 2003                                      Page 24 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+   •   Hospitals must ensure that the triage process has an efficient record-keeping process to be sure injured
+       persons are not missed. The Armed Forces Radiobiological Research Institute (AFRRI) and the Radiation
+       Emergency Assistance Center/Training Site (REAC/TS) have developed and tested a record-keeping
+       process and a system of tagging for triage, AFFRI’s Biodosimetry Assessment Tool software application
+       (4).
+   •   Hospitals need to take into consideration that corpses from a radiological event may be contaminated
+       with radioactive material. Guidance on handling contaminated corpses is provided by the National
+       Council of Radiation Protection and Measurements (NCRP Report No. 37, “Precautions in the
+       Management of Patients Who Have Received Therapeutic Amounts of Radionuclides,” 1970, NCRP,
+       Washington, D.C.) and by the National Health and Medical Research Council of Australia (1986;AGPS
+       Press, Australian Government Publishing Service, G.P.O., box 84, Canberra, A.C.T. 2601).
+
+
+The Triage Process
+   •   The hospital triage plan should be based on and coordinated with the community plan. It should focus
+       on training and exercises.
+   •   Triage will be conducted at the scene and at the hospital, but communities and responders should
+       attempt to do as much as possible at the scene.
+   •   After a mass casualty or Hazardous Materials (HazMat) incident, hospitals should “lock down,” providing
+       only two entrances:
+       - A site for triage and patients
+       - A site for personnel, staff, press, officials, etc.
+                                                                                                                   Formatted: Bullets and Numbering
+   •   It will require community support and local law enforcement to assist in the lock down because the
+       hospital is an important disaster response asset.
+       - Casualty distribution to participating health care facilities should be based on and coordinated with
+           the community plan.
+       - Hospital space must be reserved for the most critically injured or ill.
+   •   The assessment center should be used for observation, decontamination, limited treatment and
+       evaluation and reuniting with family members where possible.
+   •   Under the triage process for patients with life-threatening conditions, emergency department staff
+       should stabilize and treat physical symptoms according to standard procedures. The threat of
+       contamination should not preclude patient treatment.
+   •   Under the triage process for patients with non-life threatening conditions:
+       - When possible, trained staff should survey all patients for radioactive contamination (See Appendix
+          C for information on radiation survey instrumentation).
+                                                                                                                   Formatted: Bullets and Numbering
+          •   If contamination is detected or suspected, remove the patient’s clothing, give the patient a
+              shower, then treat physical symptoms according to standard procedures.
+          •   Localized contamination can be rinsed off with pre-moistened wipes or washed with soap and
+              water as opposed to showering the individual.
+          •   If radiation is still detected after washing, admit the patient if medically warranted and arrange
+              for further evaluation and decontamination.
+
+
+
+
+                                               December 2003                                       Page 25 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Key Principles of Contamination Containment
+
+   •   Hospitals should use contamination containment processes with which the staff are familiar and should
+       apply universal precautions and isolation techniques. Staff should use universal precautions when
+       making direct contact with contaminated patients.
+   •   Staff should double bag, tie, seal, and label any contaminated material in plastic bags to be stored in a
+       predetermined, secure storage area (labeling should include appropriate identifying information, e.g.,
+       patient name, hospital number, date, and time of day). The bagged items should be removed from the
+       patient treatment area as soon as possible to eliminate any further contamination.
+   •   In a mass casualty emergency, staff should dispose of the water used to decontaminate patients via the
+       sewer system. (It is unlikely hospitals will have an effective water-holding system for any mass casualty
+       event.) The EPA has issued guidance to the effect that: “Contaminated runoff should be avoided
+       whenever possible, but should not impede necessary and appropriate actions to protect human life and
+       health. Once the victims are removed and safe from further harm and the site is secured and stable,
+       the first responders should be doing everything reasonable to prevent further migration of
+       contamination into the environment.” (EPA 550-F-00-009, July 2000; www.epa.gov/ceppo )
+   •   Hospitals should prepare personnel to rapidly identify and notify pre-identified resources who can
+       provide assistance.
+   •   Hospitals should use appropriately trained staff with properly maintained and tested radiation survey
+       meters to determine contamination.
+   •   Hospitals should consider purchasing personal dosimeters for rapid response teams or others who might
+       be subject to contact with contaminated patients or materials. Personal dosimeter data for hospital staff
+       provide exposure documentation after the fact.
+   •   Hospital staff should remember that it may take time before a disaster is recognized as a radiological
+       incident and assume contamination is present; however, the first time radioactive contamination is
+       clearly identified, all staff and first responders must be notified as soon as possible.
+
+
+
+Key Principles of Control
+
+   •   Hospitals should designate a central point where patients are funneled into the hospital (ensure that it is
+       within walking distance from the hospital).
+   •   Hospitals should clearly identify demarcation points (use control points, pylons, or tape) where people
+       will be monitored when coming in and going out of the hospital. The hospital should provide survey
+       monitors at both points. This also includes the restricting staff movement.
+       - Designate separate “clean” vs. “contaminated” areas in the hospital.
+       - Segregate contaminated and non-contaminated patients and arrange a location where contaminated
+            patients can be observed with limited staff contact.
+   •   Hospitals should plan to contact local law enforcement and to augment hospital security staff to control
+       facility ingress and egress (including the parking lot).
+       - These security staff must control entrance of vehicles also.
+       - They will also work with EMS to determine how to address contaminated EMS vehicles.
+
+
+
+                                                December 2003                                      Page 26 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+                                     Patient Management
+
+The management of patients following suspected or confirmed radiological events involving mass
+casualties must be well organized and rehearsed. Patient management includes determining the signs and
+symptoms of acute radiation exposure, determining the extent the patient may be contaminated,
+providing for decontamination when necessary, treating specific injuries, collecting specimens for
+laboratory testing, providing care for special populations (e.g., pregnant women), providing discharge
+information, follow-up care, and post-mortem procedures, and addressing the psychological effects of
+patients and their mental health concerns. The psychological trauma in a radiological incident may be as
+varied in severity and type as physical trauma and will require special skills and training to adequately
+meet the needs of those affected.
+
+How do you know if someone is contaminated?
+   •   Radiological contamination cannot be detected without specialized equipment (See Appendix C for
+       information on radiation survey instrumentation).
+   •   When conducting a radiation survey of the patient, the technician should initially conduct a scan of the
+       face, hands, and feet using a standard radiation survey instrument. If the meter results are positive,
+       then the technician should conduct a thorough survey (5-8 minutes per person). The speed of the
+       survey should not exceed 2 inches per second, and the distance between the probe and the patient
+       should be approximately 1 inch. Staff should consider covering the survey probe in plastic to prevent
+       contamination of the instrument. (See also the REAC/TS Website for additional information on patient
+       scanning. www.orau.gov/reacts/intro.htm )
+   •   Ensure that data recorded from radiation detection instrumentation is understandable to clinical
+       practitioners.
+   •   The provider should arrange for bioassays if internal contamination is suspected (5) Body fluids used for
+       laboratory analysis include blood, urine, feces, nasal and saliva swabs, sputum, vomitus, and wound
+       secretions.
+
+
+
+                                        Decontamination
+
+   •   Radiation decontamination should not interfere with medical care of patients with life-threatening
+       injuries or illness.
+   •   If possible, staff should screen and survey for levels of contamination before moving a patient into the
+       facility; this will minimize staff and equipment exposure. As a control, staff should attempt a
+       background reading of the facility before surveying the patient.
+   •   Only properly trained personnel should use radiation survey equipment. (Web Site links to many basic
+       radiation training courses can be found at www.umt.edu/research/eh/radiationsafety.htm )
+       - Most things needed for decontamination are already available in a hospital – the only additional
+           recommended equipment is radiation survey equipment to measure beta and gamma rays.
+           Radiation survey equipment to detect contamination includes a Geiger counter to detect beta and
+           gamma radiation. Although not specifically designed to quantify alpha radiation, pancake probes
+           that are available for Geiger counters will detect the presence of most alpha radiation sources, as
+           well as beta and gamma radiation. (See Appendix C) Many hospitals have at least one survey
+                                                December 2003                                     Page 27 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+          instrument in-house. Make certain that trained personnel are always on duty and know how to use
+          survey instruments properly.
+   •   Hospitals should ensure that personnel have proper personal protection equipment. Universal
+       precautions as practiced with any other mass casualty incidents (trauma, chemical, biological, etc.) is
+       generally sufficient for protection from radioactive contamination.
+   •   Under Standard Precautions, surgical masks are used to reduce the possibility of blood splashes to the
+       mouth and nose and hand-oral contamination (reference: Gusev, et. al, p. 432). Surgical masks do not
+       protect against inhaling all respiratory hazards. A higher level of protection is provided by fitted
+       particulate respirators such as N95 or higher. These respirators should be available in hospitals because
+       they already are recommended for health care worker protection against SARS, tuberculosis, and certain
+       other infectious diseases. However, these respirators must be used in an OSHA-compliant respiratory
+       protection program that includes medical clearance, training, and fit testing. Experience in human
+       decontamination indicates that careful procedures for removing clothing and decontaminating patients
+       prevents aerosolization of radioactive particles, and dosimetry of health care workers using surgical
+       masks has not found evidence of contamination (Reference: personal communication, Dr. Robert Ricks,
+       Department of Energy REAC/TS, Oak Ridge TN, July 17, 2003). This suggests that if N95 respirators are
+       not available, surgical masks should provide adequate protection if other precautions are observed.
+   •   Responders should attempt as much decontamination as possible either at the designated assessment
+       center or outside the hospital. Minimize the amount of contamination that actually enters the
+       emergency department or the hospital. Decontamination areas should be separated from the hospital.
+   •   Removing the clothing from the patient should remove 70 to 90% of the contamination (6). Staff or
+       responders should bag and tag clothing, dressings, etc., for future evaluation and potential use as
+       criminal evidence and small personal belongings (jewelry, wallet, etc.) should be surveyed for
+       contamination. If the personal belongings are not contaminated they can be returned to the patient.
+       Otherwise, steps must be taken to decontaminate the items before giving them back to the patient. If
+       the patient is medically able to remove his/her own clothing and wash, then the patient should do so;
+       however, providers should maintain communication during the process.
+   •   Staff should address privacy concerns of patients who are undressing. Disposable dressing gowns
+       should be provided for patients concerned about modesty and to ensure that the environment is
+       appropriate to remove clothing (e.g., not too cold).
+   •   The patient should be washed with water and soap, taking care not to abrade or irritate the skin. Water
+       is the most important ally in this setting. Ambulatory patients can be washed easily; however, non-
+       ambulatory patients must be on gurneys that can be washed.
+   •   Staff trained in using survey instrumentation should resurvey the patient after washing and rewash until
+       no further reduction in contamination is achieved or a set threshold is attained, generally considered less
+       than two or three times background. Providers should isolate and cover any area of the skin that is still
+       positive after washing with a plastic bag or wrap.
+   •   Care should be taken with the washing procedure, ensuring that radioactive materials are not
+       incorporated into a wound.
+   •   If a patient has both wounds and very high, localized levels of internal contamination, this may indicate
+       that the patient has a radioactive fragment or fragments internally. The physician, in consultation with
+       the hospital radiation safety officer if possible, should consider surgically removing the fragment(s) using
+       forceps to avoid potential local radiation injury to the hands of the provider.
+   •   To ensure best use of the health care providers’ time and resources, hospitals should consider having
+       other personnel perform the decontamination process. But the “other personnel” should be appropriately
+                                                December 2003                                       Page 28 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+       trained to prevent injury to the patient and to minimize the possibility of contaminating themselves
+       during decontamination of the patient.
+   •   Hospitals should decontaminate the facility and staff who had contact with contaminated patients to
+       prevent the spread of contamination. Staff should consult their radiation safety officer for step-by-step
+       procedures. (Also refer to Gusev, et al. Medical Mgt. Of Rad Accidents).
+   •   If the patient does not show any signs of contamination or meet hospital admittance criteria, providers
+       should recommend that the patient take a thorough shower as soon as possible.
+   •
+Patient Treatment
+
+   •    Staff must not allow the threat of contamination to impede the delivery of medical assistance. The
+       right thing to do in almost every occasion when an individual who is contaminated and has a life-
+       threatening condition is to admit him/her to the Emergency department for immediate care.
+   •   It is crucial to educate staff on the realities and history of a patient’s contamination to provide
+       appropriate patient treatment. Staff who work in an emergency department are exposed to certain
+       risks, including ordinary hospital radiation sources.
+   •   Initially, hospitals should obtain as much patient and situation history as possible, noting circumstances
+       surrounding the patient and the situation that might indicate exposure. This also includes looking for
+       corroborating evidence. AFRRI has developed a software program in conjunction with Radiation
+       Emergency Assistance Center/Training Site (REAC/TS) that can be effectively used to record
+       information. This software can also be used for dose assessment and treatment management. It can
+       be found at: www.afrri.usuhs.mil/www/outreach/batpage.htm
+   •   Emergency department staff can measure complete blood counts (CBCs) with differential initially to
+       serve as a baseline measurement. CBCs taken over the next several days can than be compared to the
+       baseline measurements and used to assess the radiation dose received. These data are of key
+       importance in evaluating patients for acute radiation syndrome. (also see Appendix B)
+   •   When internal contamination is suspected, body excreta may contain radioactive substances. Collection
+       of urine and feces should be considered on those patients. Also, swabs from body orifices should be
+       taken for survey or analysis for radionuclides. Although state and federal assistance may be made
+       available for receiving and analyzing these samples, hospitals should identify during their emergency
+       planning what agencies or laboratories the samples should go to for analysis.
+   •   In the first 48 hours, the basic premise is that physicians should conduct standard patient assessment,
+       take care of immediately life-threatening problems, and take care of all other problems that require
+       immediate attention. Emergency department staff should:
+       - Treat symptoms according to ordinary patient treatment practices and procedures.
+       - Take care of wounds by irrigating, debriding, and covering to the best extent possible.
+       - Look for the symptoms of acute radiation syndrome (See Appendix B). Have a trained technician
+           perform a radiation survey if symptoms, patient history, and situation history indicate the possibility
+           of contamination.
+   •   Suggested supplies and medications to keep on hand and have easily accessible in large quantities
+       include IVs, fluid support, anti-diarrhea, anti-emetic medications, and potassium iodide tablets.
+   •   Hospitals should consider keeping a supply of potassium iodide to help reduce the risk of thyroid cancer
+       from radioactive iodine exposure. Such exposures may arise from a nuclear power plant incident or in
+       radioactive fallout from a terrorism event involving the detonation of a nuclear device.
+
+                                                December 2003                                       Page 29 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+   •   Hospitals should adhere to FDA recommendations (Guidance: Potassium Iodide as a Thyroid Blocking
+       Agent in Radiation Emergencies, U. S. Department of Health and Human Services, Food and Drug
+       Administration, Center for Drug Evaluation and Research, December, 2001) for administration of
+       Potassium Iodide, which is summarized in Table 1.
+   •   Table 1      FDA Recommendations for the Administration of Potassium Iodide (KI)
+   •
+          •      Threshold Thyroid Radioactive Exposures and
+          •      Recommended Doses of KI for Different Risk Groups
+          •                      •   Predicted       •   KI       •   # of         •   #
+                                     Radiation           dos          130              of
+                                     Dose to             e            mg               65
+                                     Thyroid             (m           tablets          mg
+                                     (cGy or             g)                            tab
+                                     rad)                                              let
+                                                                                       s
+          •      Adults over     •   > 500
+                 40 years
+          •      Adults over     •   > 10
+                 18 through                          •   130      •   1            •   2
+                 40 years                            •            •                •
+          •      Pregnant or
+                 lactating
+                 women
+          •      Adolescents
+                 over 12
+                 through 18
+                 years*
+                                                     •   65       •   1/2          •   1
+          •      Children
+                 over 3
+                                 •   >5
+                 through 12
+                 years
+          •      Over 1
+                 month
+                                                     •   32       •   1/4          •   1/2
+                 through 3
+                 years
+          •      Birth
+                 through 1                           •   16       •   1/8          •   1/4
+                 month
+   •   * Adolescents approaching adult size (> 70 kg) should receive the full adult dose (130 mg).
+   •
+   •   Potassium iodide supplementation is not as effective for those individuals over 40 years of age and
+       therefore it is generally recommended that these individuals only receive supplementation if it is
+                                                 December 2003                                   Page 30 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+       estimated that their exposure is significant enough to potentially destroy the thyroid leading to
+       hypothyroidism (7). FDA guidance on the administration of potassium iodide (KI) based on age,
+       predicted thyroid exposure, pregnancy and lactation status is below. Potassium iodide should be taken
+       immediately though it may still have a significant impact if taken even 3-4 hours after exposure (8). It
+       should be available to those in a radioactive fallout area. The Nuclear Regulatory Commission requires
+       that states with a population within the 10-mile emergency planning zone of commercial nuclear power
+       plants consider including potassium iodide as a protective measure for the general public to supplement
+       sheltering and evacuation in the unlikely event of a severe nuclear power plant accident.
+   •   Hospital staff should also note that FDA Guidance recommends “that persons with known iodine
+       sensitivity should avoid potassium iodide, as should individuals with dermatitis herpetiformis and
+       hypocomplementemic vasculitis, extremely rare conditions associated with an increased risk of iodine
+       hypersensitivity.” Individuals with multinodular goiter, Graves' disease, and autoimmune thyroiditis
+       should be treated with caution -- especially if dosing extends beyond a few days. Unless other
+       protective measures are not available, it is not recommended to provide repeat dosing in pregnant
+       females and neonates because of the potential for potassium iodide to suppress thyroid function in the
+       fetus and neonate (9).
+   •   Hospital staff should avoid giving the perception to patients and the community that potassium iodide
+       prevents adverse health effects from radiation exposure in general. However, staff should understand
+       that offering potassium iodide may help address some patient psychological concerns.
+
+
+Care of Special Populations
+   •   Special populations include pregnant women, immunocompromised patients, equipment-dependent
+       patients (especially those requiring ventilators), disabled persons requiring wheelchairs or other
+       mechanisms of assistance, nursing home and jail residents, people with various physical challenges, the
+       mentally ill, children, elderly, and persons with cultural and language barriers.
+   •   In general, special populations should not be treated differently from other populations. One exception
+       would be pregnant women and small children:
+       - There are no special pharmaceutical treatments for a pregnant woman, but they will require
+           considerable reassurance and communication.
+       - If radioactive iodine exposure has occurred, consider giving children potassium iodide tablets
+           according to FDA guidance (8) www.fda.gov/cder/guidance/4825fnl.htm )
+   •   Patient Discharge and Follow-up
+       - Patient discharge sheets should include basic information about radiation exposure and accurate
+           information about the long-term health effects of radiation exposure. Hospitals can customize and
+           relate these possible effects to the specific situation. If the incident is thought to be of criminal
+           intent, the discharge staff should explain the need for reporting to and cooperation with law
+           enforcement.
+       - Along with discharge sheets hospitals should provide Q&A sheets and fact sheets. Fact sheets
+           should include expert contacts and phone numbers and reliable sources of information.
+       - There is the risk of information overload to the patient. Printed materials should be brief and easy to
+           understand (e.g. reading level of Flesch-Kincaid 6.0 or lower).
+       - Hospitals should avoid generic discussions about radiation, which could promote unwarranted
+           concern. The more that information is customized to an individual’s circumstances, the more helpful
+           it will be.
+   •   Laboratory Issues
+
+
+                                               December 2003                                     Page 31 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+       -   In the management of mass casualties, basic precepts of medicine should take hold with regard to
+           testing: minimize the amount of testing, only doing those tests that can affect the immediate care
+           of the patient.
+       -   In a mass casualty incident, hundreds to thousands of patients may attempt to come to a hospital,
+           putting the hospital in the position where it cannot practically take a blood count on every patient.
+           Anyone who has or might exhibit prodromal effects (see Appendix B) would need to be considered
+           for a CBC with differential to test for acute radiation syndrome. If practicable, this should be
+           repeated every 6 hours for about 72 hours.
+   •   Other laboratory tests to consider if warranted include cytogenetic analysis, i.e., collecting blood for
+       dosimetry. All samples must be placed in separate, labeled containers that specify patient name, date,
+       and time of sampling. Hospitals should consider in the planning process how to manage the shipping
+       and transportation of samples to qualified laboratories.
+   •   Preparation steps that hospitals can take to address laboratory capacity include:
+       -   Ensuring that mutual aid agreements with area laboratories are in place.
+       -   Determine if it is possible to transfer non-critical patients to other local facilities.
+       -   Keep a stockpile of CBC tubes (use purple top tubes 1 for CBCs).
+   •   Hospitals should keep in mind that while they are treating the casualties, other local, state, and federal
+       organizations are dealing with the scene. Hospitals need to know how to connect with these responding
+       organizations to get needed information, such as radionuclide data and radiation dose assessment.
+   •   A lesson learned from past incidents is that healthcare providers should have heightened awareness of
+       significant political pressure to use the most accurate tests available and avoid reliance on random
+       testing of individuals.
+   •
+Patient Mental Health Concerns
+   •   A mass casualty event involving radiation has the potential to yield a large number of psychological
+       casualties (10).
+       - The majority of these will not have severe psychiatric conditions that result from the incident. The
+          initial reaction of many is one of shock, immobilization and fear. Most people will exhibit higher
+          levels of anxiety rather than psychotic behavior; some will also experience Post Traumatic Stress
+          Disorder (PTSD). Concern and anxiety are natural reactions to the uncertainty associated with a
+          radiological incident (10). Also, many people will come to the hospital for fear of loss of access to
+          mental health medications.
+       - It is probable that family members will attempt to gather information about other family members
+          who are experiencing heightened anxiety and have sought medical attention. Hospitals should
+          dedicate space in the facility and a phone number (if possible) to keep family members informed.
+   •   Long-term psychological effects, which could arise from 48 to 72 hours after the incident and from then
+       on for several months, include anxiety disorders, PTSD, depression, traumatic neurosis, insomnia, and
+       acute stress disorder (10).
+
+
+
+1
+  Tubes for blood collection and testing are standardized by the color of the rubber stopper placed in
+each. The different stopper colors refer to the additives placed in each tube (these additives are
+necessary to preserve the appropriate blood product for different blood tests). A purple tube top contains
+(K3) EDTA as a preservative for whole blood.
+
+                                                   December 2003                                      Page 32 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+   •   It is very important to distinguish between those concerned about potential exposure and people who
+       have a non-incident-based psychological dysfunction.
+   •   Since the situation is frightening to most people, hospitals should be proactive in reassurance and
+       communication to reduce psychological issues. Hospitals should:
+       - Dispense timely and accurate information, including an accurate description of the incident and its
+           location to the public. This will allow them to take appropriate actions before they come to the
+           hospital.
+       - Counsel patients on both acute and potential long-term physical and psychological effects. Include
+           this information in patient discharge sheets.
+   •   Hospitals also should ensure that trained counselors are on site, and screen persons who may be at
+       higher risk for PTSD (i.e., people who have been previously traumatized or have been in other
+       disasters). These individuals will require follow-up.
+       - Dedicate a lead person responsible for the counselors.
+       - Provide radiological education/training for the staff performing the psychological evaluations and
+           counseling. Staff who cannot function in times of high stress should not be assigned to these duties.
+
+
+
+
+                           Healthcare Provider Protection
+
+While patient care is a top hospital priority, it is vital that hospital personnel are protected from injury and
+disease while doing their job. During a mass casualty radiological event it is likely that hospital personnel
+will be concerned about radiation contamination. To alleviate their concern, hospital personnel should be
+educated about the potential health effects resulting from radiation exposure, learn what personal
+protective equipment they will need for precautionary measures and be trained so they can respond
+effectively to a radiological incident. In addition, hospitals must prepare for potential psychological effects
+resulting from such a stressful event.
+
+Employee Protection (Physical)
+   •   Initially obtaining as much information as possible is proactive protection. Obtain as much patient and
+       site information as feasible from first responders.
+   •   The first step in protecting employees is to establish an assessment center removed from the
+       emergency department to rapidly screening victims for injury and contamination and to provide for
+       decontamination. Radiation control zones, where potential radioactive contamination exists, should be
+       established within the hospital and the administration should ensure that there is someone in charge of
+       access to/from the control zones, and that they have a law enforcement representative present.
+   •   Suggested personnel protection equipment that also facilitates the ease of clean-up includes:
+       - Universal precautions clothing (facemask, goggles, gowns, double-gloves with inner one taped and
+          outer glove removed after each contact).
+       - Plastic wrap (e.g., disposable trash bags, Saran Wrap™, ZipLocTM bags, etc.) to cover and protect
+          instruments and equipment.
+       - Disposable shoe coverings.
+       - Butcher paper or equivalent on floor.
+       - If possible, personal dosimeters (see Appendix C) for staff members who might have frequent
+          contact with contaminated patients.
+
+                                               December 2003                                     Page 33 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+   •   Hospitals should purchase and maintain radiation survey meters for detection procedures.
+       - Each hospital should have at least three actively working and maintained radiation survey meters,
+          one each at points of egress and ingress and the third in circulation.
+       - Large hospitals might consider a portal monitor for 24/7 monitoring and protection. (See Appendix
+          C)
+       - Hospitals should ensure that designated personnel are properly trained on the use of the survey
+          meters, and that the meters are maintained and calibrated according to the manufacturer.
+   •   Protective clothing does not always reduce risk of exposure since penetrating beta and gamma radiation
+       may go through it. However, it prevents personal contamination of radioactive substances and limits
+       the spread of contamination.
+   •   Hospitals should take extra precautions to protect special populations, especially pregnant employees.
+   •   Hospitals should provide employees with immediate and accurate communication, such as public
+       announcements, media packets, information packets for the Emergency department waiting area, and
+       web site updates.
+   •   Hospitals should consider providing copies of the North American Emergency Response Guide for staff
+       (www.envectra.com/env/erg/erg.htm ).
+   •   Issues to consider in funding or obtaining needed equipment include:
+       - Considering a billable patient surcharge for disaster preparedness. Federal or state government
+           grants may be available for PPE and radiation detection devices.
+       - Considering other resources in the community that also have survey meters and equipment.
+   •   Employees are best protected when hospitals activate the radiological component of their emergency
+       response plan when there is any probability of a radiological mass casualty event.
+   •   Employees should remember, in the event of a radiological emergency, apply time, distance, and
+       shielding principles (i.e., limit time spent near contamination; keep as much distance from the
+       contaminated area as practicable; and shield with any available material).
+   •
+Training of Hospital Staff
+
+   •   Every employee at the hospital needs simple, competency-based training that is preferably conducted
+       on-site and includes:
+       - The basic principles of radiation protection and the realties of treating contaminated patients.
+       - A clear definition of the roles and responsibilities of all staff members involved in a response to a
+          mass casualty incident.
+       - Hospitals should incorporate this training into employee orientation and differentiate radiation
+          training from other HazMat trainings.
+       - Basic radiation training for staff will help to reduce stress and increase quality of care in a
+          radiological mass casualty incident.
+   •   Specific skill-based training includes:
+       - Radiation survey meter use and interpretation for those who will test individuals for contamination.
+       - Decontamination training for those who will most likely decontaminate patients.
+       - Setting up control zones and a global perspective for head nurses in the Emergency Department.
+       - How to plan for a radiological emergency for members of the disaster planning committee.
+       - Equipment decontamination for janitorial staff.
+
+
+                                               December 2003                                      Page 34 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+   •   Hospitals can emphasize continuing medical education credits (CMEs) to encourage physicians to
+       participate in training, especially training on patient treatment for the first 48 hours after a radiological
+       mass casualty incident.
+   •   Ensure that hospital staff who will most likely respond to a radiological incident or those at highest risk
+       for radiation exposure receive the most training.
+   •   Since the hospital will not be able to train the entire staff in all scenarios, it should create easy access to
+       radiological experts, beginning with the hospital radiation safety officer, but including medical physicists,
+       health physicists, and radiation protection technologists.
+   •   Training should extend beyond hospital staff; the hospital’s training plan and Emergency Response Plan
+       should be coordinated with the first responders, the American Red Cross and civil authorities. Because
+       of the constant interaction of hospital and non-hospital staff during any disaster, it should conduct joint
+       interactive training if at all possible.
+
+
+
+
+Practitioner Mental Health Concerns
+   •   There is a basic assumption that health care providers operating outside of their areas of expertise will
+       share many of the same concerns as the public and probably some of the same mental health effects.
+   •   The most likely psychological consequences for medical staff as a result of treating patients in a mass
+       casualty incident are:
+       - Fear, primarily because many people know a little about the effects of radiation and assume that
+          radiation is more dangerous than it actually might be. There is also the lingering concern about
+          unknown long-term side effects, such as the increased risk of cancer.
+       - Suspicion of being contaminated by radiation and carrying that radiation home to one’s family. This
+          preoccupation may distract health care providers from their work.
+       - The decisions made regarding who to save and who not to save. Providers are likely to have a real
+          sense of guilt when they cannot treat everyone and are not able to do as much as possible for each
+          patient. This concern could result in anger, feelings of helplessness, depression (potentially long-
+          term), and sleep disturbances. All of these will be aggravated by fatigue and exhaustion from
+          response demands.
+       - Apprehensions, when the state or federal government personnel arrive, that their decisions will be
+          second-guessed. This could lead to guilt and anxiety.
+   •   Possible physical signs that staff may be experiencing psychological effects include vomiting, diarrhea,
+       nausea, and headaches (10). Coincidentally, these physical signs are also associated with acute
+       radiation exposure.
+   •   Psychological effects are most likely to occur among staff who have the greatest amount of contact with
+       the deceased and/or dying, and those dealing with children or pregnant women. These effects are more
+       likely to occur with staff who are severely fatigued by being on duty for a long period of time.
+   •   Prevention is the best treatment and, because prevention and treatment for provider mental heath
+       concerns are so intertwined, it is important to educate health care providers now to provide the best
+       care for all when it is needed.
+       - The first lesson in treatment is to have a critical incident stress management team that includes
+           credentialed mental health providers in place at each facility before a critical incident.
+       - Hospitals should have mental health providers who can dedicate time to staff support.
+                                                 December 2003                                         Page 35 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+       -   Hospitals should screen for those who are at higher risk of psychological complications.
+       -   Provider education and training are key components. Do not assume that practitioners know more
+           about radiation than the general public.
+       -   Staff will be concerned about their own families, so hospitals should establish a communication
+           liaison for them.
+       -   Provide for rotation of staff to reduce fatigue.
+   •   Hospitals should conduct tiered levels of debriefing after a mass casualty event to gather data and to
+       address mental health concerns. The debriefing groups should not be cross-discipline (physicians with
+       nurses, etc.). This allows participants to express concerns more freely.
+
+
+
+                                             Surveillance
+
+Surveillance is the ongoing systematic collection, analysis and interpretation of health outcome data for
+use in the planning, implementation and evaluation of public health practice (11). There are many
+purposes for surveillance including: to establish a registry for follow up and epidemiological investigations
+as well as to use as a resource for short-term disaster medical intervention. It is especially critical the first
+48 hours as information gathered then is used to determine action and treatment. In addition,
+surveillance is needed to treat and track patients and to learn from the incident.
+   •   Patient care comes first, so hospital personnel should focus on decision-making data, especially for
+       patient treatment. Records should be user-friendly to practitioners.
+   •   Key data for collection includes patient demographics, patient location at the time of the incident, and
+       contact information for later follow-up.
+       - Consider including the patient’s description of what happened, details about the conditions at the
+          location at the time of exposure, and the patient’s chief complaints.
+       - Record therapeutic data, including treatment, body location of radioactive contamination and isotope
+          identification if known.
+   •   It would be valuable to gather data for an hour-by-hour summary of some basic information that
+       includes a count of people affected by the immediate incident (the number could grow markedly over
+       time) and key patient complaints.
+   •   Encourage staff to use current technology/electronic storage to implement and integrate surveillance
+       information.
+   •   Radiation exposure may have long-term consequences; therefore, there is an additional long-term issue
+       of registry tracking. Although this should not be an immediate concern of the hospital, the hospital can
+       readily define the population up front for future tracking and epidemiological studies.
+    •
+The Health Insurance Portability and Accountability Act (HIPPA) rules limit access to this information;
+therefore it is not clear now how this will play out in an incident involving mass casualties. Some states
+have flexibility for creating a list of reportable conditions to track and report. HIPAA allows (but does not
+require) health care providers to supply this information to appropriate authorities without patient
+authorization for law enforcement and public health activities ( 45 CFR164.512 (a) (1) and (2).
+Additionally, some states require reporting of suspected terrorism incidents. Hospitals should check with
+their state on these issues.
+
+                                     Community Planning
+                                                December 2003                                     Page 36 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+
+Although providing the highest quality health care and patient treatment is the hospital’s primary goal,
+hospitals should work with community emergency planners to determine its role in the community’s
+response to mass casualty incidents. It is important that hospitals work with their communities and in
+particular with local and state health and radiation protection departments on community planning.
+However, the hospital may have to take the lead in creating a community plan for responding to such
+events. An important benefit of the overall planning process, however, is developing new partnerships and
+reaffirming long-standing ones. In time of crisis, these established relationships usually prove invaluable.
+   •   A hospital’s responsibility in community planning and in responding to a mass casualty incident includes:
+       - First and foremost, receiving and treating patients: To be successful, a hospital needs to develop
+          strategies to treat a large number of patients during a mass casualty incident, including having easy
+          access to medications. (Hospitals should consider entering into formal agreements with local
+          hospitals and pharmacies as part of emergency planning and preparation.)
+       - Convening community partners if the health department has not already assumed this role.
+       - Establishing adequate and redundant two-way communication with staff and partners; two-way
+          radios can be used for this purpose.
+       - Knowing how to avoid becoming a second-hand casualty (provide emergency power, etc).
+       - Planning for a move if the hospital becomes dangerously contaminated.
+       - Coordinating human resources including staff members, individual and organizational volunteers,
+          and Good Samaritan health care professionals. The hospital should have liability and malpractice
+          coverage that automatically covers this additional help. Furthermore, hospitals should address an
+          emergency credentialing policy in advance (reference: May 2002 issue of the National Association of
+          Medical Staff Services; Hospital Accreditation Standards, Joint Commission on Accreditation of
+          Healthcare Organizations, 2002).
+       -   Controlling access to the facility.
+       - Instituting a process to accurately record costs/expenses related to any mass casualty incident for
+          future reference.
+   •   Helpful steps in developing an evidence-based Community Plan include:
+       - Checking to see if a Community Plan already exists. If so, it should be revised if it does not include
+          radiological incident-specific information.
+       - Exploring evidence-based research and literature on radiation emergency response to stay abreast
+          of new findings.
+       - Determining who should be responsible for convening a community planning process; if there is
+          none in place, the hospital should be the leader/convener.
+       - Knowing the key state or regional partners. These will probably include state radiation protection
+          and emergency response staff as well as state health inspectors. Initial players will be EMS, Police,
+          Fire, emergency management agencies, and the health department. This group will expand quickly
+          once the key organizations begin working together (additional partners might include public and
+          private transportation companies, and expanding to other public and private ventures). Hospitals
+          should include local businesses and non-profit volunteer organizations (rescue missions, churches,
+          and food banks) as partners.
+       - Having each partner conduct its own internal assessment and then share its findings with the
+          partners.
+       - Ensuring that all partners agree on and are familiar with the roles and responsibilities of each
+          partner.
+       - Conducting a community-wide risk assessment.
+       - Developing an integrated training program and conducting at least one training exercise per year, as
+          required by JCAHO.
+
+                                               December 2003                                     Page 37 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+       -   Evaluating and reassessing the plan periodically.
+   •   Relationships are just as important as the plan content when it comes to ensuring successful
+       implementation of the plan in response to a mass casualty incident.
+   •   Hospitals should make sure in the community planning process that there is a method in place for
+       finding out which hospitals are still functioning, which ones need help, and which ones should not be
+       receiving additional patients.
+   •   It is important to conduct post-incident debriefing and share these discoveries with hospitals in other
+       communities. There is a need for a national institutionalized process to maximize the lessons we learn
+       from disasters and to serve as a national clearinghouse of published and non-published research.
+       However, hospitals may be reluctant to share information for fear of lawsuits; therefore, the research
+       should be rendered anonymous prior to sharing.
+   •   The benefits of community planning go beyond joint planning to include other collaborative opportunities
+       such as joint purchasing that will reduce costs.
+    •
+Hospital medical personnel can use these basic guidelines in conjunction with their professional training
+and experience to aid in the effective and efficient treatment of victims. The purpose of the guidelines is
+not to address all of the possible emergency-related medical care that may be required by the hospital
+during such an emergency. Rather, the focus is on unique aspects of a nuclear or radiological event
+involving mass casualties for which the hospital’s emergency department may not be adequately prepared
+or equipped. It should be noted, however, a successful response is dependent not only on written
+guidelines, but also on the communication of these guidelines along with partnerships between medical
+personnel and private, state, local and federal public health agencies and organizations.
+
+
+
+                                      ACKNOWLEGMENTS
+
+
+The document preparers would like to give special thanks to all the participants in the May 2002 CDC
+Roundtable on the Identification of Emerging Strategies for Hospital Management of Mass Casualties from
+a Radiological Incident, held in Atlanta, GA, May 12-14, 2002 (Appendix A). The specific contributions and
+lively discussions of the Roundtable members and their follow up with specific comments on early drafts of
+this document formed the basis of the present Guidelines. Also acknowledged are the invaluable
+assistance and expert guidance throughout the document preparation of C. M. Wood, Elizabeth Donnelly,
+Dr. Robert Whitcomb, Dr. Paul Garbe, Dr. Armin Ansari, and Carol McCurley as well as the constant
+support and encouragement of Drs. Mike McGeehin, Charles Miller, and Richard Jackson.
+
+
+
+
+                                               December 2003                                     Page 38 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+                                           Reference List
+1. Erik Auf der Heide. Triage. Disaster Response: Principles of Preparation and Coordination. Atlanta:
+   1989.
+
+2. The Emergency Medical Treatment and Labor Act. U.S.Department of Health and Human Services .
+   2003.
+   Ref Type: Electronic Citation
+
+3. Armed Forces Radiobiology Research Institute. Medical Management of Radiological Casualties. 2003.
+   Bethesda, MD, Armed Forces Radiobiology Research Institute. 1999.
+   Ref Type: Report
+
+4. Armed Forces Radiobiology Research Institute. Biodosimetry Assessment Tool; Version 0.7.5. 2003.
+   Ref Type: Report
+
+5. National Council on Radiation Protection and Measurements. Use of Bioassay Procedures for
+   Assessment of Internal Radionuclide Deposition. 1986. Bethesda, MD, National Council on Radiation
+   Protection and Measuremetns. NCRP Report No. 87.
+   Ref Type: Report
+
+6. Fred A.Mettler Jr. Hospital Preparation for Radiation Accidents. In: Igor A.Gusev, Angelina K.Guskova,
+   Fred A.Mettler, eds. Medical Management of Radiation Accidents. Boca Raton: CRC Press 2001:425-34.
+
+7. Frequently Asked Questions on Potassium Iodide (KI). U.S Food and Drug Administration, Center for
+   Drug Evaluation and Research . 2003. 2001.
+   Ref Type: Electronic Citation
+
+8. United States Department of Health and Human Services, Food and Drug Administration Center for
+   Drug Evaluation and Research. Guidance, Potassium Iodide as a Thyroid Blocking Agent in Radiation
+   Emergencies. U.S.Department of Health and Human Services . 2001.
+   Ref Type: Electronic Citation
+
+9. FEMA. Federal Emergency Management Agency Federal Response Plan. FEMA. US Department of
+   Health and Human Services . 1997.
+   Ref Type: Electronic Citation
+
+10.      Steven M.Becker. Psychococial Effects of Radiation Accidents. In: Igor A.Gusev, Angelina
+      K.Guskova, Fred A.Mettler, eds. Medical Management of Radiation Accidents. Boca Raton: CRC Press
+      2001:519-24.
+
+11.      S.M.Teutsh and R.E.Churchill. Principles and Practice of Public Health Surveillance 2nd Edition.
+      2000. Oxford University Press.
+      Ref Type: Report
+
+
+
+
+                                                December 2003                                   Page 39 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+
+Appendix A: Participants from the May 2002 CDC Roundtable on the Identification of Emerging
+Strategies for Hospital Management of Mass Casualties from a Radiological Incident
+
+Erik Auf der Heide, M.D., M.P.H., F.A.C.E.P.
+Agency for Toxic Substances and Disease Registry
+
+Stephanie Beck, R.N.
+Washoe District Health Department
+
+William Blakely, Ph.D.
+Armed Forces Radiobiology Research Institute
+
+Richard Brusuelas, M.P.H.
+National Association of County and City Health Officials
+
+Nancy Riese Daly, M.S., M.P.H.
+American Society of Therapeutic Radiology and Oncology
+
+Tim Davis, M.D.
+National Center for Injury Prevention and Control, CDC
+
+Kathy Dolan, R.N., B.S., C.E.N.
+American Hospital Association
+American Organization of Nurse Executives
+
+Lynne Fairobent
+American College of Radiology
+
+Fun Fong, M.D., F.A.C.E.P
+American College of Emergency Physicians
+
+Ron Fraass, M.S.
+Conference of Radiation Control Program Directors
+
+Eric Frykberg, M.D., F.A.C.S.
+American College of Surgeons
+
+Abigail Grant, M.S.W., L.I.S.W.
+Clinical Social Work Federation
+
+Ed Leap, M.D., F.A.C.E.P.
+Oconee Memorial Hospital
+
+Ralph Lieto, M.S.E.
+American Academy of Physicists in Medicine
+Sarah McAfee
+Society for Healthcare Strategy and Market Development
+                                              December 2003                                    Page 40 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+William McNutt, M.B.A.
+Federal Emergency Management Agency
+
+Fred Mettler, M.D., M.P.H.
+University of New Mexico
+
+Ken Miller, M.S., C.H.P.
+Health Physics Society
+
+Lynne Pinkerton, M.D.
+National Institute of Occupational Safety and Health, CDC
+
+Jean Randolph, R.N., COHN-S/CM
+Children’s Healthcare System of Atlanta
+
+Robert Ricks, M.S., Ph.D.
+Radiation Emergency Assistance Center/Training Site
+
+Henry Royal, M.D.
+Society of Nuclear Medicine
+
+Jeffrey R. Saffle, M.D.
+American Burn Association
+
+Marc A. Safran, M.D, F.A.C.P.M.
+CDC Mental Health Work Group
+
+Matthew Seeger, Ph.D.
+Wayne State University
+
+Kenneth Shine, M.D.
+Institute of Medicine
+
+Henry J. Siegelson, M.D., F.A.C.E.P.
+Emory University
+
+Michael C. Sinclair
+Illinois Department of Nuclear Safety
+
+Stewart Smith, M.S.C., U.S.N.
+American College of Contingency Planning
+
+Ellen Steinberg, M.D., M.P.H., D.T.M.H.
+GA State Department of Health
+
+Bettina Stopford, R.N.
+Emergency Nurses Association
+
+
+                                              December 2003                                    Page 41 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Sammy Suriani, R.P.A.-C, M.S.
+Society of Emergency Medicine Physician Assistants
+
+Diana Swindel
+CDC/OD Office of Communications
+
+John Tassey, Ph.D.
+American Psychological Association
+Disaster Response Network
+
+Pamela Tucker, M.D.
+CDC Mental Health Work Group
+
+Marsha Vanderford
+CDC/OD Office of Communications
+
+Richard Vetter, Ph.D.
+Mayo Clinic
+
+Derrick Walker
+National Center for Injury Prevention and Control, CDC
+
+
+
+
+                                              December 2003                                    Page 42 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+Appendix B: Acute Radiation Syndrome
+Radiation sickness, known as acute radiation sickness (ARS), is a serious illness that
+occurs when the entire body (or most of it) receives a high dose of radiation, usually
+over a short period of time. Many survivors of the Hiroshima and Nagasaki atomic
+bombs in the 1940s and many of the firefighters who first responded after the Chernobyl
+Nuclear Power Plant accident in 1986 became ill with ARS.
+
+
+People exposed to radiation will get ARS only if:
+
+   •   The radiation dose was high (doses from medical procedures such as diagnostic x-rays are too low
+
+       to cause ARS; however, doses from radiation therapy to treat cancer may be high enough to cause
+
+       some ARS symptoms),
+
+   •   The radiation was penetrating, such as gamma rays or neutrons (that is, able to reach internal
+
+       organs),
+
+   •   The person’s entire body, or most of it, received the dose, and
+
+   •   The radiation was received in a short time, usually within minutes.
+
+
+The first symptoms of ARS typically are nausea, vomiting, and diarrhea. These symptoms will start within
+minutes to days after the exposure, will last for minutes up to several days, and may come and go. Then
+the person usually looks and feels healthy for a short time, after which he or she will become sick again
+with loss of appetite, fatigue, fever, nausea, vomiting, diarrhea, and possibly even seizures and coma.
+This seriously ill stage may last from a few hours up to several months.
+
+
+People with ARS typically also have some skin damage. This damage can start to show within a few hours
+after exposure and can include swelling, itching, and redness of the skin (like a bad sunburn). There also
+can be hair loss. As with the other symptoms, the skin may heal for a short time, followed by the return of
+swelling, itching, and redness days or weeks later. Complete healing of the skin may take from several
+weeks up to a few years depending on the radiation dose the person’s skin received.
+
+
+The chance of survival for people with ARS decreases with increasing radiation dose. Most people who do
+not recover from ARS will die within several months of exposure. The cause of death in most cases is the
+destruction of the person’s bone marrow, which results in infections and internal bleeding. For the
+survivors, the recovery process may last from several weeks up to 2 years.
+
+
+If a radiation emergency occurs that exposes people to high doses of radiation in a short period of time,
+they should immediately seek medical care from their doctor or local hospital.
+                                              December 2003                                    Page 43 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+
+
+For more information about radiation and emergency response, see the Centers for Disease Control and
+Prevention’s website at www.bt.cdc.gov or contact the following organizations:
+
+The CDC Public Response Source at 1-888-246-2675
+
+The Conference of Radiation Control Program Directors ( www.crcpd.org ) at (502) 227-4543
+
+The Environmental Protection Agency (www.epa.gov/radiation/rert/ )
+
+The Nuclear Regulatory Commission Radiation Protection Program (www.nrc.gov/what-we-
+do/radiation/about-radiation.html ) at (301) 415-8200
+
+The Federal Emergency Management Agency (FEMA; www.fema.gov ) can be reached at (202) 646-4600.
+The Radiation Emergency Assistance Center/Training Site ( www.orau.gov/reacts/) at (865)-576-3131
+
+The U.S. National Response Team (www.nrt.org/production/nrt/home.nsf )
+
+The U.S. Department of Energy ( www.energy.gov ) at 1-800-dial-DOE
+
+
+
+
+                                              December 2003                                    Page 44 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+        Appendix C: Radiation Detection and Measurement
+                        Instrumentation
+Note: In the descriptions below, the term “radiation” in the context of radiation detection refers to
+beta/gamma radiation unless noted otherwise. The detection of alpha radiation, or even low energy beta
+or gamma radiation (like that emitted from tritium), requires special probes or devices and is generally
+not included in the instruments discussed unless specifically mentioned.
+
+
+Thermoluminescent dosimeters (TLD) – TLDs are devices that store radiation readings, which can
+later be measured using an electronic reader. They are rugged and can be stockpiled and rapidly issued.
+They are usually housed in cards that can color code for different technical specialties or be used as ID
+cards. TLDs do not have readouts that can be read by those wearing them, so they cannot be used as
+early warning devices or as indicators that radiation exposure limits have been reached. Once a TLD is
+read, its reading is cleared, so it can be reused many times. The TLD reader must be regularly calibrated
+and operated by a qualified and knowledgeable person. TLDs are appropriate for people involved in
+reentry and cleanup, but should not be used alone by first responders entering high-radiation areas. In
+the latter case, real-time detection instrumentation should also be carried by the first responders.
+
+
+Self-reading dosimeters – This type of dosimeter, a small tube about the size of a ballpoint pen, is easy
+to use and does not require an expensive training program or a skilled technician. The wearer can look
+through the tube and get a reading of total absorbed dose in real time, so they can be used as an aid in
+controlling the amount of time spent in the radiation area. However, they are fragile and tend to go to a
+maximum reading when dropped, leading to lost data. They can be initialized by electronic chargers and
+reused many times. Self-reading dosimeters could be used by emergency responders, but because of
+their sensitivity to mechanical shock or environmental conditions dosimeter cards are preferred.
+
+
+Dosimeter cards – These devices are about the size of a credit card and can be carried in a pocket.
+Successive dots on the card change color as levels of radiation exposure are exceeded. They can only be
+used once, and then must be thrown away, but the cost is minimal at $5.00 per card. Interpretation of the
+reading is instantaneous. They are recommended for immediate issue to emergency responders. Because
+their readings are only approximate and because they can only be used once, they are not recommended
+for reentry and cleanup personnel.
+
+
+Monitoring Devices for Decontamination Stations
+
+Decontamination stations should be established as soon as possible after the event. People without serious
+injuries should be directed to these stations instead of to emergency rooms. Decontamination stations
+need instruments that can read radiation levels below normal background, but do not need a very high
+range. Accurate readings of high radiation levels have no practical value; if a person is contaminated, he
+or she should be immediately decontaminated.
+
+
+Geiger-Mueller (GM) counter – GM counters are sensitive radiation detection devices that can be
+capable of measuring alpha, beta, and gamma radiation. The GM counter, or Geiger counter, has a probe
+that can be aimed at the area of interest and a readout that measures in mR/hr or counts/minute. A
+                                              December 2003                                    Page 45 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+special probe, generally referred to as a “pancake” probe, is required for detecting alpha radiation. GM
+counters also offer an audio option that allows the user to hear clicking proportional to the radiation level.
+Because they are directional and can give erroneous readings in extremely high radiation fields, GM
+counters are not recommended for general area readings by the teams entering intense radiation areas to
+save lives or to map the areas. They are easy to use, but require periodic calibration, which can be done
+by shipping to a service provider. Organizations using Geiger counters should have access to a qualified
+technician who can train the team members in use of the device.
+
+
+Pancake probe – A Geiger-Mueller counter with a wide, flat probe that is capable of detecting alpha,
+beta, or gamma radiation. The wide sensitive area of the probe allows for more rapid search of an area,
+and the shield on the back of the probe helps prevent radiation from some other source from interfering
+with the readings on the area of interest. The detector should be able to read levels below normal
+background. Because they are directional and can give erroneous readings in extremely high radiation
+fields, pancake probes are not recommended for general area readings by the teams entering intense
+radiation areas to save lives or to map the areas. They are easy to use, but require periodic calibration,
+which can be done by shipping to a service provider. Organizations using pancake probes should have
+access to a qualified technician who can train the team members in use of the device.
+
+
+Alpha detectors – An alpha detector must be very close to the alpha source to detect it. It should be
+noted that the measurement of alpha radiation can be confounded by the presence of beta/gamma
+radiation. However, since alpha emitters are internal hazards, not external hazards, if there is any concern
+about alpha emitters, first responders can enter with respiratory protection and not worry about the
+presence of the alpha emitting material. The decontamination station personnel can determine whether
+radioactive material is present using a pancake probe. Alpha detectors are only useful in the reentry and
+cleanup phase of the incident.
+
+
+Portable spectrometer –Portable spectrometers are used to determine the specific radioisotopes
+present. Since the presence or absence of radiation, and its magnitude, is all that emergency responders
+entering an area to save lives need to be aware of, knowing the specific radioisotope involved would not
+be immediately helpful. Therefore, portable spectrometers are not recommended for first responders.
+However, personnel making protective action recommendations need to know what radioisotopes are
+present, specifically to guide the treatment of internal contamination, so they need the capability of
+performing isotopic identification.
+
+
+Area monitor – These monitors are stationary devices set up to detect radiation over a wide area
+continuously. One form, the gate monitor, is an omnidirectional probe and meter mounted in a fixed
+location to check incoming or outgoing material for radiation. An area monitor should be capable of
+reading below normal background, and it would be worthwhile to connect it to a computer or data-logging
+device. Logged data would then enable the reconstruction of the extent of possible contamination or staff
+exposure, especially when emergency room or relocation center staff miss an alarm or choose to ignore it
+to take care of a gravely injured patient.
+
+
+Portal monitor – A portal monitor is a doorway-type device that allows people to walk through to detect
+the presence of radiation. A portal monitor can be used to check large numbers of people more rapidly
+than a technician with a hand-held meter so they are useful at decontamination stations established for
+                                               December 2003                                    Page 46 of 47
+I nt er im Gui de lin es for H o s p ita l R e sp ons e t o M a ss Ca sua lt ies f ro m a Rad io log ic a l
+I n c id en t
+(continued from previous page)
+
+screening mobile but possibly contaminated people. Many types of portal monitors are not wide enough
+to accommodate wheel chairs or gurneys and all require periodic calibration and testing. Some portal
+monitors can be expanded to allow vehicles to pass through, but most are for the monitoring of people.
+
+
+Air monitor/Air sampler – These terms sometimes create confusion. An air monitor is technically an
+omnidirectional probe mounted in an area of concern, which can record or transmit dose rates in units
+such as rad per hour. An air sampler is a calibrated vacuum cleaner-type device that collects particles
+from the air on a filter that can be analyzed later. There are some hybrid devices, which pull air through a
+moving paper tape that is then counted by a detector, usually called an air particle detector. An air
+monitor is useful where there is concern over airborne radiation posing an immediate health risk. An air
+sampler is more sensitive than an air monitor, but it does not provide real time information. Samples can
+be analyzed in a laboratory for total counts, or for specific isotopes.
+
+
+
+
+For assistance in selecting a particular instrument or set of instruments, contact your state's Radiation
+Control Program Director. You can find the name and telephone number by contacting the Conference of
+Radiation Control Program Directors at (502) 227-4543 or on the Internet at www.crcpd.org
+
+
+
+
+                                              December 2003                                    Page 47 of 47
+

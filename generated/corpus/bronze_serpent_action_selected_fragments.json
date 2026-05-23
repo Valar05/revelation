@@ -1,0 +1,98 @@
+{
+  "name": "Bronze Serpent Violent-Resolution Source Packet",
+  "purpose": "Selected public-domain anchors for a Revelation action-horror room where a healing sign has become an idol, and the squad can resolve the anomaly through controlled violence against the object.",
+  "fragments": [
+    {
+      "id": "fiery_serpents_healing_standard",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00219",
+      "source_circumstance": "The people speak against God and Moses; fiery serpents bite them; a bronze serpent set on a standard becomes the appointed means by which the bitten live when they look at it.",
+      "source_excerpt": "Fiery serpents bite the people after complaint and rebellion. Moses makes a serpent of brass and sets it on a standard; those bitten look to it and live.",
+      "nightmare_room_seed": "A modern therapeutic object saves bite victims only when watched, turning treatment into enforced attention. The cure is real, but the dependence is spiritually and physically dangerous.",
+      "escalation_thread": "First the object heals, then it demands visible attention, then it punishes anyone who looks away, then it generates new bites to justify itself.",
+      "suggested_actions": ["clinic", "recover", "torah_speaks", "destroy"],
+      "generation_rules": [
+        "Make the healing function real enough that destroying the object is costly.",
+        "Use looking/attention as the symbolic mechanism.",
+        "Do not make this a generic snake monster scene; the danger is a corrupted remedy."
+      ]
+    },
+    {
+      "id": "nehushtan_broken",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00543",
+      "source_circumstance": "Hezekiah breaks the bronze serpent Moses made because people have begun burning incense to it, calling it Nehushtan.",
+      "source_excerpt": "Hezekiah removes high places, breaks pillars, cuts down the Asherah, and breaks in pieces the bronze serpent Moses made, because Israel had burned incense to it; he calls it Nehushtan.",
+      "nightmare_room_seed": "A once-authorized medical artifact has become an object of devotion. The violent solution is to break the thing that used to save people.",
+      "escalation_thread": "The squad must decide whether to breach and destroy the idol under contact, preserve it for study, or force a symbolic renaming that strips its authority.",
+      "suggested_actions": ["destroy", "seal", "full_disclosure", "torah_speaks"],
+      "generation_rules": [
+        "The force option should be valid: breaking the object can close the anomaly locally.",
+        "The violent act must be against the idol/object, not patients or worshippers.",
+        "Name the moral problem: dependence on the sign has replaced the source of healing."
+      ]
+    },
+    {
+      "id": "josiah_purge_objects",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00552",
+      "source_circumstance": "Josiah removes idolatrous vessels, burns them, beats objects to dust, breaks altars and pillars, and defiles a place where children passed through fire.",
+      "source_excerpt": "Objects made for false worship are brought out, burned, beaten to dust, and cast away. Altars and pillars are broken down; places of harmful ritual are defiled so the practice cannot continue.",
+      "nightmare_room_seed": "A containment team may need to treat destruction as procedure: remove the object, neutralize the site, destroy ritual infrastructure, document the act, then manage fallout.",
+      "escalation_thread": "If the object is only sealed, devotion continues around the seal. If it is studied too long, the site reorganizes around it.",
+      "suggested_actions": ["destroy", "quarantine", "recover"],
+      "generation_rules": [
+        "Use controlled destruction as a procedural close condition.",
+        "Force should leave consequences: damaged equipment, contaminated dust, political complaint, or personnel stress."
+      ]
+    },
+    {
+      "id": "ranger_clear_room",
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_title": "SH 21-76 Ranger Handbook",
+      "source_chunk_id": "army_ranger_handbook_sh_21_76:00001",
+      "source_circumstance": "Ranger battle drills include entering and clearing a room; later text describes unit leader control, clearing teams, sectors, minimizing friendly casualties, and reporting rooms clear.",
+      "source_excerpt": "Enter and clear a room is a battle drill. The unit clears and secures the room while minimizing friendly casualties; the leader controls security and clearing teams, sectors, and reports.",
+      "nightmare_room_seed": "The object is in a treatment room or chapel-like clinic bay with patients nearby. The squad must breach, clear sectors, protect patients, and reach the object.",
+      "escalation_thread": "A clean clear protects patients but slows the strike; a hard entry reaches the object faster but risks casualties and panic.",
+      "suggested_actions": ["intercept", "seal", "destroy"],
+      "generation_rules": [
+        "Make the violence tactical and controlled, not chaotic brawling.",
+        "Give Brooks or Owen a real close-quarters plan."
+      ]
+    },
+    {
+      "id": "ranger_breaching_charges",
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_title": "SH 21-76 Ranger Handbook",
+      "source_chunk_id": "army_ranger_handbook_sh_21_76:00001",
+      "source_circumstance": "The handbook includes demolitions and breaching charges used to break down barriers, plus safety and charge-placement considerations.",
+      "source_excerpt": "Breaching charges are used to break down barriers. Demolition and breaching tasks require charge selection, placement, safety considerations, and follow-on clearing.",
+      "nightmare_room_seed": "A destructive plan can be surgical: breach the case or support column holding the artifact, not the whole room. Failure produces shrapnel, dust, or sympathetic activation.",
+      "escalation_thread": "Destroying the object resolves the rule quickly but risks artifact fragments and patient harm if the team misjudges the charge or containment wrap.",
+      "suggested_actions": ["destroy", "repair", "seal"],
+      "generation_rules": [
+        "If using demolitions, keep it grounded: small charge, containment blanket, angle, line of sight, medical evacuation ready.",
+        "Make force one of multiple plans, not the only tone."
+      ]
+    },
+    {
+      "id": "stress_attention_under_pressure",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+      "source_circumstance": "Emergency decision-making under stress can involve unclear warnings, faulty information, equipment failure, time pressure, and narrowed attention.",
+      "source_excerpt": "Under emergency stress, warnings are often unclear, apparatus may fail, time pressure narrows attention, and people tend to focus on critical cues while neglecting alternatives.",
+      "nightmare_room_seed": "The anomaly exploits narrowed attention: those who focus on the healing object survive the bite but lose broader awareness. Squad members under stress may fixate on it.",
+      "escalation_thread": "A plan can fail because the officer cannot look away, misses a sector, or chooses preservation because the object is demonstrably healing someone.",
+      "suggested_actions": ["support_owen", "clinic", "watch_quietly"],
+      "generation_rules": [
+        "Use attention and fixation as character-state pressure.",
+        "Show stress as narrowed focus, clipped communication, and missed cues."
+      ]
+    }
+  ]
+}

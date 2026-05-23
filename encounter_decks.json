@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "content_track": "revelation_packets_v1",
+  "base_bpm": 20.0,
+  "danger_bpm_step": 2.0,
+  "pressure_warning_threshold": 3,
+  "pressure_lock_threshold": 6,
+  "corruption_spike_threshold": 0,
+  "danger_notice_threshold": 0,
+  "merchant_every": 0,
+  "merchant_refusal_limit": 0,
+  "merchant_claim_limit": 0,
+  "symbiote_card_per_deck": false,
+  "symbiote_first_after_rooms": -1,
+  "symbiote_every": 0,
+  "symbiote_offer_limit": 0,
+  "max_enemy_cards_per_deck": 0,
+  "branch_cards_min": 1,
+  "branch_cards_max": 1,
+  "straight_cards_min": 1,
+  "straight_cards_max": 1,
+  "ending_reckoning_min_rooms": 10,
+  "named_ending_state_threshold": 3,
+  "opening_room_id": "institute_initial_briefing",
+  "opening_event_id": "captain_initial_report",
+  "first_room_after_opening": "",
+  "base_player_stats": {
+    "damage": 0,
+    "armor": 0,
+    "shield": 0,
+    "health": 30,
+    "ambush_chance": 0.0,
+    "initiative": 0.5,
+    "speed": 1.0
+  },
+  "starter_rooms": [
+    "choir_beneath_floorboards"
+  ],
+  "draw_rules": [
+    {
+      "pool": "mission",
+      "count": 1
+    }
+  ],
+  "room_pools": {
+    "enemy": [],
+    "mission": [
+      "choir_beneath_floorboards"
+    ],
+    "branch": [
+      "choir_beneath_floorboards"
+    ],
+    "straight_noncombat": [
+      "choir_beneath_floorboards"
+    ],
+    "recovery": [
+      "choir_beneath_floorboards"
+    ],
+    "ship_crisis": [],
+    "random_non_special": [
+      "choir_beneath_floorboards"
+    ]
+  }
+}

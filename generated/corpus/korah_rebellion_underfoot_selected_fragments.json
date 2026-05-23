@@ -1,0 +1,70 @@
+{
+  "name": "Korah Rebellion-Underfoot Source Packet",
+  "purpose": "Selected public-domain anchors for a Revelation room where illegitimate command and seizure of sacred/operational authority make floors, badges, and chain-of-command physically dangerous.",
+  "fragments": [
+    {
+      "id": "korah_claims_authority_censers",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00211",
+      "source_circumstance": "Korah, Dathan, Abiram, and leaders challenge Moses and Aaron, claim the whole assembly is holy, and are told to bring censers before Yahweh.",
+      "source_excerpt": "A faction challenges appointed authority, claims equal holiness, and brings censers with fire and incense to prove who may come near.",
+      "nightmare_room_seed": "An Institute internal faction tries to seize control of Torah and symbolic assets by issuing unauthorized mission orders and presenting badges as proof of right.",
+      "escalation_thread": "First badges heat. Then false orders open floor seams. Then every unauthorized command becomes a censer-like offering that calls judgment into the room.",
+      "suggested_actions": ["full_disclosure", "seal", "torah_speaks", "intercept"],
+      "generation_rules": [
+        "Name the sin: seizing sacred/operational authority as entitlement.",
+        "Make the conflict modern: chain-of-command, badges, authorization logs, crisis command, asset control.",
+        "Do not make dissent itself sinful; the fault is fraudulent seizure and self-consecration."
+      ]
+    },
+    {
+      "id": "korah_ground_opens_censers_memorial",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00212",
+      "source_circumstance": "The congregation is told to get away from the tents; the ground opens and swallows the rebels, fire consumes the censer-bearers, and the bronze censers become a memorial sign.",
+      "source_excerpt": "The people are separated from the rebels. The ground opens its mouth, swallows them, fire consumes the censers, and bronze becomes a warning sign.",
+      "nightmare_room_seed": "Floors open under false orders. The only safe path is to separate by authority record, evacuate by lawful command, and preserve the failed badges or devices as warning evidence.",
+      "escalation_thread": "If the squad mishandles command, the floor swallows equipment and people. If they separate properly, the bronze/badge evidence cools into a memorial plate.",
+      "suggested_actions": ["intercept", "recover", "seal", "repair"],
+      "generation_rules": [
+        "Include structural hazard, evacuation, and a concrete closing act.",
+        "Force can be used to stop a faction member or breach an exit, but authority review must solve the symbolic rule.",
+        "Closure should leave a usable warning artifact or policy consequence."
+      ]
+    },
+    {
+      "id": "danger_area_rally_points",
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_title": "ATP 3-21.8 Infantry Rifle Platoon and Squad",
+      "source_chunk_id": "army_atp_3_21_8_infantry_platoon_squad:00203",
+      "source_circumstance": "Danger-area crossing uses overwatch, bypass or contour movement, rally points, position updates, and linkup after contact.",
+      "source_excerpt": "When contact happens near a danger area, leaders use rally points, overwatch, position updates, and controlled movement to link separated elements.",
+      "nightmare_room_seed": "The splitting floor is a danger area. Character plans can use overwatch, rally points, position updates, and controlled evacuation across unstable seams.",
+      "escalation_thread": "A failed crossing separates the squad, hides a character option, or leaves a faction member issuing commands from the wrong side of a seam.",
+      "suggested_actions": ["support_owen", "intercept", "repair", "seal"],
+      "generation_rules": [
+        "Use rally points, overwatch, position updates, and danger-area discipline.",
+        "Make physical movement matter.",
+        "Backfires should affect individual availability or stress, not only global flavor."
+      ]
+    },
+    {
+      "id": "stress_dynamic_environment",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00006",
+      "source_circumstance": "Dynamic environments change continually; decision-makers balance action cost against risk of non-action, and waiting can worsen system crashes.",
+      "source_excerpt": "In dynamic environments, the situation changes as decisions are made; action cost must be weighed against risk of delay and deterioration.",
+      "nightmare_room_seed": "Every delayed command review lets the floor open farther. Every rushed command risks feeding the authority anomaly.",
+      "escalation_thread": "Failed or delayed plans cause additional seams, faction pressure, squad mistrust, or a forced evacuation under worse conditions.",
+      "suggested_actions": ["full_disclosure", "clinic", "torah_speaks", "repair"],
+      "generation_rules": [
+        "Each choice must state the proposed plan in the character's own voice.",
+        "No visible +morale or odds labels.",
+        "The follow-up should resolve what happened to the faction and the authority artifact."
+      ]
+    }
+  ]
+}

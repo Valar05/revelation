@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "project": "Revelation",
+  "templates": {
+    "mission_room": {
+      "id": "",
+      "name": "",
+      "type": "mission",
+      "room_role": "",
+      "encounter_family": "",
+      "operation_type": "",
+      "description": "",
+      "first_visit_description": "",
+      "return_description": "",
+      "detection_report": "",
+      "current_situation": "",
+      "officer_reports": [
+        {
+          "officer_id": "",
+          "stance": "",
+          "report": ""
+        }
+      ],
+      "recurring_character_ids": [],
+      "state_reads": [],
+      "state_writes": [],
+      "resource_stakes": {},
+      "character_state_stakes": {
+        "character.<id>.morale": "",
+        "character.<id>.mental_state": "",
+        "character.<id>.trust": "",
+        "character.<id>.availability": ""
+      },
+      "followup_vectors": [],
+      "interlude_vectors": [],
+      "progression_state": {
+        "early": "",
+        "mid": "",
+        "late": ""
+      },
+      "failure_modes": [],
+      "artifact_vectors": [],
+      "procedure_hooks": [
+        {
+          "procedure": "",
+          "effect": ""
+        }
+      ],
+      "corpus_influences": [
+        {
+          "seed_id": "",
+          "source_title": "",
+          "source_chunk_id": "",
+          "source_moment": "",
+          "writing_influence": "",
+          "room_application": "",
+          "followup_application": "",
+          "interlude_application": "",
+          "license_category": "",
+          "source_fingerprint": [],
+          "structural_transfer": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "",
+          "source_chunk_id": "",
+          "anchor_role": "premise | procedure | evidence | followup | interlude",
+          "source_fingerprint": [],
+          "playable_transform": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ]
+    },
+    "mission_event": {
+      "id": "",
+      "type": "choice",
+      "speaker": "SITREP",
+      "line_1": "",
+      "line_2": "",
+      "reactivate_on_reshuffle": false,
+      "state_reads": [],
+      "buttons": [
+        {
+          "label": "",
+          "action": "",
+          "voice_aliases": []
+        }
+      ],
+      "action_results": {
+        "action_id": {
+          "lines": [],
+          "resource_changes": {},
+          "environment_state_changes": [],
+          "state_changes": [
+            {
+              "key": "character.<id>.morale",
+              "delta": 0
+            },
+            {
+              "key": "character.<id>.mental_state",
+              "value": "steady"
+            }
+          ]
+        }
+      },
+      "operation_plans": [
+        {
+          "action": "",
+          "officer_id": "",
+          "primary_skill": "",
+          "base_success": 0.65,
+          "yield": "",
+          "risk": "",
+          "minimum_availability": 25,
+          "blocked_mental_states": [
+            "unfit",
+            "dissociated"
+          ],
+          "outcomes": {
+            "strong_success": {
+              "lines": [],
+              "environment_state_changes": []
+            },
+            "success": {
+              "lines": [],
+              "environment_state_changes": []
+            },
+            "partial": {
+              "lines": [],
+              "environment_state_changes": []
+            },
+            "failure": {
+              "lines": [],
+              "environment_state_changes": []
+            },
+            "catastrophe": {
+              "lines": [],
+              "environment_state_changes": []
+            }
+          }
+        }
+      ],
+      "story_followups": {
+        "action_id": {
+          "event_id": "",
+          "trigger_key": "",
+          "delay_rooms": 1,
+          "queued_line": ""
+        }
+      },
+      "interlude_hooks": [],
+      "corpus_influences": [
+        {
+          "seed_id": "",
+          "source_title": "",
+          "source_chunk_id": "",
+          "source_moment": "",
+          "writing_influence": "",
+          "room_application": "",
+          "followup_application": "",
+          "interlude_application": "",
+          "license_category": "",
+          "source_fingerprint": [],
+          "structural_transfer": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ],
+      "story_thread": {
+        "id": "",
+        "role": ""
+      },
+      "corpus_anchor_points": [
+        {
+          "source_id": "",
+          "source_chunk_id": "",
+          "anchor_role": "premise | procedure | evidence | followup | interlude",
+          "source_fingerprint": [],
+          "playable_transform": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ]
+    },
+    "followup_event": {
+      "id": "",
+      "type": "story",
+      "speaker": "",
+      "line_1": "",
+      "line_2": "",
+      "reactivate_on_reshuffle": false,
+      "trigger_conditions": [],
+      "state_reads": [],
+      "state_writes": [],
+      "buttons": [],
+      "action_results": {},
+      "story_followups": {},
+      "interlude_hooks": [],
+      "corpus_influences": [
+        {
+          "seed_id": "",
+          "source_title": "",
+          "source_chunk_id": "",
+          "source_moment": "",
+          "writing_influence": "",
+          "room_application": "",
+          "followup_application": "",
+          "interlude_application": "",
+          "license_category": "",
+          "source_fingerprint": [],
+          "structural_transfer": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ],
+      "story_thread": {
+        "id": "",
+        "role": ""
+      },
+      "thread_end_state": "",
+      "corpus_anchor_points": [
+        {
+          "source_id": "",
+          "source_chunk_id": "",
+          "anchor_role": "premise | procedure | evidence | followup | interlude",
+          "source_fingerprint": [],
+          "playable_transform": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ]
+    },
+    "interlude_event": {
+      "id": "",
+      "type": "interlude",
+      "interlude_type": "",
+      "speaker": "",
+      "trigger_conditions": [],
+      "state_reads": [],
+      "state_writes": [],
+      "featured_characters": [],
+      "visible_text": "",
+      "choices": [],
+      "outcomes": {},
+      "followup_hooks": [],
+      "corpus_anchors": [],
+      "tone_notes": "",
+      "corpus_anchor_points": [
+        {
+          "source_id": "",
+          "source_chunk_id": "",
+          "anchor_role": "premise | procedure | evidence | followup | interlude",
+          "source_fingerprint": [],
+          "playable_transform": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ]
+    },
+    "artifact_record": {
+      "id": "",
+      "name": "",
+      "source_mission": "",
+      "containment_status": "",
+      "observed_behavior": [],
+      "known_risks": [],
+      "unknowns": [],
+      "state_effects": [],
+      "study_options": [],
+      "interlude_hooks": [],
+      "corpus_influences": [
+        {
+          "seed_id": "",
+          "source_title": "",
+          "source_chunk_id": "",
+          "source_moment": "",
+          "writing_influence": "",
+          "room_application": "",
+          "followup_application": "",
+          "interlude_application": "",
+          "license_category": "",
+          "source_fingerprint": [],
+          "structural_transfer": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ]
+    },
+    "squad_arc_record": {
+      "character_id": "",
+      "arc_id": "",
+      "current_stage": "",
+      "visible_behavior": [],
+      "hidden_state_reads": [],
+      "state_writes": [],
+      "trigger_events": [],
+      "interlude_beats": [],
+      "failure_or_breakpoint": "",
+      "recovery_or_concession": ""
+    },
+    "base_incident": {
+      "id": "",
+      "type": "base_incident",
+      "incident_domain": "",
+      "trigger_conditions": [],
+      "visible_text": "",
+      "choices": [],
+      "outcomes": {},
+      "state_reads": [],
+      "state_writes": [],
+      "followup_hooks": [],
+      "corpus_influences": [
+        {
+          "seed_id": "",
+          "source_title": "",
+          "source_chunk_id": "",
+          "source_moment": "",
+          "writing_influence": "",
+          "room_application": "",
+          "followup_application": "",
+          "interlude_application": "",
+          "license_category": "",
+          "source_fingerprint": [],
+          "structural_transfer": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "",
+          "source_chunk_id": "",
+          "anchor_role": "premise | procedure | evidence | followup | interlude",
+          "source_fingerprint": [],
+          "playable_transform": "",
+          "required_visible_details": [],
+          "followup_payoff": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,916 @@
+{
+  "title": "East Wind Remaining",
+  "design_goal": "A living locust swarm consuming a detention facility's last food stores forces the squad into fire-and-movement contact while Torah must compel the warden's public reversal of an unlawful hold to close the manifestation.",
+  "events": [
+    {
+      "room_id": "east_wind_remaining",
+      "event": {
+        "id": "root_east_wind_remaining",
+        "type": "choice",
+        "speaker": "lt_mara_owen",
+        "line_1": "Owen spreads the floor plan on the lobby desk. The east corridor is a moving wall. Brooks has three minutes of suppression, maybe four.",
+        "line_2": "The warden's office light is on. He is not answering the phone. The swarm is moving toward records storage.",
+        "buttons": [
+          {
+            "label": "Fix and Bound",
+            "action": "intercept",
+            "preview": "Squad reaches the stairwell intact; Brooks holds the corridor; Torah has a clear route to the..."
+          },
+          {
+            "label": "Cordon and Contain",
+            "action": "quarantine",
+            "preview": "Swarm is contained to east wing; Torah opens a dialogue with the warden remotely; buys time..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Fix and Bound",
+            "action": "intercept",
+            "officer_id": "lt_mara_owen",
+            "primary_skill": "tactical movement under contact",
+            "tactical_step": "suppress/fix swarm in corridor, bound along north wall to stairwell, breach second floor",
+            "base_success": 0.65,
+            "yield": "Squad reaches the stairwell intact; Brooks holds the corridor; Torah has a clear route to the warden's office",
+            "risk": "Suppression window collapses early; element is caught in the corridor under contact",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Brooks keys the canister and the corridor clears a lane — not clean, not quiet, but passable. Owen moves first, one hand on the north wall, not looking at what is in the air around her. Torah follows. The wing-noise is physical, a pressure against the chest. They reach the stairwell door in forty seconds. Brooks's voice on comms: 'Four minutes. Go.'"
+                ],
+                "environment_state_changes": [
+                  "root_east_wind_remaining.intercept.success"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "The lane opens but closes faster than Brooks called it. Owen takes a sting across the back of her hand and loses the floor plan. She finds the stairwell door by memory, shoulder against the north wall, and gets the element through — but she is shaking the hand out and not saying anything about it, and Torah notices."
+                ],
+                "environment_state_changes": [
+                  "root_east_wind_remaining.intercept.partial"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The suppression window collapses at ninety seconds. The swarm fills the lane and Brooks is shouting to pull back. Owen gets the element to the lobby threshold but not through. Brooks has welts on his neck now and is breathing carefully. The swarm is at the records room door. Saye's voice on comms, quieter than before: 'It found the intake log.'"
+                ],
+                "environment_state_changes": [
+                  "root_east_wind_remaining.intercept.failure"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+2",
+                  "character.lt_mara_owen.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Cordon and Contain",
+            "action": "quarantine",
+            "officer_id": "agent_caleb_ross",
+            "primary_skill": "perimeter control and mechanical containment",
+            "tactical_step": "cordon east face, seal secondary exits, contain swarm to east wing while Torah attempts direct contact with warden via facility intercom",
+            "base_success": 0.55,
+            "yield": "Swarm is contained to east wing; Torah opens a dialogue with the warden remotely; buys time for a second approach",
+            "risk": "Warden does not respond to intercom; swarm finds a gap in the cordon and exits the building",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Ross's element seals the loading dock and the east stairwell exit in four minutes. The swarm hits the sealed doors and turns back. It is not stopped — it is redirected, which is not the same thing, but it is enough. Torah finds the intercom panel in the lobby. The warden picks up on the third call. He does not speak first. Torah does."
+                ],
+                "environment_state_changes": [
+                  "root_east_wind_remaining.quarantine.success"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Ross gets the loading dock sealed but the east stairwell exit has a broken latch and the swarm finds it. A portion of the swarm exits into the alley before Ross's element can close the gap. Ross is on comms immediately: 'We have egress. East alley. I need a decision.' The cordon holds the main body but the warden still has not answered the intercom."
+                ],
+                "environment_state_changes": [
+                  "root_east_wind_remaining.quarantine.partial"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The cordon fails at the loading dock. The swarm exits the east face in a column and Ross's element breaks contact — the right call, but the swarm is now in the alley and moving toward the residential block. Ross's radio traffic is clipped and professional and he does not say anything that is not operationally necessary. Inside, the intercom rings unanswered. The intake log room goes dark on Saye's camera feed."
+                ],
+                "environment_state_changes": [
+                  "root_east_wind_remaining.quarantine.failure"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+2",
+                  "character.agent_caleb_ross.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Brooks keys the canister and the corridor clears a lane — not clean, not quiet, but passable. Owen moves first, one hand on the north wall, not looking at what is in the air around her. Torah follows. The wing-noise is physical, a pressure against the chest. They reach the stairwell door in forty seconds. Brooks's voice on comms: 'Four minutes. Go.'"
+            ],
+            "environment_state_changes": [
+              "root_east_wind_remaining.intercept.success"
+            ],
+            "resource_changes": {
+              "character.lt_mara_owen.morale": "+1"
+            }
+          },
+          "quarantine": {
+            "lines": [
+              "Ross's element seals the loading dock and the east stairwell exit in four minutes. The swarm hits the sealed doors and turns back. It is not stopped — it is redirected, which is not the same thing, but it is enough. Torah finds the intercom panel in the lobby. The warden picks up on the third call. He does not speak first. Torah does."
+            ],
+            "environment_state_changes": [
+              "root_east_wind_remaining.quarantine.success"
+            ],
+            "resource_changes": {
+              "character.agent_caleb_ross.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_east_wind_remaining",
+            "queued_line": "Someone has to reach the second floor before the intake log is gone.",
+            "trigger_key": "resolution_east_wind_remaining",
+            "delay_rooms": 1,
+            "reactivate_on_reshuffle": false
+          },
+          "quarantine": {
+            "event_id": "resolution_east_wind_remaining",
+            "queued_line": "Someone has to reach the second floor before the intake log is gone.",
+            "trigger_key": "resolution_east_wind_remaining",
+            "delay_rooms": 1,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_chunk_id": "locust_exodus_plague",
+            "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+            "structural_transfer": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+            "required_visible_details": [
+              "East HVAC intake roaring with inbound insects visible from the parking structure",
+              "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+            ],
+            "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+          },
+          {
+            "source_chunk_id": "locust_revelation_war_swarm",
+            "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+            "structural_transfer": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+            "required_visible_details": [
+              "Wing-noise audible from the parking structure before entry",
+              "Brooks's welted forearm at the lobby threshold before the squad has moved"
+            ],
+            "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+          },
+          {
+            "source_chunk_id": "locust_joel_consumption_chain",
+            "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+            "structural_transfer": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+            "required_visible_details": [
+              "Cafeteria shelving stripped to bare metal when the squad enters",
+              "Dr. Saye's reports getting shorter as each resource category falls"
+            ],
+            "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+          },
+          {
+            "source_chunk_id": "tactical_fire_and_movement",
+            "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+            "structural_transfer": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+            "required_visible_details": [
+              "Owen calling sectors from the floor plan in the lobby",
+              "Brooks at the threshold with suppression canister, timing the window aloud"
+            ],
+            "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "locust_exodus_plague",
+            "anchor_role": "premise",
+            "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+            "playable_transform": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+            "required_visible_details": [
+              "East HVAC intake roaring with inbound insects visible from the parking structure",
+              "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+            ],
+            "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "locust_revelation_war_swarm",
+            "anchor_role": "escalation",
+            "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+            "playable_transform": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+            "required_visible_details": [
+              "Wing-noise audible from the parking structure before entry",
+              "Brooks's welted forearm at the lobby threshold before the squad has moved"
+            ],
+            "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "locust_joel_consumption_chain",
+            "anchor_role": "escalation",
+            "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+            "playable_transform": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+            "required_visible_details": [
+              "Cafeteria shelving stripped to bare metal when the squad enters",
+              "Dr. Saye's reports getting shorter as each resource category falls"
+            ],
+            "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+          },
+          {
+            "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+            "source_chunk_id": "tactical_fire_and_movement",
+            "anchor_role": "procedure",
+            "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+            "playable_transform": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+            "required_visible_details": [
+              "Owen calling sectors from the floor plan in the lobby",
+              "Brooks at the threshold with suppression canister, timing the window aloud"
+            ],
+            "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_east_wind_remaining",
+      "type": "resolution",
+      "speaker": "torah",
+      "line_1": "Torah is outside the warden's office door. The swarm is one zone away. The signed order is the only thing that ends this.",
+      "line_2": "The warden is inside. He knows what is happening. He has known for fourteen months.",
+      "buttons": [
+        {
+          "label": "Compel the Reversal",
+          "action": "torah_speaks",
+          "preview": "Warden signs the release order; Torah signals Ross; HVAC reverses to west-exhaust; swarm is driven out..."
+        },
+        {
+          "label": "Evacuate and Seal",
+          "action": "seal",
+          "preview": "No additional personnel casualties; swarm is contained; detainees are safe; warden is isolated with the swarm..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Compel the Reversal",
+          "action": "torah_speaks",
+          "officer_id": "torah",
+          "primary_skill": "symbolic authority and moral confrontation",
+          "tactical_step": "symbolic close — compel warden's verbal and written reversal in Torah's presence, then signal Ross to reverse HVAC",
+          "base_success": 0.65,
+          "yield": "Warden signs the release order; Torah signals Ross; HVAC reverses to west-exhaust; swarm is driven out through the east face; detainees are processed for release",
+          "risk": "Warden refuses or delays; swarm reaches the office zone; Torah is caught in contact without suppression cover",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "The office door is not locked. Torah opens it. Voss is at his desk with the release forms in front of him — he printed them himself, sometime in the last hour. He does not look up immediately. When he does, his face is the face of a man who has been watching the cafeteria cameras. Torah does not raise his voice. The warden signs. Torah keys the radio: 'Ross. West exhaust. Now.' The wing-noise shifts — a change in pitch, then direction, then the corridor begins to lighten from the west end inward."
+              ],
+              "environment_state_changes": [
+                "resolution_east_wind_remaining.torah_speaks.success"
+              ],
+              "resource_changes": {
+                "character.torah.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Voss signs but his hand is shaking and he argues the date on the order, a bureaucratic reflex that costs three minutes. The swarm reaches the office anteroom while they are standing there. Torah can feel the air moving. Voss signs the corrected form. Torah keys Ross. The HVAC reverses. The swarm begins to move east but it is slow — it takes eleven minutes instead of four, and Brooks takes a third contact event in the corridor during the egress. He does not report it until they are outside."
+              ],
+              "environment_state_changes": [
+                "resolution_east_wind_remaining.torah_speaks.partial"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Voss will not sign. He says the court orders are under appeal. He says this while the swarm is audible through the office wall. Torah stands in the office for ninety seconds and the warden does not move. The swarm enters the anteroom. Torah pulls back to the stairwell. The intake log is gone — Saye confirms it on camera. The swarm has consumed the only physical record of the hold. The warden is still in his office when the squad evacuates. Ross does not reverse the HVAC. The swarm exits through the east face on its own schedule."
+              ],
+              "environment_state_changes": [
+                "resolution_east_wind_remaining.torah_speaks.failure"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+2",
+                "character.torah.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Evacuate and Seal",
+          "action": "seal",
+          "officer_id": "lt_mara_owen",
+          "primary_skill": "personnel evacuation and structural containment",
+          "tactical_step": "evacuate all staff and detainees through west exit, seal east wing, break contact, establish external cordon pending secondary approach",
+          "base_success": 0.6,
+          "yield": "No additional personnel casualties; swarm is contained; detainees are safe; warden is isolated with the swarm in the east wing",
+          "risk": "Sealing the east wing traps the warden; swarm consumes the intake log before a secondary approach can be mounted; partial closure only",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Owen moves fast and does not explain herself twice. Staff and detainees are through the west exit in six minutes. Owen seals the east wing doors with the facility's own fire-door system — a clean procedural move that nobody can argue with later. The swarm is behind the doors. The warden is behind the swarm. Ross establishes the external cordon. The east wing is dark on Saye's cameras. The intake log may still be intact. Owen files the seal report and does not editorialize."
+              ],
+              "environment_state_changes": [
+                "resolution_east_wind_remaining.seal.success"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Owen gets the detainees out but two staff members are slow and one takes a sting in the west corridor during egress — the swarm has already begun moving past the east wing boundary. Owen seals the doors anyway. The seal holds the main body. The warden is unreachable. Saye reports the intake log camera has gone dark. Owen stands at the west exit and looks at the sealed doors for a moment before she turns away."
+              ],
+              "environment_state_changes": [
+                "resolution_east_wind_remaining.seal.partial"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "The fire-door system fails on the east wing — a maintenance fault, logged six weeks ago and not repaired. Owen seals what she can with manual door wedges and a supply cart. It is not enough. The swarm moves into the central corridor. Owen calls the evacuation and gets everyone out, but the building is no longer containable. Ross expands the external cordon to the full block. The warden exits through a fire escape on the south face, alone, and does not speak to anyone. The intake log is gone. The detainees are safe. Everything else is a remainder."
+              ],
+              "environment_state_changes": [
+                "resolution_east_wind_remaining.seal.failure"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.stress": "+2",
+                "character.lt_mara_owen.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "torah_speaks": {
+          "lines": [
+            "The office door is not locked. Torah opens it. Voss is at his desk with the release forms in front of him — he printed them himself, sometime in the last hour. He does not look up immediately. When he does, his face is the face of a man who has been watching the cafeteria cameras. Torah does not raise his voice. The warden signs. Torah keys the radio: 'Ross. West exhaust. Now.' The wing-noise shifts — a change in pitch, then direction, then the corridor begins to lighten from the west end inward."
+          ],
+          "environment_state_changes": [
+            "resolution_east_wind_remaining.torah_speaks.success"
+          ],
+          "resource_changes": {
+            "character.torah.morale": "+1"
+          }
+        },
+        "seal": {
+          "lines": [
+            "Owen moves fast and does not explain herself twice. Staff and detainees are through the west exit in six minutes. Owen seals the east wing doors with the facility's own fire-door system — a clean procedural move that nobody can argue with later. The swarm is behind the doors. The warden is behind the swarm. Ross establishes the external cordon. The east wing is dark on Saye's cameras. The intake log may still be intact. Owen files the seal report and does not editorialize."
+          ],
+          "environment_state_changes": [
+            "resolution_east_wind_remaining.seal.success"
+          ],
+          "resource_changes": {
+            "character.lt_mara_owen.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "torah_speaks": {
+          "event_id": "cooldown_east_wind_remaining",
+          "queued_line": "The HVAC panel is live. Ross is waiting.",
+          "trigger_key": "cooldown_east_wind_remaining",
+          "delay_rooms": 1,
+          "reactivate_on_reshuffle": false
+        },
+        "seal": {
+          "event_id": "cooldown_east_wind_remaining",
+          "queued_line": "The HVAC panel is live. Ross is waiting.",
+          "trigger_key": "cooldown_east_wind_remaining",
+          "delay_rooms": 1,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_chunk_id": "locust_exodus_plague",
+          "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+          "structural_transfer": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+          "required_visible_details": [
+            "East HVAC intake roaring with inbound insects visible from the parking structure",
+            "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+          ],
+          "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+        },
+        {
+          "source_chunk_id": "locust_revelation_war_swarm",
+          "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+          "structural_transfer": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+          "required_visible_details": [
+            "Wing-noise audible from the parking structure before entry",
+            "Brooks's welted forearm at the lobby threshold before the squad has moved"
+          ],
+          "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+        },
+        {
+          "source_chunk_id": "locust_joel_consumption_chain",
+          "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+          "structural_transfer": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+          "required_visible_details": [
+            "Cafeteria shelving stripped to bare metal when the squad enters",
+            "Dr. Saye's reports getting shorter as each resource category falls"
+          ],
+          "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+        },
+        {
+          "source_chunk_id": "tactical_fire_and_movement",
+          "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+          "structural_transfer": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+          "required_visible_details": [
+            "Owen calling sectors from the floor plan in the lobby",
+            "Brooks at the threshold with suppression canister, timing the window aloud"
+          ],
+          "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_exodus_plague",
+          "anchor_role": "premise",
+          "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+          "playable_transform": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+          "required_visible_details": [
+            "East HVAC intake roaring with inbound insects visible from the parking structure",
+            "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+          ],
+          "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_revelation_war_swarm",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+          "playable_transform": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+          "required_visible_details": [
+            "Wing-noise audible from the parking structure before entry",
+            "Brooks's welted forearm at the lobby threshold before the squad has moved"
+          ],
+          "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_joel_consumption_chain",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+          "playable_transform": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+          "required_visible_details": [
+            "Cafeteria shelving stripped to bare metal when the squad enters",
+            "Dr. Saye's reports getting shorter as each resource category falls"
+          ],
+          "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_chunk_id": "tactical_fire_and_movement",
+          "anchor_role": "procedure",
+          "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+          "playable_transform": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+          "required_visible_details": [
+            "Owen calling sectors from the floor plan in the lobby",
+            "Brooks at the threshold with suppression canister, timing the window aloud"
+          ],
+          "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_east_wind_remaining",
+      "type": "interlude",
+      "speaker": "brooks",
+      "line_1": "Brooks is sitting on the tailgate of the support vehicle with his sleeve still down. Owen is writing. Ross is on the phone with the Institute and not making eye...",
+      "line_2": "The east face of the building is quiet now. The HVAC is running west. The detainees are being processed inside by someone else.",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Brooks does not take his sleeve up. He drinks from a water bottle and watches the east face of the building.",
+            "Owen finishes the after-action in one sitting, does not ask Brooks to review it, does not ask anyone to review it.",
+            "Ross ends the call and sits on the bumper next to Brooks. He says: 'The detainees knew something was happening. One of them told the processing officer the noise stopped the moment the order was signed.' Brooks says nothing. Ross does not say anything else either.",
+            "The cafeteria is stripped to bare metal. The records room is intact or it is not, depending on how the mission resolved. Either way, the warden's nameplate is already gone from the door."
+          ],
+          "environment_state_changes": [
+            "brooks.available_next_mission_conditional",
+            "lt_mara_owen.stress_plus_one",
+            "squad.morale_conditional_on_closure_outcome",
+            "institute.attention_tick_conditional_on_cordon_failure"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "smoke_break",
+      "state_reads": [
+        "brooks.injury_state",
+        "lt_mara_owen.fatigue",
+        "agent_caleb_ross.institute_attention_pressure",
+        "torah.symbolic_authority_used"
+      ],
+      "state_writes": [
+        "brooks.available_next_mission_conditional",
+        "lt_mara_owen.stress_plus_one",
+        "squad.morale_conditional_on_closure_outcome",
+        "institute.attention_tick_conditional_on_cordon_failure"
+      ],
+      "featured_characters": [
+        "brooks",
+        "lt_mara_owen",
+        "agent_caleb_ross"
+      ],
+      "visible_text": [
+        "Brooks does not take his sleeve up. He drinks from a water bottle and watches the east face of the building.",
+        "Owen finishes the after-action in one sitting, does not ask Brooks to review it, does not ask anyone to review it.",
+        "Ross ends the call and sits on the bumper next to Brooks. He says: 'The detainees knew something was happening. One of them told the processing officer the noise stopped the moment the order was signed.' Brooks says nothing. Ross does not say anything else either.",
+        "The cafeteria is stripped to bare metal. The records room is intact or it is not, depending on how the mission resolved. Either way, the warden's nameplate is already gone from the door."
+      ],
+      "choices": [
+        "Let Brooks keep his sleeve down.",
+        "Ask Owen if she is all right.",
+        "Ask Ross what the Institute said."
+      ],
+      "outcomes": [
+        "If Brooks is left alone: he is available next mission but his threshold for point work has moved; Owen notes it in the after-action without naming it.",
+        "If Owen is asked: she says 'Fine' and means it in the operational sense only; her stress carries forward.",
+        "If Ross is asked: he reads from his notes in a flat voice — the Institute wants a full swarm-behavior report and a recommendation on the warden's status; he does not say what he thinks the recommendation should be."
+      ],
+      "followup_hooks": [
+        "The warden's appeal is still active; the signed order may be challenged; the intake log's status determines whether the Institute can support the detainees' legal case",
+        "Brooks's third contact event was not reported in the field; it will surface in the next clinic rotation",
+        "The swarm's selective targeting of warden-controlled spaces is in Saye's report; the Institute flags it for corpus review — this is not the first facility with an unlawful hold"
+      ],
+      "corpus_anchors": [
+        "locust_exodus_plague",
+        "locust_joel_consumption_chain"
+      ],
+      "corpus_influences": [
+        {
+          "source_chunk_id": "locust_exodus_plague",
+          "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+          "structural_transfer": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+          "required_visible_details": [
+            "East HVAC intake roaring with inbound insects visible from the parking structure",
+            "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+          ],
+          "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+        },
+        {
+          "source_chunk_id": "locust_revelation_war_swarm",
+          "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+          "structural_transfer": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+          "required_visible_details": [
+            "Wing-noise audible from the parking structure before entry",
+            "Brooks's welted forearm at the lobby threshold before the squad has moved"
+          ],
+          "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+        },
+        {
+          "source_chunk_id": "locust_joel_consumption_chain",
+          "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+          "structural_transfer": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+          "required_visible_details": [
+            "Cafeteria shelving stripped to bare metal when the squad enters",
+            "Dr. Saye's reports getting shorter as each resource category falls"
+          ],
+          "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+        },
+        {
+          "source_chunk_id": "tactical_fire_and_movement",
+          "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+          "structural_transfer": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+          "required_visible_details": [
+            "Owen calling sectors from the floor plan in the lobby",
+            "Brooks at the threshold with suppression canister, timing the window aloud"
+          ],
+          "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_exodus_plague",
+          "anchor_role": "premise",
+          "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+          "playable_transform": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+          "required_visible_details": [
+            "East HVAC intake roaring with inbound insects visible from the parking structure",
+            "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+          ],
+          "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_revelation_war_swarm",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+          "playable_transform": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+          "required_visible_details": [
+            "Wing-noise audible from the parking structure before entry",
+            "Brooks's welted forearm at the lobby threshold before the squad has moved"
+          ],
+          "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_joel_consumption_chain",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+          "playable_transform": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+          "required_visible_details": [
+            "Cafeteria shelving stripped to bare metal when the squad enters",
+            "Dr. Saye's reports getting shorter as each resource category falls"
+          ],
+          "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_chunk_id": "tactical_fire_and_movement",
+          "anchor_role": "procedure",
+          "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+          "playable_transform": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+          "required_visible_details": [
+            "Owen calling sectors from the floor plan in the lobby",
+            "Brooks at the threshold with suppression canister, timing the window aloud"
+          ],
+          "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "east_wind_remaining",
+      "name": "Harrow Detention Facility — East Wing",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A regional detention facility is under active locust infestation. The swarm is consuming the building from the east. The warden will not open the door.",
+      "first_visit_description": "Torah deploys with Lt. Owen and Brooks on the ground floor entry. Ross is staged at the vehicle cordon outside the east face with a four-person support element. Dr. Saye is remote on comms from the Institute, tracking swarm density via facility cameras still online. The warden has locked himself in his second-floor office and is not responding to facility phones. Owen has tactical lead on the ground floor. Brooks is point for any breach into the administrative corridor. Torah's role is symbolic asset and command authority — Owen defers to Torah on the close condition but runs all movement decisions herself. The detainee wing is quiet. The east wing is not.",
+      "return_description": "The east wing still smells of chitin and grain dust. The overhead lights work again but nobody has cleaned the cafeteria floor. The warden's nameplate is gone from the door.",
+      "detection_report": "Facility security triggered a mass-casualty pest alarm at 0340. First responders found the cafeteria stripped to bare metal shelving. A corrections officer described the swarm as moving in formation — her word was 'deliberate.' Institute seismic sensors picked up wing-frequency resonance consistent with locust_revelation_war_swarm corpus signature at 0412. Deployment authorized 0431.",
+      "current_situation": "The squad is inside the facility lobby. The east corridor is a moving wall of insects — visibility two meters, wing-noise loud enough to require shouted communication. The overhead fluorescents are dark under the swarm's mass. Brooks is at the corridor threshold with a suppression canister. Owen has the floor plan and is calling sectors. Ross is outside on the east face, watching the HVAC intake roaring with inbound insects. Dr. Saye reports the swarm is not random: it has not entered the detainee wing once in four hours. The warden's office light is on.",
+      "action_profile": {
+        "physical_threat": "The swarm stings exposed skin within seconds of contact; stings cause immediate welt pain, eye swelling, and anaphylactic risk for any personnel with unknown sensitivity; Brooks already has welts on his left forearm from the lobby threshold; the swarm can pin a person to the floor if they lose footing in the corridor",
+        "contact_state": "The squad is at the edge of active contact; the corridor is impassable without suppression; the swarm is expanding westward and will reach the lobby in under ten minutes if not fixed",
+        "field_manual_drill": "Suppress/fix the swarm body in the corridor with chemical dispersant while a bounding element moves along the north wall to the stairwell; breach the second floor; clear to the warden's office; evacuate non-combatants through the west exit; cordon the east face to prevent swarm escape into the surrounding block",
+        "tactical_objective": "Fix the swarm in the east corridor long enough for Torah and one escort to reach the warden's office, compel the reversal, then reverse the HVAC to drive the swarm out",
+        "symbolic_close": "Force alone cannot end the manifestation; the warden must reverse the hold in writing and in Torah's presence; until that moment the swarm reconstitutes through the HVAC regardless of suppression",
+        "not_monster_of_week": "The swarm does not attack the detainees; it consumes only what the warden controls — his food stores, his records, his administrative space; the judgment is structurally precise, not indiscriminate; the squad is not fighting a pest, they are operating inside a verdict"
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "lt_mara_owen",
+          "name": "Lt. Mara Owen",
+          "mission_role": "tactical lead, ground floor movement command",
+          "physical_position": "Lobby, floor plan in hand, calling sectors to Brooks",
+          "assigned_reason": "Owen runs fire-and-movement at squad level; this is a breach-and-reach problem before it is anything else",
+          "visible_state": "Controlled, clipped sentences, not looking at the corridor longer than she has to"
+        },
+        {
+          "officer_id": "brooks",
+          "name": "Brooks",
+          "mission_role": "point element, suppression and breach",
+          "physical_position": "East corridor threshold, suppression canister primed, left forearm already welted",
+          "assigned_reason": "Brooks takes point on every hard entry; Owen trusts his threshold judgment",
+          "visible_state": "Still, watching the swarm move, not flinching but not speaking either"
+        },
+        {
+          "officer_id": "agent_caleb_ross",
+          "name": "Agent Caleb Ross",
+          "mission_role": "external cordon, east-face security, HVAC control",
+          "physical_position": "Outside the east face of the building with support element, watching the HVAC intake",
+          "assigned_reason": "Ross manages the perimeter and the mechanical reversal that is the physical half of the close condition",
+          "visible_state": "Terse radio traffic, professional, asking for a timeline every ninety seconds"
+        },
+        {
+          "officer_id": "torah",
+          "name": "Torah",
+          "mission_role": "symbolic asset, command authority, close condition executor",
+          "physical_position": "Lobby with Owen, behind Brooks",
+          "assigned_reason": "The warden will not reverse the hold for a corrections officer or a field agent; Torah's authority is the only lever that has not been tried",
+          "visible_state": "Listening to the wing-noise, not yet moving"
+        },
+        {
+          "officer_id": "dr_lenora_saye",
+          "name": "Dr. Saye",
+          "mission_role": "remote technical consult, swarm behavior analysis",
+          "physical_position": "Institute operations room, monitoring facility cameras",
+          "assigned_reason": "Saye tracks swarm density and expansion rate to give Owen decision windows",
+          "visible_state": "Calm on comms, but her reports are getting shorter"
+        }
+      ],
+      "root_sin": "Warden Voss has held eleven people past lawful release for fourteen months, hardening against two court orders and one prior Institute advisory; the refusal is not negligence but will",
+      "modern_incident_logic": "The facility's east-facing HVAC intake draws outside air from an agricultural corridor; the swarm entered through that intake and has not left because the symbolic pressure sustaining it is still active inside the building; the intake is a real mechanical vector that also maps exactly to the corpus east-wind entry rule; no contrivance required",
+      "closure_test": "The squad must reach the warden, compel the signed reversal, and then Ross must mechanically reverse the HVAC to west-exhaust; both acts are required; neither alone closes the manifestation",
+      "religious_pattern": "Exodus locust plague structure: hardened authority, east-wind entry, consumption of what remains, confession and reversal, west-wind expulsion",
+      "anomaly_rule": "Swarm reconstitutes through east HVAC within four minutes of any suppression unless the warden's reversal is in progress; swarm does not enter detainee wing under any circumstances; swarm selects targets by what the warden controls",
+      "forbidden_flat_read": "Do not literalize the swarm as a supernatural monster with a health bar; it is a judgment with a mechanical body; it can be suppressed, fixed, and driven out, but it cannot be killed",
+      "officer_reports": [
+        "Owen: 'Swarm is holding the corridor. We have a window if Brooks can fix it for four minutes. I need a route to the stairwell.'",
+        "Brooks: 'Canister gives me three minutes of clear lane, maybe four. After that it reconstitutes. I've seen it do it twice already.'",
+        "Ross on radio: 'East intake is pulling hard. Whatever is feeding this is still running. I'm at the HVAC panel. Say the word and I reverse it. But Saye says that only works if the source condition is met.'",
+        "Dr. Saye on comms: 'The swarm has not touched cell block A or B. Not once. It knows where it is going. The cafeteria is stripped. It's moving toward records storage now.'"
+      ],
+      "procedure_hooks": [
+        "Suppress/fix the corridor with chemical dispersant to open a bounding lane",
+        "Bounding overwatch along north wall to stairwell while Brooks holds suppression",
+        "Breach second-floor office door — it is locked from inside",
+        "Cordon east face to prevent swarm escape into surrounding residential block once HVAC reverses",
+        "Evacuate remaining staff through west exit before HVAC reversal drives the swarm through the building"
+      ],
+      "character_state_stakes": {
+        "lt_mara_owen": "If the suppression window fails, Owen takes a sting injury and loses tactical composure for the resolution phase",
+        "brooks": "Brooks is already at partial exposure; a second contact event risks anaphylactic response and removes him from the field",
+        "agent_caleb_ross": "If the HVAC reversal is called before the warden signs, Ross executes a failed close and the swarm exits into the surrounding block, triggering institute.attention pressure",
+        "torah": "If Torah cannot compel the warden, the swarm consumes the intake log — the only physical evidence of the unlawful hold — and the moral case collapses with it"
+      },
+      "interlude_vectors": [
+        "Brooks does not talk about the welts in the cooldown; he just keeps his sleeve down",
+        "Owen files the after-action in one sitting and does not ask for review",
+        "Ross asks Saye whether the detainees knew what was happening; Saye does not answer"
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "Warden Voss has held eleven people past lawful release for fourteen months, hardening against two court orders and one prior Institute advisory; the refusal is not negligence but will",
+        "modern_incident_logic": "The facility's east-facing HVAC intake draws outside air from an agricultural corridor; the swarm entered through that intake and has not left because the symbolic pressure sustaining it is still active inside the building; the intake is a real mechanical vector that also maps exactly to the corpus east-wind entry rule; no contrivance required",
+        "closure_test": "The squad must reach the warden, compel the signed reversal, and then Ross must mechanically reverse the HVAC to west-exhaust; both acts are required; neither alone closes the manifestation"
+      },
+      "religious_subtext": {
+        "source_pattern": "Exodus locust plague structure: hardened authority, east-wind entry, consumption of what remains, confession and reversal, west-wind expulsion",
+        "transformed_rule": "Swarm reconstitutes through east HVAC within four minutes of any suppression unless the warden's reversal is in progress; swarm does not enter detainee wing under any circumstances; swarm selects targets by what the warden controls",
+        "forbidden_flat_read": "Do not literalize the swarm as a supernatural monster with a health bar; it is a judgment with a mechanical body; it can be suppressed, fixed, and driven out, but it cannot be killed"
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Brooks does not talk about the welts in the cooldown; he just keeps his sleeve down",
+        "Owen files the after-action in one sitting and does not ask for review",
+        "Ross asks Saye whether the detainees knew what was happening; Saye does not answer"
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "east_wind_remaining",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_chunk_id": "locust_exodus_plague",
+          "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+          "structural_transfer": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+          "required_visible_details": [
+            "East HVAC intake roaring with inbound insects visible from the parking structure",
+            "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+          ],
+          "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+        },
+        {
+          "source_chunk_id": "locust_revelation_war_swarm",
+          "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+          "structural_transfer": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+          "required_visible_details": [
+            "Wing-noise audible from the parking structure before entry",
+            "Brooks's welted forearm at the lobby threshold before the squad has moved"
+          ],
+          "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+        },
+        {
+          "source_chunk_id": "locust_joel_consumption_chain",
+          "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+          "structural_transfer": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+          "required_visible_details": [
+            "Cafeteria shelving stripped to bare metal when the squad enters",
+            "Dr. Saye's reports getting shorter as each resource category falls"
+          ],
+          "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+        },
+        {
+          "source_chunk_id": "tactical_fire_and_movement",
+          "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+          "structural_transfer": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+          "required_visible_details": [
+            "Owen calling sectors from the floor plan in the lobby",
+            "Brooks at the threshold with suppression canister, timing the window aloud"
+          ],
+          "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_exodus_plague",
+          "anchor_role": "premise",
+          "source_fingerprint": "East wind carries swarm after hardened refusal; west wind drives it out after confession",
+          "playable_transform": "East-facing HVAC intake is the east wind; mechanical reversal to west-exhaust is the west wind; warden's refusal is the hardened heart; signed reversal is the confession",
+          "required_visible_details": [
+            "East HVAC intake roaring with inbound insects visible from the parking structure",
+            "Ross stationed at the HVAC panel waiting for the close condition before he reverses flow"
+          ],
+          "followup_payoff": "If the HVAC reverses before the warden signs, the swarm exits into the surrounding block and triggers a secondary containment crisis"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_revelation_war_swarm",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Swarm moves in war-body formation with armor sound, selective targeting, and sting power",
+          "playable_transform": "Wing-noise loud enough to require shouted communication; swarm holds corridor formation rather than dispersing; stings cause immediate injury; swarm selects only warden-controlled spaces",
+          "required_visible_details": [
+            "Wing-noise audible from the parking structure before entry",
+            "Brooks's welted forearm at the lobby threshold before the squad has moved"
+          ],
+          "followup_payoff": "Suppression breaks the body temporarily but the sting rule persists; personnel who take multiple contacts risk removal from the field"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "locust_joel_consumption_chain",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Successive waves consume different categories; each wave eats what the previous spared",
+          "playable_transform": "Swarm moves through resource categories in sequence: food stores already gone, medical supplies next, then paper records, then the intake log",
+          "required_visible_details": [
+            "Cafeteria shelving stripped to bare metal when the squad enters",
+            "Dr. Saye's reports getting shorter as each resource category falls"
+          ],
+          "followup_payoff": "If the squad delays past two failed plan cycles, the intake log is consumed and the moral case for the warden's accountability is destroyed"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_chunk_id": "tactical_fire_and_movement",
+          "anchor_role": "procedure",
+          "source_fingerprint": "One team suppresses while another bounds; fire superiority buys movement",
+          "playable_transform": "Brooks fixes the swarm with dispersant while Owen's element bounds along the north wall to the stairwell; Ross holds the external cordon",
+          "required_visible_details": [
+            "Owen calling sectors from the floor plan in the lobby",
+            "Brooks at the threshold with suppression canister, timing the window aloud"
+          ],
+          "followup_payoff": "Partial success on the root plan means Brooks takes a second contact event and may be unavailable for the resolution phase"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "east_wind_remaining"
+    },
+    {
+      "pool": "action_horror",
+      "room_id": "east_wind_remaining"
+    },
+    {
+      "pool": "branch",
+      "room_id": "east_wind_remaining"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "east_wind_remaining"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The HVAC as east/west wind is the load-bearing modern translation — it is mechanical, plausible, and symbolically exact",
+    "The swarm's refusal to enter the detainee wing is the judgment made structurally visible without any exposition",
+    "Brooks's unreported third contact event is the Joel consumption-chain logic applied to personnel: what the first wave spared, the second wave takes",
+    "The warden printing the release forms before Torah arrives is a character beat that rewards the player for reaching him — he was close to breaking on his own, which makes the fourteen months worse, not better"
+  ],
+  "self_critique": [
+    "The cordon-failure branch in the root plans risks triggering institute.attention pressure before the resolution phase, which may feel punishing if the player then succeeds at the symbolic close; the compiler should check whether the attention tick fires before or after the resolution outcome is evaluated"
+  ]
+}

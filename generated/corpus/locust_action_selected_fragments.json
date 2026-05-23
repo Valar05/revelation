@@ -1,0 +1,99 @@
+{
+  "name": "Locust Action-Horror Source Packet",
+  "purpose": "Selected fair-use/public-domain anchors for an action-heavy Revelation room where biblical plague manifests as squad contact, and field manuals provide tactical procedure.",
+  "fragments": [
+    {
+      "id": "locust_exodus_plague",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00087",
+      "source_circumstance": "A hardened ruler refuses release; an east wind brings locusts that cover the land, darken it, consume what survived the previous plague, and are later driven out by a west wind after confession.",
+      "source_excerpt": "The east wind brought the locusts. They covered the surface of the whole earth, so that the land was darkened, and they ate every herb and all fruit left by hail. Pharaoh says he has sinned, and a west wind drives the locusts into the sea.",
+      "nightmare_room_seed": "A modern authority refuses to release people, records, or captives after prior damage; the remaining green places are consumed by a living plague until the refusal is reversed.",
+      "escalation_thread": "The swarm eats what remains after earlier harm, fills interior spaces, darkens visibility, and will not leave until the root refusal is confronted.",
+      "suggested_actions": ["torah_speaks", "seal", "vent", "quarantine"],
+      "generation_rules": [
+        "Use hardened refusal as the root sin.",
+        "Use east/west airflow or ventilation as a real tactical/containment problem.",
+        "Make confession/release/reversal matter more than killing individual insects."
+      ]
+    },
+    {
+      "id": "locust_revelation_war_swarm",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:01523",
+      "source_circumstance": "Smoke from the abyss darkens air and sun; locusts emerge with scorpion power, war-horse shapes, iron breastplate sound, human faces, lion teeth, and stinging tails.",
+      "source_excerpt": "Out of smoke came locusts with power like scorpions. They do not harm green things, but torment people. Their shapes are like horses prepared for war; their wings sound like many horses rushing to war; their tails sting.",
+      "nightmare_room_seed": "The threat is not a bug cloud alone: the insects mass into a war-body with armor sound, faces glimpsed in the swarm, lion teeth in the mouth shape, and scorpion sting effects.",
+      "escalation_thread": "Smoke and wing-noise precede contact; suppression may break the body but not the sting rule. The swarm selects marked or unmarked people according to symbolic status.",
+      "suggested_actions": ["intercept", "destroy", "recover", "torah_speaks"],
+      "generation_rules": [
+        "Give the squad a real combat problem.",
+        "Use war imagery physically: sound, armor, movement, stings.",
+        "Keep it procedural and readable; do not turn into fantasy spellcasting."
+      ]
+    },
+    {
+      "id": "locust_joel_consumption_chain",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:01131",
+      "source_circumstance": "Joel describes successive locust waves: what one leaves, another eats; vines and fig trees are stripped; offerings are cut off and joy withers.",
+      "source_excerpt": "What the swarming locust left, the great locust ate; what the great locust left, the grasshopper ate; what the grasshopper left, the caterpillar ate. Vine, fig, grain, wine, and oil fail.",
+      "nightmare_room_seed": "A follow-through structure: first the swarm eats supplies, then memory, then morale, then ritual/order. Each wave consumes what the previous wave spared.",
+      "escalation_thread": "Longer branch means larger consequence: casualties, loss of cover, ruined evidence, squad morale damage, then inability to perform the closing act.",
+      "suggested_actions": ["ration", "recover", "support_owen", "clinic"],
+      "generation_rules": [
+        "Use rising action, not repeated sightings.",
+        "Each follow-up or resolution beat should consume a different category of what remains.",
+        "Tie recovery to restoring what was wrongfully withheld or devoured."
+      ]
+    },
+    {
+      "id": "tactical_fire_and_movement",
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_title": "ATP 3-21.8 Infantry Rifle Platoon and Squad",
+      "source_chunk_id": "army_atp_3_21_8_infantry_platoon_squad:00327",
+      "source_circumstance": "Field manual glossary defines fire and movement, suppressive fire, fire superiority, fixing a force, and related tactical tasks.",
+      "source_excerpt": "Fire and movement applies fires to suppress, neutralize, or destroy while another team moves. At squad level, one team places suppressive fire as another moves against or around the enemy. Fix prevents enemy movement for a period.",
+      "nightmare_room_seed": "Brooks or Owen can propose fixing the swarm-body with suppression while Ross or Torah moves to the symbolic source. Failure means the swarm breaks containment or pins the wrong team.",
+      "escalation_thread": "Success buys movement; partial success injures or contaminates the suppressing team; failure lets the swarm envelop the route.",
+      "suggested_actions": ["intercept", "destroy", "send_party", "recall_party"],
+      "generation_rules": [
+        "Make field manual procedure visible in plan intent and outcome prose.",
+        "Do not make action plans generic; name who suppresses, who bounds, who evacuates, and who touches the symbolic source."
+      ]
+    },
+    {
+      "id": "tactical_battle_drills",
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_title": "ATP 3-21.8 Infantry Rifle Platoon and Squad",
+      "source_chunk_id": "army_atp_3_21_8_infantry_platoon_squad:00336",
+      "source_circumstance": "The reference list names relevant drills: react to direct fire contact, react to ambush, break contact, establish security at the halt, enter and clear a room, and conduct a squad assault.",
+      "source_excerpt": "Relevant drills include react to direct fire contact, react to ambush, break contact, establish security at the halt, enter and clear a room, and conduct a squad assault.",
+      "nightmare_room_seed": "The player chooses which trained response the squad applies to an impossible contact: hold and suppress, breach/clear to reach victims, break contact with casualties, or establish a cordon and force the swarm into a containable lane.",
+      "escalation_thread": "Wrong drill can still help but costs people: a clean break contact may abandon victims; an assault may save them but overexpose Torah.",
+      "suggested_actions": ["intercept", "avoid", "seal", "quarantine"],
+      "generation_rules": [
+        "Every action plan should be a character's plan using a named tactical drill or symbolic exception.",
+        "Incapacitated characters should obviously remove their plan from the choice set later."
+      ]
+    },
+    {
+      "id": "quran_locust_clear_signs",
+      "source_id": "quran_rodwell_gutenberg_2800",
+      "source_title": "The Koran, translated by J. M. Rodwell",
+      "source_chunk_id": "quran_rodwell_gutenberg_2800:00185",
+      "source_circumstance": "Pharaoh's people receive successive clear signs including flood, locusts, lice, frogs, and blood, behave proudly, ask for relief, then break their promise.",
+      "source_excerpt": "Flood, locusts, lice, frogs, and blood are sent as clear signs; the people behave proudly, plead for the plague to be removed, promise belief and release, then break their promise when relief comes.",
+      "nightmare_room_seed": "Closure should test whether relief is another broken promise. The anomaly may withdraw only if the squad forces an irreversible release or public concession.",
+      "escalation_thread": "If command accepts a false concession, the swarm returns harder after relief, targeting whoever signed the empty promise.",
+      "suggested_actions": ["full_disclosure", "quarantine_forms", "torah_speaks"],
+      "generation_rules": [
+        "Use clear signs and broken promises as the moral logic.",
+        "Avoid making the site a generic cult scene; the modern sin is institutional pride under pressure."
+      ]
+    }
+  ]
+}

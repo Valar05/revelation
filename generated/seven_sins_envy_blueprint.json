@@ -1,0 +1,272 @@
+{
+  "title": "The Pit at Dothan",
+  "design_goal": "A favored-marker sabotage at a deep utility shaft becomes a live rescue-and-containment action when envy-driven symbolic pressure turns the shaft into a judgment engine that buries the marked and elevates the resentful.",
+  "source_mechanism": {
+    "source_chunk_id": "world_english_bible:00052",
+    "source_action": "Brothers strip Joseph of his coat, throw him into a dry pit, then sit down to eat while he calls from below; a passing caravan becomes the exit route",
+    "sin_or_transgression": "Envy of a favored colleague, compounded by collective silence and false evidence fabricated to cover the act",
+    "witness_or_judgment": "The pit refuses to stay empty or silent; the dreamer's voice rises from below as physical pressure, and the coat-as-evidence reappears regardless of disposal",
+    "required_scene_elements": [
+      "a dry shaft or pit with a person trapped below",
+      "a distinctive marked garment or favored-marker object",
+      "fabricated incident report used to explain the disappearance",
+      "a group of colleagues who ate and continued working while someone was below",
+      "a caravan or transit vector that was meant to remove the problem quietly"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "While the original act of envious disposal remains unacknowledged by those who committed it, the shaft exerts gravitational symbolic pressure: anyone carrying a favored-marker object is drawn toward the opening, and the shaft amplifies sound from below into a physical concussive wave",
+    "active_manifestation": "Before the squad arrives, a junior Institute technician named Dov Reiss has been in the shaft for eleven hours. His colleagues filed a false equipment-malfunction report. The shaft is now emitting rhythmic pressure pulses timed to Reiss's voice, cracking the surrounding concrete and destabilizing the access gantry above him. The gantry is live and failing.",
+    "escalation": "Each failed intervention causes the shaft to deepen symbolically: the gantry drops another section, the pressure pulses increase in frequency, and the false report begins replicating itself across the site's document system, burying the real incident record",
+    "closure_condition": "Reiss must be physically extracted from the shaft AND the false incident report must be formally repudiated by at least one person who signed it, on record, in the presence of a witness"
+  },
+  "room": {
+    "id": "room_pit_dothan",
+    "name": "Shaft Seven, Reiss Incident",
+    "type": "mission",
+    "mission_mode": "action_horror",
+    "description": "A utility shaft at an Institute-adjacent infrastructure site. A technician is trapped below. The gantry is failing. The paperwork says it was an accident.",
+    "first_visit_description": "Torah leads Owen and Brooks to the Dothan Industrial Annex at 0340. The site is a decommissioned water-treatment complex the Institute uses for deep-equipment storage. Shaft Seven is a 40-meter vertical access bore, dry, concrete-lined. Owen is on the gantry level with a rope kit and a radio. Brooks is at the site entrance holding the incident file, which he flagged as inconsistent during transit. Dr. Saye is remote, patched in by comms from the Institute clinic, monitoring Reiss's vitals via the shaft's emergency sensor package. Three of Reiss's colleagues are present on-site: they have not moved from the break room since filing the malfunction report eleven hours ago. The gantry groans every forty seconds. From below, a voice rises in regular intervals, not screaming, just speaking, and each time it does the concrete around the shaft lip fractures another centimeter outward.",
+    "return_description": "The shaft is quieter now. The gantry has been secured or is gone. The break room is empty. Whatever was filed here will follow the squad.",
+    "detection_report": "Institute seismic array flagged rhythmic sub-surface pressure events at the Dothan Annex at 0110. Civilian emergency services were turned away at 0200 by an on-site supervisor citing an active Institute protocol. The supervisor's name appears on the malfunction report.",
+    "current_situation": "Owen is already clipped to the gantry rail, looking down. She radios: the shaft floor is visible, Reiss is standing, not injured, but he cannot climb. Every time he tries, the shaft wall pushes him back down. The gantry shudders. A section of the access ladder has already separated and fallen. Brooks holds up the incident file: three signatures, one timestamp that predates the reported malfunction by six hours. The colleagues in the break room have not come out.",
+    "action_profile": {
+      "physical_threat": "The failing gantry can drop a section onto Owen or anyone on the rope line at any moment; the pressure pulses from the shaft transmit through the metal frame as concussive shockwaves that can knock personnel off the platform",
+      "contact_state": "Owen is on the gantry under active structural failure; the squad is in contact with the anomaly the moment they step onto the platform",
+      "field_manual_drill": "React to contact on the gantry: suppress the structural failure by establishing a secondary anchor point, fix Reiss's position with a rope line, bound the extraction team in two-person relay, breach the false-report chain to satisfy the symbolic close condition",
+      "tactical_objective": "Extract Reiss from the shaft before the gantry fails completely, while the shaft's symbolic pressure is still active",
+      "symbolic_close": "The false incident report must be formally repudiated on record by a signatory; force alone cannot stop the shaft's pressure pulses",
+      "violent_resolution": "The gantry itself can be partially demolished in a controlled drop to relieve load on the anchor points, buying extraction time at the cost of the primary egress route",
+      "not_monster_of_week": "There is no creature. The shaft is a judgment engine powered by collective envy and institutional silence. The threat is structural, procedural, and moral simultaneously. The colleagues eating in the break room while Reiss was below is the horror."
+    },
+    "deployment_manifest": [
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Lt. Mara Owen",
+        "mission_role": "Tactical point, extraction lead",
+        "physical_position": "On the gantry platform, clipped to the rail, looking into the shaft",
+        "assigned_reason": "Owen requested the assignment after flagging the seismic report herself; she has prior rope-rescue certification",
+        "visible_state": "Controlled, but her grip on the rail is white-knuckled. She has not looked away from the shaft since arrival."
+      },
+      {
+        "officer_id": "brooks",
+        "name": "Brooks",
+        "mission_role": "Evidence and field command support",
+        "physical_position": "Site entrance, holding the incident file, radio in hand",
+        "assigned_reason": "Brooks processed the initial detection report and identified the timestamp discrepancy during transit",
+        "visible_state": "Quiet. He has read the file four times. He keeps looking at the break room door."
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Dr. Lenora Saye",
+        "mission_role": "Remote medical consult, symbolic pattern analysis",
+        "physical_position": "Institute clinic, patched in via comms",
+        "assigned_reason": "Monitoring Reiss's vitals through the shaft sensor package; Saye also holds the Institute's incident-report authentication protocol",
+        "visible_state": "Her voice on comms is steady but she asks for a pulse update every three minutes, which is more often than the sensors require."
+      }
+    ],
+    "root_sin": "Collective envy of a favored colleague, expressed as deliberate disposal and covered by fabricated institutional paperwork",
+    "modern_incident_logic": "Reiss was the only technician on the team to receive a commendation and a project lead assignment last quarter. His colleagues filed a false equipment-malfunction report, lured him to Shaft Seven on a pretext, and left him below. The shaft's symbolic resonance activates because the act mirrors the source pattern exactly: the favored one stripped of status, dropped into a dry pit, while the group returns to ordinary work. The Institute's own documentation system becomes the coat: the false report is the physical evidence of the original sin, and it replicates because the sin has not been named.",
+    "closure_test": "Reiss extracted alive AND at least one signatory of the false report formally repudiates it on record in the presence of a witness before the squad leaves the site",
+    "religious_pattern": "Joseph pit narrative: favored marker, envious brothers, dry pit, false evidence, eating while the victim calls below, transit vector as escape route for the perpetrators",
+    "anomaly_rule": "The shaft exerts symbolic gravity on favored-marker objects and persons; it amplifies the trapped person's voice as concussive pressure; it resists extraction until the false record is broken; it deepens if the squad leaves without closure",
+    "forbidden_flat_read": "Do not literalize as a monster in the shaft or a supernatural entity controlling the colleagues; the horror is human envy made structurally consequential",
+    "officer_reports": [
+      "Owen, radio: 'Gantry section three is gone. I have eyes on Reiss. He's standing. He's talking but I can't make out words. Every time he talks the frame moves.'",
+      "Brooks, at entrance: 'This report was filed at 1800 yesterday. The malfunction it describes happened at 2200. Someone wrote the ending before the event.'",
+      "Saye, comms: 'Reiss's vitals are stable but his cortisol is flat. That's not fear. That's resignation. He stopped expecting rescue hours ago.'"
+    ],
+    "procedure_hooks": [
+      "Rope-rescue relay: two-person anchor-and-lower, one person on the line, one person on the brake",
+      "Incident report authentication: Institute protocol requires a witness signature and a timestamp audit to formally void a filed report",
+      "Gantry load assessment: controlled demolition of a failing section to redistribute structural load is a recognized field procedure",
+      "Evidence custody: the original false report must be physically retained and logged, not destroyed, for the repudiation to be valid"
+    ],
+    "character_state_stakes": {
+      "lt_mara_owen": "If the gantry drops while she is on it, Owen takes injury and stress; if extraction succeeds under her lead, her squad cohesion improves",
+      "brooks": "If Brooks forces the repudiation and it holds, his institute standing increases; if he is ignored or the report replicates before he acts, he carries a fixation state",
+      "dr_lenora_saye": "If Reiss is extracted alive, Saye's remote-consult confidence stabilizes; if Reiss dies while she is monitoring vitals, she enters a withdrawn state"
+    },
+    "interlude_vectors": [
+      "Post-mission: Brooks sits with the voided report in a plastic evidence sleeve and does not file it immediately",
+      "Owen's hands shake during the debrief meal; she does not mention it",
+      "Saye asks Torah privately whether the colleagues will face Institute review or whether the file will be managed quietly"
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00052",
+      "role": "premise",
+      "fingerprint": "Joseph wandering, brothers present, pit as disposal site, group continues normal activity",
+      "transfer": "Reiss lured to shaft on a pretext, colleagues return to break room and file paperwork, shaft becomes active judgment site",
+      "visible_details": [
+        "The break room light is on and the colleagues have not moved in eleven hours",
+        "Reiss is standing at the shaft floor, not injured, just unable to climb"
+      ],
+      "payoff": "The colleagues' inaction is the load-bearing moral fact; the shaft does not close until it is named"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00053",
+      "role": "evidence",
+      "fingerprint": "False evidence fabricated after the act; the coat dipped in blood as institutional cover",
+      "transfer": "The false incident report timestamped before the event; the document replicates across the site system as the anomaly escalates",
+      "visible_details": [
+        "Brooks holds the file with the impossible timestamp",
+        "The report begins appearing on other terminals in the site as the gantry deteriorates"
+      ],
+      "payoff": "Voiding the report is the symbolic close condition; destroying it instead of voiding it makes the anomaly worse"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00052",
+      "role": "escalation",
+      "fingerprint": "Dreamer's voice rising from the pit; the caravan as transit vector",
+      "transfer": "Reiss's voice causes concussive pressure pulses in the shaft structure; a contractor vehicle is idling at the site gate, apparently waiting to transport equipment, actually the colleagues' planned exit",
+      "visible_details": [
+        "Each time Reiss speaks the concrete at the shaft lip fractures outward another centimeter",
+        "A contractor flatbed is parked at the site gate with its engine running"
+      ],
+      "payoff": "If the colleagues leave in the contractor vehicle before the repudiation is filed, the closure condition cannot be met and the shaft seals"
+    },
+    {
+      "source_id": "army_call_21_14_building_cohesive_teams:00007",
+      "source_chunk_id": "army_call_21_14_building_cohesive_teams:00007",
+      "role": "procedure",
+      "fingerprint": "Enrichment stage cohesion: team members already committed, newly assigned members as fracture point",
+      "transfer": "The colleagues are an established team; Reiss was the newly commended outsider; the squad's own cohesion is tested by whether they hold the site perimeter against the colleagues' exit",
+      "visible_details": [
+        "The three colleagues have worked together for four years; Reiss joined the team eight months ago after his commendation",
+        "Brooks notes the team's shift logs show perfect coverage except for the six-hour gap around Reiss's disappearance"
+      ],
+      "payoff": "If the squad's cohesion holds through the extraction and repudiation, the team-fracture pressure does not transfer to the Institute squad"
+    }
+  ],
+  "root": {
+    "id": "root_shaft_seven_contact",
+    "speaker": "lt_mara_owen",
+    "line_1": "Owen reports gantry section three has separated. Reiss is standing at shaft floor, responsive. Each time he speaks, the frame shudders.",
+      "line_2": "Brooks flags the evidence file: timestamp predates the malfunction by six hours. Three signatures. The colleagues remain in the break room.",
+    "queued_line": "The gantry will not hold through another pressure pulse. Someone has to go on the line now, and someone has to go to that break room.",
+    "plans": [
+      {
+        "label": "Owen runs the rope",
+        "action": "combat",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "rope rescue under structural failure",
+        "tactical_step": "React to contact: Owen establishes secondary anchor, fixes Reiss on the line, two-person relay extraction while Brooks holds the brake from the platform edge",
+        "base_success": 0.65,
+        "intent": "Get Reiss out of the shaft before the next section drops",
+        "yield": "Reiss extracted alive; Owen demonstrates the shaft can be beaten by direct action, which shifts the symbolic pressure toward the paperwork problem",
+        "risk": "A pressure pulse hits during the descent; the gantry drops a section with Owen on the line",
+        "success_line": "Owen goes over the edge without ceremony. The shaft pulses twice while she descends and both times she locks the rope and waits, pressed flat against the concrete wall, until the frame stops moving. When she reaches Reiss he looks up at her like he stopped believing in this possibility hours ago. She clips him in without a word. Brooks works the brake. The extraction takes nine minutes. When Reiss clears the lip, Owen is already looking at the break room door.",
+        "partial_line": "Owen gets Reiss on the line and halfway up before the gantry drops another section. The brake jams. Brooks hauls by hand for the last four meters, and Reiss comes over the edge hard, one shoulder taking the concrete lip. Saye's voice on comms: 'He's breathing. Get him flat.' Owen pulls herself up last, moving carefully, and does not look at her hands.",
+        "failure_line": "The pulse hits when Owen is eight meters down. The secondary anchor holds but the primary frame shears and the rope line whips. Owen arrests the fall but the shock load tears the brake assembly. Brooks grabs the line bare-handed and holds it. Reiss is still below. Owen is hanging in the dark, and the shaft is very quiet now, which is worse than the noise."
+      },
+      {
+        "label": "Brooks stops the vehicle",
+        "action": "intercept",
+        "officer_id": "brooks",
+        "primary_skill": "evidence custody and site perimeter control",
+        "tactical_step": "Break contact from the entrance post, move to the site gate, intercept the contractor vehicle and the colleagues before they can leave the perimeter, establish a cordon at the gate",
+        "base_success": 0.65,
+        "intent": "Prevent the colleagues from leaving before the repudiation is filed; the closure condition requires a signatory on-site",
+        "yield": "Colleagues are held at the gate; the contractor vehicle is stopped; the exit route is closed, which removes the caravan-vector escape and forces the symbolic close",
+        "risk": "Brooks leaves the brake position on the gantry; if Owen needs the brake during the intercept, there is no one on it",
+        "success_line": "Brooks walks to the gate at a pace that does not look like running. The contractor driver sees him coming and cuts the engine without being asked. Brooks stands at the vehicle door and says, quietly, 'Nobody leaves this site until I have a signature.' The colleagues in the break room hear this through the window. One of them stands up. Brooks does not move from the gate.",
+        "partial_line": "Brooks reaches the gate as the contractor vehicle is already rolling. He steps into the lane. The driver stops. Two of the three colleagues are already in the cab. The third is still in the break room. Brooks has two of them. He radios Owen: 'I need someone on the brake. Now.' There is a pause on the line before she answers.",
+        "failure_line": "Brooks is twenty meters from the gate when the contractor vehicle pulls out. He radios the plate. The colleagues are gone. He stands at the empty gate for a moment, then turns back toward the shaft. The false report is still in his hand. He looks at it like it has changed shape."
+      }
+    ]
+  },
+  "resolution": {
+    "id": "resolution_shaft_seven_close",
+    "speaker": "brooks",
+      "line_1": "Brooks reports Reiss out or the shaft still active. The false report is in evidence custody. One signatory remains on-site.",
+      "line_2": "Saye records the Institute authentication protocol. The signatory has to speak on record. The shaft is listening.",
+    "queued_line": "Whatever gets said in the next two minutes will either close this site or follow everyone home.",
+    "plans": [
+      {
+        "label": "Force the repudiation",
+        "action": "full_disclosure",
+        "officer_id": "brooks",
+        "primary_skill": "evidence confrontation and institutional record procedure",
+        "tactical_step": "Symbolic close: Brooks presents the timestamped report to the remaining signatory, walks them through the authentication protocol on comms with Saye as witness, and files the formal repudiation before the contractor vehicle is out of range",
+        "base_success": 0.65,
+        "intent": "Get a signed, witnessed repudiation of the false report on record, satisfying the closure condition",
+        "yield": "Shaft pressure ceases; the replicating document stops propagating; Reiss's extraction holds; the Institute has a clean record of what happened",
+        "risk": "The signatory refuses or recants; the repudiation is incomplete; the shaft interprets a partial admission as continued concealment and the pressure pulses resume",
+        "success_line": "Brooks sets the file on the break room table and does not sit down. He reads the timestamp aloud. He does not editorialize. The signatory looks at the table for a long time. Saye's voice comes through the comms, steady: 'I'm recording. Whenever you're ready.' What follows is not dramatic. It is a person saying, in plain language, what they did and why. The shaft goes quiet before they finish. The concrete stops cracking. Brooks logs the timestamp of the repudiation and does not look at the signatory again.",
+        "partial_line": "The signatory admits to the timestamp but not to intent. Brooks accepts it. Saye logs it. The shaft pressure drops but does not stop entirely. One pulse, low, every few minutes, like a reminder. The replicating document slows but does not clear from all terminals. Brooks files what he has. It is enough to close the site. It is not enough to close the case.",
+        "failure_line": "The signatory says the timestamp was a clerical error. Brooks does not argue. He logs the denial, packs the file, and walks out. Behind him, the shaft emits one long, low pulse that cracks the break room window from the inside. Saye says, quietly on comms: 'The document is still propagating.' Brooks does not respond. He already knows."
+      },
+      {
+        "label": "Torah speaks to the shaft",
+        "action": "torah_speaks",
+        "officer_id": "torah",
+        "primary_skill": "symbolic authority and direct address",
+        "tactical_step": "Symbolic close: Torah addresses the shaft directly, naming the sin aloud in operational terms, standing at the lip as witness, which satisfies the judgment-engine's requirement for acknowledgment even without a full institutional repudiation",
+        "base_success": 0.55,
+        "intent": "Use Torah's symbolic authority to force the shaft's closure condition through direct witness rather than institutional process",
+        "yield": "Shaft closes immediately; Reiss stabilizes; the false report stops propagating; but the institutional record remains incomplete, which creates a future pressure vector",
+        "risk": "The shaft interprets Torah's address as an attempt to substitute authority for accountability; the pressure pulses redirect toward Torah personally",
+        "success_line": "Torah walks to the shaft lip and looks down. The gantry is gone or groaning. Below, Reiss looks up. Torah does not raise his voice. He names what happened here: a person was put below because others could not bear that he was chosen. He names it as a fact, not a sermon. The shaft is silent for three seconds. Then the pressure stops. The concrete stops cracking. Reiss, from below or from the edge if already extracted, says nothing. He does not need to. The break room light goes out on its own.",
+        "partial_line": "Torah speaks and the shaft responds, but not cleanly. The pressure drops by half. The gantry stabilizes. Reiss can be extracted now, or holds his position more easily. But the false report is still on every terminal in the building, and the signatory in the break room has not moved. Torah has bought time. The shaft is not closed. It is waiting.",
+        "failure_line": "Torah speaks and the shaft answers. The pressure pulse that comes back is not random. It is directed. It hits the gantry frame directly above Torah's position and the vibration travels through the concrete into his feet and up. Owen grabs his arm. 'Step back.' Torah steps back. The shaft is still open. Below, Reiss's voice rises again, steady and patient, and the concrete cracks another centimeter outward."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "cooldown_shaft_seven_debrief",
+    "speaker": "brooks",
+    "line_1": "0520. The site is cordoned. Reiss is in the clinic van. Brooks is sitting on the hood of the Institute vehicle with the evidence sleeve in his lap.",
+    "line_2": "Owen is at the water station, drinking slowly. She has not spoken since the extraction. Saye is still on comms, waiting for someone to close the channel.",
+    "interlude_type": "debrief",
+    "state_reads": [
+      "brooks.fixation",
+      "lt_mara_owen.injury_state",
+      "dr_lenora_saye.remote_confidence",
+      "squad.morale",
+      "character.reiss.survival"
+    ],
+    "state_writes": [
+      "brooks.institute_standing",
+      "lt_mara_owen.squad_cohesion",
+      "dr_lenora_saye.withdrawn_risk",
+      "squad.morale"
+    ],
+    "featured_characters": [
+      "brooks",
+      "lt_mara_owen",
+      "dr_lenora_saye"
+    ],
+    "visible_text": [
+      "Brooks has not put the evidence sleeve down. He holds it the way people hold things they are not sure what to do with.",
+      "Owen finishes the water and crushes the cup. She looks at the shaft housing, which is now just a concrete collar in the ground. 'He was down there for eleven hours,' she says. Not to anyone. Just to say it.",
+      "Saye's voice comes through the comms, quieter now: 'Torah. I need to know if the repudiation was filed or if we're managing this another way. I need to know before I write the clinic intake.'",
+      "The contractor flatbed is gone or it is still at the gate. Either way, the site feels smaller than it did at 0340."
+    ],
+    "choices": [
+      "Tell Saye the repudiation was filed and the record is clean.",
+      "Tell Saye the record is incomplete and she should document what she observed.",
+      "Say nothing and let Brooks answer."
+    ],
+    "outcomes": [
+      "If the repudiation was filed: Saye logs it, closes the channel professionally, and does not ask follow-up questions. Brooks finally puts the sleeve in the case file. Owen looks at Torah once, briefly, and nods.",
+      "If the record is incomplete: Saye is quiet for a moment, then says 'Understood' in a tone that means she will carry this. Brooks looks at the ground. Owen does not react visibly, which is its own reaction.",
+      "If Torah says nothing: Brooks answers for him. Whatever Brooks says, it is accurate. He does not soften it. Saye logs it. The channel closes. Brooks looks at Torah and does not say what he is thinking."
+    ],
+    "followup_hooks": [
+      "The two colleagues who left in the contractor vehicle are now a loose thread in the Institute record",
+      "The false report's replication pattern, if not fully cleared, may surface in another site's document system",
+      "Reiss, once stable, will need to decide whether to file a formal complaint or accept the Institute's handling; his decision depends on what Torah told Saye",
+      "Owen's rope-rescue performance under structural failure has been noted; someone at the Institute will ask about it"
+    ],
+    "corpus_anchors": [
+      "world_english_bible:00052",
+      "world_english_bible:00053",
+      "army_call_21_14_building_cohesive_teams:00007"
+    ]
+  }
+}

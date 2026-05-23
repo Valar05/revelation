@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "id": "narrative",
+      "label": "Captain Log",
+      "purpose": "Low-friction bridge report, voyage threshold, warning, or aftermath beat.",
+      "existing_actions": ["proceed", "observe", "seal"],
+      "content_rules": [
+        "Use concise captain-facing report language.",
+        "May foreshadow later ship or crew consequences.",
+        "Should not explain the black hole definitively."
+      ]
+    },
+    {
+      "id": "story",
+      "label": "Story Echo",
+      "purpose": "Delayed consequence, officer reaction, altered ship procedure, or recovered-record follow-up.",
+      "existing_actions": ["observe", "seal", "quarantine", "ration", "wake_officer", "proceed"],
+      "content_rules": [
+        "Should connect visibly to a prior captain decision.",
+        "Should alter ship state, crew state, officer trust, doctrine, or anomaly pressure.",
+        "Avoid pure ambience."
+      ]
+    },
+    {
+      "id": "choice",
+      "label": "Captain Authorization",
+      "purpose": "A captain-level decision with two or three operational tradeoffs.",
+      "existing_actions": [
+        "intercept",
+        "avoid",
+        "observe",
+        "destroy",
+        "dock",
+        "recover",
+        "quarantine",
+        "jettison",
+        "repair",
+        "reroute",
+        "seal",
+        "vent",
+        "ration",
+        "wake_officer",
+        "send_party",
+        "recall_party"
+      ],
+      "content_rules": [
+        "Frame buttons as orders, not dialogue.",
+        "Each option should risk or preserve a named resource, officer relationship, crew state, ship system, or knowledge opportunity.",
+        "Every multi-choice event should have action_results and at least one followup vector."
+      ]
+    },
+    {
+      "id": "recovery",
+      "label": "Recovery Operation",
+      "purpose": "Intercepting, docking with, stripping, quarantining, or studying an inward-falling object.",
+      "existing_actions": ["dock", "recover", "quarantine", "observe", "destroy", "send_party", "recall_party"],
+      "content_rules": [
+        "Start from detection and officer interpretation.",
+        "No operation is entirely safe.",
+        "Trade resources against contamination, science, manpower, morale, or ship damage."
+      ]
+    },
+    {
+      "id": "ship_crisis",
+      "label": "Shipboard Crisis",
+      "purpose": "Mechanical failure, pressure problem, compartment decision, rationing order, or departmental dispute.",
+      "existing_actions": ["seal", "vent", "repair", "reroute", "ration", "wake_officer", "jettison"],
+      "content_rules": [
+        "The ship should remain mechanically understandable.",
+        "The crisis may contain impossible evidence, but the captain's options should be procedural.",
+        "Consequences should mark compartments, departments, officers, or doctrine."
+      ]
+    },
+    {
+      "id": "signal_anomaly",
+      "label": "Signal Anomaly",
+      "purpose": "Impossible lamp, shutter, speaking-tube, log, or timing event.",
+      "existing_actions": ["observe", "seal", "quarantine", "jettison", "wake_officer"],
+      "content_rules": [
+        "Let dread come from contradiction, timing, and record evidence.",
+        "Avoid omniscient explanation.",
+        "Signals should create policy or officer pressure."
+      ]
+    },
+    {
+      "id": "transition",
+      "label": "Voyage Transition",
+      "purpose": "Pacing break, depth threshold, doctrine shift, or new descent phase.",
+      "existing_actions": ["proceed", "observe"],
+      "content_rules": [
+        "Use sparingly.",
+        "Should orient the player toward a coming pressure change.",
+        "Should remain concise and report-like."
+      ]
+    },
+    {
+      "id": "resolution",
+      "label": "Mission Resolution",
+      "purpose": "A closing containment, disclosure, evidence, mercy, or command decision after a mission thread reaches its visible end.",
+      "existing_actions": ["proceed", "observe", "full_disclosure", "report_word_gap", "return_ross", "support_owen", "torah_speaks", "watch_quietly"],
+      "content_rules": [
+        "Resolve the immediate mission pressure without erasing future consequences.",
+        "Buttons should name concrete final orders or character-owned resolution plans.",
+        "Consequences should preserve evidence, personnel state, command pressure, or doctrine debt for later follow-up."
+      ]
+    },
+    {
+      "id": "interlude",
+      "label": "Interlude",
+      "purpose": "Between-mission pressure, debrief, clinic, command review, lab, squad, or evidence-custody beat.",
+      "existing_actions": ["proceed"],
+      "content_rules": [
+        "Use choices for system interludes and buttons for manually authored playable follow-ups.",
+        "Expose pressure through behavior and procedure rather than numeric state labels.",
+        "Every choice should alter personnel state, command scrutiny, evidence custody, doctrine pressure, or future mission availability."
+      ]
+    },
+    {
+      "id": "debrief",
+      "label": "Debrief",
+      "purpose": "A direct after-action report where field consequences become command, medical, evidence, or squad obligations.",
+      "existing_actions": ["proceed", "observe", "clinic", "clear_iyad", "hold_iyad", "brooks_handles", "continue_analysis", "extend_eval"],
+      "content_rules": [
+        "Tie the debrief to a prior player decision or visible field cost.",
+        "Name who is filing, objecting, cleared, restricted, or placed under review.",
+        "Avoid repeating the original anomaly without changing the crew, record, or next mission."
+      ]
+    },
+    {
+      "id": "base_incident",
+      "label": "Base Incident",
+      "purpose": "A non-mission event inside Institute life caused by prior anomaly pressure, personnel damage, or evidence custody.",
+      "existing_actions": ["proceed", "observe", "seal", "quarantine", "clinic", "brooks_handles", "watch_quietly"],
+      "content_rules": [
+        "Keep the incident grounded in base procedure, rooms, equipment, and named staff.",
+        "It should change availability, custody, trust, morale, contamination, or command posture.",
+        "It should create a playable consequence, not only atmosphere."
+      ]
+    }
+  ]
+}

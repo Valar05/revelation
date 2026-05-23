@@ -1,0 +1,981 @@
+{
+  "title": "Roofline",
+  "design_goal": "A property manager's systematic surveillance of a tenant he desired—concealed cameras, manipulated sightlines, exposure by proxy—has generated a symbolic manifestation where every camera on the building now broadcasts a single fixed angle: the window of the victim's former apartment, looping footage that should not exist, while the lenses physically track anyone who enters the frame.",
+  "events": [
+    {
+      "room_id": "room_roofline_aldren_court",
+      "event": {
+        "id": "root_roofline_contact",
+        "type": "choice",
+        "speaker": "lt_mara_owen",
+        "line_1": "Owen, fourth floor: cameras are tracking my team. Dolan's work order is on the floor. Reyes's radio is transmitting from inside 4F. Requesting order to clear.",
+        "line_2": "Brooks reports the hidden drive secured. Security monitors still loop. Owen needs a corridor order before the mounts swing again.",
+        "buttons": [
+          {
+            "label": "Clear the corridor now",
+            "action": "intercept",
+            "preview": "Get Dolan and Reyes out of the sightline corridor before the camera mounts cause further injury..."
+          },
+          {
+            "label": "Secure the drive first",
+            "action": "recover",
+            "preview": "Lock down the hidden drive as admissible evidence before anything else moves, so the disclosure has..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Clear the corridor now",
+            "action": "intercept",
+            "officer_id": "lt_mara_owen",
+            "primary_skill": "tactical movement under anomalous contact",
+            "tactical_step": "React to contact: Owen's two-element team bounds down the corridor, one element fixed on the camera arc to suppress tracking while the other moves to 4F door; breach and clear 4F to recover Reyes",
+            "intent": "Get Dolan and Reyes out of the sightline corridor before the camera mounts cause further injury, and breach 4F to confirm Reyes's status",
+            "base_success": 0.65,
+            "yield": "Both workers recovered; Owen's team establishes security on the corridor; the physical threat is neutralized and the squad is consolidated for disclosure",
+            "risk": "The camera mounts are faster than expected in the narrow corridor; one element takes a strike during the bound; Reyes is found disoriented inside 4F and requires clinic support",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Owen's voice on the radio is flat and exact: 'Corridor clear. Dolan's got a laceration on his forearm—camera mount caught him when he tried to redirect it. Reyes is in 4F, sitting on the floor, not injured, not responsive. We're bringing them both down.' A pause. 'The cameras stopped tracking when we breached the door. They're still pointing at the window, but they're not moving.' Brooks exhales slowly in the security office and does not comment."
+                ],
+                "environment_state_changes": [
+                  "root_roofline_contact.intercept.success"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Owen gets Dolan out. Reyes is harder—the door to 4F resists in a way that has nothing to do with the lock, and by the time they breach it, one of Owen's team has taken a glancing hit from a pan-tilt mount swinging hard through its arc. Reyes is inside, uninjured but fixed on the window, not responding to his name. Owen gets a hand on his shoulder and he moves, but slowly. 'We're out,' she radios. 'One of mine needs a look. Reyes is ambulatory.' She doesn't say what Reyes was looking at."
+                ],
+                "environment_state_changes": [
+                  "root_roofline_contact.intercept.partial"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The bound goes wrong in the narrow corridor. The camera mount on the east end swings faster than Owen's team anticipated and catches the lead element across the shoulder—not a killing blow, but enough to drop them. Owen calls a break contact immediately, pulling her team back to the stairwell. Dolan and Reyes are still in the corridor. 'I'm not sending anyone back in there without a different approach,' Owen says on the radio. Her voice is controlled. That's the part that's hard to hear."
+                ],
+                "environment_state_changes": [
+                  "root_roofline_contact.intercept.failure"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+2",
+                  "character.lt_mara_owen.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Secure the drive first",
+            "action": "recover",
+            "officer_id": "brooks",
+            "primary_skill": "evidence custody under symbolic pressure",
+            "tactical_step": "Fix the evidence: Brooks photographs the drive in situ, logs its position, bags it under chain-of-custody protocol, and confirms the date range before Owen moves—establishing the evidentiary basis for disclosure before the corridor is cleared",
+            "intent": "Lock down the hidden drive as admissible evidence before anything else moves, so the disclosure has a physical record to cite and cannot be challenged",
+            "base_success": 0.65,
+            "yield": "Drive secured with full chain of custody; date range and Vess's credentials confirmed on record; Brooks has the evidentiary package Torah needs for the naming",
+            "risk": "The delay gives the camera mounts more time to track Owen's team; the monitors in the security office begin showing a second image alongside the 4F loop—Brooks's own reflection, from an angle no camera covers",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Brooks works without looking at the monitors. He photographs the drive in place, logs the rack position, notes the cable routing, bags it, and reads the label aloud into his field recorder: 'Vess employee ID, date range beginning six weeks prior to system installation.' He sets the bag on the desk. 'Chain of custody is clean,' he says. 'Torah, you have what you need.' He still hasn't looked at the monitors. The second image—his reflection—is gone."
+                ],
+                "environment_state_changes": [
+                  "root_roofline_contact.recover.success"
+                ],
+                "resource_changes": {
+                  "character.brooks.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Brooks gets the drive bagged and logged, but the date range on the label is partially overwritten—someone tried to scratch it out, recently, with something sharp. He can read enough. 'Credentials are Vess's. Date range is approximate but consistent,' he says. 'It'll hold.' He glances at the monitors once, by accident. His reflection is there for a moment, then gone. He doesn't mention it on the radio."
+                ],
+                "environment_state_changes": [
+                  "root_roofline_contact.recover.partial"
+                ],
+                "resource_changes": {
+                  "character.brooks.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Brooks is halfway through the in-situ photography when the monitors shift. All nine screens show the same image: Brooks, standing at the rack, from directly above—an angle that requires a camera in the ceiling, and there is no camera in the ceiling. He freezes. The drive is in his hand but the chain-of-custody log is open on the desk and he has not written anything in it yet. 'I need a minute,' he says on the radio. Torah can hear that he means more than a minute."
+                ],
+                "environment_state_changes": [
+                  "root_roofline_contact.recover.failure"
+                ],
+                "resource_changes": {
+                  "character.brooks.stress": "+2",
+                  "character.brooks.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Owen's voice on the radio is flat and exact: 'Corridor clear. Dolan's got a laceration on his forearm—camera mount caught him when he tried to redirect it. Reyes is in 4F, sitting on the floor, not injured, not responsive. We're bringing them both down.' A pause. 'The cameras stopped tracking when we breached the door. They're still pointing at the window, but they're not moving.' Brooks exhales slowly in the security office and does not comment."
+            ],
+            "environment_state_changes": [
+              "root_roofline_contact.intercept.success"
+            ],
+            "resource_changes": {
+              "character.lt_mara_owen.morale": "+1"
+            }
+          },
+          "recover": {
+            "lines": [
+              "Brooks works without looking at the monitors. He photographs the drive in place, logs the rack position, notes the cable routing, bags it, and reads the label aloud into his field recorder: 'Vess employee ID, date range beginning six weeks prior to system installation.' He sets the bag on the desk. 'Chain of custody is clean,' he says. 'Torah, you have what you need.' He still hasn't looked at the monitors. The second image—his reflection—is gone."
+            ],
+            "environment_state_changes": [
+              "root_roofline_contact.recover.success"
+            ],
+            "resource_changes": {
+              "character.brooks.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_roofline_naming",
+            "queued_line": "Whatever happens in that corridor, the footage doesn't stop until someone puts Vess's name on a record that can't be pulled.",
+            "trigger_key": "resolution_roofline_naming",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          },
+          "recover": {
+            "event_id": "resolution_roofline_naming",
+            "queued_line": "Whatever happens in that corridor, the footage doesn't stop until someone puts Vess's name on a record that can't be pulled.",
+            "trigger_key": "resolution_roofline_naming",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:00439",
+            "source_moment": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+            "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+            "room_application": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+            "structural_transfer": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+            "required_visible_details": [
+              "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+              "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+            ],
+            "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:00440",
+            "source_moment": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+            "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+            "room_application": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+            "structural_transfer": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+            "required_visible_details": [
+              "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+              "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+            ],
+            "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:00441",
+            "source_moment": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+            "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+            "room_application": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+            "structural_transfer": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+            "required_visible_details": [
+              "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+              "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+            ],
+            "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+          },
+          {
+            "source_id": "army_call_21_14_building_cohesive_teams",
+            "source_title": "Army Call 21 14 Building Cohesive Teams",
+            "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+            "source_moment": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+            "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+            "room_application": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+            "structural_transfer": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+            "required_visible_details": [
+              "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+              "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+            ],
+            "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00439",
+            "anchor_role": "premise",
+            "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+            "playable_transform": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+            "required_visible_details": [
+              "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+              "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+            ],
+            "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00440",
+            "anchor_role": "escalation",
+            "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+            "playable_transform": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+            "required_visible_details": [
+              "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+              "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+            ],
+            "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00441",
+            "anchor_role": "closure",
+            "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+            "playable_transform": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+            "required_visible_details": [
+              "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+              "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+            ],
+            "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+          },
+          {
+            "source_id": "army_call_21_14_building_cohesive_teams",
+            "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+            "anchor_role": "procedure",
+            "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+            "playable_transform": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+            "required_visible_details": [
+              "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+              "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+            ],
+            "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_roofline_naming",
+      "type": "resolution",
+      "speaker": "dr_lenora_saye",
+      "line_1": "Saye on comms: Torah, the Institute log is live. Three fields: responsible party, victim, mechanism. The cameras are waiting. Say it on record.",
+      "line_2": "Brooks reports the drive secured. Owen reports corridor control. The footage closes only when Torah names the mechanism.",
+      "buttons": [
+        {
+          "label": "Name Vess on record",
+          "action": "full_disclosure",
+          "preview": "Deliver the formal on-record naming that the anomaly requires: Vess, the victim, the hidden drive, the..."
+        },
+        {
+          "label": "Force the cameras down",
+          "action": "destroy",
+          "preview": "End the physical danger by destroying the camera hardware entirely, accepting that the symbolic loop may..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Name Vess on record",
+          "action": "full_disclosure",
+          "officer_id": "torah",
+          "primary_skill": "symbolic authority and formal testimony",
+          "tactical_step": "Symbolic close: Torah speaks the naming into the Institute live log—responsible party, victim's name as recovered from the suppressed complaint file Saye located, mechanism of surveillance—satisfying the witness-class closure condition",
+          "intent": "Deliver the formal on-record naming that the anomaly requires: Vess, the victim, the hidden drive, the suppressed complaint—all three fields, spoken aloud, logged and timestamped",
+          "base_success": 0.65,
+          "yield": "Cameras release floor by floor; footage advances past 11:42 and goes dark; the rooftop unit is last; the building is clear; the Institute log has a permanent record",
+          "risk": "Speaking the victim's name on a live Institute log without her consent is its own ethical weight; Saye warned Torah about this; the log cannot be unwritten; the partial outcome is that the cameras release but the squad carries the knowledge of what they put on record",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Torah reads the three fields into the log. Name. Name. Method. The security office monitors flicker once—all nine—and go dark except for a single white timestamp that reads 11:43 and advances. Brooks watches it tick forward. Owen's radio check comes in on schedule, ninety seconds, no lapse. The cameras on the fourth floor are still. The rooftop unit releases last; Torah hears it on the building's PA system as a faint mechanical click, like a lock opening. Saye's voice on comms: 'Log received. It's in.' She doesn't say anything else for a long time."
+              ],
+              "environment_state_changes": [
+                "resolution_roofline_naming.full_disclosure.success"
+              ],
+              "resource_changes": {
+                "character.torah.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Torah gets two of the three fields. The victim's name is in Saye's follow-up message but Torah hesitates on it—putting a name on a permanent Institute record without the person's knowledge is not a clean act, and Torah knows it. The cameras on floors one through three release. The fourth floor holds. The monitors show 11:43 but do not advance further. Owen radios: 'The corridor cameras are still. The one above 4F is not.' Saye says, quietly: 'You need the third field.' Torah has to decide whether to finish it."
+              ],
+              "environment_state_changes": [
+                "resolution_roofline_naming.full_disclosure.partial"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Torah opens the log and stops. The three fields are there. The drive is bagged on the desk. Saye is on comms, waiting. But the act of putting a victim's name into an Institute record—a record she doesn't know exists, in a system she has no access to—feels like another version of the thing Vess did. Torah closes the log without entering anything. The monitors stay at 11:42. Brooks looks at Torah and does not ask. Owen's radio check comes in four minutes late."
+              ],
+              "environment_state_changes": [
+                "resolution_roofline_naming.full_disclosure.failure"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+2",
+                "character.torah.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Force the cameras down",
+          "action": "destroy",
+          "officer_id": "lt_mara_owen",
+          "primary_skill": "direct action against anomalous hardware",
+          "tactical_step": "Suppress and destroy: Owen's team physically destroys the remaining active camera mounts on the fourth floor and the rooftop unit, eliminating the tracking threat by force; this is a real force option with real consequences",
+          "intent": "End the physical danger by destroying the camera hardware entirely, accepting that the symbolic loop may not close but protecting personnel from further injury",
+          "base_success": 0.55,
+          "yield": "Physical threat eliminated; Dolan, Reyes, and Owen's team are safe; the building is no longer actively dangerous; the symbolic pressure remains but is no longer manifesting through hardware",
+          "risk": "Destroying the cameras without the naming leaves the witness-class pressure unresolved; the footage migrates—it appears on the victim's phone, on Saye's monitor at the Institute, on the screen of the first person to open the suppressed complaint file; the anomaly finds another surface",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Owen's team takes the mounts down methodically: east corridor first, then west, then the rooftop unit last. It takes eleven minutes. The pan-tilt hardware on the rooftop fights—it swings twice before Owen's specialist gets the power coupling disconnected. When it goes dark, the security office monitors go dark with it. Brooks exhales. 'Physical threat is clear,' Owen radios. She sounds tired rather than satisfied. Saye's voice on comms is careful: 'The pressure index dropped. It didn't close.' A pause. 'It'll find somewhere else to be.' Torah has the drive. The log is still open."
+              ],
+              "environment_state_changes": [
+                "resolution_roofline_naming.destroy.success"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Owen gets the fourth-floor mounts. The rooftop unit is harder—it's on a separate power circuit and the coupling is behind a locked panel. Her specialist gets it open but the mount swings during the attempt and catches them across the hand. Not serious. The unit goes dark. The security office monitors go dark. Then Brooks's phone lights up with a video notification from a number he doesn't recognize. He shows it to Torah without playing it. The thumbnail is a window. 11:42 PM. 'It moved,' Saye says on comms. 'Torah, the log is still open.'"
+              ],
+              "environment_state_changes": [
+                "resolution_roofline_naming.destroy.partial"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "The rooftop unit does not go down. Owen's team gets to the panel and finds the power coupling has been physically modified—the wiring runs somewhere it shouldn't, into the building's main trunk, and cutting it would take the whole grid down. Owen calls it: 'I can't do this without taking the building dark, and I'm not doing that with Dolan and Reyes still on the fourth floor.' She pulls her team back. The cameras are still tracking. The monitors are still at 11:42. Brooks looks at Torah. 'The log,' he says. Just that."
+              ],
+              "environment_state_changes": [
+                "resolution_roofline_naming.destroy.failure"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.stress": "+2",
+                "character.lt_mara_owen.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "full_disclosure": {
+          "lines": [
+            "Torah reads the three fields into the log. Name. Name. Method. The security office monitors flicker once—all nine—and go dark except for a single white timestamp that reads 11:43 and advances. Brooks watches it tick forward. Owen's radio check comes in on schedule, ninety seconds, no lapse. The cameras on the fourth floor are still. The rooftop unit releases last; Torah hears it on the building's PA system as a faint mechanical click, like a lock opening. Saye's voice on comms: 'Log received. It's in.' She doesn't say anything else for a long time."
+          ],
+          "environment_state_changes": [
+            "resolution_roofline_naming.full_disclosure.success"
+          ],
+          "resource_changes": {
+            "character.torah.morale": "+1"
+          }
+        },
+        "destroy": {
+          "lines": [
+            "Owen's team takes the mounts down methodically: east corridor first, then west, then the rooftop unit last. It takes eleven minutes. The pan-tilt hardware on the rooftop fights—it swings twice before Owen's specialist gets the power coupling disconnected. When it goes dark, the security office monitors go dark with it. Brooks exhales. 'Physical threat is clear,' Owen radios. She sounds tired rather than satisfied. Saye's voice on comms is careful: 'The pressure index dropped. It didn't close.' A pause. 'It'll find somewhere else to be.' Torah has the drive. The log is still open."
+          ],
+          "environment_state_changes": [
+            "resolution_roofline_naming.destroy.success"
+          ],
+          "resource_changes": {
+            "character.lt_mara_owen.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "full_disclosure": {
+          "event_id": "cooldown_roofline_debrief",
+          "queued_line": "Whatever Torah says into that log, it goes somewhere it cannot be pulled, and the building will know it.",
+          "trigger_key": "cooldown_roofline_debrief",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        },
+        "destroy": {
+          "event_id": "cooldown_roofline_debrief",
+          "queued_line": "Whatever Torah says into that log, it goes somewhere it cannot be pulled, and the building will know it.",
+          "trigger_key": "cooldown_roofline_debrief",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00439",
+          "source_moment": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "room_application": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "structural_transfer": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "required_visible_details": [
+            "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+            "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+          ],
+          "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00440",
+          "source_moment": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "room_application": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "structural_transfer": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "required_visible_details": [
+            "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+            "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+          ],
+          "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00441",
+          "source_moment": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "room_application": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "structural_transfer": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "required_visible_details": [
+            "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+            "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+          ],
+          "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+        },
+        {
+          "source_id": "army_call_21_14_building_cohesive_teams",
+          "source_title": "Army Call 21 14 Building Cohesive Teams",
+          "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+          "source_moment": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "room_application": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "structural_transfer": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "required_visible_details": [
+            "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+            "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+          ],
+          "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00439",
+          "anchor_role": "premise",
+          "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "playable_transform": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "required_visible_details": [
+            "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+            "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+          ],
+          "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00440",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "playable_transform": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "required_visible_details": [
+            "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+            "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+          ],
+          "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00441",
+          "anchor_role": "closure",
+          "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "playable_transform": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "required_visible_details": [
+            "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+            "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+          ],
+          "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+        },
+        {
+          "source_id": "army_call_21_14_building_cohesive_teams",
+          "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "playable_transform": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "required_visible_details": [
+            "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+            "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+          ],
+          "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_roofline_debrief",
+      "type": "interlude",
+      "speaker": "brooks",
+      "line_1": "Brooks sets the bagged drive on the debrief table and sits down. He doesn't open his notes. The after-action form is in front of him with one field circled.",
+      "line_2": "Owen files her report from the doorway, standing. Saye's follow-up message is on Torah's tablet: a name, no other text.",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Brooks has circled the field labeled 'corrosive conduct identified' on the after-action form. He hasn't written anything in it yet.",
+            "Owen's report is three paragraphs. The section on personnel recovery condition took her twenty minutes to fill in. Torah can tell because the ink is slightly different—she switched pens.",
+            "Saye's message contains one line: a woman's name, and below it, the words 'suppressed complaint, fourteen months ago, never forwarded.' No signature.",
+            "The bagged drive sits between Brooks and Torah on the table. Neither of them moves it.",
+            "Brooks finally says: 'The log entry is permanent.' He's not asking. He's deciding whether that's the right word for what it is."
+          ],
+          "environment_state_changes": [
+            "brooks.loyalty_tick",
+            "lt_mara_owen.morale_write",
+            "torah.symbolic_contamination_flag",
+            "squad.cohesion"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "debrief",
+      "state_reads": [
+        "brooks.fatigue",
+        "lt_mara_owen.stress",
+        "torah.mental_state",
+        "character.dr_lenora_saye.availability"
+      ],
+      "state_writes": [
+        "brooks.loyalty_tick",
+        "lt_mara_owen.morale_write",
+        "torah.symbolic_contamination_flag",
+        "squad.cohesion"
+      ],
+      "featured_characters": [
+        "brooks",
+        "lt_mara_owen",
+        "dr_lenora_saye"
+      ],
+      "visible_text": [
+        "Brooks has circled the field labeled 'corrosive conduct identified' on the after-action form. He hasn't written anything in it yet.",
+        "Owen's report is three paragraphs. The section on personnel recovery condition took her twenty minutes to fill in. Torah can tell because the ink is slightly different—she switched pens.",
+        "Saye's message contains one line: a woman's name, and below it, the words 'suppressed complaint, fourteen months ago, never forwarded.' No signature.",
+        "The bagged drive sits between Brooks and Torah on the table. Neither of them moves it.",
+        "Brooks finally says: 'The log entry is permanent.' He's not asking. He's deciding whether that's the right word for what it is."
+      ],
+      "choices": [
+        "\"It needed to be on record. That's what record means.\"",
+        "\"We put her name in a system she doesn't know exists. That's worth sitting with.\"",
+        "\"The building is clear. We did the job.\""
+      ],
+      "outcomes": [
+        "If Torah says it needed to be on record: Brooks writes in the after-action field. Owen comes in from the doorway and sits down. The debrief finishes. Saye sends a second message two hours later: she has located the victim and is asking Institute legal about notification protocol. The squad's cohesion holds.",
+        "If Torah says it's worth sitting with: Brooks doesn't write anything. He closes the form. Owen stays in the doorway. Nobody says anything for a while, and then Brooks says, 'Yeah,' and that's the end of the debrief. Saye's message stays unanswered until morning.",
+        "If Torah says the building is clear: Owen looks at Torah for a moment, then nods once and leaves. Brooks writes one word in the after-action field and closes the form. He takes the drive with him when he goes. Torah is alone with the tablet and Saye's message."
+      ],
+      "followup_hooks": [
+        "Saye's notification protocol question becomes a future mission pressure: does the victim learn what the Institute recorded, and does she have a say in what happens to the log entry",
+        "The suppressed complaint file contains a second name—someone in building management who received the complaint and routed it back to Vess; that person is still employed",
+        "Brooks's after-action form, if completed, enters the Institute's conduct record and may surface in a future command review",
+        "Dolan and Reyes: Reyes was found staring at the window in 4F; his mental state in the days following is a latent thread"
+      ],
+      "corpus_anchors": [
+        "world_english_bible:00441",
+        "army_call_21_14_building_cohesive_teams:00003"
+      ],
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00439",
+          "source_moment": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "room_application": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "structural_transfer": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "required_visible_details": [
+            "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+            "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+          ],
+          "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00440",
+          "source_moment": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "room_application": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "structural_transfer": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "required_visible_details": [
+            "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+            "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+          ],
+          "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00441",
+          "source_moment": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "room_application": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "structural_transfer": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "required_visible_details": [
+            "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+            "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+          ],
+          "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+        },
+        {
+          "source_id": "army_call_21_14_building_cohesive_teams",
+          "source_title": "Army Call 21 14 Building Cohesive Teams",
+          "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+          "source_moment": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "room_application": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "structural_transfer": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "required_visible_details": [
+            "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+            "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+          ],
+          "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00439",
+          "anchor_role": "premise",
+          "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "playable_transform": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "required_visible_details": [
+            "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+            "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+          ],
+          "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00440",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "playable_transform": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "required_visible_details": [
+            "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+            "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+          ],
+          "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00441",
+          "anchor_role": "closure",
+          "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "playable_transform": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "required_visible_details": [
+            "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+            "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+          ],
+          "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+        },
+        {
+          "source_id": "army_call_21_14_building_cohesive_teams",
+          "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "playable_transform": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "required_visible_details": [
+            "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+            "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+          ],
+          "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "room_roofline_aldren_court",
+      "name": "Aldren Court — Security Level & Fourth Floor",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A residential complex where every security camera has physically reoriented to a single window. Two workers are missing. The footage on every monitor shows a woman who should not be visible.",
+      "first_visit_description": "Torah leads Owen and Brooks into the Aldren Court lobby at 0340. The building manager, Harlan Vess, was detained by local police an hour ago on an unrelated warrant; his assistant let the squad in and left immediately. Dr. Saye is remote, patched into the security office feed from Institute comms. The security office is on the ground floor: nine monitors, all showing the same image—apartment 4F window, 11:42 PM, fourteen months ago. The two missing maintenance workers, Dolan and Reyes, were last seen on the fourth-floor corridor at 2200. Owen has the floor plan and is running point on the fourth floor sweep. Brooks is on the security office, pulling the physical camera logs and the access history for 4F. Torah is the command node between them.",
+      "return_description": "The monitors are dark now except one. It still shows 4F. The timestamp no longer loops—it advances, slowly, as if waiting for something to be said.",
+      "detection_report": "Institute anomaly desk flagged the building at 0118 after a civilian 911 call described 'every TV in the lobby showing the same woman.' Local responders found no broadcast source. The security contractor confirmed the cameras had physically moved overnight. Two workers reported missing by a family member at 0300. Symbolic pressure index: elevated and rising.",
+      "current_situation": "Owen's radio crackles from the fourth floor: she has eyes on the corridor and reports the cameras up there are moving—slow, deliberate, tracking her team's position. She cannot see Dolan or Reyes. Brooks is in the security office and has found a secondary hard drive hidden behind the main DVR rack, labeled with Vess's employee ID and a date range that covers the fourteen months in question. The footage on the monitors has not changed. The timestamp reads 11:42 and does not advance.",
+      "action_profile": {
+        "physical_threat": "The cameras on the fourth floor are physically tracking personnel; two workers are missing in the corridor and may be injured or pinned; the lenses are mounted on motorized pan-tilt hardware that can swing fast enough to strike at close range, and the corridor is narrow",
+        "contact_state": "Owen's fire team is in the fourth-floor corridor under active camera tracking; Brooks is isolated in the security office with the anomalous feed running on all nine monitors; the missing workers' location is unknown and the squad is split",
+        "field_manual_drill": "React to contact and establish security: Owen must fix the camera threat and clear the corridor room by room to locate the missing workers; Brooks must secure the evidence drive under field custody procedure before the feed can be used for disclosure",
+        "tactical_objective": "Locate and evacuate Dolan and Reyes from the fourth-floor corridor while Owen's team suppresses the camera tracking threat; simultaneously secure the hidden drive as evidence custody before it can be wiped remotely",
+        "symbolic_close": "A formal on-record naming of Vess, the victim, and the surveillance mechanism must be delivered—by Torah, using the recovered drive as the evidentiary basis—before the cameras release and the footage stops looping",
+        "violent_resolution": "The pan-tilt camera mounts on the fourth floor can be physically destroyed or disabled by Owen's team; this stops the tracking threat and frees the corridor but does not close the symbolic loop—the monitors in the security office will continue broadcasting until disclosure is made",
+        "not_monster_of_week": "The cameras are not possessed objects in a generic haunting sense; they are witnesses enacting a judgment logic derived from the Nathan parable—they will not stop pointing at the site of the original act until the act is named by someone with authority to put it on record; destroying them delays the physical danger but leaves the symbolic pressure unresolved and escalating to the next available surface"
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "lt_mara_owen",
+          "name": "Lt. Mara Owen",
+          "mission_role": "Tactical point, fourth-floor sweep and personnel recovery",
+          "physical_position": "Fourth-floor corridor, east stairwell entry, with two squad members",
+          "assigned_reason": "Senior tactical officer; missing-persons recovery requires a cleared sweep under active anomalous contact",
+          "visible_state": "Clipped radio traffic, no wasted words; she has already noted the camera arcs and is holding position pending Torah's order"
+        },
+        {
+          "officer_id": "brooks",
+          "name": "Brooks",
+          "mission_role": "Evidence custody and technical recovery, security office",
+          "physical_position": "Ground-floor security office, standing at the DVR rack with the hidden drive in hand",
+          "assigned_reason": "Best hands for physical evidence extraction and chain-of-custody documentation under time pressure",
+          "visible_state": "Quiet, focused; he has not looked directly at the monitors since he found the drive"
+        },
+        {
+          "officer_id": "dr_lenora_saye",
+          "name": "Dr. Lenora Saye",
+          "mission_role": "Remote symbolic analyst and disclosure protocol advisor",
+          "physical_position": "Institute comms, patched into the security office feed",
+          "assigned_reason": "Symbolic pressure pattern matches her documented case files on witness-class anomalies; she identified the closure condition from the feed before the squad entered",
+          "visible_state": "Her voice on comms is careful and even; she has already told Torah what she thinks needs to happen and is waiting to see if he agrees"
+        },
+        {
+          "officer_id": "torah",
+          "name": "Torah",
+          "mission_role": "Command node and disclosure authority",
+          "physical_position": "Lobby, between the security office and the fourth-floor stairwell",
+          "assigned_reason": "Only officer with Institute authority to place a formal on-record naming that satisfies the symbolic closure condition",
+          "visible_state": "Holding the floor plan, listening to both radio channels simultaneously"
+        }
+      ],
+      "root_sin": "A building manager used his institutional access to the security infrastructure—cameras, master keys, maintenance schedules—to surveil a tenant he desired, arrange for her private moments to be recorded without consent, and then use that footage as leverage. When she reported it internally, he routed the complaint back to himself and had her lease terminated. The surveillance was the weapon; the concealment was the second crime; the erasure of her complaint was the third.",
+      "modern_incident_logic": "Vess installed a secondary DVR on a hidden drive using his own employee credentials, set cameras to record apartment 4F on a schedule tied to the tenant's known routine, and suppressed her formal complaint through his administrative access. The symbolic pressure accumulated at the site of the original act—the window, the camera angle, the timestamp—and when Vess was removed from the building by police, the suppression mechanism collapsed. The cameras, no longer directed by the person who weaponized them, defaulted to the only instruction still encoded in the symbolic record: witness.",
+      "closure_test": "Brooks must secure the hidden drive under evidence custody. Owen must clear the fourth floor and recover Dolan and Reyes. Torah must then deliver a formal on-record naming—spoken aloud into the Institute log with the drive cited as evidence—identifying Vess, the victim by name if known, and the mechanism of surveillance. The cameras release when the naming is complete.",
+      "religious_pattern": "Nathan parable structure: the sin is committed by a powerful figure using institutional position; the evidence is hidden; a witness arrives and names the act directly to the one with authority to record it; the naming is the judgment and the closure simultaneously",
+      "anomaly_rule": "Witness-class manifestation: the infrastructure of the original sin becomes a compulsive witness, orienting toward the site of the act and looping the moment of exposure. It tracks anyone who enters the sightline because the original act was about being seen without consent—the anomaly inverts this, making the watcher watched. It cannot be closed by destruction alone because a witness silenced is not a witness satisfied.",
+      "forbidden_flat_read": "Do not literalize as a ghost of the victim or a demonic possession of the cameras; the cameras are not haunted, they are enacting a judgment logic that requires testimony, not exorcism",
+      "officer_reports": [
+        "Owen, radio: 'Camera on the east end just tracked Specialist Park through a full ninety-degree arc. It's not on a motion sensor. It followed her.'",
+        "Brooks, security office: 'This drive was formatted with Vess's credentials. The date range starts six weeks before the cameras were officially installed. He was recording before the system was live.'",
+        "Dr. Saye, comms: 'The footage timestamp doesn't advance. In every case I've documented with this pattern, the loop holds until someone with authority says what happened out loud and puts it somewhere it can't be deleted.'"
+      ],
+      "procedure_hooks": [
+        "Evidence custody: Brooks must photograph the drive in situ, log its location relative to the DVR rack, and bag it before removal—standard chain-of-custody; if skipped, the drive's evidentiary value is compromised and the disclosure may not satisfy the symbolic closure condition",
+        "Corridor sweep: Owen's team uses a two-element bounding movement to clear each doorway on the fourth floor, with one element fixed on the camera arc while the other moves—standard react-to-contact drill adapted for a non-ballistic tracking threat",
+        "Formal disclosure: Torah's naming must be delivered into the Institute's live mission log, not informally; the log entry is the record that cannot be deleted, which is the structural requirement the anomaly is enforcing"
+      ],
+      "character_state_stakes": {
+        "lt_mara_owen": "If the corridor sweep goes wrong and Dolan or Reyes is found injured, Owen carries the weight of the split-force decision; her composure is load-bearing for the rest of the squad",
+        "brooks": "Brooks found the drive; if the evidence chain is broken on his watch, he knows it and it shows in how he handles the next mission's paperwork",
+        "dr_lenora_saye": "Saye identified the closure condition before anyone else; if Torah acts on her read and it works, her standing with the squad improves; if it fails, she goes quiet in a way that is worse than argument",
+        "torah": "Torah must say the name on record; the act of naming is the player's moral commitment, not just a mechanical close"
+      },
+      "interlude_vectors": [
+        "Post-mission: Brooks sits with the bagged drive on the table and doesn't open his notes for a long time",
+        "Owen files her after-action and leaves the section on 'personnel recovery condition' blank for twenty minutes before filling it in",
+        "Saye sends Torah a single follow-up message: the victim's name, found in a suppressed complaint file; no further comment"
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "A building manager used his institutional access to the security infrastructure—cameras, master keys, maintenance schedules—to surveil a tenant he desired, arrange for her private moments to be recorded without consent, and then use that footage as leverage. When she reported it internally, he routed the complaint back to himself and had her lease terminated. The surveillance was the weapon; the concealment was the second crime; the erasure of her complaint was the third.",
+        "modern_incident_logic": "Vess installed a secondary DVR on a hidden drive using his own employee credentials, set cameras to record apartment 4F on a schedule tied to the tenant's known routine, and suppressed her formal complaint through his administrative access. The symbolic pressure accumulated at the site of the original act—the window, the camera angle, the timestamp—and when Vess was removed from the building by police, the suppression mechanism collapsed. The cameras, no longer directed by the person who weaponized them, defaulted to the only instruction still encoded in the symbolic record: witness.",
+        "closure_test": "Brooks must secure the hidden drive under evidence custody. Owen must clear the fourth floor and recover Dolan and Reyes. Torah must then deliver a formal on-record naming—spoken aloud into the Institute log with the drive cited as evidence—identifying Vess, the victim by name if known, and the mechanism of surveillance. The cameras release when the naming is complete."
+      },
+      "religious_subtext": {
+        "source_pattern": "Nathan parable structure: the sin is committed by a powerful figure using institutional position; the evidence is hidden; a witness arrives and names the act directly to the one with authority to record it; the naming is the judgment and the closure simultaneously",
+        "transformed_rule": "Witness-class manifestation: the infrastructure of the original sin becomes a compulsive witness, orienting toward the site of the act and looping the moment of exposure. It tracks anyone who enters the sightline because the original act was about being seen without consent—the anomaly inverts this, making the watcher watched. It cannot be closed by destruction alone because a witness silenced is not a witness satisfied.",
+        "forbidden_flat_read": "Do not literalize as a ghost of the victim or a demonic possession of the cameras; the cameras are not haunted, they are enacting a judgment logic that requires testimony, not exorcism"
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Post-mission: Brooks sits with the bagged drive on the table and doesn't open his notes for a long time",
+        "Owen files her after-action and leaves the section on 'personnel recovery condition' blank for twenty minutes before filling it in",
+        "Saye sends Torah a single follow-up message: the victim's name, found in a suppressed complaint file; no further comment"
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "room_roofline_aldren_court",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00439",
+          "source_moment": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "room_application": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "structural_transfer": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "required_visible_details": [
+            "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+            "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+          ],
+          "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00440",
+          "source_moment": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "room_application": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "structural_transfer": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "required_visible_details": [
+            "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+            "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+          ],
+          "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00441",
+          "source_moment": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "room_application": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "structural_transfer": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "required_visible_details": [
+            "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+            "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+          ],
+          "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+        },
+        {
+          "source_id": "army_call_21_14_building_cohesive_teams",
+          "source_title": "Army Call 21 14 Building Cohesive Teams",
+          "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+          "source_moment": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "room_application": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "structural_transfer": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "required_visible_details": [
+            "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+            "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+          ],
+          "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00439",
+          "anchor_role": "premise",
+          "source_fingerprint": "King on rooftop sees woman, inquires, takes her—elevated position enabling transgressive gaze",
+          "playable_transform": "Building manager uses rooftop-level camera infrastructure and institutional elevation to surveil a tenant; the rooftop vantage becomes the security camera network; the gaze becomes recorded footage",
+          "required_visible_details": [
+            "The hidden drive is mounted behind the DVR rack at eye level—the same height as a rooftop parapet",
+            "The camera that first tracked Owen is the one mounted above the fourth-floor stairwell exit, the highest point in the corridor"
+          ],
+          "followup_payoff": "The rooftop camera—the one with the widest angle over 4F's window—is the last to release when the naming is complete"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00440",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Uriah placed at the point of greatest danger by proxy; the messenger carries the order that causes the death",
+          "playable_transform": "The missing workers Dolan and Reyes were sent to reposition the cameras by Vess's assistant acting on old standing orders—proxy exposure; they are now in the sightline corridor, in danger from the tracking hardware they were sent to fix",
+          "required_visible_details": [
+            "Dolan's work order, found on the floor of the corridor, is signed by Vess's assistant and dated two days ago—after Vess was already under investigation",
+            "Reyes's radio is transmitting static from somewhere behind the door of 4F itself"
+          ],
+          "followup_payoff": "If Owen recovers Dolan and Reyes before the cameras are addressed, one of them will have a camera mount impact injury—evidence of the proxy harm that mirrors the source"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00441",
+          "anchor_role": "closure",
+          "source_fingerprint": "Nathan says 'You are the man'—the naming is the judgment; the prophet speaks directly to the one with power",
+          "playable_transform": "Torah must deliver the naming on record; the Institute log is the record that cannot be suppressed; the act of speaking it aloud into a live log is the Nathan moment",
+          "required_visible_details": [
+            "The Institute log prompt on Torah's field tablet reads: 'Incident cause — responsible party — mechanism.' Three fields. The anomaly requires all three filled.",
+            "When Torah begins speaking, the monitors in the security office flicker for the first time since the squad arrived"
+          ],
+          "followup_payoff": "The footage on the monitors advances past 11:42 only when all three fields are spoken; the cameras release in sequence from lowest floor to highest, ending with the rooftop unit"
+        },
+        {
+          "source_id": "army_call_21_14_building_cohesive_teams",
+          "source_chunk_id": "army_call_21_14_building_cohesive_teams:00003",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Leaders eliminate corrosive behavior; the squad is the group you are responsible for and they are responsible for you",
+          "playable_transform": "Owen's corridor sweep is a leadership test under contact; the split-force deployment means she is responsible for personnel she cannot see; the field manual drill is the procedure that keeps the squad from becoming the next proxy casualties",
+          "required_visible_details": [
+            "Owen's radio check cadence is every ninety seconds; when it lapses past two minutes, Brooks notices before Torah does",
+            "The after-action form has a field labeled 'corrosive conduct identified'—Brooks circles it before writing anything"
+          ],
+          "followup_payoff": "If Owen's sweep succeeds cleanly, the squad's cohesion holds through the cooldown; if it fails, the after-action form becomes a recurring object in future missions"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "room_roofline_aldren_court"
+    },
+    {
+      "pool": "branch",
+      "room_id": "room_roofline_aldren_court"
+    },
+    {
+      "pool": "straight_noncombat",
+      "room_id": "room_roofline_aldren_court"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "room_roofline_aldren_court"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The Nathan parable's power is that the naming is the judgment—the anomaly enforces this structurally, not atmospherically",
+    "The force option (destroy) is fully playable and consequential: it works physically but the witness-class pressure migrates, which is a direct consequence of the source logic",
+    "Brooks's after-action form field 'corrosive conduct identified' is the CALL 21-14 anchor made visible as a physical object",
+    "The victim is never shown, never described, never made into spectacle—she is present only as a name in a suppressed complaint file and a window in footage that should not exist"
+  ],
+  "self_critique": [
+    "The partial outcome on full_disclosure requires Torah to make an ethical judgment about recording a victim's name without consent—this is intentional and load-bearing, but a runtime implementation must ensure the choice text does not feel punishing for players who attempt the correct closure; the moral weight should feel like consequence, not trap"
+  ]
+}

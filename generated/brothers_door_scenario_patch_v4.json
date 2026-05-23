@@ -1,0 +1,540 @@
+{
+  "title": "Brothers Door Stairwell",
+  "design_goal": "Create a tense tactical stairwell clearing mission that embodies the Biblical motif of Cain and Abel's 'keeper threshold'. Characters face a false clearance report, revealing abandoned civilians in danger, with smoke and stress complicating evacuation and evidence custody in a fatal funnel. Tactical choice and follow-up interludes emphasize risk, evidence audit, and lingering uncertainty.",
+  "events": [
+    {
+      "room_id": "brothers_door_stairwell",
+      "event": {
+        "id": "brothers_stairwell_root_choice",
+        "type": "choice",
+        "speaker": "Captain",
+        "line_1": "Stairwell entry report: smoke and abandoned civilians detected.",
+        "line_2": "Choose your action carefully — lives and evidence are at stake.",
+        "visible_text": "Brothers door stairwell entry. False all-clear risk. Smoke limits visibility.",
+        "buttons": [
+          {
+            "label": "Brooks: Clear stairwell",
+            "action": "brooks_handles",
+            "voice_aliases": [
+              "brooks clear stairwell",
+              "brooks handles",
+              "brooks clear",
+              "clear stairwell",
+              "brooks"
+            ]
+          },
+          {
+            "label": "Mina: Mark and hold line",
+            "action": "hold_line",
+            "voice_aliases": [
+              "mina hold line",
+              "select branch",
+              "branch",
+              "hold line",
+              "mark"
+            ]
+          },
+          {
+            "label": "Lenora: Recover civilians",
+            "action": "recover",
+            "voice_aliases": [
+              "lenora recover civilians",
+              "recover",
+              "lenora recover",
+              "recover civilians",
+              "civilians"
+            ]
+          },
+          {
+            "label": "Torah: Audit evidence",
+            "action": "torah_speaks",
+            "voice_aliases": [
+              "torah audit evidence",
+              "torah speaks",
+              "audit evidence",
+              "torah audit",
+              "audit"
+            ]
+          }
+        ],
+        "action_results": {
+          "brooks_handles": {
+            "lines": [
+              "Brooks moves methodically, clearing the stairwell despite choking smoke."
+            ],
+            "environment_state_changes": [
+              "character.brooks.fatigue +1",
+              "character.brooks.stress +2",
+              "resource.evidence_integrity -1"
+            ],
+            "story_followups": {
+              "trigger_key": "brooks_handles",
+              "event_id": "brothers_stairwell_resolve",
+              "immediate": true,
+              "queued_line": "Brooks reports initial clearance but senses lingering danger."
+            }
+          },
+          "hold_line": {
+            "lines": [
+              "Mina secures a defensive position, marking obstacles and gathering infantry."
+            ],
+            "environment_state_changes": [
+              "character.specialist_mina.stress +1",
+              "resource.lockdown_zone +1"
+            ],
+            "story_followups": {
+              "trigger_key": "hold_line",
+              "event_id": "brothers_stairwell_resolve",
+              "immediate": true,
+              "queued_line": "Mina holds line but reports missing persons beyond the perimeter."
+            }
+          },
+          "recover": {
+            "lines": [
+              "Lenora leads a rapid civilian extraction, bypassing unsafe zones."
+            ],
+            "environment_state_changes": [
+              "character.dr_lenora_saye.fatigue +2",
+              "character.dr_lenora_saye.stress +3",
+              "resource.civilian_safety +2"
+            ],
+            "story_followups": {
+              "trigger_key": "recover",
+              "event_id": "brothers_stairwell_resolve",
+              "immediate": true,
+              "queued_line": "Lenora recovers survivors but notes incomplete clearance."
+            }
+          },
+          "torah_speaks": {
+            "lines": [
+              "Torah conducts a critical audit of evidence and site logs."
+            ],
+            "environment_state_changes": [
+              "character.torah.stress +1",
+              "resource.evidence_integrity +2"
+            ],
+            "story_followups": {
+              "trigger_key": "torah_speaks",
+              "event_id": "brothers_stairwell_resolve",
+              "immediate": true,
+              "queued_line": "Torah identifies discrepancies in official clearance reports."
+            }
+          }
+        }
+      },
+      "operation_plans": [
+        {
+          "action": "brooks_handles",
+          "officer_id": "brooks",
+          "primary_skill": "tactical_clearance",
+          "base_success": 0.78,
+          "yield": 3,
+          "risk": 2,
+          "blocked_states": [
+            "character.brooks.injured"
+          ],
+          "outcomes": {
+            "strong_success": {
+              "lines": [
+                "Brooks secures stairwell with minimal incident."
+              ],
+              "environment_state_changes": [
+                "resource.civilian_safety +2",
+                "character.brooks.stress -1"
+              ]
+            },
+            "success": {
+              "lines": [
+                "Brooks clears stairwell, some stress effects endure."
+              ],
+              "environment_state_changes": [
+                "character.brooks.stress +1"
+              ]
+            },
+            "partial": {
+              "lines": [
+                "Brooks clears part of the stairwell; unknowns remain."
+              ],
+              "environment_state_changes": [
+                "character.brooks.fatigue +2",
+                "resource.civilian_safety +1"
+              ]
+            },
+            "failure": {
+              "lines": [
+                "Brooks encounters heavy resistance; some civilians endangered."
+              ],
+              "environment_state_changes": [
+                "character.brooks.injury +1",
+                "resource.civilian_safety -1"
+              ]
+            },
+            "catastrophe": {
+              "lines": [
+                "Brooks is incapacitated; stairwell integrity compromised."
+              ],
+              "environment_state_changes": [
+                "character.brooks.injury +3",
+                "resource.civilian_safety -3"
+              ]
+            }
+          }
+        },
+        {
+          "action": "hold_line",
+          "officer_id": "specialist_mina_park",
+          "primary_skill": "field_security",
+          "base_success": 0.85,
+          "yield": 2,
+          "risk": 1,
+          "blocked_states": [],
+          "outcomes": {
+            "strong_success": {
+              "lines": [
+                "Mina holds position, preventing further infiltrations."
+              ],
+              "environment_state_changes": [
+                "resource.lockdown_zone +2",
+                "character.specialist_mina.stress -1"
+              ]
+            },
+            "success": {
+              "lines": [
+                "Mina's hold is steady, minor fatigue sets in."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina.fatigue +1"
+              ]
+            },
+            "partial": {
+              "lines": [
+                "Mina's line holds but with exposed flanks."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina.stress +1"
+              ]
+            },
+            "failure": {
+              "lines": [
+                "Mina's line falters; enemies breach perimeter."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina.injury +1",
+                "resource.lockdown_zone -1"
+              ]
+            },
+            "catastrophe": {
+              "lines": [
+                "Mina is overwhelmed; perimeter lost."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina.injury +3",
+                "resource.lockdown_zone -3"
+              ]
+            }
+          }
+        },
+        {
+          "action": "recover",
+          "officer_id": "dr_lenora_saye",
+          "primary_skill": "emergency_medicine",
+          "base_success": 0.67,
+          "yield": 4,
+          "risk": 3,
+          "blocked_states": [
+            "character.dr_lenora_saye.injured"
+          ],
+          "outcomes": {
+            "strong_success": {
+              "lines": [
+                "Civilians recovered with no casualties."
+              ],
+              "environment_state_changes": [
+                "resource.civilian_safety +4",
+                "character.dr_lenora_saye.fatigue -1"
+              ]
+            },
+            "success": {
+              "lines": [
+                "Most civilians recovered; minor injuries treated."
+              ],
+              "environment_state_changes": [
+                "resource.civilian_safety +3"
+              ]
+            },
+            "partial": {
+              "lines": [
+                "Partial recovery; some civilians remain trapped."
+              ],
+              "environment_state_changes": [
+                "resource.civilian_safety +1",
+                "character.dr_lenora_saye.fatigue +2"
+              ]
+            },
+            "failure": {
+              "lines": [
+                "Recovery operation disrupted; casualties increase."
+              ],
+              "environment_state_changes": [
+                "resource.civilian_safety -1",
+                "character.dr_lenora_saye.injury +1"
+              ]
+            },
+            "catastrophe": {
+              "lines": [
+                "Recovery attempt fails; civilians lost."
+              ],
+              "environment_state_changes": [
+                "resource.civilian_safety -4",
+                "character.dr_lenora_saye.injury +3"
+              ]
+            }
+          }
+        },
+        {
+          "action": "torah_speaks",
+          "officer_id": "torah",
+          "primary_skill": "forensic_audit",
+          "base_success": 0.92,
+          "yield": 3,
+          "risk": 1,
+          "blocked_states": [],
+          "outcomes": {
+            "strong_success": {
+              "lines": [
+                "Evidence audit reveals multiple falsified clearance entries."
+              ],
+              "environment_state_changes": [
+                "resource.evidence_integrity +3",
+                "character.torah.stress -1"
+              ]
+            },
+            "success": {
+              "lines": [
+                "Audit finds minor inconsistencies."
+              ],
+              "environment_state_changes": [
+                "resource.evidence_integrity +1"
+              ]
+            },
+            "partial": {
+              "lines": [
+                "Limited audit completed; ambiguity remains."
+              ],
+              "environment_state_changes": [
+                "character.torah.stress +1"
+              ]
+            },
+            "failure": {
+              "lines": [
+                "Audit inconclusive; data corrupted."
+              ],
+              "environment_state_changes": [
+                "resource.evidence_integrity -1",
+                "character.torah.stress +2"
+              ]
+            },
+            "catastrophe": {
+              "lines": [
+                "Audit fails; critical records lost."
+              ],
+              "environment_state_changes": [
+                "resource.evidence_integrity -3",
+                "character.torah.stress +3"
+              ]
+            }
+          }
+        }
+      ],
+      "corpus_influences": [
+        {
+          "source_chunk_id": "world_english_bible:00005",
+          "source_fingerprint": "b2d9e876f66aab037c2e5a4bf24c7d2a",
+          "structural_transfer": "threshold_rule",
+          "required_visible_details": [
+            "brothers' door sign",
+            "bloodstain on floor"
+          ],
+          "followup_payoff": "trigger_stairwell_abandonment_warning"
+        },
+        {
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+          "source_fingerprint": "99477e8c5d94d71280d6be1eb51aaf96",
+          "structural_transfer": "fatal_funnel_procedure",
+          "required_visible_details": [
+            "obstacle marks",
+            "cleared pathway"
+          ],
+          "followup_payoff": "complex_stairwell_clearing_decision"
+        },
+        {
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+          "source_fingerprint": "24ed1d8aeb3f09e27bba74ed0da9d175",
+          "structural_transfer": "smoke_stress_influence",
+          "required_visible_details": [
+            "smoke plume",
+            "crew respirator gauges"
+          ],
+          "followup_payoff": "stress_altered_operation_outcomes"
+        },
+        {
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+          "source_fingerprint": "ae78f20dacf52a0f7c7eb67a7ced79ef",
+          "structural_transfer": "local_closure_and_contradiction",
+          "required_visible_details": [
+            "official clearance report",
+            "faint voices from stairwell"
+          ],
+          "followup_payoff": "delayed_evidence_reveal"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00005",
+          "anchor_role": "religious_what",
+          "source_fingerprint": "b2d9e876f66aab037c2e5a4bf24c7d2a",
+          "playable_transform": "door threshold",
+          "required_visible_details": [
+            "brothers' door sign",
+            "bloodstain on floor"
+          ],
+          "followup_payoff": "trigger_stairwell_abandonment_warning"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+          "anchor_role": "procedural_how",
+          "source_fingerprint": "99477e8c5d94d71280d6be1eb51aaf96",
+          "playable_transform": "marked obstacle",
+          "required_visible_details": [
+            "obstacle marks",
+            "cleared pathway"
+          ],
+          "followup_payoff": "complex_stairwell_clearing_decision"
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+          "anchor_role": "weird_fiction_structure",
+          "source_fingerprint": "ae78f20dacf52a0f7c7eb67a7ced79ef",
+          "playable_transform": "official clearance report",
+          "required_visible_details": [
+            "official clearance report",
+            "faint voices from stairwell"
+          ],
+          "followup_payoff": "delayed_evidence_reveal"
+        }
+      ],
+      "religious_subtext": {
+        "motif": "Cain/Abel keeper threshold",
+        "primary_sources": [
+          "world_english_bible:00005"
+        ],
+        "subtext": "The stairwell symbolizes the threshold at which official abandonment becomes a fatal failing. The door is the keeper's mark; ignored evidence and abandoned names invoke Cain's burden.",
+        "visible_requirements": [
+          "brothers' door sign",
+          "bloodstained floor"
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "brothers_stairwell_resolve",
+      "type": "choice",
+      "speaker": "Captain",
+      "line_1": "Reports conflict: civilians found abandoned beyond cleared stairwell.",
+      "line_2": "Decide next steps amid rising stress and evidence anomalies.",
+      "visible_text": "False all-clear uncovered. Stairwell remains hazardous.",
+      "buttons": [
+        {
+          "label": "Brooks: Push further",
+          "action": "brooks_handles",
+          "voice_aliases": [
+            "brooks push further"
+          ]
+        },
+        {
+          "label": "Mina: Strengthen perimeter",
+          "action": "hold_line",
+          "voice_aliases": [
+            "mina strengthen perimeter"
+          ]
+        },
+        {
+          "label": "Lenora: Emergency triage",
+          "action": "recover",
+          "voice_aliases": [
+            "lenora emergency triage"
+          ]
+        }
+      ],
+      "action_results": {
+        "brooks_handles": {
+          "lines": [
+            "Brooks advances despite worsening smoke, searching missing civilians."
+          ],
+          "environment_state_changes": [
+            "character.brooks.fatigue +3",
+            "character.brooks.stress +3",
+            "resource.civilian_safety +1"
+          ],
+          "story_followups": {
+            "trigger_key": "brooks_handles",
+            "event_id": "brothers_stairwell_cooldown_interlude",
+            "immediate": true,
+            "queued_line": "Brooks relays harrowing findings; stairwell remains dangerous."
+          }
+        },
+        "hold_line": {
+          "lines": [
+            "Mina fortifies position, buying time for rescue operations."
+          ],
+          "environment_state_changes": [
+            "character.specialist_mina.stress +1",
+            "resource.lockdown_zone +2"
+          ],
+          "story_followups": {
+            "trigger_key": "hold_line",
+            "event_id": "brothers_stairwell_cooldown_interlude",
+            "immediate": true,
+            "queued_line": "Mina reports firm defenses but unresolved cases linger."
+          }
+        },
+        "recover": {
+          "lines": [
+            "Lenora rushes wounded civilians to stability despite smoke."
+          ],
+          "environment_state_changes": [
+            "character.dr_lenora_saye.fatigue +3",
+            "character.dr_lenora_saye.stress +2",
+            "resource.civilian_safety +3"
+          ],
+          "story_followups": {
+            "trigger_key": "recover",
+            "event_id": "brothers_stairwell_cooldown_interlude",
+            "immediate": true,
+            "queued_line": "Lenora notes gap in prior clearance risking lives."
+          }
+        }
+      }
+    },
+    "operation_plans':[{"
+  ],
+  "_validation_errors": [
+    "brothers_stairwell_resolve: unknown action 'hold_line'",
+    "special_events[0].brothers_stairwell_resolve: corpus_influences must be a non-empty list of source objects",
+    "special_events[0].brothers_stairwell_resolve: corpus_anchor_points must be a non-empty list",
+    "special_events[0].brothers_stairwell_resolve: Revelation choice events must include character-owned operation_plans",
+    "special_events[1] is not an object",
+    "events[0].room_id 'brothers_door_stairwell' is not in room_dialogue.json or patch.room_records",
+    "brothers_stairwell_root_choice: unknown action 'hold_line'",
+    "events[0].brothers_stairwell_root_choice: corpus_influences must be a non-empty list of source objects",
+    "events[0].brothers_stairwell_root_choice: corpus_anchor_points must be a non-empty list",
+    "events[0].brothers_stairwell_root_choice: Revelation choice events must include character-owned operation_plans",
+    "events[0].brothers_stairwell_root_choice.line_1: report line lacks a clear order, test, report, or procedure",
+    "events[0].brothers_stairwell_root_choice.line_2: report line lacks a clear order, test, report, or procedure",
+    "special_events[0].brothers_stairwell_resolve.line_2: report line lacks a clear order, test, report, or procedure"
+  ]
+}

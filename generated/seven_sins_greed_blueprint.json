@@ -1,0 +1,310 @@
+{
+  "title": "Devoted Property",
+  "design_goal": "A field agent's hidden theft of Institute-designated assets triggers an active symbolic judgment that collapses the operation site around the squad until the stolen property is confessed, recovered, and formally restituted.",
+  "source_mechanism": {
+    "source_chunk_id": "world_english_bible:00308",
+    "source_action": "A concealed act of taking devoted property causes military defeat and pursuit; the community cannot advance until the hidden thing is exposed, confessed, and destroyed",
+    "sin_or_transgression": "Greed: Agent Caleb Ross diverted a cache of recovered artifacts designated for Institute custody into a private storage unit, filing falsified chain-of-custody forms to cover the gap",
+    "witness_or_judgment": "The site where the theft occurred refuses to stay closed—symbolic pressure radiates outward from the hidden property, routing anyone who enters the affected zone and producing physical pursuit until the devoted items are surrendered",
+    "required_scene_elements": [
+      "a buried or hidden cache of designated property",
+      "falsified custody documents",
+      "a pursuit or routing force that cannot be stopped by firepower alone",
+      "a formal confession naming the transgressor",
+      "physical recovery and restitution of the hidden items"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "While devoted property remains hidden and unclaimed, the site generates a pursuit-class manifestation that routes personnel; force cannot stop it because the cause is moral, not physical",
+    "active_manifestation": "Before the squad arrives, the storage facility's lower level is already in active pursuit-state: a pressure-front of displaced air, structural groaning, and a directed force that physically drives anyone in the corridor toward the exits—three Institute contractors were routed out injured before the squad was called",
+    "escalation": "Each failed plan tightens the pursuit radius, injures additional personnel, and begins collapsing the structural envelope of the building; if the cache is not recovered, the manifestation expands to the street cordon",
+    "closure_condition": "Ross makes a formal verbal confession naming the stolen items, the items are physically recovered from the hidden location, and the cache is transferred back into Institute custody under witnessed chain-of-custody procedure"
+  },
+  "room": {
+    "id": "room_devoted_property",
+    "name": "Devoted Property",
+    "type": "mission",
+    "mission_mode": "action_horror",
+    "description": "A pursuit-class anomaly is routing personnel from a secured Institute storage facility. The cause is inside the building.",
+    "first_visit_description": "Lt. Mara Owen has the exterior cordon. She is on comms from the parking structure across the street, coordinating the three injured contractors being triaged at the perimeter. Torah and Brooks are on the ground floor of the facility, past the first security door. Dr. Samira Iyad is remote—she pulled the chain-of-custody logs from Institute records twenty minutes ago and is reading them on a secure line. Agent Caleb Ross is present: he was already on-site when the manifestation started, which is why Owen flagged him. He is standing near the stairwell door to the lower level, not moving toward it. The lower corridor is audible from here—a low structural groan, rhythmic, like pressure building behind a wall that has no reason to flex. The emergency lighting is on. Two of the custody forms on the reception desk have been signed by Ross. One line on each form is blank where the item count should be.",
+    "return_description": "The lower level is quieter now but not silent. The stairwell door is still warm to the touch. The reception desk forms are still there, the blank lines visible under the emergency lights.",
+    "detection_report": "Institute logistics flagged a discrepancy in artifact transfer records from this facility three days ago. Before an audit could be scheduled, contractors reported a physical routing force in the lower corridor—described as a pressure wave that moved them bodily toward the exit. Two sustained soft-tissue injuries. A third lost consciousness briefly. Symbolic energy readings spiked to threshold on the Institute's passive monitoring grid at 0340 this morning.",
+    "current_situation": "The pursuit-front is active in the lower corridor right now. Torah can hear it: a sustained low-frequency groan from the structure, and a directional pressure that makes the stairwell door rattle in its frame. Ross is standing six feet from that door with his arms crossed, not offering anything. Brooks is watching him. Iyad's voice comes through the earpiece: she has found a gap in the custody log—eleven items designated for Institute holding are unaccounted for, and the last person to sign the transfer sheet was Ross. Owen reports from the cordon that the pressure signature is expanding; it reached the lobby windows two minutes ago.",
+    "action_profile": {
+      "physical_threat": "The pursuit-front is a directed physical force: it moves through corridors as a pressure wave that can knock personnel off their feet, drive them into walls, and cause blunt trauma; it is currently contained to the lower level but expanding upward",
+      "contact_state": "The squad is under indirect contact—the pursuit-front has not yet reached the ground floor but is measurably advancing; anyone who enters the lower corridor is immediately in direct contact",
+      "field_manual_drill": "React to contact, establish security on the stairwell threshold, suppress/fix the advance of the pursuit-front by addressing its cause, evacuate injured contractors through the cordon, and break contact if the closure condition cannot be met before structural collapse",
+      "tactical_objective": "Hold the stairwell threshold, prevent the pursuit-front from reaching the ground floor and street cordon, locate and recover the hidden cache in the lower level, and complete the chain-of-custody transfer before the building envelope fails",
+      "symbolic_close": "Ross must verbally confess the theft by name—specific items, specific act—and the cache must be physically handed to a witnessed Institute officer; force alone cannot stop the pursuit-front because the cause is a moral debt, not a physical entity",
+      "violent_resolution": "The stairwell door can be sealed and braced to slow the pursuit-front's advance; the hidden storage unit in the lower level can be breached and the cache physically extracted under contact; the pursuit-front itself can be suppressed temporarily by establishing a security line at the threshold, buying time for the symbolic close",
+      "not_monster_of_week": "There is no creature. The pursuit-front is judgment made kinetic—it routes because the community is compromised by hidden greed, exactly as the Israelite force was routed at Ai. It cannot be killed. It can only be satisfied."
+    },
+    "deployment_manifest": [
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Lt. Mara Owen",
+        "mission_role": "command lead, exterior cordon",
+        "physical_position": "Parking structure across the street, managing the perimeter and contractor triage",
+        "assigned_reason": "Senior officer on call; she established the cordon before Torah arrived and is coordinating casualty movement",
+        "visible_state": "Controlled but clipped on comms; she has already counted the injured and she wants a timeline"
+      },
+      {
+        "officer_id": "brooks",
+        "name": "Brooks",
+        "mission_role": "tactical point, ground floor security",
+        "physical_position": "Ground floor of the facility, between Ross and the stairwell door",
+        "assigned_reason": "First through the door with Torah; default forward position",
+        "visible_state": "Not speaking. Watching Ross with the specific stillness that means he has already formed an opinion"
+      },
+      {
+        "officer_id": "agent_caleb_ross",
+        "name": "Agent Caleb Ross",
+        "mission_role": "subject and field agent, involuntary asset",
+        "physical_position": "Ground floor, near the stairwell door, not moving toward it",
+        "assigned_reason": "Was already on-site when the manifestation started; Owen flagged his presence as anomalous",
+        "visible_state": "Arms crossed, jaw set, not volunteering information; he flinches slightly each time the stairwell door rattles"
+      },
+      {
+        "officer_id": "dr_samira_iyad",
+        "name": "Dr. Samira Iyad",
+        "mission_role": "remote technical specialist, records analysis",
+        "physical_position": "Remote, on secure line, reviewing Institute chain-of-custody logs",
+        "assigned_reason": "Pulled into the operation when logistics flagged the custody discrepancy; she is the fastest reader of Institute records on the team",
+        "visible_state": "Her voice is flat and precise on the earpiece; she reads numbers without editorial comment, which is its own kind of pressure"
+      }
+    ],
+    "root_sin": "Greed: Ross designated eleven recovered artifacts for Institute custody, then diverted them to a private storage unit and falsified the transfer count to cover the gap. The devoted property was never surrendered.",
+    "modern_incident_logic": "The facility is a legitimate Institute secure-storage site. Ross had authorized access and used it to stage the diversion. The falsified forms are physically present on the reception desk. The hidden cache is in a locked secondary unit in the lower level, which is why the pursuit-front is centered there. The anomaly is not imported—it grew from the site of the original act.",
+    "closure_test": "Ross must name the stolen items aloud in the presence of a witnessed Institute officer, the cache must be physically recovered from the lower level under contact, and the items must be transferred into Institute custody with a corrected chain-of-custody form signed on-site.",
+    "religious_pattern": "Achan's sin: devoted property taken secretly, community routed in consequence, exposure through systematic inquiry, confession by name, recovery of hidden goods, restitution to the community.",
+    "anomaly_rule": "The pursuit-front is directional and cause-linked. It advances toward the location of the hidden property and routes anyone between it and the exit. It cannot be destroyed. Its radius contracts when the confession is made and collapses when the cache is physically transferred. If the cache is moved without confession, the front follows it.",
+    "forbidden_flat_read": "Do not literalize as a ghost, demon, or creature. The pursuit-front has no face, no voice, and no negotiable demands. It is pressure made from moral debt.",
+    "officer_reports": [
+      "Brooks, ground floor: 'Ross was here before us. He knew where to stand.'",
+      "Owen, exterior cordon: 'Pressure signature just touched the lobby glass. We have maybe fifteen minutes before I have to pull the perimeter back.'",
+      "Iyad, remote: 'The last clean form is dated six weeks ago. After that, the item counts drop by one or two per sheet. Eleven total. All designated property. All signed by Ross.'"
+    ],
+    "procedure_hooks": [
+      "Chain-of-custody form review: blank item-count lines are visible evidence requiring a corrected entry",
+      "Stairwell threshold security: establish a hold line before anyone descends",
+      "Lower-level breach: the secondary storage unit requires physical entry under pursuit-front contact",
+      "Witnessed confession protocol: the Institute requires a named verbal statement in the presence of a senior officer for restitution to be valid",
+      "Contractor triage: Owen is managing three casualties at the perimeter; their status affects available personnel"
+    ],
+    "character_state_stakes": {
+      "agent_caleb_ross": "Confession costs Ross his field status and triggers a formal Institute review; silence costs the squad structural time and injury exposure",
+      "lt_mara_owen": "If the perimeter has to pull back, Owen carries that operationally; her composure is load-bearing for the cordon",
+      "brooks": "Brooks has already read the situation; if Ross is protected or excused, Brooks's trust in command degrades visibly",
+      "dr_samira_iyad": "Iyad's records work is the evidentiary spine; if it is dismissed or overridden, she withdraws from future operational support"
+    },
+    "interlude_vectors": [
+      "Post-mission: Ross's confession or silence becomes a permanent record entry that affects future Institute trust",
+      "Brooks's silence during the operation becomes a conversation he initiates later, alone",
+      "Iyad files a supplemental report regardless of outcome; what it says depends on what she witnessed"
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00308",
+      "role": "premise",
+      "fingerprint": "Community routed because of hidden devoted property; defeat cannot be explained by tactical factors alone",
+      "transfer": "The pursuit-front routes Institute personnel from the facility for no physically explicable reason; the squad is deployed because the routing is anomalous, not because of a structural failure",
+      "visible_details": [
+        "three contractors physically driven out of the lower corridor before the squad arrived",
+        "pursuit-front advances toward the exit, not toward personnel—it routes, it does not hunt"
+      ],
+      "payoff": "If the squad tries to fight through without addressing the cause, they are routed the same way"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00309",
+      "role": "closure",
+      "fingerprint": "Confession by name, recovery of hidden goods, restitution to the community",
+      "transfer": "Ross must name the items aloud; the cache must be physically recovered and transferred under witnessed procedure; a corrected chain-of-custody form is the restitution document",
+      "visible_details": [
+        "blank item-count lines on the reception desk forms",
+        "the secondary storage unit in the lower level where the cache is hidden"
+      ],
+      "payoff": "The pursuit-front collapses when the transfer is witnessed; the blank lines on the form are filled in"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00307",
+      "role": "evidence",
+      "fingerprint": "Devoted property must be surrendered entirely; partial compliance is not sufficient",
+      "transfer": "Moving the cache without confession does not close the anomaly; the pursuit-front follows the property until the moral debt is named",
+      "visible_details": [
+        "the custody forms show the gap but not the location; the location requires Ross to speak",
+        "the pursuit-front's radius contracts only after the verbal confession, not after physical recovery alone"
+      ],
+      "payoff": "A partial resolution—cache recovered, no confession—leaves a residual pressure signature that becomes a future mission hook"
+    },
+    {
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_chunk_id": "army_atp_3_21_8_infantry_platoon_squad:00331",
+      "role": "procedure",
+      "fingerprint": "Physical security, narrow-front penetration, establish and hold a threshold",
+      "transfer": "The squad must establish a security line at the stairwell threshold before anyone descends; the lower-level breach is a narrow-front entry under active pursuit-front contact",
+      "visible_details": [
+        "stairwell door as the threshold: hold it or lose the ground floor",
+        "breach of the secondary storage unit requires a two-person entry with one person on the threshold"
+      ],
+      "payoff": "If the threshold is not held, the pursuit-front reaches the ground floor and Owen must pull the cordon"
+    },
+    {
+      "source_id": "lovecraft_charles_dexter_ward_pg73547",
+      "source_chunk_id": "lovecraft_charles_dexter_ward_pg73547:00040",
+      "role": "escalation",
+      "fingerprint": "Prior digging discovered and linked to current incident; investigators connect separate events through physical evidence at the site",
+      "transfer": "Iyad's records review connects the current anomaly to a pattern of small custody discrepancies over six weeks; the current event is not isolated",
+      "visible_details": [
+        "the custody forms on the reception desk show a six-week pattern, not a single act",
+        "Iyad reads the dates aloud on the earpiece: each one is a separate entry, each one slightly wrong"
+      ],
+      "payoff": "The six-week pattern means Ross has done this before; the Institute review triggered by confession will find additional sites"
+    }
+  ],
+  "root": {
+    "id": "root_devoted_property",
+    "speaker": "SITREP",
+        "line_1": "Ross reports the evidence corridor active. Three contractors are injured. Iyad reports eleven items missing from the custody log.",
+        "line_2": "Owen reports pressure expanding upward. The cordon has fifteen minutes before the stairwell door becomes the threshold.",
+    "queued_line": "Someone has to go down there, and someone has to make Ross talk before the building decides for us.",
+    "plans": [
+      {
+        "label": "Brooks holds the line",
+        "action": "intercept",
+        "officer_id": "brooks",
+        "primary_skill": "threshold security, tactical pressure",
+        "tactical_step": "suppress/fix: establish security at the stairwell threshold, hold the pursuit-front's advance, buy time for the symbolic close",
+        "base_success": 0.65,
+        "intent": "Brooks takes the stairwell door as a hold position, physically bracing the threshold against the pursuit-front's advance while Torah works Ross",
+        "yield": "The pursuit-front is slowed; the ground floor stays clear; Owen does not have to pull the cordon; Ross has no exit pressure to hide behind",
+        "risk": "The pursuit-front is stronger than expected; Brooks takes direct contact and is injured or driven back, collapsing the threshold and forcing an early evacuation decision",
+        "success_line": "Brooks puts his back to the stairwell door and sets his feet. The groaning drops half a register—not gone, but held. He does not look away from the door. He says, flat: 'You have time. Use it.' The door frame creaks but does not give.",
+        "partial_line": "Brooks gets to the door and holds it for ninety seconds before the pressure spikes. He braces, absorbs it, stays upright—but the door buckles outward an inch and does not go back. He calls over his shoulder without turning: 'Whatever you're doing, do it faster.' His voice is steady. His hands are not.",
+        "failure_line": "The pursuit-front hits the door before Brooks reaches threshold position. He is driven back three steps, shoulder into the wall, and the door swings open. Cold pressure fills the ground floor. Brooks gets up without a word, but he is moving carefully, and Owen's voice on comms goes very quiet."
+      },
+      {
+        "label": "Iyad, run the gap",
+        "action": "full_disclosure",
+        "officer_id": "dr_samira_iyad",
+        "primary_skill": "records analysis, evidentiary pressure",
+        "tactical_step": "symbolic close: use the custody log gap as formal evidence to force Ross toward confession before physical entry",
+        "base_success": 0.65,
+        "intent": "Iyad reads the discrepancy record aloud on comms—item by item, date by date—creating an evidentiary record that makes Ross's silence operationally untenable",
+        "yield": "Ross cracks under the weight of the documented record; he names the items before the squad has to descend; the confession starts the closure sequence",
+        "risk": "Ross holds. Iyad's recitation hardens him instead of breaking him; the delay costs structural time and the pursuit-front advances while Torah waits for a confession that does not come",
+        "success_line": "Iyad's voice comes through the earpiece without inflection: item designation, date, Ross's signature, item count: blank. Item designation, date, Ross's signature, item count: blank. Eleven times. By the eighth entry Ross has uncrossed his arms. By the eleventh he is looking at the floor. He says, quietly: 'Storage unit four. Lower level. Left side, behind the secondary rack.' The stairwell door stops rattling.",
+        "partial_line": "Iyad gets through six entries before Ross cuts her off. 'I know what the forms say.' He does not confess. But he stops lying: 'Unit four. Lower level.' He will not say the rest. The pursuit-front does not collapse—but it pauses, like something waiting to hear the rest of the sentence.",
+        "failure_line": "Ross listens to all eleven entries without moving. When Iyad finishes, he says: 'I want Institute counsel before I say anything.' The pursuit-front does not care about counsel. The door blows open. Owen's voice on comms: 'Pressure just hit the lobby glass. I'm pulling the outer perimeter back.'"
+      }
+    ]
+  },
+  "resolution": {
+    "id": "resolution_devoted_property",
+    "speaker": "SITREP",
+        "line_1": "Iyad reports evidence unit four accessible. The cache is present, and the custody form needs a corrected witness entry.",
+        "line_2": "Owen gives the order: recover and formally transfer the cache before the pressure follows it out.",
+    "queued_line": "The items go back into Institute custody with a corrected form, witnessed and signed, or they do not go back at all.",
+    "plans": [
+      {
+        "label": "Recover and transfer",
+        "action": "recover",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "command authority, chain-of-custody procedure",
+        "tactical_step": "breach and clear: Owen enters from the cordon to witness the transfer; the cache is physically extracted from unit four, carried to the reception desk, and logged on the corrected form under her signature",
+        "base_success": 0.65,
+        "intent": "Owen comes in from the perimeter to serve as the witnessed Institute officer; the cache is transferred formally, the form is corrected, and the restitution is complete",
+        "yield": "Full closure: the pursuit-front collapses, the building stabilizes, the corrected form is in Institute custody, and the anomaly is locally resolved with a documented remainder for the review",
+        "risk": "Owen is caught in the pursuit-front's last contraction as it collapses; she is injured in the final pressure release, and the transfer is completed but at personal cost to her",
+        "success_line": "Owen comes through the front door with her field kit and does not break stride. She takes the corrected form from the desk, reads it once, signs it, and sets it down. She picks up the first item from the cache—a sealed evidence bag, tagged with an Institute designation number—and places it on the desk beside the form. Eleven items. Eleven entries. When the last one is logged, the groaning stops. Not gradually. All at once. Owen looks at the ceiling for a moment, then back at the form. 'Witnessed,' she says. 'Logged. We're done here.'",
+        "partial_line": "Owen gets the form signed and the first seven items logged before the pursuit-front releases in a single pressure spike that knocks her sideways into the desk. She catches herself, does not drop the item in her hand, and finishes the entry standing at an angle. The groaning fades unevenly—lower, then lower, then a residual hum that does not fully stop. 'Close enough for tonight,' she says, but she does not sound certain. Iyad, on comms, notes the residual for the record.",
+        "failure_line": "The pursuit-front releases before Owen reaches the desk. The pressure wave moves through the ground floor and the cache scatters—items across the floor, one evidence bag split open, the corrected form blown against the wall. Owen is down, not unconscious but not moving fast. Brooks gets to her. The items are still here, but the transfer is not witnessed, the form is not signed, and Iyad's voice on the earpiece is very careful: 'The anomaly is not closed. It's just quiet.'"
+      },
+      {
+        "label": "Torah takes custody",
+        "action": "torah_speaks",
+        "officer_id": "torah",
+        "primary_skill": "symbolic authority, formal witness",
+        "tactical_step": "symbolic close: Torah personally witnesses the confession, handles the cache, and speaks the formal transfer—using command presence as the Institute's authority in the room",
+        "base_success": 0.65,
+        "intent": "Torah stands as the witnessed officer, receives Ross's confession directly, handles each item from the cache personally, and speaks the transfer aloud as a formal act",
+        "yield": "The closure is complete and personal; the pursuit-front collapses under Torah's direct authority; the remainder is clean; Ross's confession is on record with Torah as witness",
+        "risk": "Torah absorbs the pursuit-front's final contraction directly; the symbolic pressure of handling devoted property under active judgment leaves a contamination trace on Torah that surfaces in a future mission",
+        "success_line": "Torah takes the first item from the cache and holds it. The groaning in the walls gets louder for three seconds—then drops to nothing. Ross is watching. Torah sets the item on the desk, picks up the form, and says Ross's name. Ross says the rest: the items, the dates, the unit number, the act. Torah writes it on the corrected line. Eleven items. Eleven entries. The emergency lighting flickers once and comes back steady. The stairwell door swings open on its own and stays there, no pressure behind it.",
+        "partial_line": "Torah gets through eight items before the pursuit-front makes its last move—a directed pressure that hits Torah in the chest and stops there, held, like something testing whether it can pass. It cannot. Torah finishes the entry. The form is signed. The transfer is witnessed. But when Torah sets down the last item, there is a faint warmth in the hands that was not there before, and Iyad notes it on the record without being asked.",
+        "failure_line": "Torah reaches for the first item and the pursuit-front spikes. The cache is physically repelled—items slide off the desk, the form tears, and the pressure in the room becomes directional, pointing at Torah. Brooks pulls Torah back from the desk. The items are on the floor. Ross has not finished his confession. The anomaly is not satisfied, and now it knows who is in charge."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "cooldown_devoted_property",
+    "speaker": "brooks",
+    "line_1": "Brooks is outside, sitting on the parking structure steps, not smoking, not on comms. Owen is inside finishing the paperwork. Ross is in a vehicle.",
+    "line_2": "Iyad sends a supplemental report at 0610. It is three pages. She does not summarize it on comms.",
+    "interlude_type": "debrief",
+    "state_reads": [
+      "brooks.mental_state",
+      "agent_caleb_ross.availability",
+      "lt_mara_owen.fatigue",
+      "dr_samira_iyad.loyalty",
+      "squad.morale"
+    ],
+    "state_writes": [
+      "brooks.mental_state: fixated on Ross's silence duration",
+      "agent_caleb_ross.availability: suspended pending Institute review",
+      "lt_mara_owen.fatigue: elevated, carrying the paperwork load",
+      "dr_samira_iyad.loyalty: conditional, watching how the Institute handles Ross",
+      "squad.morale: reduced if Ross was protected, stable if confession was complete"
+    ],
+    "featured_characters": [
+      "brooks",
+      "lt_mara_owen",
+      "dr_samira_iyad"
+    ],
+    "visible_text": [
+      "Brooks does not debrief. He sits on the steps and watches the vehicle Ross is in. When Torah comes out, Brooks says: 'He knew what he was doing when he signed those forms. He knew what he was doing when he stood next to that door and didn't say anything.' He is not asking a question.",
+      "Owen comes out twenty minutes later with the completed transfer packet. She hands it to Torah without ceremony. 'Iyad's supplement is attached. She flagged two other facilities with similar log patterns. Same six-week window.' She pauses. 'Same signature.'",
+      "Iyad's supplemental report arrives as a file transfer. The cover line reads: CHAIN-OF-CUSTODY DISCREPANCY: PATTERN ANALYSIS, THREE SITES. She has not called to discuss it. She is waiting to see what the Institute does with it."
+    ],
+    "choices": [
+      "'Brooks. Write it up.'",
+      "'Owen, what do the other two sites look like?'",
+      "'Leave it for the review board.'"
+    ],
+    "outcomes": [
+      "Brooks writes it up. It is short and exact. He does not editorialize. He sends it and does not mention it again, but he does not sit near Ross's empty desk when the squad is back at base.",
+      "Owen pulls the other two site files. One is clean on second look. One is not. She flags it and says nothing to Ross's chain of command until Torah tells her to.",
+      "The review board gets the file. Iyad's supplement goes with it. Three weeks later, the Institute sends a one-line acknowledgment. Brooks reads it and puts it face-down on the desk."
+    ],
+    "followup_hooks": [
+      "Second facility with matching log pattern: a future mission site",
+      "Iyad's conditional loyalty: she will support the squad fully if the Institute acts on her report; she will begin routing information around command if it does not",
+      "Brooks's fixation on Ross becomes relevant if Ross returns to field status under any circumstances",
+      "The residual pressure signature at the facility—if the closure was partial—activates when the building is next accessed"
+    ],
+    "corpus_anchors": [
+      "world_english_bible:00309",
+      "world_english_bible:00308"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "branch",
+    "straight_noncombat",
+    "recovery",
+    "random_non_special"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "Achan's sin is load-bearing: the routing, the confession procedure, the recovery, and the restitution are all direct transfers from the source",
+    "The pursuit-front is judgment-as-physics: it routes, it does not hunt, it cannot be killed, it collapses only when the moral debt is named and paid",
+    "Brooks's silence is the squad's moral barometer throughout",
+    "Iyad's supplemental report is the unresolved remainder that survives into future missions"
+  ],
+  "self_critique": [
+    "Risk: the partial closure outcome—cache recovered, confession incomplete—leaves a residual that must be tracked by the engine or it becomes a dead thread; the followup_hook is authored but requires a compiler flag to activate the second-facility mission"
+  ]
+}

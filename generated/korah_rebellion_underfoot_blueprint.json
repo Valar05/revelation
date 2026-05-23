@@ -1,0 +1,300 @@
+{
+  "title": "Censers and Seams",
+  "design_goal": "An unauthorized Institute faction seizes command authority inside a live symbolic event; floors open under false orders and the squad must separate lawful from unlawful command, evacuate under structural hazard, and preserve the faction's badges as a warning artifact before the building swallows them.",
+  "source_mechanism": {
+    "source_chunk_id": "korah_ground_opens_censers_memorial",
+    "source_action": "A faction claims equal authority, brings unauthorized offerings before the seat of command, the ground opens under them, fire consumes the censer-bearers, and the bronze censers are hammered into a memorial plate as a permanent warning against seizing sacred office.",
+    "sin_or_transgression": "Seizing sacred and operational authority as personal entitlement rather than appointment; self-consecration through fraudulent credentials.",
+    "witness_or_judgment": "The ground itself refuses to hold the weight of false authority; the earth opens under the rebels and closes over them, and the surviving censers become evidence that the claim was judged and found void.",
+    "required_scene_elements": [
+      "Floor seams opening under personnel who carry unauthorized command credentials",
+      "Faction badges or authorization tokens that heat, warp, or fail as the anomaly escalates",
+      "A concrete closing act in which the failed credentials are preserved as a warning artifact",
+      "Evacuation ordered by lawful command, not by the faction",
+      "A structural hazard that injures or threatens personnel who follow false orders"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "If unauthorized command credentials are used to issue orders inside the Institute's symbolic command space, the floor beneath the credential-holder destabilizes; the more orders issued under false authority, the wider and deeper the seams open; force alone cannot close them because the ground responds to authority record, not to weight or pressure.",
+    "active_manifestation": "When the squad arrives, the command floor of Sub-Level 3 is already splitting along load-bearing seams directly beneath the workstations where the faction issued its first unauthorized orders forty minutes ago; two faction officers are still at those stations issuing commands, and the concrete beneath their chairs has dropped six centimeters and is continuing to descend; the overhead lights flicker each time a false order clears the system.",
+    "escalation": "Every additional unauthorized command logged widens the nearest seam by a measurable increment; if the squad delays the command review, a second seam opens under the main egress corridor, trapping personnel; if force is used without authority separation, the floor reads the squad's own credentials and begins testing them.",
+    "closure_condition": "The faction's command tokens must be physically revoked and logged as void in the Institute's authorization chain; the tokens must then be sealed as evidence rather than destroyed; once the authorization record is corrected and the tokens are in custody, the seams stop widening and can be shored."
+  },
+  "room": {
+    "id": "room_censers_and_seams",
+    "name": "Sub-Level 3 Command Floor",
+    "type": "mission",
+    "mission_mode": "action_horror",
+    "description": "The Institute's sub-level command floor is splitting open under unauthorized orders. A faction has seized the command terminals. The floor is actively failing.",
+    "first_visit_description": "Torah leads the squad down the Sub-Level 3 access stair at 0340. Lt. Owen is on point, moving ahead to establish overwatch at the corridor junction before the command floor door. Ross is on Torah's left shoulder carrying the authorization audit kit. Saye is remote, patched into the building's structural sensor feed from the surface van, calling seam positions over comms every ninety seconds. The faction's own personnel are still at the terminals. Two of them have not moved since the first seam opened. The floor between the squad and the terminals has a visible crack running east to west, roughly four centimeters wide, with a drop of unknown depth on the south side. The overhead strip lights pulse each time a keystroke clears the command system. The air smells of hot metal and concrete dust.",
+    "return_description": "The command floor is quieter. The main seam has been shored with emergency bracing but the concrete is still discolored where it dropped. The faction's workstations are dark. The authorization audit terminal is still open on Ross's last logged entry.",
+    "detection_report": "Structural sensors in Sub-Level 3 flagged a 6 cm differential settlement at grid coordinates C-7 and C-9 at 0301. Building management escalated to Institute security at 0318 after a second sensor at D-8 registered movement. Cross-referencing the settlement timestamps against the command log shows the first seam opened eleven seconds after the faction's initial unauthorized order cleared the system. Saye confirmed the correlation from the surface van before deployment.",
+    "current_situation": "Owen is at the corridor junction holding overwatch on the command floor door. Ross is staged at the stair landing with the audit kit. Torah is at the threshold. Saye is on comms from the van, reading seam positions off the structural feed. The two faction officers at the terminals are still issuing commands. The east seam is now 8 cm wide and the concrete on the south side has dropped a further 2 cm since the squad entered the stairwell. A third faction member is somewhere on the floor; Saye has not been able to place him from the sensors.",
+    "action_profile": {
+      "physical_threat": "The floor seams are actively widening; a person standing on the south side of the main seam when it jumps can drop into a concrete void of unknown depth; the faction's third member is unaccounted for and may be armed or may attempt to physically block the audit; the structural bracing overhead is rated for static load only and will fail if the slab drops further.",
+      "contact_state": "The squad is at the threshold of an active structural failure zone; the faction officers are between the squad and the command terminals; the third faction member's position is unknown; every second the terminals stay active the seam widens.",
+      "field_manual_drill": "React to contact, establish overwatch at the junction, suppress/fix the faction's ability to issue further commands, bound across the seam to the terminals, clear the command floor section by section, evacuate non-essential personnel through the north corridor before the egress seam opens, break contact with the faction's chain if it attempts to assert authority during the operation.",
+      "tactical_objective": "Reach the command terminals, revoke the faction's authorization tokens, log the revocation in the Institute's chain, and evacuate all personnel across the seam before it widens past safe crossing width.",
+      "symbolic_close": "The faction's physical command tokens, badges, and authorization cards must be collected, logged as void, and sealed in an evidence container; the authorization record must show the correction before the seams stop responding; force alone will not close the floor.",
+      "violent_resolution": "The faction's third member can be physically intercepted and restrained; the command terminals can be hard-shut by pulling the power conduit behind the server rack, which stops new orders from clearing but does not substitute for the authorization audit; the overhead structural brace can be manually set to buy time before the slab drops, requiring a personnel breach across the active seam under risk of injury.",
+      "not_monster_of_week": "There is no creature. The floor opens because false authority was exercised in a space the Institute designated as a symbolic command seat; the anomaly is the building's response to a chain-of-command violation that has crossed into the symbolic register; the faction members are human, the hazard is structural and procedural, and the horror is that the building is enforcing a rule the faction chose to ignore."
+    },
+    "deployment_manifest": [
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Lt. Mara Owen",
+        "mission_role": "Tactical point and evacuation lead",
+        "physical_position": "Corridor junction outside the command floor door, holding overwatch on the faction's two visible officers",
+        "assigned_reason": "Owen has the building's emergency egress authority and is the only officer on the squad with structural-hazard crossing certification",
+        "visible_state": "Still, watching the door gap, not speaking; she has already measured the seam width twice with her boot"
+      },
+      {
+        "officer_id": "torah",
+        "name": "Torah",
+        "mission_role": "Symbolic asset and command authority anchor",
+        "physical_position": "Threshold of Sub-Level 3 stairwell, one step behind Ross",
+        "assigned_reason": "Torah's presence is required to anchor the lawful command record; the authorization audit cannot be logged without his credential in the chain",
+        "visible_state": "Watching the strip lights pulse; he has not looked at the seam directly yet"
+      },
+      {
+        "officer_id": "agent_caleb_ross",
+        "name": "Agent Caleb Ross",
+        "mission_role": "Authorization audit and evidence custody",
+        "physical_position": "Stair landing, audit kit open on the railing, already pulling the faction's command log on his tablet",
+        "assigned_reason": "Ross holds the Institute's evidence custody certification and the physical audit kit required to log a credential revocation",
+        "visible_state": "Reading the log timestamps against the seam sensor data; his jaw is set; he has found something in the log he has not reported yet"
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Dr. Lenora Saye",
+        "mission_role": "Remote structural analyst and seam tracking",
+        "physical_position": "Surface van, patched into the building's sensor feed",
+        "assigned_reason": "Saye's structural analysis background makes her the only available officer who can read the sensor data in real time and call seam positions before they jump",
+        "visible_state": "Calling seam positions every ninety seconds in a flat voice; she has stopped adding qualifiers to her readings"
+      }
+    ],
+    "root_sin": "A faction of Institute officers concluded that their operational experience entitled them to command authority over Torah and the Institute's symbolic assets; they obtained forged authorization tokens, issued orders through the command system, and continued issuing orders after the floor began to open, because they believed the building's response was a system fault rather than a judgment on their claim.",
+    "modern_incident_logic": "The Institute's Sub-Level 3 command floor was designated as a symbolic command seat during the Institute's founding protocols, meaning the authorization chain running through it carries both operational and symbolic weight; when the faction used forged tokens to push orders through that chain, the symbolic layer of the building's designation activated; the floor's response is not supernatural decoration but the direct consequence of false authority being exercised in a space that was consecrated to lawful command, making the structural failure inseparable from the credential fraud.",
+    "closure_test": "The squad must physically reach the terminals, stop the faction from issuing further orders, collect and log the faction's authorization tokens as void in the Institute's chain with Torah's credential anchoring the record, seal the tokens in evidence custody, and evacuate all personnel before the egress seam opens; the seams will not close until the authorization record is corrected.",
+    "religious_pattern": "Korah's rebellion: a faction claims equal or superior authority, presents credentials as proof of right, exercises that authority in a consecrated space, and the ground opens under them; the surviving evidence of the false claim is preserved as a warning rather than destroyed.",
+    "anomaly_rule": "The floor seams widen in direct proportion to the volume of unauthorized commands cleared through the system; they respond to authorization record, not to physical weight or pressure; they stop widening when the record is corrected and the tokens are in custody; they do not close on their own and must be shored after the symbolic condition is met.",
+    "forbidden_flat_read": "Do not literalize as a sinkhole or earthquake; the seams open only under personnel carrying unauthorized credentials and only in the command floor's designated symbolic space; the building is not alive and is not attacking anyone; it is enforcing a rule.",
+    "officer_reports": [
+      "Owen, comms, 0341: Seam at C-7 is now 9 cm. South side has dropped. I can still cross but not with a casualty. Give me a timeline.",
+      "Ross, comms, 0342: The faction's first order cleared at 0250. The sensor logged the first seam movement at 0250 and eleven seconds. That is not a coincidence. I have the log.",
+      "Saye, comms, 0343: Second seam is forming at D-8. That is the egress corridor. If it opens past 15 cm you lose the north exit. I am watching it."
+    ],
+    "procedure_hooks": [
+      "Authorization audit kit: physical device required to log a credential revocation in the Institute's chain; cannot be substituted with a software command",
+      "Evidence seal: faction tokens must be physically bagged and logged before the audit entry closes; chain of custody requires two witnesses",
+      "Seam crossing protocol: personnel cross one at a time, lightest first, with a safety line; no crossing with a casualty unless the seam is under 10 cm",
+      "Egress corridor hold: if the D-8 seam opens past 15 cm, the north exit is lost and the squad must use the emergency ladder in the server room",
+      "Hard-shut procedure: pulling the power conduit behind the server rack stops new orders but does not substitute for the audit; the symbolic condition requires the audit"
+    ],
+    "character_state_stakes": {
+      "lt_mara_owen": "If Owen's evacuation plan fails or she is injured crossing the seam, her structural-hazard certification is flagged and she is unavailable for the next sub-level deployment",
+      "agent_caleb_ross": "If Ross's audit is incomplete or the evidence seal is broken, the authorization record remains contested and the Institute's command chain carries a permanent anomaly flag",
+      "dr_lenora_saye": "If Saye loses the sensor feed or calls a seam position wrong, a squad member crosses into a drop zone; her remote role becomes a source of guilt rather than support",
+      "torah": "If Torah's credential is used to anchor a flawed audit, his command authority is symbolically contaminated and the next mission carries an elevated anomaly threshold"
+    },
+    "interlude_vectors": [
+      "Ross sits with the sealed evidence bag in his lap for twenty minutes after the debrief and does not explain why",
+      "Owen files the crossing report with the seam width logged to the centimeter; she does not round",
+      "Saye's sensor log shows she called the D-8 seam four seconds before it moved; she does not mention it"
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "korah_claims_authority_censers",
+      "role": "premise",
+      "fingerprint": "Faction presents credentials as proof of right to command authority in a consecrated space",
+      "transfer": "The faction's forged authorization tokens function as the censers: physical objects that embody the claim to authority and that the symbolic layer of the building reads as an offering it will not accept",
+      "visible_details": [
+        "Faction badges that have warped slightly from heat by the time the squad arrives",
+        "Command log timestamps that align exactly with the first seam movement"
+      ],
+      "payoff": "The tokens must be preserved as evidence rather than destroyed, mirroring the censers hammered into a memorial plate"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "korah_ground_opens_censers_memorial",
+      "role": "escalation",
+      "fingerprint": "Ground opens under the rebels; surviving evidence becomes a permanent warning",
+      "transfer": "Floor seams open under personnel carrying unauthorized credentials; the sealed evidence bag of faction tokens becomes the mission's warning artifact",
+      "visible_details": [
+        "Concrete dropping in measurable increments under the faction's workstations",
+        "The evidence bag sealed at the end of the audit, tagged with the revocation log number"
+      ],
+      "payoff": "If the tokens are properly sealed, the Institute can use them as a policy exhibit; if they are destroyed or lost, the anomaly flag persists"
+    },
+    {
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_chunk_id": "danger_area_rally_points",
+      "role": "procedure",
+      "fingerprint": "Danger-area crossing uses overwatch, rally points, and controlled movement",
+      "transfer": "Owen establishes overwatch at the junction; the squad crosses the seam one at a time with a safety line; the server room ladder is the rally point if the egress corridor seam opens",
+      "visible_details": [
+        "Owen measuring the seam width before calling the crossing",
+        "The safety line clipped to the door frame on the north side"
+      ],
+      "payoff": "If Owen is injured or the crossing fails, the rally point procedure determines who is trapped and who can still reach the terminals"
+    },
+    {
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_chunk_id": "stress_dynamic_environment",
+      "role": "escalation",
+      "fingerprint": "Delayed decisions worsen system crashes; action cost must be weighed against non-action risk",
+      "transfer": "Every round the squad delays the audit, the seams widen; rushing the audit without proper evidence custody breaks the chain and leaves the anomaly flag active",
+      "visible_details": [
+        "Saye's ninety-second seam position calls creating a visible countdown pressure",
+        "Ross reading the log timestamps before reporting them, taking time the squad may not have"
+      ],
+      "payoff": "The tension between audit thoroughness and seam speed is the mission's central decision pressure"
+    }
+  ],
+  "root": {
+    "id": "root_censers_seams",
+    "speaker": "SITREP",
+    "line_1": "Sub-Level 3 command floor is splitting under active faction orders. Two officers at the terminals. Seam at C-7 is 9 cm and widening. Egress corridor seam forming.",
+    "line_2": "Ross has the command log. Timestamps confirm the seam opened eleven seconds after the faction's first unauthorized order cleared. Owen is holding overwatch at the junction door.",
+    "queued_line": "The squad has two options before the egress seam cuts off the north exit: reach the terminals and pull the faction's credentials, or establish a cordon and force a halt before the audit can run.",
+    "plans": [
+      {
+        "label": "Ross: Run the Audit",
+        "action": "full_disclosure",
+        "officer_id": "agent_caleb_ross",
+        "primary_skill": "evidence custody and authorization chain procedure",
+        "tactical_step": "Bound across the seam under Owen's overwatch, reach the terminals, suppress the faction's ability to issue further commands by pulling the power conduit, then run the credential revocation audit with Torah's authority anchoring the record",
+        "base_success": 0.65,
+        "intent": "Ross wants to reach the terminals, hard-shut the command system to stop new orders, pull the faction's tokens, log the revocation with Torah's credential, and seal the tokens in the evidence bag before the egress seam opens",
+        "yield": "The authorization record is corrected, the tokens are in custody, the seams stop widening, and the squad can evacuate through the north corridor before it closes",
+        "risk": "If Ross is crossing when the seam jumps, he drops; if the audit is rushed and the evidence seal is incomplete, the record stays contested and the anomaly flag persists on the Institute's command chain",
+        "success_line": "Ross crossed the seam on Owen's call, moving fast and low with the safety line trailing. He pulled the power conduit behind the server rack and the terminals went dark. The faction officers stood up. Ross did not look at them. He opened the audit kit on the nearest workstation, logged the revocation with Torah's credential anchoring the entry, and bagged the faction's tokens one at a time, reading each badge number aloud for the record. Owen called the seam width from the door: holding at 9 cm. Saye confirmed the D-8 sensor had stopped moving. The strip lights steadied. Ross sealed the evidence bag and held it up without turning around. 'Chain is clean,' he said. 'Log is closed.'",
+        "partial_line": "Ross made it across and pulled the conduit, but the audit ran long. Saye called the D-8 seam at 14 cm before the revocation entry closed. Ross sealed the bag with one token still unlogged; he made the call to close the entry anyway and flag the gap for review. The seams stopped widening but did not hold steady. Owen got the squad out through the north corridor with 60 seconds to spare. The evidence bag is sealed but the chain-of-custody flag will follow the case. Ross has not said anything since the debrief started.",
+        "failure_line": "Ross was two steps past the seam when it jumped. The south side dropped 30 cm in under a second and the safety line went taut and then slack. Owen pulled him back by the harness. The audit kit went into the void. The faction's terminals were still active. Saye called the D-8 seam at 16 cm and the north corridor was gone. Ross was on his hands and knees at the seam edge, looking down, not moving. Torah had to call his name twice before he stood up."
+      },
+      {
+        "label": "Owen: Cordon and Halt",
+        "action": "intercept",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "tactical movement and structural-hazard evacuation",
+        "tactical_step": "Establish a cordon at the command floor door to fix the faction in place and prevent further orders, then evacuate non-essential personnel through the north corridor before the egress seam opens, buying time for the audit to run under controlled conditions",
+        "base_success": 0.65,
+        "intent": "Owen wants to fix the faction at the terminals by holding the door and cutting off their ability to call for support, evacuate anyone not needed for the audit, and hold the cordon until Ross can run the credential revocation under less time pressure",
+        "yield": "The egress corridor stays open, non-essential personnel are out, and the audit runs without the squad racing the D-8 seam",
+        "risk": "If the faction's third member is behind the cordon line, Owen's position is compromised; if the cordon holds too long, the C-7 seam widens past safe crossing width and Ross cannot reach the terminals",
+        "success_line": "Owen took the door frame and held it. She did not announce the cordon; she just stood in the gap with her hand on the frame and looked at the two faction officers until they stopped typing. The third faction member came out of the server room corridor with his badge in his hand, already talking. Owen pointed at the floor between them. He looked down at the seam and stopped talking. She evacuated the two support staff through the north corridor herself, one at a time, then came back to the door. 'Floor is yours,' she told Ross over comms. 'Seam is holding. Move.'",
+        "partial_line": "Owen held the door and got the support staff out, but the third faction member had already sent one more order before she reached him. Saye called the C-7 seam at 12 cm. Owen got the cordon established but the crossing window for Ross had narrowed. He made it across but the safety line was under tension the whole way. Owen watched the seam the entire time Ross was running the audit. She did not look at the faction officers once.",
+        "failure_line": "The third faction member was not in the server room. He came through the south access door behind Owen's position and reached the nearest terminal before she could close the gap. Three more orders cleared the system in the time it took Owen to cross the room. The C-7 seam jumped to 14 cm. The south side dropped again. One of the support staff was still on the wrong side of the egress corridor when the D-8 seam opened past 15 cm. Owen got her out through the server room ladder but it took eleven minutes and the audit had not started yet."
+      }
+    ]
+  },
+  "resolution": {
+    "id": "resolution_censers_seams",
+    "speaker": "SITREP",
+    "line_1": "Faction terminals are dark. Tokens are in Ross's evidence bag. The seams have stopped widening but the floor is not safe. The third faction member is in custody or unaccounted for.",
+    "line_2": "The authorization record needs a final confirmation entry from Torah to close the revocation log. The sealed evidence bag must be formally transferred to Institute command as a warning artifact.",
+    "queued_line": "Two options remain: Torah anchors the final log entry and the tokens are formally transferred as a policy exhibit, or the squad forces a hard evacuation and files the incomplete record for review.",
+    "plans": [
+      {
+        "label": "Torah: Close the Record",
+        "action": "torah_speaks",
+        "officer_id": "torah",
+        "primary_skill": "symbolic authority and command chain integrity",
+        "tactical_step": "Symbolic close: Torah enters his credential into the open revocation log, confirms the faction's tokens as void in the Institute's authorization chain, and formally designates the sealed evidence bag as a warning artifact in the mission record",
+        "base_success": 0.7,
+        "intent": "Torah wants to anchor the final log entry with his own credential, close the revocation record cleanly, and formally transfer the sealed tokens to Institute command so the anomaly flag does not persist on the chain",
+        "yield": "The revocation record is complete, the tokens are formally designated as a warning artifact, the seams stabilize, and the Institute's command chain is clean; the mission closes without a persistent anomaly flag",
+        "risk": "If Torah's credential is used to close a flawed record, his command authority carries the contamination forward; if the log entry is challenged later, Torah's name is on the contested entry",
+        "success_line": "Torah sat down at the one terminal Ross had left active and entered his credential without being asked. The log entry was already open. He read it through once, then confirmed it. The strip lights in Sub-Level 3 came on at full brightness for the first time since the squad arrived. The seam at C-7 was still 9 cm wide but the concrete on both sides had stopped moving. Ross handed him the evidence bag. Torah held it for a moment, then set it on the terminal desk and logged the transfer. 'Record is closed,' he said. 'Bag goes to command. Not storage. Command.' Ross wrote it down.",
+        "partial_line": "Torah closed the log entry but the third faction member's token was the one Ross had flagged as unlogged. The entry closed with a gap notation. The seams stabilized but the D-8 sensor continued to read a 2 mm drift per hour, slow enough to shore but not zero. Torah transferred the bag to command with the gap notation attached. He did not explain it in the transfer memo. Saye read the sensor data from the van and did not say anything for a long time.",
+        "failure_line": "Torah entered his credential and the system rejected it. The faction's orders had written a conflicting authority record that the system could not resolve with a single entry. The log stayed open. The C-7 seam, which had been holding at 9 cm, dropped another 4 cm on the south side. Ross looked at the screen, then at Torah, then back at the screen. 'We need a second credential,' he said. 'Someone from command. Someone they haven't touched.' Nobody on the floor qualified. Torah picked up the radio."
+      },
+      {
+        "label": "Ross: Force Evacuation",
+        "action": "seal",
+        "officer_id": "agent_caleb_ross",
+        "primary_skill": "evidence custody and emergency evacuation procedure",
+        "tactical_step": "Break contact with the command floor, evacuate all remaining personnel through the server room ladder, seal the Sub-Level 3 access door, and file the incomplete revocation record for command review rather than closing it in the field",
+        "base_success": 0.6,
+        "intent": "Ross wants to get everyone out before the floor fails further, seal the access door to prevent the faction from re-entering, and file the incomplete record so command can close it from a safe position rather than risking Torah's credential on a contested log",
+        "yield": "All personnel are out, the access door is sealed, the evidence bag is in custody, and the record is filed for review; the anomaly flag persists but the squad is intact",
+        "risk": "Filing an incomplete record leaves the Institute's command chain with an active anomaly flag that will affect the next mission; the faction may contest the revocation before command can close the log",
+        "success_line": "Ross called the evacuation before Torah finished reading the log entry. 'We are out of time,' he said, and he meant the floor, not the clock. Owen took point up the server room ladder. Ross went last, carrying the evidence bag in one hand and his tablet in the other, filing the incomplete record as he climbed. He sealed the Sub-Level 3 access door from the outside with the emergency lock and photographed the seal for the record. The faction's third member was already in custody in the surface van. Saye had the sensor feed open on her laptop. The D-8 seam was still drifting. 'Command will close it,' Ross said. He did not sound certain.",
+        "partial_line": "Ross got everyone out but the server room ladder took longer than the plan allowed. The C-7 seam dropped another 6 cm while Owen was on the ladder. She made it but the safety line was the only reason. Ross sealed the door and filed the record but the evidence bag transfer was logged at the surface van rather than at a command terminal, which the protocol required. The chain-of-custody entry has a location flag. Ross has already drafted the explanation memo. He has not sent it.",
+        "failure_line": "Ross called the evacuation but the server room ladder was blocked. The faction's third member had locked the server room door from the inside before Owen reached it. Ross had the evidence bag, the sealed door was behind him, and the C-7 seam was between him and the only other exit. Owen was on the north side of the seam. Ross was on the south side. The seam was 15 cm wide and still moving. Saye called it from the van in a flat voice and then stopped talking."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "cooldown_censers_seams",
+    "speaker": "agent_caleb_ross",
+    "line_1": "Ross is in the surface van with the evidence bag on the seat beside him. He has not put it in the transfer case yet. The seal is intact. He is reading the log timestamps again.",
+    "line_2": "Owen filed her crossing report from the stairwell before she came outside. Saye has the sensor feed still open. The D-8 seam is drifting at 1 mm per hour. Nobody has said it is over.",
+    "interlude_type": "evidence_review",
+    "state_reads": [
+      "ross.fatigue",
+      "ross.mental_state",
+      "owen.injury_flag",
+      "saye.remote_guilt",
+      "torah.command_authority_contamination_flag"
+    ],
+    "state_writes": [
+      "ross.mental_state: fixated on the gap notation in the revocation log",
+      "owen.visible_state: filed the report to the centimeter; will not round",
+      "saye.remote_guilt: called the seam correctly every time; has not decided if that makes it better or worse",
+      "institute.command_chain_flag: set if record is incomplete; cleared if Torah closed the log cleanly"
+    ],
+    "featured_characters": [
+      "agent_caleb_ross",
+      "lt_mara_owen",
+      "dr_lenora_saye"
+    ],
+    "visible_text": [
+      "Ross sets the evidence bag in the transfer case and closes the lid. He does not latch it yet.",
+      "Owen comes out of the stairwell and sits on the van's rear bumper. She does not look at the bag.",
+      "Saye closes the sensor feed on her laptop. The last reading is still on the screen. She does not close the laptop.",
+      "Ross latches the transfer case. The sound is louder than it should be.",
+      "Nobody speaks for a while. The building is still standing. That is the most anyone can say about it."
+    ],
+    "choices": [
+      "File the transfer and go",
+      "Wait for command confirmation before moving the bag",
+      "Ask Saye what the sensor is reading now"
+    ],
+    "outcomes": [
+      "If the record is clean: Ross latches the case and signs the transfer log. Owen reads the signature line over his shoulder without being asked. Saye closes the laptop. The three of them sit with the sealed case between them and do not talk about what the floor looked like when it dropped.",
+      "If the record has a gap: Ross latches the case but leaves the transfer log unsigned. He says he will wait for command to close the entry before he moves the bag. Owen does not argue. Saye pulls the sensor feed back up. The D-8 seam is still drifting. She calls the number out loud even though no one asked.",
+      "If the evacuation was forced: Ross has the bag but the transfer log has the location flag. He signs it anyway. Owen reads the flag notation and says nothing. Saye shuts the laptop and gets out of the van. She stands outside in the dark for a few minutes. When she comes back in she says the sensor has stopped updating. She does not know if that means the seam closed or if the sensor failed."
+    ],
+    "followup_hooks": [
+      "The faction's third member is in custody but has not been interviewed; his badge is not in the evidence bag",
+      "The D-8 seam is drifting at 1 mm per hour; command has not ordered a structural assessment yet",
+      "The revocation log gap notation, if present, will appear in the next Institute command review and someone will ask Torah about it",
+      "The sealed evidence bag, if properly transferred, becomes a policy exhibit; if it is lost or contested, the anomaly flag on the command chain escalates"
+    ],
+    "corpus_anchors": [
+      "korah_ground_opens_censers_memorial",
+      "korah_claims_authority_censers",
+      "stress_dynamic_environment"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "branch",
+    "straight_noncombat",
+    "recovery"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The floor as authority-reader rather than creature gives the horror procedural weight: the building enforces the rule the faction chose to ignore",
+    "The evidence bag as memorial artifact mirrors the bronze censers hammered into a plate: the failed claim preserved as warning rather than erased",
+    "Ross's gap notation is the mission's unresolved remainder: the record is almost clean, which is worse than obviously broken",
+    "Saye's remote role makes her guilt structural: she called every seam correctly and it did not stop anything",
+    "Owen's crossing report filed to the centimeter is her way of saying she was afraid and did not show it"
+  ],
+  "self_critique": [
+    "The third faction member's position is introduced as a threat but his resolution depends on which plan the player chose; if both plans partially fail, his status may be ambiguous in the cooldown and the compiler will need a fallback state for his custody flag"
+  ]
+}

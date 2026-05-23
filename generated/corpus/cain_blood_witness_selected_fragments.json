@@ -1,0 +1,70 @@
+{
+  "name": "Cain Blood-Witness Source Packet",
+  "purpose": "Selected public-domain anchors for a Revelation room where hidden violence and denied responsibility make blood, ground, and thresholds testify. The room should become an investigation that can turn violent at a door or field edge.",
+  "fragments": [
+    {
+      "id": "cain_sin_door_blood_cries",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00005",
+      "source_circumstance": "Cain is warned that sin crouches at the door, kills Abel in the field, denies responsibility, and hears that Abel's blood cries from the ground.",
+      "source_excerpt": "Sin crouches at the door. Cain kills Abel in the field, denies being his brother's keeper, and the blood cries from the ground.",
+      "nightmare_room_seed": "A falsified duty-of-care incident report causes a floor, soil bed, or threshold to repeat the victim's last pressure patterns until the hidden killing is named.",
+      "escalation_thread": "First stains reappear. Then the doorway behaves like a waiting predator. Then the ground opens and tries to make every bystander answer as keeper.",
+      "suggested_actions": ["torah_speaks", "intercept", "recover", "seal"],
+      "generation_rules": [
+        "Name the sin: refusing keeper-duty after harming someone under one's care.",
+        "Make the blood witness specific: pressure, seepage, sound, floor response, or soil movement.",
+        "The room must ask who failed to keep whom; do not make it a vague murder ghost."
+      ]
+    },
+    {
+      "id": "cain_mark_wandering",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00005",
+      "source_circumstance": "Cain is cursed from the ground, becomes a fugitive and wanderer, and receives a sign so others will not kill him.",
+      "source_excerpt": "The ground will not yield strength. Cain becomes fugitive and wanderer, yet receives a sign so he is not killed in vengeance.",
+      "nightmare_room_seed": "Closure cannot be mob vengeance. The culprit may need to be marked, removed, or handed over alive while the victim's testimony is preserved.",
+      "escalation_thread": "Violence against the suspect feeds the anomaly. Accountability, custody, and naming responsibility quiet the floor more reliably than revenge.",
+      "suggested_actions": ["full_disclosure", "recover", "clinic", "seal"],
+      "generation_rules": [
+        "Give a force option, but make uncontrolled vengeance backfire.",
+        "Let Brooks or Ross propose custody/clearance under pressure.",
+        "A successful resolution should preserve evidence and stop the witness-loop locally."
+      ]
+    },
+    {
+      "id": "clear_room_noncombatants",
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_title": "SH 21-76 Ranger Handbook",
+      "source_chunk_id": "army_ranger_handbook_sh_21_76:clear_room_07_4_D9509",
+      "source_circumstance": "Enter-and-clear doctrine emphasizes leader control, corridor security, sectors, noncombatants intermixed with threats, room assessment, and status reports.",
+      "source_excerpt": "A clearing team secures corridors, enters by sectors, identifies noncombatants, announces clear, assesses the room, reports status, and consolidates.",
+      "nightmare_room_seed": "The crouching threshold can be crossed by a trained team, but only if they treat the door as a live danger area and protect civilians.",
+      "escalation_thread": "Fast entry reaches the suspect and evidence sooner. Slow clearing protects witnesses but lets the floor rehearse the killing again.",
+      "suggested_actions": ["intercept", "support_owen", "recover", "seal"],
+      "generation_rules": [
+        "Use threshold control, sectors, noncombatants, clear status, and evidence custody.",
+        "Make at least one plan materially capable of violence.",
+        "Do not write chaotic monster fighting; write trained personnel entering a guilty room."
+      ]
+    },
+    {
+      "id": "stress_dynamic_diagnosis",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+      "source_circumstance": "Emergency decision-making involves problem detection, diagnosis, option selection, execution, and stress that can interfere with accurate diagnosis.",
+      "source_excerpt": "Decision-making under emergency stress moves through detection, diagnosis, options, choice, and execution; stress can interfere with accurate diagnosis.",
+      "nightmare_room_seed": "Character plans should differ: one secures the living, one preserves evidence, one addresses the symbolic witness, one forces the threshold.",
+      "escalation_thread": "A failed diagnosis sends the squad after the wrong keeper and makes the floor repeat the death with greater force.",
+      "suggested_actions": ["full_disclosure", "torah_speaks", "clinic", "intercept"],
+      "generation_rules": [
+        "Each choice must be a named character's concrete plan.",
+        "Failure should materially change that character's stress, morale, mental state, injury, or availability.",
+        "No visible +morale or numeric reward labels."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "title": "Brothers' Door Stairwell",
+  "design_goal": "Deploy a threshold event combining the Cain/Abel 'keeper' motif and procedural stairwell clearance. Reveal a site abandoned under a false all-clear, where compromised accountability and contested evidence create lasting marks.",
+  "events": [
+    {
+      "room_id": "brothers_door_stairwell",
+      "event": {
+        "event_type": "choice",
+        "room_title": "Brothers' Door Stairwell",
+        "room_description": "Landing between smoke-fogged floors, a steel stairwell marks the 'all-clear' line. Evidence tags and a stained accountability roster remain. The air is thick with a residue that fails to dissipate. The official site log suggests 'all accounted for', but civilian wristbands and ground prints tell otherwise.",
+        "buttons": [
+          {
+            "action": "recover",
+            "button_label": "Audit names, recover evidence",
+            "voice_alias": "recover-evidence",
+            "voice_aliases": [
+              "recover"
+            ]
+          },
+          {
+            "action": "brooks_handles",
+            "button_label": "Lead smoke entry, push forward",
+            "voice_alias": "smoke-entry",
+            "voice_aliases": [
+              "brooks handles"
+            ]
+          },
+          {
+            "action": "torah_speaks",
+            "button_label": "Request official record review",
+            "voice_alias": "record-review",
+            "voice_aliases": [
+              "torah speaks"
+            ]
+          }
+        ],
+        "operation_plans": [
+          {
+            "action": "recover",
+            "officer_id": "specialist_mina_park",
+            "primary_skill": "evidence_handling",
+            "base_success": 0.78,
+            "yield": "Civic roster, marked floor, civilian wristbands",
+            "risk": "Smoke stress, conflicting records",
+            "strong_success": {
+              "lines": [
+                "Park recovers both the marked accountability log and named wristbands from a stain-encircled stair, confirming at least two civilians left off the official report.",
+                "No additional exposure sustained."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina_park.fatigue+1",
+                "resource.evidence_case_files+1"
+              ]
+            },
+            "success": {
+              "lines": [
+                "Key names and emergency tags are secured for later cross-check. The floor-record contradiction is logged.",
+                "Smoke exposure minimal."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina_park.fatigue+2"
+              ]
+            },
+            "partial": {
+              "lines": [
+                "Critical evidence extracted, but smoke and confusion cause stress spikes. At least one name remains unreadable.",
+                "Reportable anomaly flagged in log."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina_park.stress+2",
+                "character.specialist_mina_park.fatigue+3"
+              ]
+            },
+            "failure": {
+              "lines": [
+                "Smoke overcomes Park mid-recovery; confusion in the stairwell results in lost time and miscounted tags.",
+                "A name is accidentally blotted from the register."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina_park.stress+3",
+                "character.specialist_mina_park.fatigue+4",
+                "character.specialist_mina_park.mental_state=fixation"
+              ]
+            },
+            "catastrophe": {
+              "lines": [
+                "Park is disoriented; evidence is scattered and contaminated. A new line is blotted from the accountability log—no way to reconstruct it.",
+                "Residual voices are reported by Park on withdrawal."
+              ],
+              "environment_state_changes": [
+                "character.specialist_mina_park.stress+4",
+                "character.specialist_mina_park.fatigue+5",
+                "character.specialist_mina_park.availability=unavailable",
+                "character.specialist_mina_park.mental_state=fixation"
+              ]
+            }
+          },
+          {
+            "action": "brooks_handles",
+            "officer_id": "brooks",
+            "primary_skill": "leadership",
+            "base_success": 0.66,
+            "yield": "Clear fatal funnel, momentum",
+            "risk": "Visibility, hidden obstacle, witness mark",
+            "strong_success": {
+              "lines": [
+                "Brooks' team maintains 360-degree security and clears the stairwell rapidly. Obstacle markings are upgraded, casualty evacuation routes established."
+              ],
+              "environment_state_changes": [
+                "character.brooks.fatigue+1",
+                "resource.casualty_routes+1"
+              ]
+            },
+            "success": {
+              "lines": [
+                "Stairwell cleared with controlled pace; official door marker checked and site report updated. One unidentified stain is logged.",
+                "Team holds threshold until relieved."
+              ],
+              "environment_state_changes": [
+                "character.brooks.stress+1"
+              ]
+            },
+            "partial": {
+              "lines": [
+                "Procedures stick to manual, but a member slips in residue: recovery is delayed, and a blotted segment appears on the accountability board."
+              ],
+              "environment_state_changes": [
+                "character.brooks.fatigue+2",
+                "resource.time_pressure+1"
+              ]
+            },
+            "failure": {
+              "lines": [
+                "Smoke and confusion; Brooks loses cohesion, and unauthorized marks are added to the threshold.",
+                "A contested official report is filed."
+              ],
+              "environment_state_changes": [
+                "character.brooks.stress+3",
+                "character.brooks.fatigue+3",
+                "character.brooks.mental_state=fixation"
+              ]
+            },
+            "catastrophe": {
+              "lines": [
+                "Fatal funnel discipline collapses; Brooks' team is exposed to new contamination, and a new accusatory stain forms on the ground at the door.",
+                "Emergency evacuation required. Brooks is marked unavailable."
+              ],
+              "environment_state_changes": [
+                "character.brooks.stress+4",
+                "character.brooks.fatigue+4",
+                "character.brooks.availability=unavailable"
+              ]
+            }
+          },
+          {
+            "action": "torah_speaks",
+            "officer_id": "torah",
+            "primary_skill": "site_doctrine",
+            "base_success": 0.62,
+            "yield": "Official record, log review, accountability escalation",
+            "risk": "Entrenched contradiction, site hesitation",
+            "strong_success": {
+              "lines": [
+                "Torah reviews the all-clear record and initiates escalation. A site error is acknowledged, and the missing names are registered for immediate follow-up.",
+                "A review tag is affixed to both the stair marker and log."
+              ],
+              "environment_state_changes": [
+                "character.torah.fatigue+1",
+                "resource.case_followup+1"
+              ]
+            },
+            "success": {
+              "lines": [
+                "The official report is amended; accountability is preserved, but procedural delay is noted.",
+                "Site log stabilized for audit."
+              ],
+              "environment_state_changes": [
+                "character.torah.stress+1"
+              ]
+            },
+            "partial": {
+              "lines": [
+                "Contradictory records are found, but site custodians hesitate. A blotted extract is left unresolved for now.",
+                "Brooks requests additional support."
+              ],
+              "environment_state_changes": [
+                "character.torah.stress+2",
+                "resource.delay_flag+1"
+              ]
+            },
+            "failure": {
+              "lines": [
+                "Effort blocked by entrenched misreporting; no names amended. Later, a soft accusation circulates in the review file.",
+                "Procedure breakdown."
+              ],
+              "environment_state_changes": [
+                "character.torah.stress+3",
+                "character.torah.mental_state=fixation"
+              ]
+            },
+            "catastrophe": {
+              "lines": [
+                "The record locks out; missing names are expunged. On the floor, new marks appear, and staff freeze at the door.",
+                "Torah becomes unavailable for future incident review."
+              ],
+              "environment_state_changes": [
+                "character.torah.stress+4",
+                "character.torah.fatigue+3",
+                "character.torah.availability=unavailable"
+              ]
+            }
+          }
+        ],
+        "corpus_influences": [
+          {
+            "source_chunk_id": "world_english_bible:00005",
+            "source_fingerprint": "cain-door-sin-threshold",
+            "structural_transfer": "Keeper responsibility enacted as a named threshold. Neglected reporter's name triggers witness effect.",
+            "required_visible_details": [
+              "contested accountability roster",
+              "stain at stairwell threshold"
+            ],
+            "followup_payoff": "Names marked or blotted directly influence haunting, evidence, or later audit."
+          },
+          {
+            "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+            "source_fingerprint": "stairwell-fatal-funnel-procedure",
+            "structural_transfer": "Stairwell is structured as a fatal funnel, blending civilian rescue and security procedure.",
+            "required_visible_details": [
+              "entry door marked as clear",
+              "smoke-obscured landing"
+            ],
+            "followup_payoff": "Procedural success or failure leaves visible marks and log changes."
+          },
+          {
+            "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+            "source_fingerprint": "abandoned-civic-clearance-stain",
+            "structural_transfer": "All-clear is falsely recorded. Stains, neglected names, and physical unease remain.",
+            "required_visible_details": [
+              "physical residue along stair edge",
+              "extra civilian wristbands"
+            ],
+            "followup_payoff": "Falsified clearance report increases unease in future civic-site missions."
+          }
+        ],
+        "corpus_fragment_ids": [
+          "world_english_bible:00005",
+          "army_ranger_handbook_sh_21_76:00156",
+          "lovecraft_colour_out_of_space_pg68236:00002"
+        ],
+        "corpus_artifact_ids": [
+          "world_english_bible:00005"
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "00005",
+            "anchor_role": "religious_what",
+            "source_fingerprint": "cain-sin-at-door",
+            "playable_transform": "Accountability log with blotted lines",
+            "required_visible_details": [
+              "blotted or amended names on log",
+              "accusatory ground stain at threshold"
+            ],
+            "followup_payoff": "Every unaccounted name magifies local anomaly or haunting."
+          },
+          {
+            "source_id": "army_ranger_handbook_sh_21_76",
+            "source_chunk_id": "00156",
+            "anchor_role": "procedural_how",
+            "source_fingerprint": "stairwell-procedure",
+            "playable_transform": "Marked door, security tape, timed rotation card",
+            "required_visible_details": [
+              "door marker with clearance time",
+              "security tape across landing"
+            ],
+            "followup_payoff": "Mishandling creates additional site risk or future access penalty."
+          },
+          {
+            "source_id": "lovecraft_colour_out_of_space_pg68236",
+            "source_chunk_id": "00002",
+            "anchor_role": "weird_fiction_structure",
+            "source_fingerprint": "site-stain-all-clear",
+            "playable_transform": "Physical stain where all-clear was posted",
+            "required_visible_details": [
+              "dried residue just past the landing",
+              "instrument deviation near official record"
+            ],
+            "followup_payoff": "Persisting marks complicate closure and future access."
+          }
+        ],
+        "religious_subtext": {
+          "motif": "Sin at the door, blotted name, blood witness",
+          "primary_sources": [
+            "world_english_bible:00005"
+          ],
+          "subtext": "The threshold, when falsely cleared and abandoned, bears witness through physical and procedural marks. Who was meant to keep the names, and who is accountable for what rises at an official door left violated?",
+          "visible_requirements": [
+            "Accountability roster with missing or blotted names",
+            "Physical stain at the stairwell threshold"
+          ]
+        },
+        "story_followups": [
+          {
+            "trigger_key": "brothers_door_debrief_1"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "event_id": "brothers_door_debrief_1",
+      "event_type": "interlude",
+      "interlude_type": "clinic observation",
+      "featured_characters": [
+        "specialist_mina_park",
+        "dr_lenora_saye",
+        "brooks"
+      ],
+      "state_reads": [
+        "character.specialist_mina_park.stress",
+        "character.brooks.fatigue",
+        "environment.accountability_log"
+      ],
+      "state_writes": [
+        "character.dr_lenora_saye.stress+1"
+      ],
+      "visible_text": "Clinic bench, post-op. Brooks hands over evidence bags; Park keeps re-checking her notes, circling blotted lines. Saye, clipboard in hand, tries to match recovered tags to the official roster. Names keep appearing in the wrong order. High-pitched feedback from the battered comms set is blamed on the stairwell's electromagnetic residue. Each time the accountability log is handled, a faint moisture seeps along its blotted lines.",
+      "choices": [
+        {
+          "action": "observe",
+          "button_label": "Monitor team for stress reactions"
+        },
+        {
+          "action": "proceed",
+          "button_label": "Authorize evidence tag re-audit"
+        }
+      ],
+      "outcomes": [
+        {
+          "lines": [
+            "Staff fatigue/contamination check incomplete; Park is referred for rest.",
+            "Saye logs persistent anomaly in the site after-action report."
+          ],
+          "environment_state_changes": [
+            "character.specialist_mina_park.fatigue+1",
+            "resource.case_followup+1"
+          ]
+        },
+        {
+          "lines": [
+            "A re-audit of tags and marks brings new names to light, but local unease persists.",
+            "Pending accountability flagged."
+          ],
+          "environment_state_changes": [
+            "resource.evidence_case_files+1"
+          ]
+        }
+      ],
+      "followup_hooks": [],
+      "corpus_anchors": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "00005",
+          "anchor_role": "hidden_state_resolution",
+          "source_fingerprint": "blotted-name-recurrence",
+          "playable_transform": "Moisture along blotted lines on the log",
+          "required_visible_details": [
+            "recovered accountability log",
+            "anomalous blotted area"
+          ],
+          "followup_payoff": "Names lost on-site may reappear in later interludes."
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "room_id": "brothers_door_stairwell",
+      "category": "mission",
+      "display_name": "Brothers' Door Stairwell",
+      "description": "A fatal procedural threshold—abandoned under smoke, with the official all-clear in neat contradiction to human evidence. Names marked, blotted, and lost.",
+      "tags": [
+        "threshold",
+        "accountability",
+        "evidence",
+        "sin-at-the-door"
+      ]
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "recovery",
+      "room_id": "brothers_door_stairwell"
+    },
+    {
+      "pool": "straight_noncombat",
+      "room_id": "brothers_door_stairwell"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "Root sin at official-abandonment is codified through a procedural object (log, roster, stain).",
+    "Every visible mark (stain, wristbands, blotted names, contested door) persists and can reappear downstream.",
+    "Specialist Park and Brooks are scripted to physically handle and suffer from the gray zone between site procedure and moral accountability.",
+    "Motif (Cain/Abel/keeper/sin at the door) is concretized—the blotted register and threshold stain are direct effects, not just flavor."
+  ],
+  "self_critique": [
+    "Risk of overusing the log as the key religious anchor—some follow-up events could diversify with procedural objects (e.g., badge scanner, evac sheet).",
+    "Room could expand further on the civic-site unease with more unique physical evidence.",
+    "Balance between supernatural and mundane stress backfires should be monitored in follow-ups. Refine for clarity in resource impact."
+  ],
+  "_validation_errors": [
+    "room_records[0].id is empty",
+    "special_events[0].id is empty",
+    "0: missing type",
+    "0: missing speaker",
+    "0: missing line_1",
+    "0: missing line_2",
+    "0: event type '' is not a defined category",
+    "0: buttons must be a non-empty list",
+    "events[0].room_id 'brothers_door_stairwell' is not in room_dialogue.json or patch.room_records",
+    "events[0].event.id is empty",
+    "duplicate event id in patch: ",
+    "0: missing type",
+    "0: missing speaker",
+    "0: missing line_1",
+    "0: missing line_2",
+    "0: event type '' is not a defined category",
+    ": button 0 missing label",
+    ": button 1 missing label",
+    ": button 2 missing label",
+    "deck_pool_updates[0].room_id 'brothers_door_stairwell' is not an existing or patch room",
+    "deck_pool_updates[1].room_id 'brothers_door_stairwell' is not an existing or patch room"
+  ]
+}

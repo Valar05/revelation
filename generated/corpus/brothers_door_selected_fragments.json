@@ -1,0 +1,168 @@
+{
+  "fragments": [
+    {
+      "id": "world_english_bible:00005",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_author": "",
+      "line_start": 0,
+      "line_end": 0,
+      "source_excerpt": "Cain and Abel: sin crouches at the door; Cain asks whether he is his brother's keeper; Abel's blood cries from the ground; Cain is marked and made a fugitive.",
+      "source_circumstance": "A refused responsibility becomes violence, accusation, ground testimony, and a lasting mark.",
+      "nightmare_room_seed": "For Revelation, convert keeper responsibility into a threshold rule: a door or floor becomes dangerous when official procedure abandons a named person.",
+      "escalation_thread": [
+        "threshold warning",
+        "abandoned person's name appears",
+        "ground or floor becomes witness",
+        "guilty party is marked",
+        "resolution requires accountability"
+      ],
+      "ship_state_hooks": [
+        "character stress",
+        "mental_state fixation",
+        "contamination mark",
+        "future threshold reaction"
+      ],
+      "suggested_actions": [
+        "confirm_record",
+        "rescue_civilians",
+        "torah_speaks",
+        "hold_perimeter"
+      ],
+      "generation_rules": [
+        "Do not quote scripture in player-facing prose.",
+        "Make the religious motif an operational rule, not decoration."
+      ]
+    },
+    {
+      "id": "enoch_laurence_gutenberg_77815:00028",
+      "source_id": "enoch_laurence_gutenberg_77815",
+      "source_title": "The Book of Enoch the Prophet, Richard Laurence translation",
+      "source_author": "Richard Laurence translation",
+      "line_start": 0,
+      "line_end": 0,
+      "source_excerpt": "A place of separated dead includes Abel's accusing voice; separated places are divided by chasm, water, and light.",
+      "source_circumstance": "The dead accuse from an assigned place; separation itself becomes evidence and judgment.",
+      "nightmare_room_seed": "For Revelation, let abandoned residents' voices transmit from separated floors, landings, or emergency zones until their cases are accounted for.",
+      "escalation_thread": [
+        "voices from separated space",
+        "wrongly cleared names repeat",
+        "physical zones divide living, dead, and unaccounted",
+        "the accusing voice persists until answered"
+      ],
+      "ship_state_hooks": [
+        "radio anomaly",
+        "evidence pressure",
+        "staff trauma"
+      ],
+      "suggested_actions": [
+        "audit_logs",
+        "establish_roster",
+        "recover_body",
+        "debrief_team"
+      ],
+      "generation_rules": [
+        "Use accusation as field evidence, not theological exposition."
+      ]
+    },
+    {
+      "id": "army_ranger_handbook_sh_21_76:00156",
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_title": "SH 21-76 Ranger Handbook",
+      "source_author": "U.S. Army",
+      "line_start": 0,
+      "line_end": 0,
+      "source_excerpt": "Stairwells and staircases are comparable to doorways because they create a fatal funnel. Clearing requires designated assault elements, 360-degree security, obstacle marking or clearing, three-man flow, maintained momentum, casualty evacuation, room marking, and site exploitation.",
+      "source_circumstance": "Vertical movement through stairwells is dangerous, procedural, and evidence-sensitive.",
+      "nightmare_room_seed": "For Revelation, make the action loop a stairwell rescue where clearing, marking, overwatch, casualties, and evidence custody all compete.",
+      "escalation_thread": [
+        "fatal funnel at stair door",
+        "three-dimensional security",
+        "clear or mark obstacles",
+        "maintain momentum",
+        "evacuate casualties",
+        "site exploitation reveals false clearance"
+      ],
+      "ship_state_hooks": [
+        "injury",
+        "fatigue",
+        "availability",
+        "evidence quality"
+      ],
+      "suggested_actions": [
+        "breach",
+        "hold_line",
+        "evacuate",
+        "secure_evidence"
+      ],
+      "generation_rules": [
+        "Character plans should use real tactical procedure and backfire physically if failed."
+      ]
+    },
+    {
+      "id": "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_author": "CDC/NIOSH",
+      "line_start": 0,
+      "line_end": 0,
+      "source_excerpt": "Emergency decision making under smoke and stress involves detection, diagnosis, option consideration, choice, and execution. Stress, incomplete information, skill, and complexity degrade the process.",
+      "source_circumstance": "Responders moving through smoke must make time-limited choices while stress undermines diagnosis and execution.",
+      "nightmare_room_seed": "For Revelation, hide exact stats but let individual stress alter plan success, diagnosis, delays, and panic/freeze risk.",
+      "escalation_thread": [
+        "smoke obscures route",
+        "diagnosis competes with rescue speed",
+        "stress changes odds",
+        "bad information creates bad clearance",
+        "accurate diagnosis lowers pressure"
+      ],
+      "ship_state_hooks": [
+        "stress",
+        "mental_state",
+        "panic",
+        "fatigue"
+      ],
+      "suggested_actions": [
+        "diagnose",
+        "fallback",
+        "push_forward",
+        "pair_civilians"
+      ],
+      "generation_rules": [
+        "Do not show exact odds. Prose should imply condition through behavior."
+      ]
+    },
+    {
+      "id": "lovecraft_colour_out_of_space_pg68236:00002",
+      "source_id": "lovecraft_colour_out_of_space_pg68236",
+      "source_title": "The Colour Out of Space",
+      "source_author": "H. P. Lovecraft",
+      "line_start": 0,
+      "line_end": 0,
+      "source_excerpt": "A surveyor hears local warnings, finds an abandoned place with a bad reputation, observes physical desolation, and gradually realizes the official or ordinary explanation is insufficient.",
+      "source_circumstance": "Weird-fiction structure: local testimony, bad site history, physical stain, field observation, delayed realization, unresolved remainder.",
+      "nightmare_room_seed": "For Revelation, use a municipal building with a neat official clearance report that is contradicted by stains, voices, missing residents, and instruments.",
+      "escalation_thread": [
+        "official explanation",
+        "site stigma",
+        "physical residue",
+        "instrument contradiction",
+        "delayed realization",
+        "local closure with remaining uncertainty"
+      ],
+      "ship_state_hooks": [
+        "future civic-site unease",
+        "case file followup",
+        "interlude reflection"
+      ],
+      "suggested_actions": [
+        "inspect_site",
+        "compare_records",
+        "contain_area"
+      ],
+      "generation_rules": [
+        "Borrow evidence structure, not diction or mythos language."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "title": "Brother's Door",
+  "design_goal": "A municipal emergency shelter stairwell where a supervisor's deliberate abandonment of a trapped resident has caused the floor itself to become a witness, forcing the Institute to deploy before the building's occupants are consumed by the manifestation.",
+  "source_mechanism": {
+    "source_chunk_id": "world_english_bible:00005",
+    "source_action": "Keeper responsibility is refused; the abandoned person's blood enters the ground; the ground becomes an active accuser; the guilty party is marked and cannot escape the testimony",
+    "sin_or_transgression": "Shelter supervisor Dario Voss falsified a floor-clearance log during a gas-leak evacuation, knowingly leaving resident Marcus Fell sealed in Stairwell B. Fell died on the landing. Voss signed the all-clear and walked out.",
+    "witness_or_judgment": "The concrete landing where Fell died has begun transmitting. His name appears in condensation on every door in the stairwell. The floor drains blood-temperature fluid upward through sealed cracks. The stairwell door will not hold open for anyone who touched the falsified log.",
+    "required_scene_elements": [
+      "Fell's name in condensation on door glass",
+      "floor cracks weeping warm fluid upward",
+      "stairwell door that closes against specific individuals",
+      "a falsified paper clearance log still physically present in the building",
+      "a mark or residue that transfers to Voss on contact with the landing"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "While the falsified clearance log remains uncontested and Voss remains unaccountable, the stairwell treats every threshold as a keeper-test: doors close against the guilty, the floor testifies through fluid and name, and the space between landings compresses for anyone who repeats the original refusal to act",
+    "active_manifestation": "Stairwell B is cycling. Every ninety seconds the landing lights cut, the floor temperature spikes, Fell's name appears on the door glass in condensation, and the door at the B2 landing slams shut hard enough to fracture the frame. Two shelter residents are trapped above B3 and cannot descend. A third, Voss himself, is in the building and has not disclosed his role.",
+    "escalation": "If the squad stalls or retreats without contesting the log, the compression interval shortens to forty seconds, the fluid begins rising above ankle level on B2, and the door-slam force becomes structurally dangerous to anyone in the fatal funnel",
+    "closure_condition": "The falsified log must be physically recovered and its falsification formally acknowledged on record by someone with authority. Voss must be named as responsible in a documented statement. Once accountability is on record, the floor stops testifying and the doors hold open."
+  },
+  "room": {
+    "id": "brothers_door_stairwell_b",
+    "name": "Stairwell B — Harmon Street Shelter",
+    "type": "mission",
+    "description": "A municipal emergency shelter stairwell. Two residents trapped above. Floor weeping upward. Door cycling every ninety seconds.",
+    "first_visit_description": "Torah's squad is on the ground floor of the Harmon Street Emergency Shelter, east wing. Lt. Mara Owen is at the B1 entry door with the tactical element. Specialist Mina Park is two steps inside, instrument panel open, reading the floor temperature anomaly directly. Brooks is posted at the exterior cordon keeping civilians back. Dr. Lenora Saye is remote, on comms from the Institute mobile unit parked one block north, monitoring Park's instrument feed and cross-referencing the shelter's evacuation records. The building manager handed over a paper clearance log before retreating; it is in Owen's left cargo pocket. A man named Dario Voss is seated in the shelter's ground-floor common room, identified as the shift supervisor on duty during last month's gas-leak evacuation. He has not been interviewed. Two residents — an elderly woman and a teenage boy — are audible above, on the B3 landing, unable to descend because the B2 door slams shut before they can pass through it.",
+    "return_description": "The stairwell is quieter now. The condensation on the door glass is drying. The fluid in the floor cracks has receded to a dark stain. The B2 door stands open, held by nothing visible.",
+    "detection_report": "Park's thermal scanner shows the B2 landing running eleven degrees above ambient with no heat source. The floor drain on B2 is flowing upward — confirmed by dye test. The door-slam interval is consistent at ninety seconds, not mechanical. Saye, remote, flags that the evacuation log lists Marcus Fell as evacuated at 14:32; shelter intake records show Fell never checked in at the receiving site.",
+    "current_situation": "Owen is watching the B2 door cycle. Park is crouched at the B1 threshold reading the crack fluid — warm, faintly iron-smell, no chemical match on field kit. The condensation on the B2 door glass has resolved into a legible name: FELL. The two trapped residents are calling down from B3. Voss has not moved from the common room. The log is in Owen's pocket. The clock between door-slams is running.",
+    "deployment_manifest": [
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Lt. Mara Owen",
+        "mission_role": "command lead, tactical point",
+        "physical_position": "B1 entry threshold, hand on door frame, watching the B2 door",
+        "assigned_reason": "Owen runs threshold-anomaly deployments; she requested this call after the dye-test result came in",
+        "visible_state": "She is counting the slam interval under her breath. She has not touched the log since she pocketed it."
+      },
+      {
+        "officer_id": "specialist_mina_park",
+        "name": "Specialist Mina Park",
+        "mission_role": "technical specialist, instrument lead",
+        "physical_position": "Two steps inside B1, kneeling at the floor crack with thermal scanner and field chemistry kit",
+        "assigned_reason": "Park is the squad's anomaly-measurement specialist; Saye requested her specifically for the upward-flow reading",
+        "visible_state": "She is methodical and quiet. She has labeled the fluid sample twice, which she does not normally do."
+      },
+      {
+        "officer_id": "brooks",
+        "name": "Brooks",
+        "mission_role": "perimeter security, civilian management",
+        "physical_position": "Exterior cordon at the shelter's east entrance, keeping displaced residents back",
+        "assigned_reason": "Brooks handles crowd and cordon work; Owen wanted the exterior locked before anyone else entered",
+        "visible_state": "Brooks is doing the job but has asked twice over comms whether the residents inside are confirmed safe."
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Dr. Lenora Saye",
+        "mission_role": "remote technical consult, records analysis",
+        "physical_position": "Institute mobile unit, one block north, on comms with Park's instrument feed open",
+        "assigned_reason": "Saye identified the intake-record discrepancy that triggered the deployment; she is the one who knows Fell's name",
+        "visible_state": "She has been quiet for four minutes. When she speaks she gives information in short declarative sentences."
+      },
+      {
+        "officer_id": "agent_caleb_ross",
+        "name": "Agent Caleb Ross",
+        "mission_role": "evidence custody, witness interview",
+        "physical_position": "Ground-floor common room, near Voss but not yet interviewing",
+        "assigned_reason": "Ross handles field interviews and evidence chain-of-custody; Owen assigned him to Voss the moment they identified the log discrepancy",
+        "visible_state": "Ross is standing close enough to Voss to observe him but has not opened his notebook. He is waiting for Owen's signal."
+      }
+    ],
+    "root_sin": "Shelter supervisor Dario Voss falsified a floor-clearance log during a gas-leak evacuation, knowingly leaving Marcus Fell sealed in Stairwell B. Fell died on the B2 landing. Voss signed the all-clear and walked out. No one checked.",
+    "modern_incident_logic": "The shelter's gas-leak evacuation created a documented clearance procedure with a named responsible supervisor. Voss's falsification of that procedure — a bureaucratic act of refused keeper responsibility — left a named person to die in a sealed stairwell. The building's physical fabric now testifies to that refusal: the floor where Fell died is the witness, the door is the threshold that was abandoned, and the condensation-name is the accusation that cannot be cleared until accountability is on record. The anomaly does not require supernatural insertion; it emerges from the specific moral geometry of the original act.",
+    "closure_test": "Recover the falsified log as physical evidence. Obtain a documented statement naming Voss as responsible. Both must be on record before the manifestation releases the stairwell.",
+    "religious_pattern": "Cain/Abel: refused keeper responsibility produces ground-testimony, threshold-danger, name-accusation, and a mark on the guilty. Resolution requires accountability, not punishment alone.",
+    "anomaly_rule": "The stairwell tests keeper responsibility at every threshold. Doors close against the guilty. The floor testifies through upward fluid and condensation-name. The compression interval shortens with each refusal to act. The manifestation cannot be physically forced open — it can only be answered.",
+    "forbidden_flat_read": "Do not literalize Fell as a ghost or haunting presence. He is not present. The building is the witness. The accusation is structural, not spectral.",
+    "officer_reports": [
+      "Owen: 'Door-slam interval is ninety seconds. I've timed six cycles. It's not the pneumatic closer — I pulled the closer arm on cycle three and it still slammed.'",
+      "Park: 'Floor crack fluid is thirty-seven point four degrees. Iron trace, no chemical signature. It is flowing upward. I have the dye confirmation on camera.'",
+      "Saye, remote: 'Fell, Marcus. Resident. Listed as evacuated at 14:32 on the log Owen is carrying. He was never received at the Clement Street intake. I've been through the intake sheet three times.'",
+      "Ross, low: 'Voss hasn't asked about the residents upstairs. He knows we're here for a life-safety call and he hasn't asked once.'"
+    ],
+    "procedure_hooks": [
+      "Evidence chain-of-custody for the falsified log",
+      "Witness interview under field conditions with a subject who has not been Mirandized",
+      "Casualty evacuation through a door with a dangerous compression interval",
+      "Instrument documentation of anomalous fluid flow for post-incident record",
+      "Cordon maintenance while residents are in distress above"
+    ],
+    "character_state_stakes": {
+      "lt_mara_owen": "If Owen fails the tactical push, she takes a door-slam injury and her threshold-confidence drops; future stairwell deployments flag her stress",
+      "specialist_mina_park": "If Park's instrument read is incomplete, the evidence record is challenged and Saye's remote analysis loses its anchor",
+      "agent_caleb_ross": "If Ross fails the Voss interview, Voss walks and the log cannot be formally contested; Ross carries that as a loyalty/competence fracture",
+      "dr_lenora_saye": "If Saye's records cross-reference is wrong, the closure condition cannot be met and the squad takes a second cycle of door-slam escalation"
+    },
+    "interlude_vectors": [
+      "Post-mission: Ross and Owen debrief over the log in the mobile unit while Park's sample goes to Saye for lab confirmation",
+      "Smoke break: Brooks, still at the cordon, asks Ross what Voss said and gets a short answer that does not satisfy either of them",
+      "Clinic: if Owen took the door-slam injury, she is in the mobile unit with Saye doing the intake paperwork while the stairwell is still audible outside"
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00005",
+      "role": "premise",
+      "fingerprint": "Refused keeper responsibility causes ground to become active witness; threshold becomes dangerous; guilty party is marked",
+      "transfer": "The falsified clearance log is the refused keeper act. The B2 landing floor is the ground-witness. The door-slam is the threshold danger. Voss's inability to leave the building without the anomaly tracking him is the mark.",
+      "visible_details": [
+        "Fell's name in condensation on the B2 door glass, legible and recurring after each wipe",
+        "Floor crack fluid flowing upward at body temperature, iron-trace, no chemical match — the ground testifying"
+      ],
+      "payoff": "If Voss is not named on record, the mark follows him out of the building and the Institute receives a second deployment call within seventy-two hours"
+    },
+    {
+      "source_id": "enoch_laurence_gutenberg_77815",
+      "source_chunk_id": "enoch_laurence_gutenberg_77815:00028",
+      "role": "evidence",
+      "fingerprint": "Separated dead accuse from assigned place; wrongly cleared names repeat; accusing voice persists until answered",
+      "transfer": "Fell's name repeating in condensation is the accusation from the separated place. The intake-record gap — Fell listed as evacuated but never received — is the wrongly cleared name. Saye's remote voice reading the discrepancy aloud is the accusation being transmitted.",
+      "visible_details": [
+        "Saye's flat recitation over comms: 'Fell, Marcus. Listed evacuated. Never received. I've been through the intake sheet three times.'",
+        "The condensation-name reappears within forty seconds of being wiped — it does not fade, it returns"
+      ],
+      "payoff": "If the log is recovered and the statement is on record, the condensation-name does not return after the final wipe — that absence is the closure signal"
+    },
+    {
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+      "role": "procedure",
+      "fingerprint": "Stairwell as fatal funnel; clearing requires designated assault element, momentum, obstacle marking, casualty evacuation",
+      "transfer": "Owen's tactical push through the B2 door uses the fatal-funnel rule: the door-slam is the funnel hazard, the ninety-second interval is the momentum window, and the two trapped residents are the casualty-evacuation objective",
+      "visible_details": [
+        "Owen counting the slam interval aloud to give Park the timing window to move",
+        "The B2 door frame already fractured from previous cycles — visible splintering at the latch side"
+      ],
+      "payoff": "If Owen times the push correctly, both residents are out before the next cycle; if she mistimes it, the door catches her in the frame and the residents remain trapped for another full cycle"
+    },
+    {
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+      "role": "escalation",
+      "fingerprint": "Stress degrades diagnosis and execution; bad information creates bad clearance; accurate diagnosis lowers pressure",
+      "transfer": "Ross's interview of Voss is a stress-diagnosis problem: Voss is calm, the log looks official, and Ross must decide whether to push hard enough to crack the false clearance before Owen needs the log as evidence. If Ross hesitates, Voss produces a secondary explanation that delays the record.",
+      "visible_details": [
+        "Ross has not opened his notebook — he is reading Voss's stillness before committing to a line of questioning",
+        "Voss has not asked about the residents upstairs once, which Ross has noted twice over comms without yet acting on it"
+      ],
+      "payoff": "If Ross reads Voss correctly and pushes early, the statement is on record before Owen finishes the tactical push; if Ross waits too long, Voss asks for a lawyer and the closure window extends past the next escalation cycle"
+    },
+    {
+      "source_id": "lovecraft_colour_out_of_space_pg68236",
+      "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+      "role": "closure",
+      "fingerprint": "Official explanation contradicted by physical residue, instrument reading, and local testimony; local closure with unresolved remainder",
+      "transfer": "The shelter's official clearance report is the insufficient explanation. Park's instrument readings are the physical contradiction. The intake-record gap is the local testimony. Closure is local — the stairwell releases — but the remainder is Voss in the system and the question of who else signed off on the all-clear.",
+      "visible_details": [
+        "The clearance log in Owen's pocket is printed on official shelter letterhead, signed, timestamped — it looks completely routine",
+        "After closure, the B2 landing floor stain does not disappear; it dries to a dark ring that the building manager will have to explain to the next inspector"
+      ],
+      "payoff": "The dried floor stain and the recovered log become a future-mission hook if Voss's chain of command is investigated"
+    }
+  ],
+  "root": {
+    "id": "brothers_door_root",
+    "speaker": "lt_mara_owen",
+    "line_1": "Owen has timed six door-slam cycles. Two residents are trapped above B2. The log in her pocket lists Fell as safely out.",
+    "line_2": "Park's dye test confirms the floor drain is running upward. Saye says Fell was never received at intake. The interval is ninety seconds.",
+    "queued_line": "Someone has to move through that door, and someone has to make Voss talk before the next cycle shortens.",
+    "plans": [
+      {
+        "label": "Push through B2 now",
+        "action": "proceed",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "threshold timing, tactical movement under hazard",
+        "base_success": 0.65,
+        "intent": "Owen times the door-slam interval and leads Park through the B2 fatal funnel to reach the trapped residents before the next cycle",
+        "yield": "Both residents are brought down safely; Owen establishes physical control of the B2 landing and can document the floor stain and door-frame fracture as evidence",
+        "risk": "Owen mistimes the push and the door catches her in the frame; she takes a structural impact injury and the residents remain trapped for another full cycle while the interval begins shortening",
+        "success_line": "Owen counts down from five, moves on one. The door is open for eleven seconds — she and Park are through, the residents are moving, and the door slams behind them hard enough to shake the landing below. Owen does not flinch. She has both of them by the arm before the echo stops. Park is already photographing the floor stain, her camera hand steady even though her other hand is pressed flat against the wall.",
+        "partial_line": "Owen gets through. Park gets through. The teenage boy gets through. The elderly woman is still on the B3 side when the door slams. Owen stands in the funnel with her shoulder against the frame and holds it open by force for the six seconds it takes the woman to clear the threshold. When she lets go, the door takes a piece of her jacket sleeve with it. She does not mention it over comms.",
+        "failure_line": "Owen calls the count wrong by two seconds. The door catches her across the left shoulder and drives her into the opposite wall. She goes down on one knee on the B2 landing, and the floor under her palm is warm — noticeably, wrongly warm — and she pulls her hand back fast. Park hauls her upright. The residents are still above. Over comms, Saye says the interval has dropped to seventy seconds."
+      },
+      {
+        "label": "Ross: press Voss now",
+        "action": "full_disclosure",
+        "officer_id": "agent_caleb_ross",
+        "primary_skill": "witness interview, evidence pressure, behavioral read",
+        "base_success": 0.65,
+        "intent": "Ross confronts Voss with the intake-record gap before Voss can construct a secondary explanation, aiming to get a verbal acknowledgment on record that Fell was not evacuated",
+        "yield": "Voss confirms the falsification verbally; Ross has it on his field recorder; the log can now be formally contested and the closure condition is within reach",
+        "risk": "Ross pushes too hard too fast and Voss shuts down, asks for representation, and produces a secondary explanation that delays the record past the next escalation cycle",
+        "success_line": "Ross opens his notebook, sets it on the table between them, and says Fell's name once. Voss looks at the notebook for a long time. Then he says: 'I thought he'd already gone down.' Ross does not move. Voss says it again, differently: 'I thought he'd already gone down.' Ross writes the time in the margin and keeps writing. When he looks up, Voss's hands are flat on the table and he is staring at them like he does not recognize them.",
+        "partial_line": "Ross gets the admission but not the full statement. Voss says enough — 'I signed it, I shouldn't have signed it' — and then stops talking. Ross has it on the recorder. It is not a complete account. It is enough to contest the log. It is not enough to close the case. Ross closes his notebook and tells Voss to stay in the room. Voss does not argue. He does not ask where he is supposed to go.",
+        "failure_line": "Voss listens to Ross's question, looks at the intake-record gap Ross has printed from Saye's feed, and says he wants to speak to the shelter's legal coordinator before he says anything else. His voice is completely level. Ross recognizes the tone — it is the tone of someone who has rehearsed this moment. He steps back and keys his comms. Over the radio, Saye says the door-slam interval has dropped to seventy seconds. Ross says: 'Understood.' He does not say anything else."
+      }
+    ]
+  },
+  "resolution": {
+    "id": "brothers_door_resolution",
+    "speaker": "SITREP",
+    "line_1": "The residents are down or still trapped. Voss has spoken or gone silent. The log is in Owen's hand and the floor stain is documented.",
+    "line_2": "The condensation-name is still returning on the B2 door glass. The interval is still running. The closure condition requires the log contested and Voss named on record.",
+    "queued_line": "Saye is ready to file the discrepancy report the moment Owen authorizes it; the question is whether the record is complete enough to hold.",
+    "plans": [
+      {
+        "label": "File the record now",
+        "action": "report_word_gap",
+        "officer_id": "dr_lenora_saye",
+        "primary_skill": "records analysis, discrepancy documentation, remote filing",
+        "base_success": 0.65,
+        "intent": "Saye files the formal discrepancy report cross-referencing the falsified log against the intake record, naming Fell as unaccounted and Voss as the signing supervisor, creating the accountability record that satisfies the closure condition",
+        "yield": "The report is filed and timestamped; the condensation-name stops returning after the next wipe; the floor fluid recedes; the B2 door holds open; the stairwell releases",
+        "risk": "If Ross's interview produced only a partial statement, Saye's report is flagged as incomplete by the Institute's records system and requires a secondary authorization that delays closure past the current cycle, triggering one more escalation",
+        "success_line": "Saye's voice over comms is the same flat declarative it has been all mission. 'Report filed. Timestamped. Fell, Marcus, listed as unaccounted. Voss, Dario, listed as signing supervisor.' A pause. 'Owen, wipe the door glass.' Owen wipes it. The condensation does not return. The floor crack is dry. The B2 door stands open and stays open. Park photographs it open. She photographs it again thirty seconds later, still open, because she wants the documentation to be unambiguous.",
+        "partial_line": "Saye files the report but the incomplete statement from Voss triggers a secondary-authorization flag. The Institute's system holds the filing for manual review. The condensation-name slows — it takes longer to return now, nearly two minutes instead of forty seconds — but it does return. Owen is standing at the B2 door watching it form. Park says the floor temperature is dropping. Saye says: 'It's reading the report. It's not enough yet.' Owen says: 'How long?' Saye does not answer immediately.",
+        "failure_line": "Saye cannot file without a complete statement. The records system rejects the discrepancy report as insufficiently supported. Over comms she says: 'I need Voss on record. What Ross has isn't enough for the system to accept.' The door-slam interval drops to fifty seconds. The fluid in the floor cracks rises to the level of the sole of Owen's boot. Owen steps back. The condensation-name on the B2 door glass is darker than it was an hour ago."
+      },
+      {
+        "label": "Owen: mark Voss directly",
+        "action": "full_disclosure",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "field accountability, command authority, evidence custody",
+        "base_success": 0.6,
+        "intent": "Owen takes the falsified log from her pocket, writes Voss's name across the falsified clearance entry in permanent marker, signs and dates it herself as the responding officer, and hands it to Ross as a field-accountability record — a direct command act that names the guilty party on the physical document",
+        "yield": "The physical log now carries Owen's field notation naming Voss; combined with whatever Ross obtained, this satisfies the accountability condition and the manifestation begins to release",
+        "risk": "Owen's field notation is procedurally irregular; if the Institute's legal review challenges it, the record is contested and the closure is partial — the stairwell releases but the case file is flagged, affecting Owen's standing and the Institute's ability to act on the Voss chain-of-command investigation",
+        "success_line": "Owen pulls the log from her cargo pocket. She uncaps the marker she carries for door-marking during clearance operations and writes Voss's name across the falsified entry in block letters. She signs it. She dates it. She hands it to Ross without a word. Ross looks at it for a moment, then bags it. The condensation on the B2 door glass is already fading before Saye's report goes through. Owen watches it go. When it is gone she says: 'Park, get the floor stain on camera before it dries all the way.' Park already has.",
+        "partial_line": "Owen marks the log. The manifestation reads it — the door-slam interval pauses, then resumes at a longer cycle, eighty seconds instead of fifty. The floor fluid begins to recede. But the condensation-name is still forming, slower now, as if the accusation is not fully answered by Owen's notation alone. Saye says: 'It's partial. The field mark is accepted but the record needs the statement too. Ross, whatever you have — file it now.' Ross keys his recorder and reads Voss's partial admission aloud into the comms channel for Saye to transcribe.",
+        "failure_line": "Owen marks the log. Nothing changes. The door-slam interval does not pause. The floor fluid does not recede. The condensation-name forms as fast as it has all mission. Park looks at Owen. Owen looks at the log in Ross's evidence bag. She says: 'It needs more than my signature.' Saye, remote, says quietly: 'It needs Voss's name from Voss. The document knows the difference.' Owen does not respond to that. She turns back to the door and starts counting the interval again."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "brothers_door_cooldown",
+    "speaker": "agent_caleb_ross",
+    "line_1": "Ross is in the mobile unit with the evidence bag on the table between him and Owen. Park is outside. Saye has gone quiet.",
+    "line_2": "Voss is in a municipal holding room two blocks away. The log is bagged. The stairwell is open. Ross has not closed his notebook.",
+    "interlude_type": "debrief",
+    "state_reads": [
+      "agent_caleb_ross.mental_state",
+      "lt_mara_owen.stress",
+      "squad.morale",
+      "institute.case_file_status"
+    ],
+    "state_writes": [
+      "agent_caleb_ross.fixated",
+      "lt_mara_owen.threshold_confidence",
+      "squad.morale",
+      "institute.voss_chain_followup_flagged"
+    ],
+    "featured_characters": [
+      "agent_caleb_ross",
+      "lt_mara_owen",
+      "dr_lenora_saye"
+    ],
+    "visible_text": [
+      "Ross says: 'He knew we were there for a life-safety call. He never asked about the residents upstairs. Not once in forty minutes.'",
+      "Owen sets her jacket on the table. The sleeve is torn where the door took it. She does not look at it.",
+      "Saye's voice comes through the unit's speaker, not the field comms — she has switched to the debrief channel. She says: 'The intake record shows three other evacuations Voss supervised in the last two years. I flagged them for review.' A pause. 'I should have flagged them before today.'",
+      "Ross closes his notebook. He does not put it away. He sets it on top of the evidence bag.",
+      "Owen says: 'The floor stain is still there.' She means it as a statement of fact. It comes out as something else."
+    ],
+    "choices": [
+      "Ross: 'We got what we needed. That's the job.' — accept the partial closure",
+      "Owen: 'Saye, send me the other evacuation records tonight.' — push the chain-of-command thread",
+      "Torah: say nothing, let them sit with it"
+    ],
+    "outcomes": [
+      "If Ross accepts: he closes the notebook and puts it away. His fixation does not resolve; it compresses. The next interview he runs will be harder and faster than this one.",
+      "If Owen pulls the records: Saye sends them within the hour. Owen reads them in the mobile unit while Park drives. She does not share what she finds until the next mission briefing.",
+      "If Torah says nothing: the silence holds for a full minute. Then Brooks knocks on the mobile unit door from outside and asks if anyone wants coffee. Owen says yes. Ross says yes. Saye, still on the speaker, says: 'Please.'"
+    ],
+    "followup_hooks": [
+      "Voss's chain-of-command investigation: two other evacuations flagged by Saye, both with Voss as supervising officer",
+      "The dried floor stain on B2 is photographed by the building manager and submitted to the city inspector — the Institute receives a query about the 'chemical residue' within a week",
+      "Ross's fixation on the interview: the next time he faces a subject who has rehearsed their silence, his stress check is harder",
+      "Owen's torn jacket sleeve: a minor physical remainder that she keeps rather than discards, which the compiler can read as a stress-marker in future threshold deployments"
+    ],
+    "corpus_anchors": [
+      "world_english_bible:00005",
+      "enoch_laurence_gutenberg_77815:00028",
+      "lovecraft_colour_out_of_space_pg68236:00002"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "branch",
+    "straight_noncombat",
+    "recovery"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The door-slam interval as a countdown creates natural urgency without combat",
+    "Voss's silence about the residents upstairs is the behavioral tell that makes Ross's read load-bearing",
+    "Saye's remote role means her records work is the closure mechanism, not a support function — she is structurally necessary",
+    "The dried floor stain as a remainder satisfies the weird-fiction closure-with-residue structure without requiring a sequel hook to be forced",
+    "Owen marking the log with her field marker is a use of her door-marking equipment in a non-tactical context — procedural reuse that feels earned"
+  ],
+  "self_critique": [
+    "The dry_name_protocol action is used for Owen's resolution plan but is not confirmed in the implemented_actions list — the compiler should verify this maps correctly or substitute report_word_gap with Owen as officer_id if dry_name_protocol is unavailable"
+  ],
+  "_validation_errors": [
+    "symbolic_rule.active_manifestation must state what is actively happening before the squad arrives"
+  ]
+}

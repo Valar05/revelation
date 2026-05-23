@@ -1,0 +1,150 @@
+{
+  "name": "Samson Wig Violent-Resolution Source Packet",
+  "purpose": "Selected public-domain anchors for a Revelation action-horror room where a long hair wig grants impossible strength by counterfeiting a vow-sign. The scenario should treat strength as sacred obligation corrupted into transferable equipment, not superhero power.",
+  "fragments": [
+    {
+      "id": "nazirite_vow_hair_sign",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00192",
+      "source_circumstance": "The Nazirite vow separates a person to Yahweh; no razor comes on the head during the vow, and the locks grow long as the visible sign of separation.",
+      "source_excerpt": "A Nazirite separates from wine and uncleanness. No razor comes on the head until the vow is fulfilled; the person is holy and lets the locks grow long.",
+      "nightmare_room_seed": "A manufactured wig counterfeits the visible sign of consecration. It gives strength by imposing the outward mark without the vow, making obedience into equipment.",
+      "escalation_thread": "First the wearer lifts impossible weight. Then the hair refuses removal. Then the wearer treats every command as an oath and every restraint as captivity.",
+      "suggested_actions": ["torah_speaks", "seal", "destroy", "intercept"],
+      "generation_rules": [
+        "Name the sin clearly: selling or weaponizing the sign of a vow without the vow itself.",
+        "The wig must behave like a binding obligation, not like a gadget.",
+        "Strength should feel frightening, exhausting, and sacredly misapplied."
+      ]
+    },
+    {
+      "id": "nazirite_hair_burned_on_completion",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00193",
+      "source_circumstance": "When the Nazirite separation is fulfilled, the hair of separation is shaved at the Tent of Meeting and put on the fire under the sacrifice.",
+      "source_excerpt": "At completion the Nazirite shaves the head of separation and puts that hair on the fire beneath the peace offering; after that the vow is released.",
+      "nightmare_room_seed": "The resolution can require cutting or burning the false hair under controlled conditions, turning destruction into release rather than mere damage.",
+      "escalation_thread": "If the hair is cut without release, strength discharges violently. If it is burned with confession and evacuation discipline, the borrowed vow ends.",
+      "suggested_actions": ["destroy", "torah_speaks", "recover"],
+      "generation_rules": [
+        "Make cutting or burning the wig a possible close condition.",
+        "The symbolic release should have a cost: heat, collapse risk, injury, contamination, or squad stress.",
+        "Do not imply the team fully understands the theology."
+      ]
+    },
+    {
+      "id": "samson_birth_no_razor",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00358",
+      "source_circumstance": "An angel announces Samson's birth; no razor is to come on his head because he will be a Nazirite from the womb and begin to save Israel.",
+      "source_excerpt": "The child is marked from the womb. No razor will come on his head; he is a Nazirite to God and will begin deliverance from the Philistines.",
+      "nightmare_room_seed": "The anomaly copies a birth-bound sign onto whoever wears the wig. It confuses assignment, calling, and body into a transferable product.",
+      "escalation_thread": "The wearer becomes convinced they were selected, not infected. Removing the wig feels to them like murder or apostasy.",
+      "suggested_actions": ["full_disclosure", "torah_speaks", "intercept"],
+      "generation_rules": [
+        "Keep the victim human and frightened; do not write them as a cackling monster.",
+        "Use the idea of a calling being counterfeited, sold, or stolen.",
+        "The squad must solve an active threat while recognizing the wearer may be salvageable."
+      ]
+    },
+    {
+      "id": "samson_breaks_ropes_jawbone",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00361",
+      "source_circumstance": "Samson is bound with new ropes; the Spirit comes mightily on him, the bindings fail, and he kills with a jawbone before collapsing in thirst.",
+      "source_excerpt": "New ropes burn off like flax. Samson takes a fresh jawbone, strikes down enemies, then becomes dangerously thirsty and calls out for water.",
+      "nightmare_room_seed": "Conventional restraints fail. The wearer can turn ordinary objects into lethal tools, but the strength consumes the body and leaves them shaking and dehydrated.",
+      "escalation_thread": "Every failed restraint strengthens the anomaly's claim that the wearer cannot be bound. The body pays afterward: tremor, thirst, bleeding scalp, confusion.",
+      "suggested_actions": ["intercept", "clinic", "support_owen", "destroy"],
+      "generation_rules": [
+        "Make at least one force-forward plan necessary and plausible.",
+        "Treat the strength as tactically dangerous: doors, cuffs, rails, weapons, and cover become unreliable.",
+        "Include bodily cost after the burst of power."
+      ]
+    },
+    {
+      "id": "samson_delilah_locks_strength_leaves",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00362",
+      "source_circumstance": "Samson's strength is probed through bindings and hair. Delilah weaves the locks, then presses him to reveal the secret of his strength.",
+      "source_excerpt": "Samson repeatedly breaks bindings. He says the seven locks of his head may be woven; Delilah presses him until he tells where his strength lies.",
+      "nightmare_room_seed": "The wig can be trapped, pinned, woven, or clamped, but half-measures only teach the anomaly how to resist the next restraint.",
+      "escalation_thread": "A failed plan makes the wig smarter: it knots around clips, pulls against scalp adhesive, and uses the building's fixtures like loom pins.",
+      "suggested_actions": ["seal", "intercept", "destroy"],
+      "generation_rules": [
+        "Let failed branches escalate intelligently, not repeat the same beat.",
+        "Use hair behaving mechanically: weaving, pinning, binding, snagging in fixtures.",
+        "A character plan can fail and backfire on that character."
+      ]
+    },
+    {
+      "id": "samson_shaved_pillars_collapse",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00363",
+      "source_circumstance": "Samson's seven locks are shaved; his strength departs, he is blinded and imprisoned. His hair begins to grow again. Later he pulls down the pillars of the house.",
+      "source_excerpt": "The seven locks are shaved and strength leaves. Later the hair begins to grow again. Samson stands between the pillars and brings the house down.",
+      "nightmare_room_seed": "The wig's final hazard is structural. If the team merely cuts it loose, stored strength can discharge into support columns, walls, or the wearer.",
+      "escalation_thread": "The scene should move toward a real collapse risk: cracked columns, bowed beams, evacuation calls, and a choice between saving the wearer and stopping the fall.",
+      "suggested_actions": ["destroy", "repair", "seal", "clinic"],
+      "generation_rules": [
+        "Build toward a structural climax, not a static containment scene.",
+        "Give the player a path to closure: destroy/release the false vow, identify the sin, evacuate survivors, and prevent recurrence.",
+        "Avoid making the revelation a vague cosmic statement; it should be a concrete moral diagnosis."
+      ]
+    },
+    {
+      "id": "ranger_clear_room_noncombatants",
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_title": "SH 21-76 Ranger Handbook",
+      "source_chunk_id": "army_ranger_handbook_sh_21_76:clear_room_07_4_D9509",
+      "source_circumstance": "Enter-and-clear doctrine emphasizes leader control, securing corridors, sectors of fire, noncombatants possibly intermixed with hostile personnel, and minimizing collateral damage.",
+      "source_excerpt": "A clearing team secures corridors, enters by sectors, identifies noncombatants, announces clear, assesses the room, reports status, and consolidates.",
+      "nightmare_room_seed": "The squad must enter a modern site where civilians or staff are trapped near a strengthened wearer. The violence must be controlled and procedural.",
+      "escalation_thread": "Fast entry reaches the wig sooner but risks civilians and the wearer. Slow clearing protects people but lets the structure fail.",
+      "suggested_actions": ["intercept", "seal", "destroy", "recover"],
+      "generation_rules": [
+        "Give Brooks or Owen a concrete breach/clear/restrain plan.",
+        "Use sectors, corridor security, evacuation, and clear status as texture.",
+        "Do not write chaotic monster bashing; write trained personnel under an impossible contact."
+      ]
+    },
+    {
+      "id": "ranger_breach_structural_caution",
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_title": "SH 21-76 Ranger Handbook",
+      "source_chunk_id": "army_ranger_handbook_sh_21_76:demolitions_breach_safety",
+      "source_circumstance": "The handbook treats demolitions and breaching as controlled tasks involving charge placement, protective equipment, safe distances, barrier material, and structural consideration.",
+      "source_excerpt": "Breaching charges break barriers. Personnel must consider placement, material, minimum safe distance, protective equipment, and the condition of walls or floors.",
+      "nightmare_room_seed": "If force is used, it should be surgical: cut the wig, break the display frame, wedge a column, or breach an evacuation route rather than simply blow up the site.",
+      "escalation_thread": "A force plan can succeed but injure the wearer, crack supports, contaminate the evidence, or leave Brooks/Owen carrying stress from the contact.",
+      "suggested_actions": ["destroy", "repair", "intercept"],
+      "generation_rules": [
+        "Make force feel like procedure with consequences.",
+        "Use structural danger as the ticking clock.",
+        "Do not introduce sleek future tech; use grounded containment wraps, cutters, wedges, straps, shields, and breaching tools."
+      ]
+    },
+    {
+      "id": "stress_time_pressure_unclear_information",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+      "source_circumstance": "Emergency decision-making under stress involves unclear warnings, incomplete information, apparatus failure, time pressure, and narrowed attention to critical cues.",
+      "source_excerpt": "Emergency warnings can be unclear, equipment may fail, time pressure narrows attention, and teams must update one another while acting on incomplete information.",
+      "nightmare_room_seed": "The squad sees impossible strength before it understands the moral mechanism. Each officer proposes a plan from incomplete data and their own condition.",
+      "escalation_thread": "A failed roll should change a character's mental state or morale and materially worsen the room: broken restraint, injured civilian, unstable support, or a smarter wig.",
+      "suggested_actions": ["support_owen", "full_disclosure", "intercept", "clinic"],
+      "generation_rules": [
+        "Each major choice should be a character's plan.",
+        "If a plan fails, backfire on the proposing character when appropriate.",
+        "Keep success chances obfuscated in prose; do not show +morale or numeric rewards."
+      ]
+    }
+  ]
+}

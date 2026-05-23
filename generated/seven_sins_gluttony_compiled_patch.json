@@ -1,0 +1,1100 @@
+{
+  "title": "Enough Until Morning",
+  "design_goal": "A relief kitchen's hoarded surplus has crossed a symbolic threshold—food that was never distributed is rotting alive, and the rot is spreading to people still eating it.",
+  "events": [
+    {
+      "room_id": "room_enough_until_morning",
+      "event": {
+        "id": "root_enough_until_morning",
+        "type": "choice",
+        "speaker": "lt_mara_owen",
+        "line_1": "Owen: 'Log says forty-one served. Door count says one-oh-nine. Cold-store is warm and the door is moving. We have maybe twelve minutes.'",
+        "line_2": "Ross reports fourteen patients will not stop. Two EMTs have joined them. He requests an entry plan before crossing the canteen floor.",
+        "buttons": [
+          {
+            "label": "Vent the store outward",
+            "action": "intercept",
+            "preview": "Ross takes the forklift and drives the cold-store door outward into the loading bay, venting the..."
+          },
+          {
+            "label": "Isolate patients, pull log",
+            "action": "quarantine",
+            "preview": "Owen coordinates kitchen staff to clear all food from the canteen tables while she secures the..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Vent the store outward",
+            "action": "intercept",
+            "officer_id": "agent_caleb_ross",
+            "primary_skill": "breach under pressure",
+            "tactical_step": "suppress/fix the cold-store door threat by breaching it outward with the loading bay forklift before it fails inward; establish security on the discharge zone in the open bay",
+            "intent": "Ross takes the forklift and drives the cold-store door outward into the loading bay, venting the pressurized contents away from the canteen and the seated group",
+            "base_success": 0.65,
+            "yield": "Door threat neutralized; discharge contained in the open bay; squad has time to work the log and the patients without the door-failure clock",
+            "risk": "If Ross misjudges the angle, the discharge hits the canteen wall and aerosolizes; if he hesitates, the door fails on its own timeline",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Ross does not announce it. He walks to the forklift, checks the forks, and drives it straight at the cold-store door at low speed. The door goes outward with a sound like a held breath releasing. The discharge—dense, pale, warm—spreads across the loading bay floor and stops. The smell is overwhelming for about four seconds and then it is just cold air. Ross parks the forklift across the bay entrance and gets off. 'Secure,' he says. 'Work fast.'"
+                ],
+                "environment_state_changes": [
+                  "root_enough_until_morning.intercept.success"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "The door goes, but the angle is wrong. A portion of the discharge hits the canteen wall and runs down it in slow sheets. Ross gets the forklift across the bay entrance before more follows. Three of the seated patients turn their heads toward the wall. Iyad moves between them and it immediately. 'Do not let them touch that,' she says, and her voice is completely flat. The clock is shorter now."
+                ],
+                "environment_state_changes": [
+                  "root_enough_until_morning.intercept.partial"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The door fails before Ross reaches the forklift. The discharge enters the canteen at pressure. Ross is hit across the left arm and shoulder. He does not sit down—he backs against the wall and keeps his arm away from his face—but Iyad is already moving toward him, and the seated group has grown by two. Ross says, through his teeth, 'I'm not sitting. I'm not sitting.' He means it as information."
+                ],
+                "environment_state_changes": [
+                  "root_enough_until_morning.intercept.failure"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+2",
+                  "character.agent_caleb_ross.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Isolate patients, pull log",
+            "action": "quarantine",
+            "officer_id": "lt_mara_owen",
+            "primary_skill": "evidence custody under contact",
+            "tactical_step": "fix the seated group by removing all food sources from their reach; breach the director's office for the master inventory; secure the distribution log under chain of custody before Voss can access it",
+            "intent": "Owen coordinates kitchen staff to clear all food from the canteen tables while she secures the log and forces the director's office; isolating the patients from food sources slows the seated group's growth",
+            "base_success": 0.65,
+            "yield": "Patients stabilized without extraction; log secured; Voss's office opened; squad has the evidence needed for the closure condition",
+            "risk": "If kitchen staff panic or refuse, the food sources cannot be cleared fast enough; if Voss is in his office, he may destroy records before Owen reaches him",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Owen tells the two remaining kitchen volunteers exactly what to do and does not wait for agreement. They clear the tables in under three minutes—trays, bread baskets, everything—while Owen photographs the log and bags it. The director's office door is hollow-core; she opens it with a fire extinguisher on the second hit. Voss is inside, standing at the shredder. The machine is running. Owen puts her hand on the feed tray and says, 'Step back.' He does. The shredder basket has maybe forty pages in it. She bags those too."
+                ],
+                "environment_state_changes": [
+                  "root_enough_until_morning.quarantine.success"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "The tables are cleared but one volunteer freezes at the far end of the canteen and will not move. The patient nearest him reaches for the volunteer's jacket pocket—there is a wrapped granola bar in it. Owen gets there before contact, takes the bar, and walks it out the loading bay door. The volunteer sits down in an empty chair. He does not pick up any food. Owen watches him for ten seconds, decides he is not joining the group, and goes for the office. The shredder is already running when she gets there. She gets most of it."
+                ],
+                "environment_state_changes": [
+                  "root_enough_until_morning.quarantine.partial"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Voss is not in his office. He has the master inventory binder with him and he is in the loading bay, moving toward his car. Brooks sees him from the roof and calls it down. Owen runs. She gets the binder but Voss has already torn out the summary pages—the ones with the cumulative totals. What remains is enough to show the pattern but not enough to prove the number. Owen stands in the parking lot holding a binder with ragged edges and does not say anything for a moment. Then: 'Brooks, I need you to tell me what you saw from up there. All of it. Start from when you arrived.'"
+                ],
+                "environment_state_changes": [
+                  "root_enough_until_morning.quarantine.failure"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+2",
+                  "character.lt_mara_owen.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Ross does not announce it. He walks to the forklift, checks the forks, and drives it straight at the cold-store door at low speed. The door goes outward with a sound like a held breath releasing. The discharge—dense, pale, warm—spreads across the loading bay floor and stops. The smell is overwhelming for about four seconds and then it is just cold air. Ross parks the forklift across the bay entrance and gets off. 'Secure,' he says. 'Work fast.'"
+            ],
+            "environment_state_changes": [
+              "root_enough_until_morning.intercept.success"
+            ],
+            "resource_changes": {
+              "character.agent_caleb_ross.morale": "+1"
+            }
+          },
+          "quarantine": {
+            "lines": [
+              "Owen tells the two remaining kitchen volunteers exactly what to do and does not wait for agreement. They clear the tables in under three minutes—trays, bread baskets, everything—while Owen photographs the log and bags it. The director's office door is hollow-core; she opens it with a fire extinguisher on the second hit. Voss is inside, standing at the shredder. The machine is running. Owen puts her hand on the feed tray and says, 'Step back.' He does. The shredder basket has maybe forty pages in it. She bags those too."
+            ],
+            "environment_state_changes": [
+              "root_enough_until_morning.quarantine.success"
+            ],
+            "resource_changes": {
+              "character.lt_mara_owen.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_enough_until_morning",
+            "queued_line": "The cold-store door gives a low, sustained creak—like a hull under pressure—and the seated group lifts their food in unison.",
+            "trigger_key": "resolution_enough_until_morning",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          },
+          "quarantine": {
+            "event_id": "resolution_enough_until_morning",
+            "queued_line": "The cold-store door gives a low, sustained creak—like a hull under pressure—and the seated group lifts their food in unison.",
+            "trigger_key": "resolution_enough_until_morning",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:00204",
+            "source_moment": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+            "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+            "room_application": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+            "structural_transfer": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+            "required_visible_details": [
+              "Fourteen people chewing without swallowing, food not decreasing",
+              "Dead birds in the loading bay with no entry point"
+            ],
+            "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:00097",
+            "source_moment": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+            "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+            "room_application": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+            "structural_transfer": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+            "required_visible_details": [
+              "Correction fluid visible on earlier log pages—the director altered the dates",
+              "Owen's evidence photography establishes the chain before anything is touched"
+            ],
+            "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:00203",
+            "source_moment": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+            "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+            "room_application": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+            "structural_transfer": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+            "required_visible_details": [
+              "Brooks reports vehicle count every three minutes—external witness structure",
+              "Torah must be present at the redistribution moment for full closure"
+            ],
+            "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+            "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+            "source_moment": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+            "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+            "room_application": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+            "structural_transfer": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+            "required_visible_details": [
+              "Owen photographs the log and calls out the gap without being prompted",
+              "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+            ],
+            "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+          },
+          {
+            "source_id": "lovecraft_colour_out_of_space_pg68236",
+            "source_title": "Lovecraft Colour Out Of Space Pg68236",
+            "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+            "source_moment": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+            "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+            "room_application": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+            "structural_transfer": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+            "required_visible_details": [
+              "Cold-store door warm to the back of the hand from fifteen meters",
+              "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+            ],
+            "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00204",
+            "anchor_role": "premise",
+            "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+            "playable_transform": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+            "required_visible_details": [
+              "Fourteen people chewing without swallowing, food not decreasing",
+              "Dead birds in the loading bay with no entry point"
+            ],
+            "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00097",
+            "anchor_role": "closure",
+            "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+            "playable_transform": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+            "required_visible_details": [
+              "Correction fluid visible on earlier log pages—the director altered the dates",
+              "Owen's evidence photography establishes the chain before anything is touched"
+            ],
+            "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00203",
+            "anchor_role": "procedure",
+            "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+            "playable_transform": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+            "required_visible_details": [
+              "Brooks reports vehicle count every three minutes—external witness structure",
+              "Torah must be present at the redistribution moment for full closure"
+            ],
+            "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+            "anchor_role": "procedure",
+            "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+            "playable_transform": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+            "required_visible_details": [
+              "Owen photographs the log and calls out the gap without being prompted",
+              "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+            ],
+            "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+          },
+          {
+            "source_id": "lovecraft_colour_out_of_space_pg68236",
+            "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+            "anchor_role": "escalation",
+            "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+            "playable_transform": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+            "required_visible_details": [
+              "Cold-store door warm to the back of the hand from fifteen meters",
+              "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+            ],
+            "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_enough_until_morning",
+      "type": "resolution",
+      "speaker": "dr_samira_iyad",
+      "line_1": "Iyad reports the clinic canteen stable but unresolved. The food remains in their hands, and extraction alone will not close it.",
+      "line_2": "Torah reports the queue outside still waiting. The sign-in sheet lists one hundred and nine names, and the surplus is warm.",
+      "buttons": [
+        {
+          "label": "Distribute to the queue",
+          "action": "full_disclosure",
+          "preview": "Torah takes the corrected log outside, addresses the queue, and organizes the redistribution of the surplus—every..."
+        },
+        {
+          "label": "Destroy the surplus, log it",
+          "action": "destroy",
+          "preview": "If the queue is gone or redistribution is impossible, Owen organizes the witnessed destruction of the..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Distribute to the queue",
+          "action": "full_disclosure",
+          "officer_id": "torah",
+          "primary_skill": "symbolic accountability, witnessed redistribution",
+          "tactical_step": "symbolic close—Torah leads the redistribution of the bay discharge and remaining cold-store contents to the waiting queue under witnessed record; Owen corrects and co-signs the distribution log",
+          "intent": "Torah takes the corrected log outside, addresses the queue, and organizes the redistribution of the surplus—every unit logged against a name, witnessed by Owen and Brooks, until the store is empty",
+          "base_success": 0.7,
+          "yield": "Full closure: seated patients recover as the surplus moves outward; log corrected and signed; anomaly resolves completely; no remainder in the building",
+          "risk": "If the queue is gone, or if the redistribution is incomplete, the closure is partial; if Torah is not present at the moment of distribution, the symbolic weight does not transfer",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Torah carries the corrected log to the loading bay door and opens it. The queue outside is still there—sixty, maybe seventy people, some of them sitting on the curb. Torah does not make a speech. Owen reads names from the sign-in sheet and people come forward and receive what was logged for them. It takes forty minutes. The bay floor is clean by the time the last name is called. Inside, Iyad reports that the seated group has stopped chewing. They are sitting with their hands in their laps, looking at the tables. One of them asks, quietly, if there is any water. There is."
+              ],
+              "environment_state_changes": [
+                "resolution_enough_until_morning.full_disclosure.success"
+              ],
+              "resource_changes": {
+                "character.torah.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "The redistribution runs until the queue thins, but not everyone on the sign-in sheet is still outside—maybe forty names go unclaimed. Owen logs them as undelivered and notes the time. The seated group reduces from fourteen to nine. The remaining nine are still chewing when the bay is empty. Iyad says, 'It is not enough. The log still has a gap.' Owen looks at the unclaimed names. 'We can deliver. If we know where they are.' Torah says, 'Find out.' It is not a full close. It is a direction."
+              ],
+              "environment_state_changes": [
+                "resolution_enough_until_morning.full_disclosure.partial"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "The queue has dispersed—Brooks did not hold them, and without information they left. The bay is full of surplus with nowhere to go. Torah stands in the loading bay with the corrected log and no recipients. Owen says, 'We can call the secondary distribution sites. It will take hours.' The seated group inside is now sixteen. Iyad's voice on the radio is careful and even: 'I need a decision. The longer this sits, the more people sit with it.'"
+              ],
+              "environment_state_changes": [
+                "resolution_enough_until_morning.full_disclosure.failure"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+2",
+                "character.torah.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Destroy the surplus, log it",
+          "action": "destroy",
+          "officer_id": "lt_mara_owen",
+          "primary_skill": "evidence destruction under witness, accountability record",
+          "tactical_step": "symbolic close via destruction—Owen directs the controlled destruction of the surplus under witnessed record as an alternative closure if redistribution fails; Torah co-signs the destruction log",
+          "intent": "If the queue is gone or redistribution is impossible, Owen organizes the witnessed destruction of the surplus—documented, signed, and logged against the original inventory—as the secondary closure condition",
+          "base_success": 0.55,
+          "yield": "Partial closure: anomaly resolves but with a remainder; seated patients recover more slowly; the log is corrected but the gap is noted as unresolved",
+          "risk": "Destruction without full witness chain or without Torah's co-signature does not satisfy the symbolic condition; the remainder persists and may reactivate at a secondary site",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Owen runs the destruction by the book. Every crate logged, every unit counted, the forklift used to move it to the incinerator bay two blocks over under Institute transport authority. Torah co-signs each page. It takes three hours. The seated group recovers in stages—first they stop lifting the food, then they put it down, then they look around as if they have just woken up in an unfamiliar room. One woman says she is very tired. Iyad tells her that is normal and means it. The log has a note on the final page in Owen's handwriting: 'Surplus destroyed in lieu of distribution. Recipients unlocated. Case open for follow-up delivery.' She underlines the last four words."
+              ],
+              "environment_state_changes": [
+                "resolution_enough_until_morning.destroy.success"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "The destruction is witnessed but Torah is called away before the final pages are signed—Brooks needs a command decision on the perimeter. Owen signs alone. The seated group recovers to eleven. Three remain at the tables, hands in laps, not eating, not responding. Iyad sits with them. She does not try to move them. She says, 'I think they need the delivery to happen. The record is not enough for them.' Owen looks at the three remaining patients and then at the unsigned pages. 'I'll find Torah.'"
+              ],
+              "environment_state_changes": [
+                "resolution_enough_until_morning.destroy.partial"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "The destruction log is incomplete—Voss took the master inventory and the remaining pages do not account for the full surplus. Owen cannot certify what was destroyed because she cannot certify what was there. She submits the partial record to Institute command with a cover note. The seated group recovers to eight. Six remain. Iyad does not leave the canteen. When Torah checks on her an hour later, she is sitting at one of the tables—not eating, not chewing, just sitting—and she looks up and says, 'I am not one of them. I just did not want them to be alone.' Torah believes her. Mostly."
+              ],
+              "environment_state_changes": [
+                "resolution_enough_until_morning.destroy.failure"
+              ],
+              "resource_changes": {
+                "character.lt_mara_owen.stress": "+2",
+                "character.lt_mara_owen.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "full_disclosure": {
+          "lines": [
+            "Torah carries the corrected log to the loading bay door and opens it. The queue outside is still there—sixty, maybe seventy people, some of them sitting on the curb. Torah does not make a speech. Owen reads names from the sign-in sheet and people come forward and receive what was logged for them. It takes forty minutes. The bay floor is clean by the time the last name is called. Inside, Iyad reports that the seated group has stopped chewing. They are sitting with their hands in their laps, looking at the tables. One of them asks, quietly, if there is any water. There is."
+          ],
+          "environment_state_changes": [
+            "resolution_enough_until_morning.full_disclosure.success"
+          ],
+          "resource_changes": {
+            "character.torah.morale": "+1"
+          }
+        },
+        "destroy": {
+          "lines": [
+            "Owen runs the destruction by the book. Every crate logged, every unit counted, the forklift used to move it to the incinerator bay two blocks over under Institute transport authority. Torah co-signs each page. It takes three hours. The seated group recovers in stages—first they stop lifting the food, then they put it down, then they look around as if they have just woken up in an unfamiliar room. One woman says she is very tired. Iyad tells her that is normal and means it. The log has a note on the final page in Owen's handwriting: 'Surplus destroyed in lieu of distribution. Recipients unlocated. Case open for follow-up delivery.' She underlines the last four words."
+          ],
+          "environment_state_changes": [
+            "resolution_enough_until_morning.destroy.success"
+          ],
+          "resource_changes": {
+            "character.lt_mara_owen.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "full_disclosure": {
+          "event_id": "cooldown_enough_until_morning",
+          "queued_line": "Brooks radios down: 'Queue is still outside. They have been waiting since noon. Someone should tell them something.'",
+          "trigger_key": "cooldown_enough_until_morning",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        },
+        "destroy": {
+          "event_id": "cooldown_enough_until_morning",
+          "queued_line": "Brooks radios down: 'Queue is still outside. They have been waiting since noon. Someone should tell them something.'",
+          "trigger_key": "cooldown_enough_until_morning",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00204",
+          "source_moment": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "room_application": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "structural_transfer": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "required_visible_details": [
+            "Fourteen people chewing without swallowing, food not decreasing",
+            "Dead birds in the loading bay with no entry point"
+          ],
+          "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00097",
+          "source_moment": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "room_application": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "structural_transfer": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "required_visible_details": [
+            "Correction fluid visible on earlier log pages—the director altered the dates",
+            "Owen's evidence photography establishes the chain before anything is touched"
+          ],
+          "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00203",
+          "source_moment": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "room_application": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "structural_transfer": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "required_visible_details": [
+            "Brooks reports vehicle count every three minutes—external witness structure",
+            "Torah must be present at the redistribution moment for full closure"
+          ],
+          "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "source_moment": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "room_application": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "structural_transfer": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "required_visible_details": [
+            "Owen photographs the log and calls out the gap without being prompted",
+            "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+          ],
+          "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_title": "Lovecraft Colour Out Of Space Pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+          "source_moment": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "room_application": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "structural_transfer": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "required_visible_details": [
+            "Cold-store door warm to the back of the hand from fifteen meters",
+            "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+          ],
+          "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00204",
+          "anchor_role": "premise",
+          "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "playable_transform": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "required_visible_details": [
+            "Fourteen people chewing without swallowing, food not decreasing",
+            "Dead birds in the loading bay with no entry point"
+          ],
+          "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00097",
+          "anchor_role": "closure",
+          "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "playable_transform": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "required_visible_details": [
+            "Correction fluid visible on earlier log pages—the director altered the dates",
+            "Owen's evidence photography establishes the chain before anything is touched"
+          ],
+          "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00203",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "playable_transform": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "required_visible_details": [
+            "Brooks reports vehicle count every three minutes—external witness structure",
+            "Torah must be present at the redistribution moment for full closure"
+          ],
+          "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "playable_transform": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "required_visible_details": [
+            "Owen photographs the log and calls out the gap without being prompted",
+            "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+          ],
+          "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "playable_transform": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "required_visible_details": [
+            "Cold-store door warm to the back of the hand from fifteen meters",
+            "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+          ],
+          "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_enough_until_morning",
+      "type": "interlude",
+      "speaker": "dr_samira_iyad",
+      "line_1": "Iyad is in the loading bay, sitting on a crate that has been emptied and turned upside down. She has her gloves off. She is looking at her hands.",
+      "line_2": "Ross is leaning against the forklift. He has not mentioned his arm again. Owen is on the phone, reading names from the sign-in sheet to someone at a secondary site.",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Iyad says, without looking up: 'The ones who recovered—they all said the same thing. That they were not hungry. That they had never been hungry. That they just could not stop.'",
+            "Ross says: 'That tracks.'",
+            "Owen ends her call. 'Fourteen names located. Delivery confirmed for tomorrow morning.' She pauses. 'Six still unaccounted for.' She writes something in the log margin. 'I will find them.'",
+            "Iyad finally looks up. 'The food in their hands never went down. Not one gram. I weighed a piece before and after.' She puts her gloves in her kit. 'I do not know what to do with that.'",
+            "Ross: 'Write it up. That is what you do with it.'",
+            "Iyad: 'Yes.' She does not sound convinced. She sounds like someone who will write it up and then think about it for a long time afterward."
+          ],
+          "environment_state_changes": [
+            "character.dr_samira_iyad.fixated",
+            "character.agent_caleb_ross.strained",
+            "character.lt_mara_owen.institute_scrutiny",
+            "squad.morale"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "debrief",
+      "state_reads": [
+        "character.dr_samira_iyad.stress",
+        "character.agent_caleb_ross.injury",
+        "character.lt_mara_owen.evidence_chain",
+        "squad.morale"
+      ],
+      "state_writes": [
+        "character.dr_samira_iyad.fixated",
+        "character.agent_caleb_ross.strained",
+        "character.lt_mara_owen.institute_scrutiny",
+        "squad.morale"
+      ],
+      "featured_characters": [
+        "dr_samira_iyad",
+        "agent_caleb_ross",
+        "lt_mara_owen"
+      ],
+      "visible_text": [
+        "Iyad says, without looking up: 'The ones who recovered—they all said the same thing. That they were not hungry. That they had never been hungry. That they just could not stop.'",
+        "Ross says: 'That tracks.'",
+        "Owen ends her call. 'Fourteen names located. Delivery confirmed for tomorrow morning.' She pauses. 'Six still unaccounted for.' She writes something in the log margin. 'I will find them.'",
+        "Iyad finally looks up. 'The food in their hands never went down. Not one gram. I weighed a piece before and after.' She puts her gloves in her kit. 'I do not know what to do with that.'",
+        "Ross: 'Write it up. That is what you do with it.'",
+        "Iyad: 'Yes.' She does not sound convinced. She sounds like someone who will write it up and then think about it for a long time afterward."
+      ],
+      "choices": [
+        "'The six unlocated names—we follow up ourselves.' (Owen's thread stays open; institute_scrutiny increases)",
+        "'Ross needs the clinic before we debrief.' (Ross's injury is logged; Iyad refocuses on triage rather than fixation)",
+        "'Let it sit until morning.' (Squad rests; Iyad's fixation deepens overnight; Owen's follow-up is delayed)"
+      ],
+      "outcomes": [
+        "If Owen's follow-up is authorized: the six names are located within forty-eight hours; the log is closed; the case is marked resolved with remainder noted. Owen's evidence chain is intact.",
+        "If Ross goes to clinic: Iyad has a patient to focus on and does not sit with the question of the food weight until she is ready. Her stress does not compound tonight.",
+        "If the squad delays: Iyad is found in the canteen at 0300 by Brooks, who was doing a perimeter check. She is sitting at the same table. She has not eaten anything. She is fine. She says she is fine."
+      ],
+      "followup_hooks": [
+        "The six unlocated recipients from the sign-in sheet—if Owen does not find them, they appear in a later mission as a secondary anomaly site",
+        "Voss is not in custody; his location is unknown; the torn inventory pages are a future evidence hook",
+        "Ross's arm—the discharge contact was brief, but Iyad noted it; if his swallow reflex shows any irregularity in the next seventy-two hours, she has a protocol for it and she will use it",
+        "The corrected distribution log, if fully signed and filed, becomes an Institute accountability record that reduces scrutiny pressure in a future base_fallout event"
+      ],
+      "corpus_anchors": [
+        "world_english_bible:00204",
+        "world_english_bible:00097",
+        "world_english_bible:00203"
+      ],
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00204",
+          "source_moment": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "room_application": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "structural_transfer": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "required_visible_details": [
+            "Fourteen people chewing without swallowing, food not decreasing",
+            "Dead birds in the loading bay with no entry point"
+          ],
+          "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00097",
+          "source_moment": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "room_application": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "structural_transfer": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "required_visible_details": [
+            "Correction fluid visible on earlier log pages—the director altered the dates",
+            "Owen's evidence photography establishes the chain before anything is touched"
+          ],
+          "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00203",
+          "source_moment": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "room_application": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "structural_transfer": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "required_visible_details": [
+            "Brooks reports vehicle count every three minutes—external witness structure",
+            "Torah must be present at the redistribution moment for full closure"
+          ],
+          "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "source_moment": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "room_application": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "structural_transfer": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "required_visible_details": [
+            "Owen photographs the log and calls out the gap without being prompted",
+            "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+          ],
+          "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_title": "Lovecraft Colour Out Of Space Pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+          "source_moment": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "room_application": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "structural_transfer": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "required_visible_details": [
+            "Cold-store door warm to the back of the hand from fifteen meters",
+            "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+          ],
+          "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00204",
+          "anchor_role": "premise",
+          "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "playable_transform": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "required_visible_details": [
+            "Fourteen people chewing without swallowing, food not decreasing",
+            "Dead birds in the loading bay with no entry point"
+          ],
+          "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00097",
+          "anchor_role": "closure",
+          "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "playable_transform": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "required_visible_details": [
+            "Correction fluid visible on earlier log pages—the director altered the dates",
+            "Owen's evidence photography establishes the chain before anything is touched"
+          ],
+          "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00203",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "playable_transform": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "required_visible_details": [
+            "Brooks reports vehicle count every three minutes—external witness structure",
+            "Torah must be present at the redistribution moment for full closure"
+          ],
+          "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "playable_transform": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "required_visible_details": [
+            "Owen photographs the log and calls out the gap without being prompted",
+            "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+          ],
+          "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "playable_transform": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "required_visible_details": [
+            "Cold-store door warm to the back of the hand from fifteen meters",
+            "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+          ],
+          "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "room_enough_until_morning",
+      "name": "Morrow Street Relief Kitchen",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A city relief kitchen. Cold-store door under pressure. Fourteen people eating without stopping.",
+      "first_visit_description": "Torah leads Ross and Owen through the loading bay. Three dead birds—small, gray, no visible entry wound—are arranged along the bay threshold as if they landed and did not rise. The smell is warm protein, not rot. Dr. Iyad is already inside via the clinic entrance, triaging the seated patients. Brooks is on the roof with a radio line to Institute command. The kitchen director, Harlan Voss, is not present; his office is locked. The distribution log on the service counter shows forty-one recipients for today's lunch run. The sign-in sheet at the door shows one hundred and nine.",
+      "return_description": "The loading bay smells different now—closer to nothing. The birds are gone. Someone has propped the cold-store door open with a fire extinguisher. The canteen chairs are still pushed back at odd angles.",
+      "detection_report": "Institute field sensor flagged anomalous thermal signature in the cold-store at 14:22—contents registering body temperature despite refrigeration. Clinic staff called emergency services at 14:31 when patients could not be redirected from eating. First responders withdrew at 14:44 after two EMTs began exhibiting the same seated behavior.",
+      "current_situation": "The cold-store door is visibly bowing. Fourteen people sit at canteen tables in a ring, lifting food to their mouths in slow rotation. The food in their hands—bread, rice, packaged meals—does not decrease. Dr. Iyad is crouched beside the nearest patient, gloved, not touching the food. She looks up when Torah enters and says nothing for two full seconds.",
+      "action_profile": {
+        "physical_threat": "The cold-store door can fail at any time, releasing pressurized contents—dense, warm, semi-liquid surplus—into the canteen at force sufficient to knock personnel down and coat exposed skin; contact with the discharge triggers swallow-lock within ninety seconds. The seated patients are not violent but will physically resist removal, and their grip strength is abnormal.",
+        "contact_state": "Squad is inside the building with the anomaly already active. The cold-store is fifteen meters from their position. The seated group occupies the direct path between the squad and the store.",
+        "field_manual_drill": "React to contact: establish security perimeter around the cold-store door; suppress/fix the seated group by isolating them from additional food sources; breach the director's office for the distribution log; evacuate non-affected kitchen staff through the loading bay.",
+        "tactical_objective": "Prevent cold-store door failure, extract or isolate the fourteen seated patients, and secure the distribution log before Voss or anyone else can remove it.",
+        "symbolic_close": "The hoarded surplus must leave the building outward—distributed to the queue still waiting outside or destroyed under witnessed record. The log must be corrected. Until that happens, new victims continue to join the seated group regardless of how many are extracted.",
+        "violent_resolution": "The cold-store door and its frame can be breached outward with the loading bay forklift, venting the pressurized contents into the open bay rather than the canteen—this stops the door-failure threat and buys time, but the discharge in the open bay is still hazardous and must be contained or distributed before it re-pressurizes in the drain system.",
+        "not_monster_of_week": "There is no creature. The threat is provision itself—food that was meant to move and was stopped. The violence is the surplus asserting its original purpose by force. The squad is not fighting a monster; they are inside a judgment that is still in progress."
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "torah",
+          "name": "Torah",
+          "mission_role": "command lead",
+          "physical_position": "Loading bay threshold at mission start",
+          "assigned_reason": "Institute command authority; symbolic asset required for closure condition",
+          "visible_state": "Steady. Counting the dead birds before stepping over them."
+        },
+        {
+          "officer_id": "agent_caleb_ross",
+          "name": "Caleb Ross",
+          "mission_role": "tactical point",
+          "physical_position": "Canteen entrance, covering the seated group",
+          "assigned_reason": "Physical security and breach capability",
+          "visible_state": "Hand on the door frame. Not entering until he has a read on the room."
+        },
+        {
+          "officer_id": "lt_mara_owen",
+          "name": "Lt. Mara Owen",
+          "mission_role": "field command, evidence custody",
+          "physical_position": "Service counter, examining the distribution log",
+          "assigned_reason": "Incident command structure; evidence chain of custody",
+          "visible_state": "Photographing the log page by page. Jaw set. Not speaking yet."
+        },
+        {
+          "officer_id": "dr_samira_iyad",
+          "name": "Dr. Samira Iyad",
+          "mission_role": "medical triage, anomaly assessment",
+          "physical_position": "Canteen floor beside Patient 1",
+          "assigned_reason": "Clinical assessment of swallow-lock presentation; prior anomalous ingestion casework",
+          "visible_state": "Gloved, crouched, watching the patient's throat. Her kit is open but nothing is drawn."
+        },
+        {
+          "officer_id": "brooks",
+          "name": "Brooks",
+          "mission_role": "remote coordination, Institute liaison",
+          "physical_position": "Roof, radio line to command",
+          "assigned_reason": "Keeps the perimeter clear and manages external pressure so the squad can work inside",
+          "visible_state": "Voice only. Calm. Reporting vehicle count outside every three minutes."
+        }
+      ],
+      "root_sin": "Systematic hoarding of donated food relief—diverting surplus beyond daily provision into private storage while registered recipients went without, treating communal provision as personal inventory.",
+      "modern_incident_logic": "The kitchen director falsified recipient counts over eleven weeks, accumulating a cold-store surplus that was never meant to sit. The Institute's symbolic threshold model predicts that withheld provision under a distribution covenant—food donated specifically for redistribution—accumulates symbolic pressure proportional to the gap between what was given and what was passed on. At critical mass, the surplus stops being inert. The kitchen is a modern distribution covenant site; the hoarding is a modern craving-beyond-portion. The plague follows the same logic it always did.",
+      "closure_test": "Confirm the gap between the sign-in sheet and the distribution log; locate and open the cold-store; redistribute or destroy the surplus under witnessed record; correct the log under Owen's custody. Swallow-lock in patients resolves when the surplus is no longer contained.",
+      "religious_pattern": "Numbers 11 quail plague: craving beyond provision, gathering beyond the day's portion, judgment arriving before the food is consumed. Exodus 16 manna rule: what is kept beyond the morning becomes foul. The two sources combine—hoarding is the sin, the food itself becomes the instrument of judgment.",
+      "anomaly_rule": "The surplus is not spoiled; it is activated. It exerts pressure proportional to how long it has been withheld. Contact with discharged surplus transfers the craving-lock. The lock resolves when the surplus moves outward. Destruction counts as distribution if witnessed and recorded.",
+      "forbidden_flat_read": "Do not literalize as food poisoning, bacterial contamination, or a supernatural entity living in the food. The food is not possessed. It is provision that has been denied its purpose and is asserting it.",
+      "officer_reports": [
+        "Owen: 'Log shows forty-one served. Door count says one-oh-nine. That gap is eleven weeks deep—I can see the correction fluid on the earlier pages.'",
+        "Iyad: 'They are chewing. Continuously. The food in their hands is not going down and it is not going away. I have no clinical category for this.'",
+        "Brooks via radio: 'Voss's car is in the lot. He did not go home. He is somewhere in the building.'",
+        "Ross: 'Cold-store door is warm to the back of the hand from here. Whatever is in there is not cold.'"
+      ],
+      "procedure_hooks": [
+        "Evidence chain of custody: Owen photographs and bags the distribution log before any intervention",
+        "Breach protocol: forklift in loading bay can be used to vent the cold-store outward",
+        "Triage isolation: seated patients must be separated from additional food sources before extraction",
+        "Perimeter: Brooks manages external responders and press; squad has a closing window before the scene goes public",
+        "Witness requirement: redistribution or destruction of surplus must be logged and signed to satisfy closure condition"
+      ],
+      "character_state_stakes": {
+        "agent_caleb_ross": "If he enters the canteen without a clear plan and a patient grips him, he risks swallow-lock contact; failure raises his injury and contamination state",
+        "lt_mara_owen": "If the log is removed or destroyed before she secures it, her evidence chain fails and Institute scrutiny increases; success anchors her as the accountability officer for this case",
+        "dr_samira_iyad": "Extended proximity to the seated group without resolution degrades her clinical confidence; if she attempts a medical intervention that fails visibly, her stress state rises and she becomes fixated on the patients rather than the store",
+        "torah": "Symbolic asset; if Torah is present at the redistribution moment, closure probability increases; if Torah delays, the cold-store door fails on a timer"
+      },
+      "interlude_vectors": [
+        "Owen keeps the corrected log. She will reference it in a future evidence review if the director is ever located.",
+        "Iyad's patient notes from the seated group become an anomalous ingestion case file—a future mission hook if the swallow-lock reappears elsewhere.",
+        "Ross does not talk about the grip strength. He mentions it once in the debrief and then does not mention it again."
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "Systematic hoarding of donated food relief—diverting surplus beyond daily provision into private storage while registered recipients went without, treating communal provision as personal inventory.",
+        "modern_incident_logic": "The kitchen director falsified recipient counts over eleven weeks, accumulating a cold-store surplus that was never meant to sit. The Institute's symbolic threshold model predicts that withheld provision under a distribution covenant—food donated specifically for redistribution—accumulates symbolic pressure proportional to the gap between what was given and what was passed on. At critical mass, the surplus stops being inert. The kitchen is a modern distribution covenant site; the hoarding is a modern craving-beyond-portion. The plague follows the same logic it always did.",
+        "closure_test": "Confirm the gap between the sign-in sheet and the distribution log; locate and open the cold-store; redistribute or destroy the surplus under witnessed record; correct the log under Owen's custody. Swallow-lock in patients resolves when the surplus is no longer contained."
+      },
+      "religious_subtext": {
+        "source_pattern": "Numbers 11 quail plague: craving beyond provision, gathering beyond the day's portion, judgment arriving before the food is consumed. Exodus 16 manna rule: what is kept beyond the morning becomes foul. The two sources combine—hoarding is the sin, the food itself becomes the instrument of judgment.",
+        "transformed_rule": "The surplus is not spoiled; it is activated. It exerts pressure proportional to how long it has been withheld. Contact with discharged surplus transfers the craving-lock. The lock resolves when the surplus moves outward. Destruction counts as distribution if witnessed and recorded.",
+        "forbidden_flat_read": "Do not literalize as food poisoning, bacterial contamination, or a supernatural entity living in the food. The food is not possessed. It is provision that has been denied its purpose and is asserting it."
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Owen keeps the corrected log. She will reference it in a future evidence review if the director is ever located.",
+        "Iyad's patient notes from the seated group become an anomalous ingestion case file—a future mission hook if the swallow-lock reappears elsewhere.",
+        "Ross does not talk about the grip strength. He mentions it once in the debrief and then does not mention it again."
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "room_enough_until_morning",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00204",
+          "source_moment": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "room_application": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "structural_transfer": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "required_visible_details": [
+            "Fourteen people chewing without swallowing, food not decreasing",
+            "Dead birds in the loading bay with no entry point"
+          ],
+          "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00097",
+          "source_moment": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "room_application": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "structural_transfer": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "required_visible_details": [
+            "Correction fluid visible on earlier log pages—the director altered the dates",
+            "Owen's evidence photography establishes the chain before anything is touched"
+          ],
+          "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00203",
+          "source_moment": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "room_application": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "structural_transfer": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "required_visible_details": [
+            "Brooks reports vehicle count every three minutes—external witness structure",
+            "Torah must be present at the redistribution moment for full closure"
+          ],
+          "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "source_moment": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "room_application": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "structural_transfer": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "required_visible_details": [
+            "Owen photographs the log and calls out the gap without being prompted",
+            "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+          ],
+          "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_title": "Lovecraft Colour Out Of Space Pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+          "source_moment": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "room_application": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "structural_transfer": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "required_visible_details": [
+            "Cold-store door warm to the back of the hand from fifteen meters",
+            "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+          ],
+          "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00204",
+          "anchor_role": "premise",
+          "source_fingerprint": "People gather quail beyond portion; plague strikes before they can swallow; the craving itself becomes the judgment",
+          "playable_transform": "Hoarded surplus activates as plague; victims cannot complete the act of eating; the food does not diminish in their hands",
+          "required_visible_details": [
+            "Fourteen people chewing without swallowing, food not decreasing",
+            "Dead birds in the loading bay with no entry point"
+          ],
+          "followup_payoff": "Closure requires the surplus to move outward—the same logic as the quail being spread to cure and then becoming the source of death"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00097",
+          "anchor_role": "closure",
+          "source_fingerprint": "Manna kept beyond the morning becomes foul; what is laid up against the rule of provision corrupts",
+          "playable_transform": "The distribution log's falsified dates mark exactly when the surplus crossed the threshold; the correction of the log is the procedural act that mirrors the manna rule",
+          "required_visible_details": [
+            "Correction fluid visible on earlier log pages—the director altered the dates",
+            "Owen's evidence photography establishes the chain before anything is touched"
+          ],
+          "followup_payoff": "Correcting and signing the log under witness is required for symbolic closure; destruction or redistribution alone is insufficient"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00203",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Moses is told to gather seventy elders to share the burden of provision—distribution requires witnesses and shared accountability",
+          "playable_transform": "Closure requires witnessed redistribution; Torah's presence as symbolic asset increases closure probability; Brooks on the roof maintains the external witness chain",
+          "required_visible_details": [
+            "Brooks reports vehicle count every three minutes—external witness structure",
+            "Torah must be present at the redistribution moment for full closure"
+          ],
+          "followup_payoff": "If Torah is absent at closure, the remainder is larger—some patients do not recover fully"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Effective team communication under time pressure requires anticipatory updating and unrequested information sharing",
+          "playable_transform": "Owen and Iyad must share findings without waiting to be asked; the squad's communication pattern under cold-store timer pressure determines whether they coordinate or fragment",
+          "required_visible_details": [
+            "Owen photographs the log and calls out the gap without being prompted",
+            "Iyad reports the food-not-diminishing observation immediately, before she has an explanation"
+          ],
+          "followup_payoff": "If the squad fragments—each officer waiting for Torah's direction—the cold-store door fails before they can vent it"
+        },
+        {
+          "source_id": "lovecraft_colour_out_of_space_pg68236",
+          "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00016",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Something in a contained space is sucking the life out of everything; it burns cold and wet; witnesses describe it as smoke or color before they can name it",
+          "playable_transform": "The cold-store contents are warm, not cold; the smell is described as meat that is still alive; the discharge is dense and semi-liquid and coats skin; the effect is not visible until it is already inside you",
+          "required_visible_details": [
+            "Cold-store door warm to the back of the hand from fifteen meters",
+            "Discharge described by the two withdrawn EMTs as 'it went in before I knew it was there'"
+          ],
+          "followup_payoff": "The Lovecraft shape provides the escalation texture—ordinary containment fails because the threat does not behave like matter; the symbolic rule is the only reliable frame"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "room_enough_until_morning"
+    },
+    {
+      "pool": "action_horror",
+      "room_id": "room_enough_until_morning"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "room_enough_until_morning"
+    },
+    {
+      "pool": "straight_noncombat",
+      "room_id": "room_enough_until_morning"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The quail plague's key detail—judgment arrives before the food is swallowed—is the mechanical heart of the swallow-lock anomaly; it is not a metaphor, it is the rule",
+    "The manna rule (kept beyond morning becomes foul) provides the closure logic: the log correction is the procedural equivalent of not keeping it past the day's portion",
+    "The Lovecraft texture (warm, coats skin, inside you before you know) provides escalation feel without a creature",
+    "The CDC stress-communication source provides the squad coordination pressure: Owen and Iyad must share findings without prompting or the clock wins",
+    "Voss's absence is load-bearing: the sin is not present to confess, so the closure must be structural and witnessed rather than personal and absolved"
+  ],
+  "self_critique": [
+    "The partial closure path (six unlocated recipients) risks feeling like an arbitrary remainder rather than a meaningful one—the follow-up hook must be made concrete in the next mission or it reads as an unresolved loose end rather than a deliberate theological remainder"
+  ]
+}

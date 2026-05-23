@@ -1,0 +1,70 @@
+{
+  "name": "Golden Calf Manufactured-God Source Packet",
+  "purpose": "Selected public-domain anchors for a Revelation action-horror room where fear manufactures a controllable god from donated property and recovered anomalous scrap. Force can solve part of it, but the offering economy must be broken.",
+  "fragments": [
+    {
+      "id": "calf_delay_jewelry_molten_image",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00120",
+      "source_circumstance": "When Moses delays, the people demand gods to go before them. Aaron collects gold rings, fashions a molten calf, and the people assign deliverance to it.",
+      "source_excerpt": "In delay and uncertainty, the people give gold rings, a molten calf is fashioned, and deliverance is assigned to the made object.",
+      "nightmare_room_seed": "A contractor shelter or lab wing builds a protective idol from donated wedding rings, badges, and anomalous scrap after Institute command fails to answer.",
+      "escalation_thread": "First it broadcasts safety. Then it demands more offerings. Then it attacks anyone who will not credit it with rescue.",
+      "suggested_actions": ["destroy", "intercept", "full_disclosure", "seal"],
+      "generation_rules": [
+        "Name the sin: manufacturing a controllable savior out of fear and donated trust.",
+        "Make the idol physically present and dangerous, not just a symbol on a screen.",
+        "Use jewelry, badges, gold color, engraving, heat, and false deliverance as visible anchors."
+      ]
+    },
+    {
+      "id": "calf_noise_war_destroy_powder",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00121",
+      "source_circumstance": "The camp noise is mistaken for war, the calf is seen, the tablets break, and the calf is burned, ground to powder, scattered on water, and consumed.",
+      "source_excerpt": "The noise is not victory or defeat but singing. The calf is burned, ground to powder, scattered on water, and made impossible to keep whole.",
+      "nightmare_room_seed": "The idol's sound field masks panic as worship. Destroying the core is viable, but only if the team prevents the powder or fragments from becoming new relics.",
+      "escalation_thread": "If smashed carelessly, the idol propagates through dust, coolant, or drinking water. Controlled reduction breaks the loop at cost.",
+      "suggested_actions": ["destroy", "seal", "recover", "clinic"],
+      "generation_rules": [
+        "Give Owen or Brooks a surgical force plan against the idol core.",
+        "Make destruction procedural: isolate, breach, reduce, contain powder or fragments.",
+        "Closure should sever worship/offering behavior, not merely win a fight."
+      ]
+    },
+    {
+      "id": "support_by_fire_shift_lift",
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_title": "ATP 3-21.8 Infantry Rifle Platoon and Squad",
+      "source_chunk_id": "army_atp_3_21_8_infantry_platoon_squad:00300",
+      "source_circumstance": "Support-by-fire uses sectors, fire superiority, controlled rates, shifting and lifting fires, and responsibility to avoid masking friendly movement.",
+      "source_excerpt": "Support by fire assigns sectors, gains superiority, conserves fire, shifts or lifts as the assault moves, and prevents masking friendly movement.",
+      "nightmare_room_seed": "If the idol is active, the squad may need suppression, movement, and a controlled breach to reach the offering core without hitting civilians.",
+      "escalation_thread": "A force plan can work but burns ammunition, raises stress, injures a civilian near the offering line, or contaminates evidence.",
+      "suggested_actions": ["intercept", "destroy", "support_owen", "recover"],
+      "generation_rules": [
+        "Make the action legible: suppress/fix, move, breach, isolate, recover.",
+        "Avoid superhero choreography and gadgetry.",
+        "Let the biblical problem remain the reason the fight matters."
+      ]
+    },
+    {
+      "id": "stress_unclear_information",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+      "source_circumstance": "Emergency warnings can be unclear, equipment can fail, leadership affects confusion, and time pressure narrows attention.",
+      "source_excerpt": "Emergency information is often unclear or incomplete; equipment may fail; time pressure narrows attention to critical cues.",
+      "nightmare_room_seed": "The crowd believes the idol is the only functioning authority. Character plans should carry morale and mental-state consequences.",
+      "escalation_thread": "Failed plans make people surrender more property, follow false safety broadcasts, or turn on the squad.",
+      "suggested_actions": ["full_disclosure", "torah_speaks", "seal", "clinic"],
+      "generation_rules": [
+        "Each plan is spoken by a character as a plan, not as a consequence label.",
+        "Do not show reward labels or numeric odds.",
+        "Backfires should be concrete: offering line surge, friendly masking, stress spike, wound, contamination, or lost custody."
+      ]
+    }
+  ]
+}

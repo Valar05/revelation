@@ -1,0 +1,322 @@
+{
+  "title": "The Door That Shut",
+  "design_goal": "A neglected Institute watch station has crossed a symbolic threshold—the watch slept, the door is closing, and the squad must breach, account for the buried readiness failure, and force closure before the facility seals permanently with personnel inside.",
+  "source_mechanism": {
+    "source_chunk_id": "world_english_bible:00819",
+    "source_action": "The sluggard sleeps through harvest; the ant works without overseer; the door of opportunity shuts on the unprepared",
+    "sin_or_transgression": "Watch Officer Dren Holt falsified readiness logs at Station Kaph for eleven weeks, sleeping through scheduled sensor calibrations and burying the station's unresolved anomaly reports rather than escalating them. The talent was buried in the ground.",
+    "witness_or_judgment": "The station's own sealed-door protocol—designed to contain a symbolic breach—activates against the people who neglected it. The threshold closes on the unready. Those inside are taken; those outside are left scrambling.",
+    "required_scene_elements": [
+      "falsified watch logs stacked on the duty desk",
+      "a door that is actively, physically closing and cannot be held by force alone",
+      "ant-colony movement pattern in the station's sensor grid—small, coordinated, leaderless, relentless",
+      "a buried readiness report that was never filed",
+      "personnel trapped inside because the watch was not kept"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "If a designated watch is abandoned and its readiness reports are buried rather than filed, the threshold the watch was meant to hold begins to close autonomously—sealing the neglected space and consuming what was left unattended inside it.",
+    "active_manifestation": "Station Kaph's blast door is cycling shut on a 40-minute countdown that began the moment the anomaly crossed the buried threshold. Inside: two Institute technicians, Holt's duty station, and eleven weeks of unfiled sensor data. The door moves in slow, grinding increments—each increment corresponding to a missed calibration window. Ant-pattern signal noise is eating the station's comms from the inside out, coordinated and sourceless.",
+    "escalation": "Each failed plan accelerates the door cycle by one increment. If the squad does not file the buried readiness report and physically breach before the final increment, the door seals. The technicians inside are absorbed into the closed space. The station becomes permanently inaccessible.",
+    "closure_condition": "The buried readiness report must be recovered and formally filed through the Institute's reporting chain while the squad holds the door open by force. Force alone cannot stop the cycle—accountability must be rendered before the threshold releases."
+  },
+  "room": {
+    "id": "room_station_kaph_door",
+    "name": "Station Kaph — Threshold Watch",
+    "type": "mission",
+    "mission_mode": "action_horror",
+    "description": "A sealed Institute watch station. The blast door is closing. Two personnel are inside. The watch officer falsified eleven weeks of logs.",
+    "first_visit_description": "Torah leads the forward element. Lt. Mara Owen is on point at the blast door with Brooks providing physical suppression support. Specialist Mina Park is at the external terminal, remote-jacked into what remains of the station's comms. Dr. Lenora Saye is on remote consult from Institute command—she pulled the original anomaly flag that Holt buried and is the one who called the deployment. Agent Caleb Ross is inside the station; he was conducting a routine audit when the door began cycling and is now trapped with technician Vasek. Holt is unaccounted for—his duty chair is empty, his log terminal still warm.",
+    "return_description": "The blast door has moved another increment. The ant-pattern noise on the comms is louder. Ross's last transmission was clipped mid-sentence.",
+    "detection_report": "Institute remote monitoring flagged Station Kaph at 0340 when the blast door began an unsanctioned closure cycle. Comms degraded within six minutes. Dr. Saye cross-referenced the anomaly log and found eleven weeks of suppressed sensor reports—all signed by Watch Officer Holt, all marked filed, none transmitted. Two personnel confirmed inside by last headcount.",
+    "current_situation": "The blast door is at the third increment of closure—roughly 60 centimeters narrower than standard. A low, rhythmic grinding comes from the door mechanism, not mechanical: it pulses in irregular bursts, like something coordinating without a center. The external terminal shows ant-pattern signal interference crawling across every sensor channel in the same direction, inward. On the duty desk visible through the narrowing gap: a stack of paper logs, hand-annotated, rubber-banded. Holt's chair faces away from the door. The readiness board behind it shows every shift marked green. Ross's voice comes through Park's relay in fragments—he has found the buried report. He cannot transmit it out. The door moves again.",
+    "action_profile": {
+      "physical_threat": "The blast door's incremental closure can crush personnel attempting to pass through or hold it. Each increment is slow but irreversible by mechanical means. If Ross or Vasek attempt to exit without the door being held, they risk being caught in the gap. The ant-pattern signal interference is actively degrading Park's terminal link—if it completes, external comms and door override are lost entirely.",
+      "contact_state": "The squad is under time-compression contact: the door is moving now, comms are degrading now, and Ross is inside with a document the squad needs. Owen is physically bracing against the door frame. Brooks is on suppression of the terminal interference. The threat is not waiting.",
+      "field_manual_drill": "React to contact and establish security: Owen holds the door gap while Brooks suppresses the signal interference at the terminal. Bound forward: send one element through the gap to reach Ross and recover the buried report. Breach and clear the duty station. Evacuate Ross and Vasek through the held gap. Break contact once the report is filed and the door cycle releases.",
+      "tactical_objective": "Hold the door gap open long enough to get Ross and the buried readiness report out, file the report through Dr. Saye's remote chain, and evacuate all personnel before the final increment seals the station.",
+      "symbolic_close": "The buried readiness report must be formally filed—read aloud to Dr. Saye over the relay and logged into the Institute's reporting chain—before the door cycle will release. Force can hold the gap but cannot reverse the increments. Accountability is the only key.",
+      "violent_resolution": "The blast door mechanism can be physically engaged: Brooks can drive a breaching tool into the door track to arrest one increment, buying time. This is loud, dangerous, and the door will resume cycling after roughly eight minutes. It is a delay, not a solution. The ant-pattern interference node at the terminal can be physically destroyed by Park, cutting the signal degradation—but this also cuts the remote filing link to Dr. Saye, making symbolic closure harder.",
+      "not_monster_of_week": "There is no creature. The door is the judgment. It moves because the watch was not kept—each increment is a missed calibration, a buried report, a falsified green light. The squad is not fighting a monster; they are racing the consequence of someone else's sloth, and the only way to stop it is to do the work that was never done."
+    },
+    "deployment_manifest": [
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Lt. Mara Owen",
+        "mission_role": "Command lead, door security",
+        "physical_position": "At the blast door exterior, physically bracing the gap",
+        "assigned_reason": "Senior field officer; Owen ran the original Station Kaph readiness audit two months ago and flagged irregularities that were overruled by Holt's paperwork",
+        "visible_state": "Controlled, jaw set, not speaking unless spoken to. She recognized Holt's handwriting on the log stack through the gap."
+      },
+      {
+        "officer_id": "brooks",
+        "name": "Brooks",
+        "mission_role": "Tactical suppression, breaching support",
+        "physical_position": "At the external terminal beside Park, monitoring the signal interference",
+        "assigned_reason": "Physical suppression and breach capability; if the door needs to be forced, Brooks is the option",
+        "visible_state": "Restless. He keeps looking at the door gap instead of the terminal. He wants to go in."
+      },
+      {
+        "officer_id": "specialist_mina_park",
+        "name": "Specialist Mina Park",
+        "mission_role": "Technical specialist, comms and terminal",
+        "physical_position": "External terminal, remote-jacked into station comms",
+        "assigned_reason": "Only squad member with the clearance and skill to interface with Kaph's sealed terminal architecture",
+        "visible_state": "Focused but tense. The interference is eating her connection in real time and she knows it."
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Dr. Lenora Saye",
+        "mission_role": "Remote consult, Institute reporting chain",
+        "physical_position": "Institute command, remote relay",
+        "assigned_reason": "She pulled the original buried anomaly flag and has the authority to formally receive and log the readiness report",
+        "visible_state": "Precise and quiet on the relay. She has already drafted the incident form. She is waiting for someone to read her the report."
+      },
+      {
+        "officer_id": "agent_caleb_ross",
+        "name": "Agent Caleb Ross",
+        "mission_role": "Trapped asset, document recovery",
+        "physical_position": "Inside Station Kaph, at Holt's duty station",
+        "assigned_reason": "Was conducting a routine audit when the door began cycling; now the only person who can physically reach the buried report",
+        "visible_state": "Transmitting in fragments. His voice is steady. He has the report in his hands."
+      }
+    ],
+    "root_sin": "Watch Officer Holt falsified eleven weeks of readiness logs, buried anomaly sensor reports, and slept through every calibration window. The station's threshold was left unguarded. The door is closing because no one kept the watch.",
+    "modern_incident_logic": "Station Kaph is a real Institute monitoring post with a blast door rated for symbolic containment events. The door's closure protocol was designed to activate if the station's anomaly threshold was breached without a filed readiness report on record. Holt's falsified logs created the appearance of compliance while the actual threshold went unmonitored. When the anomaly finally crossed the threshold, the protocol triggered—but found no valid readiness report to halt against. The door began closing on its own logic, and the ant-pattern interference is the station's sensor grid executing the last eleven weeks of unfiled calibration tasks simultaneously, inward, without direction.",
+    "closure_test": "Recover the buried readiness report from inside the station, evacuate Ross and Vasek, and file the report through Dr. Saye's remote chain before the door seals. The door cycle will release only after the report is formally logged.",
+    "religious_pattern": "Sluggard/ant: the ant works without overseer; the sluggard sleeps and loses the harvest. Watchfulness: the master comes at an unknown hour; the unprepared house is broken into. Buried talent: the servant who buried his talent is cast out. The door shuts on the foolish who were not ready.",
+    "anomaly_rule": "The door advances one increment per failed plan. At five increments it seals permanently. Force can arrest one increment per use of the breaching option but cannot reverse the count. Filing the report halts the cycle entirely and begins a slow reversal.",
+    "forbidden_flat_read": "Do not literalize the ants as a creature swarm. The ant-pattern is a signal behavior—coordinated, leaderless, purposeful—not a biological infestation.",
+    "officer_reports": [
+      "Owen, at the gap: 'The logs on that desk are hand-written. Every shift, green. Holt's initials. Eleven weeks.'",
+      "Park, at the terminal: 'The interference is moving inward on every channel at the same rate. It's not random. It's finishing something.'",
+      "Ross, fragmented relay: '—found the report. Sensor anomaly, week three. He knew. He—' [static] '—buried under the duty desk. I have it.'",
+      "Saye, remote: 'I have the incident form open. Someone needs to read me that report. Word for word. That is the procedure.'"
+    ],
+    "procedure_hooks": [
+      "Blast door breach: breaching tool into door track arrests one increment, buys eight minutes",
+      "Signal interference suppression: destroying the interference node cuts degradation but also cuts the remote filing link",
+      "Evidence recovery: Ross must physically hand the report through the gap or transmit it page by page",
+      "Formal filing: Saye must receive the report read aloud over the relay and confirm log entry—this is the closure procedure",
+      "Evacuation: Ross and Vasek must exit through the held gap before the final increment"
+    ],
+    "character_state_stakes": {
+      "lt_mara_owen": "If Owen holds the door and the plan succeeds, her earlier overruled audit flag is vindicated—loyalty and morale stabilize. If she is injured in the gap, she carries a physical reminder of Holt's negligence.",
+      "brooks": "If Brooks uses the breaching option and it buys the time needed, his confidence holds. If the door resumes and catches someone, he fractures—he was the one who said he could hold it.",
+      "specialist_mina_park": "If Park preserves the comms link and filing succeeds, she is steady. If she destroys the interference node and cuts Saye's link, she has to live with having made closure harder.",
+      "agent_caleb_ross": "If Ross gets out with the report, he is shaken but functional. If the door seals with him inside, he becomes an unresolved remainder—alive in a closed space, unreachable.",
+      "dr_lenora_saye": "If the report is filed, Saye's original flag is on record as correct. If closure fails, she carries the knowledge that she was right and was overruled."
+    },
+    "interlude_vectors": [
+      "Post-mission: Owen sits with the rubber-banded log stack. She does not open it again.",
+      "Cooldown: Brooks does not talk about the door. He talks about something else entirely.",
+      "Follow-up: Holt's location is still unresolved. The station is open but the duty chair is still facing away."
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00819",
+      "role": "premise",
+      "fingerprint": "Sluggard sleeps; ant works without overseer; door of opportunity closes on the unprepared",
+      "transfer": "Holt's falsified logs are the sluggard's sleep. The ant-pattern interference is the ant's leaderless, purposeful work—the station executing what Holt refused to do. The door closing is the harvest window shutting.",
+      "visible_details": [
+        "eleven weeks of hand-annotated paper logs rubber-banded on the duty desk",
+        "ant-pattern signal interference crawling inward on every sensor channel simultaneously"
+      ],
+      "payoff": "Filing the buried report is the act of finally doing the work—the harvest gathered too late to prevent the door from moving, but in time to stop it from sealing"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:01217",
+      "role": "escalation",
+      "fingerprint": "Watch therefore; master comes at unknown hour; unprepared house is entered",
+      "transfer": "The blast door closure protocol is the thief arriving at the unguarded house. The squad does not know which increment is the last. The door does not announce the final closure.",
+      "visible_details": [
+        "the door moves without warning between increments",
+        "Ross's transmission cuts mid-sentence—the squad does not know if he is still reachable"
+      ],
+      "payoff": "The squad cannot calculate safety; they must act as if the next increment is the last"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:01218",
+      "role": "closure",
+      "fingerprint": "Servant buried his talent; cast into outer darkness; those who used their talents were rewarded",
+      "transfer": "The buried readiness report is the buried talent. Filing it is the act of rendering account. The door releases only when the account is rendered—not when force is applied.",
+      "visible_details": [
+        "the report is physically buried under the duty desk, not misfiled—buried",
+        "Saye's incident form is already open; she is waiting for someone to do the work"
+      ],
+      "payoff": "Partial closure: the report is filed, the door releases, but Holt is still unaccounted for—the talent was buried by someone who is now gone"
+    },
+    {
+      "source_id": "army_call_21_14_building_cohesive_teams",
+      "source_chunk_id": "army_call_21_14_building_cohesive_teams:00007",
+      "role": "procedure",
+      "fingerprint": "Squad enrichment; commitment to team; newly assigned members vs. established team",
+      "transfer": "Owen's overruled audit flag establishes that the squad's institutional knowledge was correct and was suppressed by a single bad actor. The squad's cohesion is tested by having to clean up a failure that was not theirs.",
+      "visible_details": [
+        "Owen recognized Holt's handwriting immediately—she has seen it before",
+        "Ross is inside because he was doing the audit work Holt refused to do"
+      ],
+      "payoff": "If the squad succeeds, the cohesion cost is low. If they lose Ross, the team carries a fracture point into the next mission"
+    },
+    {
+      "source_id": "lovecraft_at_mountains_of_madness_pg70652",
+      "source_chunk_id": "lovecraft_at_mountains_of_madness_pg70652:00021",
+      "role": "evidence",
+      "fingerprint": "Specimens damaged but enough left to prove the description accurate; hard work keeping personal emotions out",
+      "transfer": "The buried report is damaged—water-stained, some entries illegible—but enough survives to prove the anomaly was real and Holt knew. Saye must receive what can be read. The squad must keep their personal reaction to Holt's negligence out of the filing procedure.",
+      "visible_details": [
+        "the report is water-stained; some sensor entries are illegible",
+        "Saye's voice on the relay is flat and procedural—she is keeping her emotions out of it"
+      ],
+      "payoff": "The incomplete report creates a partial-closure remainder: the anomaly is logged but the full eleven weeks cannot be reconstructed"
+    }
+  ],
+  "root": {
+    "id": "root_kaph_door_cycling",
+    "speaker": "SITREP",
+    "line_1": "Station Kaph blast door cycling shut. Ross and Vasek inside. Eleven weeks of falsified watch logs on the duty desk. Door is on increment three.",
+      "line_2": "Park reports ant-pattern interference on the terminal link. Saye has the incident form open. Ross has the buried report.",
+    "queued_line": "The door will not stop for force alone—someone has to render the account that was never rendered.",
+    "plans": [
+      {
+        "label": "Hold the door, send Brooks",
+        "action": "combat",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "tactical command under pressure",
+        "tactical_step": "Suppress/fix: Owen holds the door gap while Brooks bounds through to reach Ross and physically recover the buried report",
+        "base_success": 0.65,
+        "intent": "Owen commands Brooks through the gap to retrieve the report while she physically holds the door open for extraction",
+        "yield": "Brooks reaches Ross, recovers the report, and both exit through the held gap with time remaining for filing",
+        "risk": "The door advances during the bound; Brooks or Ross is caught in the gap; Owen is injured holding the frame",
+        "success_line": "Owen plants her shoulder against the door frame and does not move. 'Brooks. Go. Now.' He goes. The door grinds against her position—she does not acknowledge it. Brooks comes back through the gap with Ross behind him, the report clutched in Ross's left hand, water-stained and rubber-banded. Owen steps back. The door keeps moving. 'Park,' Owen says. 'Get Saye on the line.'",
+        "partial_line": "Brooks gets through. The door advances one increment while he is inside—the gap narrows to the width of a turned shoulder. Ross passes the report through first. Brooks comes through sideways, scraping the frame, and Owen catches his arm. He is breathing hard. 'I'm fine,' he says, which means he is not. The report is intact. Vasek is still inside.",
+        "failure_line": "The door advances mid-bound. Brooks stops at the gap, reads the clearance, and pulls back. 'I can't make that.' Owen's jaw tightens. She does not argue with him. Inside, Ross's relay goes to static. The report is still in there. Owen turns to Park. 'Options.'"
+      },
+      {
+        "label": "Suppress the interference node",
+        "action": "intercept",
+        "officer_id": "specialist_mina_park",
+        "primary_skill": "technical suppression under degrading comms",
+        "tactical_step": "Suppress/fix: Park targets the interference node at the terminal to arrest signal degradation and preserve the remote filing link to Saye",
+        "base_success": 0.65,
+        "intent": "Park suppresses the ant-pattern interference before it severs the comms link, keeping Saye's filing channel open and buying time for the report to be transmitted",
+        "yield": "Interference arrested; comms link stable; Ross can transmit the report page by page without a physical bound through the gap",
+        "risk": "Suppression attempt accelerates the interference; node destruction cuts the filing link; Saye is unreachable and symbolic closure becomes harder",
+        "success_line": "Park isolates the interference node and drives a targeted signal spike through it. The ant-pattern stutters—channels clear one by one, inward to outward, like something reversing its own work. Ross's voice comes through clean for the first time. 'I have the report. All of it. Transmitting now.' Park watches the pages come through on her screen. She does not look relieved. She looks like she is counting.",
+        "partial_line": "Park arrests the interference on three channels but the node reroutes through a fourth. The filing link holds—barely. Ross can transmit, but the connection is unstable. Every page takes twice as long. The door moves again while they wait. Park does not look up from the terminal. 'It's going to be close,' she says, which is the most she will say about it.",
+        "failure_line": "The interference node absorbs the suppression spike and accelerates. Every channel goes to ant-pattern simultaneously. Park's terminal link severs. The screen shows a single line of output—the same sensor entry, repeating, from week three of Holt's buried log—and then goes dark. Saye's relay drops. Park sits back. 'I cut us off,' she says. She says it once, flat, and does not say it again."
+      }
+    ]
+  },
+  "resolution": {
+    "id": "resolution_kaph_file_and_evacuate",
+    "speaker": "dr_lenora_saye",
+      "line_1": "Saye reports the incident form open. She needs the report read aloud, word for word, while the door reaches increment four.",
+      "line_2": "Ross reports the damaged file readable. Enough evidence survives to file, and the door will not release until the account is rendered.",
+    "queued_line": "Whatever is left unread stays unresolved—the station will open, but the full eleven weeks cannot be reconstructed.",
+    "plans": [
+      {
+        "label": "File the report with Saye",
+        "action": "full_disclosure",
+        "officer_id": "agent_caleb_ross",
+        "primary_skill": "evidence custody and formal reporting under duress",
+        "tactical_step": "Symbolic close: Ross reads the recovered report aloud to Saye over the relay; Saye logs it into the Institute's reporting chain; the door cycle releases",
+        "base_success": 0.65,
+        "intent": "Ross renders the account that Holt buried—reads every legible entry to Saye, who formally logs it, satisfying the closure condition and releasing the door",
+        "yield": "Door cycle halts and begins slow reversal; Vasek evacuates; station is accessible; Holt's negligence is on record",
+        "risk": "The water-damaged entries create gaps in the record; partial filing releases the door but leaves the anomaly incompletely logged; remainder persists",
+        "success_line": "Ross reads. His voice is steady—steadier than it has any right to be. Saye repeats each entry back before logging it, her voice flat and procedural, the way you talk when you are keeping yourself out of it. The door stops mid-grind. The grinding does not resume. Vasek walks out through the gap under his own power. Owen watches the door. It does not move. 'Log complete,' Saye says. 'Incident filed. Eleven weeks, partial record.' A pause. 'It was enough.'",
+        "partial_line": "Ross reads what he can. Three entries are illegible—water damage, Holt's handwriting bleeding into the margin. Saye logs what she receives. The door slows but does not stop. It advances one final increment and holds there—gap still passable, barely. Vasek squeezes through. Ross follows. The door does not seal. It does not open further. Park looks at the gap. 'It's waiting,' she says. 'For the rest of the record.' The rest of the record does not exist.",
+        "failure_line": "The relay drops before Ross finishes the third entry. Saye's voice cuts to silence. Ross keeps reading into dead air—he reads the whole report to no one, standing at Holt's duty desk, because there is nothing else to do. The door advances to increment five. The gap closes. The grinding stops. Owen is outside. She puts her hand flat against the sealed door and holds it there for a moment. Then she steps back. 'Mark it,' she says. 'Sealed. Personnel inside. Unresolved.'"
+      },
+      {
+        "label": "Force the door, evacuate now",
+        "action": "seal",
+        "officer_id": "brooks",
+        "primary_skill": "breaching and forced extraction under time pressure",
+        "tactical_step": "Breach and evacuate: Brooks drives the breaching tool into the door track to arrest the final increment, holds the gap by force, and extracts all personnel before attempting any filing",
+        "base_success": 0.55,
+        "intent": "Brooks bets that physical force can hold the door long enough to get everyone out, accepting that symbolic closure may be incomplete or delayed",
+        "yield": "All personnel evacuated; door held open; report in hand for later filing; station accessible but anomaly not fully resolved",
+        "risk": "Door resumes cycling after eight minutes; breaching tool fails or is destroyed; Brooks is injured; door seals with the tool inside and the gap lost",
+        "success_line": "Brooks hits the door track with the breaching tool and the grinding stops—not released, arrested. The gap holds. 'Eight minutes,' he says. 'Move.' Ross and Vasek move. Owen counts them through. Brooks holds the tool in place with both hands, and the door pushes back against him the entire time—not mechanical resistance, something else, something that knows it is being delayed. Everyone is out in four minutes. Brooks pulls the tool at six. The door resumes and seals at seven. The report is in Ross's hands. Saye is still on the relay. 'Read it to me,' she says.",
+        "partial_line": "The breaching tool catches the track and holds for six minutes before the door mechanism finds a way around it—not mechanical, it simply resumes from a different point in the cycle. Brooks pulls the tool before it is destroyed. The gap is narrower now. Ross gets through. Vasek gets through. Brooks gets through last, and the door clips his shoulder on the way—not a crush, a graze, but he feels it. He does not mention it until the debrief. The report is out. The door is sealed. The station is closed but not permanently. 'We have the report,' Owen says. 'That's what we came for.'",
+        "failure_line": "The breaching tool goes into the track and the door takes it. The mechanism does not stop—it incorporates the tool, grinds through it, and advances. Brooks watches the tool disappear into the door frame. The gap closes to thirty centimeters. 'Pull back,' Owen says. Brooks does not move immediately. 'Brooks.' He pulls back. The door seals. The grinding stops. The ant-pattern interference on Park's terminal resolves into a single repeating output: the same sensor entry from week three, the one Holt buried first. Park screenshots it. It is the only piece of the record they have."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "cooldown_kaph_debrief",
+    "speaker": "lt_mara_owen",
+    "line_1": "Owen sets the rubber-banded log stack on the debrief table. She does not open it. She says Holt's name once and does not say it again.",
+    "line_2": "Brooks has his jacket off. The shoulder graze is visible. He is talking about something that happened three years ago, unrelated, and no one interrupts him.",
+    "interlude_type": "debrief",
+    "state_reads": [
+      "character.lt_mara_owen.loyalty",
+      "character.brooks.injury",
+      "character.agent_caleb_ross.mental_state",
+      "character.specialist_mina_park.fatigue",
+      "institute.reporting_chain.status"
+    ],
+    "state_writes": [
+      "character.lt_mara_owen.morale: vindicated but unresolved—Holt is still missing",
+      "character.brooks.injury: minor, logged, not treated yet",
+      "character.agent_caleb_ross.mental_state: steady surface, something underneath",
+      "character.specialist_mina_park.fatigue: high, quiet",
+      "institute.reporting_chain.status: partial record filed, remainder flagged"
+    ],
+    "featured_characters": [
+      "lt_mara_owen",
+      "brooks",
+      "agent_caleb_ross"
+    ],
+    "visible_text": [
+      "Owen: 'Two months ago I flagged his logs. They told me the paperwork was in order.'",
+      "Ross sets the water-stained report on the table next to Owen's log stack. He does not say anything about it.",
+      "Park is still at her terminal. She has not closed the screenshot of the week-three sensor entry. She is not looking at it. She is not looking away from it either.",
+      "Brooks: 'You know what I keep thinking about? That chair. Facing away from the door. Who sits like that at a watch station?'",
+      "Saye's voice on the relay, closing out: 'Partial record accepted. Incident logged. Holt, Dren—status unknown. Station Kaph—accessible, anomaly remainder flagged for follow-up.' A pause. 'Good work. All of you.' She closes the line before anyone can respond."
+    ],
+    "choices": [
+      "'Owen, your audit flag is on record now. That matters.'",
+      "'We got everyone out. That's the job.'",
+      "'The missing entries—we need to find Holt.'"
+    ],
+    "outcomes": [
+      "If Ross is safe: the squad is intact but the partial record sits on the table between them like an open question. Owen's vindication is real and tastes like nothing.",
+      "If Ross is sealed inside: the debrief does not happen in the usual way. Owen writes the incident report herself, longhand, and files it before anyone else is awake.",
+      "If Brooks was injured: he accepts clinic referral only after Owen stops asking and Park starts. He goes because Park asked, not because Owen ordered it."
+    ],
+    "followup_hooks": [
+      "Holt's location is unresolved—he left the station before the door began cycling, which means he knew",
+      "The week-three sensor entry that the interference kept repeating is the only complete record of what the anomaly actually was—Park has the screenshot",
+      "The partial record creates an Institute audit flag: someone will come to close the remaining eleven weeks, and they will find gaps that cannot be filled",
+      "Ross read the full report aloud to dead air—he knows everything in it, including the entries that were not transmitted to Saye"
+    ],
+    "corpus_anchors": [
+      "world_english_bible:00819",
+      "world_english_bible:01217",
+      "world_english_bible:01218"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "action_horror",
+    "straight_noncombat",
+    "recovery"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "Door-as-judgment is load-bearing: remove the sloth corpus and the door has no reason to close",
+    "Ant-pattern interference is the source's leaderless coordination made procedural—not a creature, a behavior",
+    "The partial-record remainder is the buried talent that cannot be fully recovered—Holt took part of the account with him",
+    "Brooks holding the door by force while Ross reads the account aloud is the scene where procedure and accountability are simultaneous, not sequential"
+  ],
+  "self_critique": [
+    "The two root plans (Owen/Brooks force option and Park/interference suppression) are mechanically distinct but both feed into the same resolution bottleneck—a player who fails both root plans may find the resolution plans feel like a second chance rather than an escalation; the compiler should ensure failed root plans visibly narrow the resolution options rather than simply reducing odds"
+  ]
+}

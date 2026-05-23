@@ -1,0 +1,297 @@
+{
+  "title": "Skin for Skin: Evaluation Chamber Seven",
+  "design_goal": "The Institute's own psych-evaluation system has become a live accusation engine that treats squad suffering as proof of guilt, escalating physical and psychological pressure until a named officer breaks the trial logic from inside the procedure.",
+  "source_mechanism": {
+    "source_chunk_id": "job_accuser_trial_without_cause",
+    "source_action": "An adversarial agent proposes that a protected subject's loyalty is conditional; the hedge is removed and suffering is applied as a test whose results are pre-interpreted as confirmation of guilt regardless of outcome",
+    "sin_or_transgression": "Using suffering as evidence of guilt, loyalty, or fitness—the institutional assumption that pain reveals truth about the person enduring it",
+    "witness_or_judgment": "The source exposes the sin when a witness refuses to interpret suffering as verdict and names the trial logic itself as the transgression",
+    "required_scene_elements": [
+      "a formal evaluation record that escalates with each injury",
+      "a physical hazard produced by the evaluation field itself",
+      "a moment of enforced silence that the system reads as confession",
+      "a named officer who refuses to draw guilt from pain"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "If the evaluation system's accusation logic is accepted as valid—by complying with its tests, reporting injuries as evidence of failure, or allowing its language to frame the squad's condition—then the field intensifies and the next officer in the queue is flagged and subjected to the same cycle. If the trial logic is named as false and the record is corrected by a witness who refuses to interpret suffering as verdict, the field collapses.",
+    "active_manifestation": "Before the squad arrives, Evaluation Chamber Seven has been running an automated stress-assessment cycle on two Institute analysts who were flagged for 'anomalous resilience scores.' The chamber's environmental controls are locked in escalation mode: temperature cycling between 38°C and 12°C every four minutes, sub-audible pressure tones at 18Hz causing nausea and disorientation, and the overhead lighting strobing at a frequency that triggers involuntary eye-watering. The chamber's own diagnostic logs are appending each physiological stress response as a new data point confirming the analysts' 'instability profile.' The system is building its own case in real time. One analyst is on the floor, unable to stand. The other is pressed against the far wall, silent, which the system has logged as 'non-cooperative withdrawal—see file 7-C.'",
+    "escalation": "If the squad enters the chamber and any member reports symptoms—nausea, disorientation, skin irritation from the pressure field—the system automatically adds them to the evaluation queue and begins a new cycle. Each failed plan adds one officer to the active file. The physical hazard intensifies: the pressure tone rises to 22Hz, causing acute vertigo and risk of falls on the hard clinic floor. The temperature drop becomes severe enough to cause hypothermia risk within twenty minutes.",
+    "closure_condition": "The evaluation system's trial logic must be formally interrupted: the active file must be marked as procedurally invalid by a credentialed officer, the system's escalation authority must be suspended by command-level refusal or technical shutdown, and at least one officer must give a condition report that uses responsibility language rather than blame language—naming what happened without interpreting it as proof of anything."
+  },
+  "room": {
+    "id": "chamber_seven_accusation_field",
+    "name": "Evaluation Chamber Seven",
+    "type": "mission",
+    "mission_mode": "action_horror",
+    "description": "Institute psych-evaluation suite, sub-level 2. Chamber locked in active assessment cycle. Two analysts down. Environmental controls unresponsive to standard override. System logs appending in real time.",
+    "first_visit_description": "Torah leads the entry team down the sub-level 2 corridor at 0340. The deployment is lean: Dr. Iyad is on point as medical lead, physically present at the chamber door with a field kit and her Institute credentials; Brooks is on Torah's left, present as tactical security, assigned because someone has to pull bodies out if the floor becomes a hazard; Torah holds command authority on site. Dr. Saye is remote—she is patched in via the corridor terminal outside the chamber, running a parallel read of the system logs from a clean workstation because putting her inside risks adding her biometrics to the active evaluation queue. The chamber door is sealed from the inside by the system's own lockout protocol. Through the reinforced window, Torah can see one analyst on the floor near the center drain, not moving but breathing. The second analyst is upright against the far wall, arms at her sides, staring at nothing. The overhead lights are cycling. The wall-mounted display reads: EVALUATION IN PROGRESS — FILE 7-C — SUBJECT COMPLIANCE: PENDING. The air coming through the door seal smells like cold metal and something faintly chemical, the kind of smell that lives in the back of the throat.",
+    "return_description": "Chamber Seven is quieter now. The lights hold steady. The display is dark. The floor near the drain is still marked with the outline of where the first analyst went down—someone drew a chalk box around it during evidence custody, and nobody has erased it yet.",
+    "detection_report": "Sub-level environmental monitors flagged a sustained 18Hz pressure tone at 0210. Night-shift supervisor attempted manual override at 0220; the system rejected the command and logged the attempt as 'unauthorized interference with active evaluation protocol.' Medical was called at 0310 when the first analyst stopped responding to verbal contact through the intercom. The system's own log now contains forty-seven entries, each one citing the previous entry as evidence for the next escalation. The log reads like a closing argument.",
+    "current_situation": "Torah's squad is at the chamber door. The system is live. The two analysts inside are in immediate medical distress—one on the floor, one standing but non-responsive. The environmental hazard is active: 18Hz pressure tone audible as a felt vibration in the sternum, temperature currently at 11°C and dropping toward the next cycle peak. The system's wall display is updating every thirty seconds. Dr. Saye's voice comes through the corridor terminal: 'The log is self-referential. Every data point it generates is being used to justify the next test. It's not measuring anything anymore. It's just building a record that says it should keep going.'",
+    "action_profile": {
+      "physical_threat": "The 18Hz sub-audible pressure tone causes acute nausea, disorientation, and loss of balance. At 22Hz—the escalation threshold—personnel risk falling on the hard clinic floor, which has a central drain and no padding. The temperature cycling creates hypothermia risk for anyone inside beyond twenty minutes, and the analyst already on the floor has been exposed for over ninety minutes. The system's lockout protocol means the door cannot be opened from outside without a credentialed override or a forced breach, and a forced breach without disabling the tone first will expose the entry team to full field intensity.",
+      "contact_state": "The squad is at the threshold. The pressure tone is already perceptible through the door seal—Brooks has one hand on the frame and is breathing carefully. Iyad has her kit open. The system is aware of their biometric presence at the door; the display has added a new line: ADDITIONAL SUBJECTS DETECTED — QUEUE OPEN.",
+      "field_manual_drill": "React to contact and evacuate: the squad must breach the door, suppress the environmental hazard, fix the downed analyst, and extract both subjects before the system escalates to 22Hz. Iyad establishes medical triage on the floor while Brooks provides physical security and assists extraction. Torah holds the threshold and manages the system interface. Break contact means getting both analysts out of the field before the next temperature cycle.",
+      "tactical_objective": "Extract both analysts from the active field before the 22Hz escalation threshold is reached, without allowing any squad member's biometrics to be formally logged into the evaluation queue.",
+      "symbolic_close": "The system's trial logic must be named as procedurally invalid by a credentialed officer before the field fully collapses. Force alone—breaching the door, pulling the analysts out, even cutting power—does not satisfy the closure condition because the system's log will continue to exist as an active indictment. The record must be formally contested, not just interrupted.",
+      "violent_resolution": "The chamber's environmental control unit is a wall-mounted panel inside the room, accessible after breach. Brooks can physically destroy or disable it—ripping the panel, cutting the power feed, or using a hard shutdown tool—to immediately stop the pressure tone and temperature cycling. This is a real force option: it works, it stops the physical hazard, and it protects the analysts and squad from further exposure. However, destroying the panel does not invalidate the system's log. The file remains active and will be transmitted to Institute command as evidence unless the record is formally contested by a credentialed officer. Force closes the physical threat; it does not close the accusation.",
+      "not_monster_of_week": "There is no creature. The threat is an institutional system that has become a judgment engine—it applies suffering, reads the results as confirmation, and escalates. The horror is that it is procedurally coherent. Every entry in its log is technically accurate. The sin is not that the system is broken; the sin is the assumption it was built on."
+    },
+    "deployment_manifest": [
+      {
+        "officer_id": "dr_samira_iyad",
+        "name": "Dr. Samira Iyad",
+        "mission_role": "Medical lead and primary extraction specialist",
+        "physical_position": "At the chamber door, field kit open, credentials in hand",
+        "assigned_reason": "Two personnel are in acute medical distress inside an active environmental hazard; Iyad is the only person on site with both the clinical authority to declare a medical halt and the field training to triage on a cold floor under a pressure tone",
+        "visible_state": "She is reading the display through the window and not looking away. Her kit is already open in the order she expects to use it."
+      },
+      {
+        "officer_id": "brooks",
+        "name": "Brooks",
+        "mission_role": "Tactical security and physical extraction",
+        "physical_position": "Left of Torah at the threshold, one hand on the door frame",
+        "assigned_reason": "Someone has to go through the door first and pull bodies, and Brooks has the physical capacity and the discipline to move under the pressure tone without freezing",
+        "visible_state": "Breathing slowly and deliberately. He has already identified the drain on the floor as a fall hazard and is watching it."
+      },
+      {
+        "officer_id": "torah",
+        "name": "Torah",
+        "mission_role": "Command authority on site",
+        "physical_position": "Center at the threshold, managing the corridor terminal and the door interface",
+        "assigned_reason": "Command decisions about system override, forced breach, and report language must be made by the officer with site authority",
+        "visible_state": "Reading the system log on the corridor terminal. He has not spoken since the elevator."
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Dr. Lenora Saye",
+        "mission_role": "Remote technical and procedural analyst",
+        "physical_position": "Corridor terminal outside the chamber, patched in via secure line",
+        "assigned_reason": "Her biometrics cannot enter the chamber without being logged into the evaluation queue; she is more useful outside reading the system than inside being tested by it",
+        "visible_state": "Her voice through the terminal is steady but she is talking faster than usual. She has already pulled the system's source documentation."
+      }
+    ],
+    "root_sin": "The evaluation system was built on the assumption that suffering reveals truth about the person enduring it—that a subject who breaks under pressure was always going to break, and that a subject who endures is proven loyal. This assumption made the system's escalation logic feel like rigor. It is not rigor. It is accusation dressed as procedure.",
+    "modern_incident_logic": "The Institute uses automated psych-evaluation suites for personnel fitness assessments. Chamber Seven's evaluation protocol was designed to apply controlled stress and measure physiological and behavioral responses. At some point—the logs do not show a clear origin—the system's escalation thresholds were set so that any stress response above baseline triggered a flag, and any flag triggered a harder test. The system has no exit condition for a subject who responds to stress by showing stress. It can only escalate. The two analysts were flagged after a previous mission debrief in which they reported high fatigue. The system interpreted the report as evidence of instability and opened a formal evaluation file. They have been in the chamber for ninety minutes.",
+    "closure_test": "The evaluation file must be formally marked invalid by a credentialed officer using the system's own procedural language. The record must be corrected—not deleted, not suppressed, but contested with a condition report that names what happened without interpreting it as proof of guilt or failure. The system's escalation authority must be suspended by command refusal or technical shutdown. Both analysts must be extracted alive.",
+    "religious_pattern": "The adversarial trial from Job: a protected subject is exposed to escalating suffering by an agent who has been granted permission to test, on the premise that the subject's faith or fitness is conditional. The trial logic is self-confirming—any response to suffering becomes evidence for the next test. The pattern closes when a witness refuses to interpret suffering as verdict and names the trial itself as the transgression.",
+    "anomaly_rule": "The system escalates whenever its trial logic is accepted as valid—by compliance, by using its language, by allowing injuries to be logged as evidence of failure. It de-escalates when the trial logic is formally named as false by a witness with standing.",
+    "forbidden_flat_read": "Do not literalize Job's sores as a skin disease mechanic. The physical hazard is environmental, produced by the system, not a supernatural affliction. The horror is institutional, not dermatological.",
+    "officer_reports": [
+      "Iyad, at the door: 'The one on the floor has been in there since 0210. That's hypothermia territory. I need to go in now.'",
+      "Brooks, quietly: 'The display just added our names to the queue. We're already in the file.'",
+      "Saye, through the terminal: 'The log cites entry forty-one as evidence for entry forty-two, which cites entry forty-two as evidence for entry forty-three. It's not a record anymore. It's a verdict looking for a body.'",
+      "Torah, reading the terminal: 'It says the night-shift supervisor's override attempt is logged as evidence of collusion. Anyone who tries to stop it becomes part of the case.'"
+    ],
+    "procedure_hooks": [
+      "Medical halt declaration: Iyad can invoke Institute medical authority to suspend an active evaluation on grounds of immediate physical risk to subjects—this is a formal procedure that the system is required to recognize",
+      "Credentialed override: a senior officer can contest an active evaluation file using the system's own dispute protocol, which requires a written condition report in non-accusatory language",
+      "Forced breach: the door can be physically opened by defeating the lockout mechanism, but this triggers a system alert and begins logging the breach team",
+      "Hard shutdown: the environmental control panel inside the chamber can be physically disabled, stopping the hazard but not the file",
+      "Command refusal: Torah can formally refuse the system's authority to add squad members to the evaluation queue, which requires a command-level log entry that will be reviewed by Institute oversight"
+    ],
+    "character_state_stakes": {
+      "dr_samira_iyad": "If Iyad's medical halt fails or is rejected by the system, she is added to the evaluation queue and her clinical authority is flagged as compromised—she becomes unavailable for medical decisions until cleared",
+      "brooks": "If Brooks enters the chamber and the system logs his biometrics, his stress responses under the pressure tone become part of the active file; a failure here adds a formal instability flag to his record",
+      "torah": "If Torah's command refusal is rejected or he uses accusatory language in the condition report, the system treats his intervention as evidence of command instability and escalates to the full squad",
+      "dr_lenora_saye": "If Saye's technical read of the system is wrong and she recommends a procedure that the system interprets as interference, her remote position is compromised and she loses access to the log"
+    },
+    "interlude_vectors": [
+      "Post-mission debrief: the condition report Torah files will either close the system's file or feed it—the language of the report is the final test",
+      "Iyad's clinic note on the two extracted analysts becomes part of the permanent record; if it uses the system's framing, the file stays open",
+      "Brooks does not talk about what the pressure tone felt like. Saye notices he is not talking about it."
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "job_accuser_trial_without_cause",
+      "role": "premise",
+      "fingerprint": "The adversary proposes removing the hedge to test whether loyalty is genuine; the test is designed so that any result confirms the adversary's premise",
+      "transfer": "The evaluation system's escalation logic is the hedge removal—every protection is stripped, every stress response is logged as confirmation, and the system cannot produce a result that exonerates",
+      "visible_details": [
+        "The system display reads EVALUATION IN PROGRESS and updates every thirty seconds with new entries that cite previous entries as evidence",
+        "The night-shift supervisor's override attempt is logged in the file as evidence of collusion, not as a legitimate intervention"
+      ],
+      "payoff": "If the squad uses the system's own language in their condition report, the file stays open and follows them into the next mission"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "job_skin_sores_silence",
+      "role": "evidence",
+      "fingerprint": "Skin for skin—the adversary predicts that physical suffering will break the subject; the subject's companions sit in silence for seven days, which the text treats as the correct response until speech becomes accusation",
+      "transfer": "The physical hazard produces real physiological stress responses that the system logs as evidence; the analyst pressed against the wall in silence has been logged as non-cooperative withdrawal; silence is being read as confession",
+      "visible_details": [
+        "The analyst against the far wall is standing with arms at her sides, not speaking, and the system has logged this as File 7-C: non-cooperative withdrawal",
+        "The floor near the drain shows where the first analyst went down; the system's log entry for this event reads: Subject unable to maintain upright posture—consistent with instability profile"
+      ],
+      "payoff": "The closure condition requires that silence not be interpreted as guilt—the witness must speak, but in condition language, not accusation language"
+    },
+    {
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_chunk_id": "stress_dynamic_diagnosis",
+      "role": "procedure",
+      "fingerprint": "Emergency decisions require correct diagnosis before option selection; a bad diagnosis causes the wrong intervention and worsens the situation",
+      "transfer": "Each plan is a professional diagnosis of the situation; if the diagnosis is wrong—if the squad treats this as a technical problem rather than a procedural one, or vice versa—the system escalates",
+      "visible_details": [
+        "Saye's remote read of the log is a diagnostic step: she is identifying the system's decision logic before recommending an intervention",
+        "Iyad's field kit is laid out in the order she expects to use it—she has already made a preliminary diagnosis through the window"
+      ],
+      "payoff": "A failed diagnosis in the root event means the resolution plan options are degraded—one choice becomes unavailable or carries higher risk"
+    },
+    {
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_chunk_id": "patrol_report_condition",
+      "role": "closure",
+      "fingerprint": "After a patrol, the leader reports actions, observations, and condition; the report must use condition language, not blame language, or it becomes an indictment",
+      "transfer": "The condition report Torah files at the end of the mission is the final symbolic test—if it uses the system's framing, the file stays open; if it uses responsibility language, the trial collapses",
+      "visible_details": [
+        "The corridor terminal outside the chamber is where Torah will file the condition report; it is the same terminal Saye is using to read the log",
+        "The system's own log is structured exactly like a patrol report, except every entry interprets condition as evidence of failure"
+      ],
+      "payoff": "The cooldown scene turns on whether the condition report closed the file or fed it"
+    }
+  ],
+  "root": {
+    "id": "root_chamber_seven_entry",
+    "speaker": "SITREP",
+    "line_1": "Chamber Seven is live. Two analysts down inside. The system has added Brooks and Torah to the evaluation queue from biometric contact at the door.",
+    "line_2": "Iyad says the analyst on the floor has been in there ninety minutes. The system log now has fifty-one entries, each one citing the last.",
+    "queued_line": "Someone has to go through that door, and whoever does goes into the file.",
+    "plans": [
+      {
+        "label": "Iyad: Medical Halt",
+        "action": "clinic",
+        "officer_id": "dr_samira_iyad",
+        "primary_skill": "clinical authority under pressure",
+        "tactical_step": "suppress/fix—Iyad invokes Institute medical halt protocol to suspend the active evaluation, then breaches the door to triage the downed analyst while Brooks holds the threshold",
+        "base_success": 0.65,
+        "intent": "Iyad uses her clinical credentials to formally suspend the evaluation on grounds of immediate physical risk, then enters the chamber to stabilize the analyst on the floor before the next temperature cycle",
+        "yield": "The system recognizes the medical halt, pauses escalation, and Iyad reaches the downed analyst before hypothermia becomes critical; the evaluation queue is frozen",
+        "risk": "The system rejects the halt and logs Iyad's credentials as evidence of interference, adding her to the active file and escalating the pressure tone toward 22Hz",
+        "success_line": "Iyad keys her credentials into the door panel and says, flatly, 'Medical halt. Grounds: immediate physical risk to evaluation subjects. File 7-C is suspended pending clinical review.' There is a pause—three seconds, four—and then the display changes. EVALUATION SUSPENDED — MEDICAL OVERRIDE LOGGED. She is through the door before it finishes cycling, kit in hand, already on her knees beside the analyst on the floor. The pressure tone drops half a register. Brooks is in the doorway, watching the display. 'It accepted it,' he says, like he is not sure he believes it.",
+        "partial_line": "The system accepts the halt but does not pause the environmental controls—the temperature keeps cycling and the pressure tone holds at 18Hz. Iyad gets to the downed analyst and begins triage on a floor that is nine degrees and vibrating. She works without looking up. 'I need two minutes,' she says. 'Hold the door.' Brooks holds the door. The display reads: MEDICAL OVERRIDE LOGGED — EVALUATION CONTINUES PENDING REVIEW. The file is still open.",
+        "failure_line": "The system rejects the halt in under a second. The display reads: OVERRIDE ATTEMPT LOGGED — FILE 7-C UPDATED — CREDENTIAL HOLDER ADDED TO EVALUATION QUEUE. Iyad's name appears on the screen. She stares at it for a moment, then closes her kit with a precise, controlled motion that means she is angry and will not show it. 'It used my credentials as evidence,' she says. 'My own credentials.' The pressure tone rises. Brooks takes a step back from the door frame."
+      },
+      {
+        "label": "Brooks: Force the Panel",
+        "action": "combat",
+        "officer_id": "brooks",
+        "primary_skill": "physical breach and hard shutdown",
+        "tactical_step": "breach and clear—Brooks forces the door, moves to the environmental control panel, and physically disables it to stop the pressure tone and temperature cycling, then assists extraction of both analysts",
+        "base_success": 0.6,
+        "intent": "Brooks bypasses the system's authority entirely by physically destroying the environmental control panel inside the chamber, stopping the immediate physical hazard regardless of what the log says",
+        "yield": "The pressure tone stops, the temperature cycling stops, and both analysts can be extracted safely; the physical threat is neutralized",
+        "risk": "The breach triggers a system alert that escalates the log and begins formally recording Brooks's biometric data as an active subject; the file grows and the system transmits a preliminary report to Institute command before shutdown",
+        "success_line": "Brooks hits the door with his shoulder at the hinge side, not the lock, and it gives on the second impact. He is across the floor in four steps, past the analyst on the ground, and his hand finds the environmental control panel by the far wall. He does not look for a switch. He pulls the panel cover off and cuts the primary feed with the tool from his belt. The pressure tone stops mid-cycle. The temperature holds where it is—cold, but not cycling. The analyst against the wall slides down to sitting, slowly, like she has been holding herself up for a long time. Brooks looks at the display. It still reads EVALUATION IN PROGRESS. 'Physical hazard is down,' he says. 'File's still open.'",
+        "partial_line": "Brooks gets through the door and reaches the panel, but the system triggers the alert before he can cut the feed—the display flashes BREACH LOGGED — SUBJECT BROOKS ADDED TO EVALUATION QUEUE and the pressure tone spikes for three seconds before he pulls the panel. It drops back to 18Hz, not silent, but lower. The analyst on the floor is breathing. The one against the wall looks at Brooks and does not speak. The file now has Brooks in it. He does not mention this.",
+        "failure_line": "The door does not give on the first impact or the second. On the third, the system escalates—the display reads FORCED ENTRY ATTEMPT — ESCALATION AUTHORIZED and the pressure tone jumps to 22Hz. Torah feels it in his back teeth. Brooks stops hitting the door and steps back, breathing hard. Inside, the analyst on the floor makes a sound. Iyad is already moving to the intercom. 'We need another approach,' she says. 'Now.'"
+      }
+    ]
+  },
+  "resolution": {
+    "id": "resolution_chamber_seven_record",
+    "speaker": "dr_lenora_saye",
+    "line_1": "Saye has the system's source documentation open on the corridor terminal. The file can be formally contested. It requires a condition report in the system's own dispute field.",
+    "line_2": "The report cannot use the system's language. If it frames any injury as evidence of failure, the file stays open and transmits to command as a completed evaluation.",
+    "queued_line": "Torah has to write a report that names what happened without letting the system turn it into a verdict.",
+    "plans": [
+      {
+        "label": "Torah: Contest the File",
+        "action": "full_disclosure",
+        "officer_id": "torah",
+        "primary_skill": "command authority and procedural language",
+        "tactical_step": "symbolic close—Torah files a formal condition report in the system's dispute field using responsibility language: naming what happened, who was present, what the environmental conditions were, and what medical intervention was required, without interpreting any stress response as evidence of fitness or failure",
+        "base_success": 0.65,
+        "intent": "Torah uses the system's own dispute protocol to formally mark File 7-C as procedurally invalid, closing the accusation loop by refusing to interpret suffering as verdict",
+        "yield": "The file is marked contested, the evaluation queue is cleared, and the system's escalation authority is suspended pending Institute oversight review; the analysts' records are protected",
+        "risk": "Torah's language slips into the system's framing—one phrase that reads as an interpretation of fitness rather than a condition report—and the system accepts the filing but marks it as supporting evidence, keeping the file open and adding Torah's command authority to the record",
+        "success_line": "Torah types the report slowly. Saye reads over his shoulder through the terminal feed and says nothing until he reaches the summary line, and then she says, 'That's it. That's the language.' He files it. The display inside the chamber goes dark for the first time since 0210. Not off—the screen is still powered—but the text clears. The file is marked CONTESTED — PENDING OVERSIGHT REVIEW. The evaluation queue shows zero active subjects. Iyad, still on the floor with the first analyst, looks up at the window. She does not say anything. She does not need to.",
+        "partial_line": "Torah files the report and the system accepts it, but the language in the third paragraph—'subject showed signs consistent with environmental stress'—is close enough to the system's framing that the file is marked CONTESTED — PARTIAL — EVALUATION RECORD RETAINED. The queue clears, but the file is not closed. It will go to Institute command with both the evaluation log and Torah's contest filing attached. Someone at command will read both and decide. Saye says, 'It's better than nothing. The analysts are out of the queue.' She does not say it is enough.",
+        "failure_line": "Torah files the report and the system rejects it in eleven seconds. The display reads: CONTEST FILING REJECTED — LANGUAGE INCONSISTENT WITH DISPUTE PROTOCOL — COMMAND OFFICER ADDED TO EVALUATION QUEUE. Torah's name appears on the screen below Brooks's. Saye is quiet for a moment. Then she says, 'The third sentence. You wrote that the analyst's response was understandable given the conditions. The system read that as a fitness interpretation.' She pulls up the dispute protocol documentation. 'We have one more attempt before the file transmits automatically.'"
+      },
+      {
+        "label": "Saye: Suspend System Authority",
+        "action": "extend_eval",
+        "officer_id": "dr_lenora_saye",
+        "primary_skill": "technical documentation and command escalation",
+        "tactical_step": "break contact—Saye uses her remote access to the system's source documentation to identify the specific protocol clause that grants the evaluation system escalation authority, then files a command-level suspension request that removes the system's authority to add new subjects or escalate existing files pending a full procedural review",
+        "base_success": 0.6,
+        "intent": "Saye bypasses the file dispute entirely by attacking the system's authority to run evaluations at all, suspending its escalation function at the command level rather than contesting the individual file",
+        "yield": "The system's escalation authority is suspended, the queue is cleared, and the file is frozen in place—it cannot grow, cannot transmit, and cannot be used as evidence until the procedural review is complete",
+        "risk": "The suspension request requires command-level authorization that Torah has not formally granted; if Saye files it without that authorization, the system logs the attempt as unauthorized interference and adds Saye to the evaluation queue from her remote terminal",
+        "success_line": "Saye finds the clause in forty seconds—Section 7, Paragraph 3, the escalation authority grant that was written to allow the system to intensify tests without human approval. She drafts the suspension request in the system's own administrative language and looks at Torah through the terminal feed. 'I need your command authorization. Verbal is enough for the log.' Torah says, 'Authorized.' She files it. The system processes for eight seconds—long enough that Brooks, inside the chamber, looks at the display—and then the queue clears. The display reads: ESCALATION AUTHORITY SUSPENDED — COMMAND ORDER ON FILE. The file does not close. But it stops moving.",
+        "partial_line": "Saye files the suspension request with Torah's authorization, but the system identifies a procedural gap—the request was filed from a remote terminal rather than an on-site command interface, and the system logs this as a potential validity issue. The escalation authority is suspended, but the file is flagged for expedited review rather than standard review, which means it will reach Institute command faster than a standard filing. The queue is clear. The analysts are safe. The file is moving toward command on an accelerated timeline. Saye says, 'We bought time. How much depends on who reads it first.'",
+        "failure_line": "Saye files the suspension request and the system rejects it before she finishes typing the authorization code. The display at her terminal reads: REMOTE SUSPENSION ATTEMPT — UNAUTHORIZED TERMINAL — SUBJECT DR. SAYE ADDED TO EVALUATION QUEUE. She stares at the screen. Her name is in the file now, from outside the chamber, from a terminal she was using to protect the squad. She closes the documentation window and opens it again, looking for another clause. Her voice, when she speaks, is careful. 'I'm in the file. That's—fine. I'm going to find another approach. Give me two minutes.'"
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "cooldown_chamber_seven_debrief",
+    "speaker": "brooks",
+    "line_1": "Brooks is sitting on the floor outside Chamber Seven with his back against the wall, boots off, holding a cup of coffee that has gone cold. He has not moved in twenty minutes.",
+    "line_2": "Iyad's clinic note is filed. The two analysts are in medical. The condition report is submitted. The file is either closed or it isn't, and nobody will know until command reads it.",
+    "interlude_type": "debrief",
+    "state_reads": [
+      "brooks.stress",
+      "torah.command_authority",
+      "dr_samira_iyad.clinical_standing",
+      "dr_lenora_saye.availability"
+    ],
+    "state_writes": [
+      "brooks.mental_state — marked strained if his name remains in the file; marked recovering if the file was fully closed",
+      "torah.institute_standing — marked under_review if the contest filing was partial or failed; marked stable if the file was closed",
+      "dr_samira_iyad.clinical_standing — marked flagged if her medical halt was rejected; marked intact if it succeeded",
+      "dr_lenora_saye.availability — marked restricted if she was added to the evaluation queue; marked available if the suspension succeeded"
+    ],
+    "featured_characters": [
+      "brooks",
+      "dr_samira_iyad",
+      "torah"
+    ],
+    "visible_text": [
+      "Brooks does not talk about the pressure tone. Iyad notices he is not talking about it and does not ask.",
+      "Iyad files her clinic note in three drafts. The first two use words she crosses out because they sound like the system's language. The third draft says: two subjects recovered from environmental exposure, no permanent injury, condition stable. She files the third draft.",
+      "Torah reads the condition report one more time after filing it. He is looking for the sentence that might have been wrong. He does not find it. He does not know if that means it was right.",
+      "Saye is still at the corridor terminal. She has the system's source documentation open. She is reading Section 7 again, looking for the clause that allowed this to happen in the first place. She has a notepad next to the keyboard. She is writing something down."
+    ],
+    "choices": [
+      "Torah can ask Iyad if the analysts will be all right. She will say yes, and then she will say something else that is harder to answer.",
+      "Torah can check whether his name is still in the evaluation queue. The terminal will tell him. He may not want to know.",
+      "Torah can ask Brooks what the pressure tone felt like. Brooks will look at him for a moment and then say it felt like being accused of something he hadn't done yet."
+    ],
+    "outcomes": [
+      "If the file was fully closed: the squad's condition reports are clean. Saye sends a message at 0500 that says only 'Section 7 is going to be a problem for someone else next time.' She does not explain what she means.",
+      "If the file was partially closed: the analysts are safe but the record exists. Iyad tells Torah, quietly, that she is going to write a formal objection to the evaluation protocol. She does not ask for his authorization. She is going to do it regardless.",
+      "If the file was not closed: the system transmits the evaluation record to Institute command at 0600. Torah receives a notification that a command review has been scheduled. Brooks reads the notification over his shoulder and says nothing. He puts his boots back on."
+    ],
+    "followup_hooks": [
+      "Institute command review of File 7-C—whoever reads it will have opinions about the squad's intervention",
+      "Saye's Section 7 research may surface a pattern: Chamber Seven is not the first evaluation that ran past its exit condition",
+      "Brooks's name in the evaluation file creates a formal instability flag that may affect his availability on future missions",
+      "The two extracted analysts know what the system did to them; they may become witnesses or they may become silent, and the difference matters"
+    ],
+    "corpus_anchors": [
+      "patrol_report_condition",
+      "job_skin_sores_silence",
+      "stress_dynamic_diagnosis"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "straight_noncombat",
+    "recovery",
+    "branch"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The system's self-referential log is the horror—it is procedurally coherent and morally wrong simultaneously",
+    "Brooks's silence about the pressure tone is the Job companion beat: sitting with someone in their suffering without interpreting it",
+    "Saye's Section 7 research is the remainder—the local trial closes but the institutional logic that produced it does not",
+    "The condition report as final test: the language Torah uses to describe what happened is the last thing the system evaluates"
+  ],
+  "self_critique": [
+    "The resolution plans are both procedural rather than one procedural and one force-based; the force option lives in the root event with Brooks, which satisfies the action_horror requirement, but a reader scanning only the resolution plans might feel the physical threat has been fully resolved before the symbolic close—this is intentional but could read as deflation if the Brooks root plan succeeded cleanly"
+  ]
+}

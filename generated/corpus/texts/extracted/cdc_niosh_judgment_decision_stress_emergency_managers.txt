@@ -1,0 +1,380 @@
+        -8'*0(17$1''(&,6,210$.,1*81'(5675(66
+           $129(59,(:)25(0(5*(1&<0$1$*(56
+                                             0.RZDOVNL3K'
+                                                  3V\FKRORJLVW
+                                                9DXJKW3K'
+                                            063 6RFLRORJLVW
+                       1DWLRL]DO,QVWLWXWHIRU 2FFXSDWLRL]DO6DIHW\DQG+HDOWK
+                                  3LWWVEXUJK5HVHDUFK/XERUDWRU\O
+
+              stress, judgment, decision-making, emergency management, mining
+
+
+
+       paper discusses human judgment and decision-making under stress. The authors review
+selected recent literature across various disciplines and suggest a definition of stress within the
+context of decision-making during the management of emergencies. They also discuss fieldwork by
+the Pittsburgh Research Laboratory, NIOSH, which explores traumatic incident stress, the
+relationship between previous training and performance under stressful conditions, and human
+behavior in underground mine fires. The authors assert that stress is one of the factors that
+decision-makers must contend with in most life-or-death situations. They suggest that a better
+understanding of individual's judgment and decision-making activities while under stress would
+yield a better understanding of how people reach the choices they make in emergencies. This
+enhanced understanding would be of enormous value to emergency managers, researchers, and
+policymakers.
+
+       ,QWURGXFWLRQ
+         the effect of stressful conditions on human judgment is of importance to emergency
+managers. In natural or human-induced emergencies, the decisions that are made in the first
+minutes, hours, and days are critical to the successful mitigation, damage control, prevention of
+structure and human loss, control of financial costs, and ultimately the overall conclusion of the
+disaster. The impact of the effect of stress on professional judgment is significant. During an
+emergency situation, critical judgments are frequently made under conditions of temporary or
+prolonged stress. Emergency decision-makers are required to process massive amounts of
+information, which is sometimes incomplete or faulty, under severe time constraints.
+    Definitions
+     use of the term "stress" is rooted deeply in the literature. Lazarus and Lazarus (1994, p.220)
+discuss the use and definition of the word "stress" and note that it was used as early as the
+fourteenth century to mean hardship, straits, or adversity of affliction. In the seventeenth century, a
+
+     Cochrans Mill Road, Pittsburgh, PA 15102, USA email: kkowalski@cdc.gov
+physicist-biologist, Robert Hooke, tried to help engineers design man-made stluctures such as
+bridges, which had to carry heavy loads and resist buffeting by winds, earthquakes and other
+natural forces that could destroy them. An important and practical engineering task, therefore, was
+how to design bridges to resist these loads, or stresses. Hooke' s analysis greatly influenced the
+way stress came to be thought of in physiology, psychology, and sociology - as an environmental
+demand on a biological, psychological, or social system.
+One popular          definition stipulates that "stress is a process by which certain work demands
+evoke an appraisal process in which perceived demands exceed resources and result in undesirable
+physiological, emotional, cognitive and social changes" (Salas et aI., 1996, p.6). The authors hold
+this definition as one of the most appropriate for emergency management purposes, because
+"demand exceeding resource" is a key factor, either in the management of an emergency or in the
+response of an individual. The focus is on the demand -- which may come from numerous sources
+including the environment, physiological constraints and social factors -- and the human resource,
+which is dependent, again, upon numerous factors including individual perception, training, and
+expenence.
+The relationship of stress to judgment and decision-making is an aspect of human behavior that
+remains relatively unexplored (Hammond,            Gillis, 1993). Consequently, the literature in this
+area is limited and not always conclusive. Gillis (1993, p. 1355) maintains that "while research on
+1) the nature and consequences of stress; and 2) human judgment and decision-making are large
+and varied, there is virtually no overlap between the two despite the obvious practical importance
+of the effect of stress on judgments ..." Hammond points out that the notion of stress having an
+influence on judgment was only first broached during a US Congressional hearing in 1988. At
+issue was compensation for the victims of Iran Air Flight 655, which was shot down by the
+American cruiser Vincennes over the Persian Gulf. A second hearing was called "to examine the
+impact of human factors such as stress" on the crew's perlormance.
+1.2 The Congressional Inquiry
+Two questions posed during the second Congressional hearing are of interest to this discussion: 1)
+Does the perlormance during the shoot-down identify elements of human behavior that are poorly
+understood? and (2) What have researchers uncovered to date on man' s ability to make rapid and
+even complex decisions in high-stress environments? (Committee on Armed Services, U.S. House
+of Representatives, 1989). Four behavioral scientists, identified as expert witnesses, testified and
+wrote reports to the Defense Policy Panel of the Armed Services in 1989 concluding that we know
+almost nothing about the extent to which decisions are affected by stressful circumstances, much
+less the manner in which the decisions are influenced by high-stress environments.
+The agreement among these experts was three-fold. First, stress is an area that has not been
+thoroughly studied and we know little about stress in group situations. Secondly, it is believed that
+the competence of human judgment is decreased by stress (even though the experts could not cite
+empirical data). Finally, the scientists concluded that stress narrows the focus of attention,
+implying a negative impact on judgment. In hindsight, these experts appeared to be completely
+correct only in their first conclusion - that stress is not a thoroughly studied area of human
+behavior. Conclusions two and three are discussed further in this paper, and the authors suggest
+the 1989 analysis was too simplistic.
+One recommendation of the Committee to Congress was that stress needed to be studied further.
+Meanwhile, the American Psychological Association and the National Institute for Occupational
+Safety and Health (NlOSH) joined forces in 1990, declaring the 90's to be the "Decade of Stress."
+During that decade, resources and attention were focused on increasing knowledge about the
+human stress response and its relationship to numerous variables.
+1.3 Paper Overview
+Over a dozen years have passed since the Congressional hearings on Iran Flight 655, and although
+no conclusive data on judgment and decision-making have emerged, a number of studies have
+reached conclusions of interest to those who must make decisions under stress. The research is
+scattered throughout the social, psychological, physiological, and medical literature with varying
+degrees of quality and breadth. This paper presents a selection of these studies with the intention of
+stimulating a dialogue among those managers and others who are responsible for developing
+models and planning responses that require decision-making in disaster situations.
+
+Assumptions and key issues
+2.1 Stress is affected by perception.
+It is critical to include the concept of perception when discussing stress in relation to performance,
+including performance in judgment and decision-making. The reader should note that in Section
+1.1, discussing the definition of stress, the key phrase "perceived demands" is used. Ability to cope
+with stress is dependent upon an individual's perception or interpretation of an event. Gillis (1993)
+suggests that stressful circumstances do not automatically lead to problems in judgment; it is the
+perceived experience of distress. One obvious implication of such a notion is that an attempt
+should be made whenever possible to minimize distress by psychological, pharmacological, or
+other means - before a subject enters the judgmental arena.
+2.2 Competence in i u d m e n t is always compromised under stress.
+This particular conclusion of the experts in the 1989 Congressional hearings deserves further
+evaluation. It is important to note that both improved perforrnalzce and perfonnumzce degradation
+have been associated with increased stress (Poulton, 1976). For some individuals, heightened
+stress elevates their performance. Others are vulnerable to the negative impacts of stress, which
+results in diminished performance. A physiological example of this positivelnegative dynamic of
+stress is athletic performance. An athlete desiring to be at an optimal performance level while
+competing demands an optimal stress level. The stress level should be enough to stimulate top
+performance, but not enough to over-stress the body, because performance declines as the body
+moves toward exhaustion.
+Studying the effect of stress on performance and judgment, Dorner and Pfeifer (1993) subjected 40
+subjects to a computerized forest firefighting game. Half of the subjects were placed under
+conditions of stress (a disturbing noise) and the others were left to focus on their task. The exercise
+involved varying levels of difficulty and lasted five hours. The researchers found that subjects
+under stress performed equally to those not stressed, but their problem solving patterns were
+different. Stressed subjects focused on the general outline of the problem, while non-stressed
+iridividuals relied on in-depth analysis. Consequently, stressed subjects made fewer errors in
+setting priorities while non-stressed subjects controlled their firefighting operations better.
+Two Greek researchers, Kontogiannis and Kossiavelou (1999), examined the decision-making
+strategies and cooperation patterns used by proven, efficient teams in adapting their behavior to
+cope with stressful emergencies. The authors conclude that stress restricts cue sampling, decreases
+vigilance, reduces the capacity of working memory, causes premature closure in evaluating
+alternative options, and results in task shedding. A study of military commanders (Serfaty and
+Entin, 1993) found that teams with records of superior performance have one common critical
+characteristic: They are extremely adaptive to varying demands. The teams in their study could
+maintain performance using just one-third of the time usually available to make decisions, but the
+mode of communication changed. Initially, the team responded to explicit requests in
+communications from commanders. As time pressure increased, they stopped waiting for explicit
+requests and instead provided commanders with information they implicitly determined would be
+useful.
+The authors suggest that changes from 'explicit' to 'implicit' communication can help teams
+maintain performance under time pressure. Implicit coordination patterns, anticipatory behavior,
+and redirection of the team communication strategy are evident under conditions of increased time-
+pressure. The authors conclude that effective changes in communication patterns may involve
+updating team members, regularly anticipating the needs of others offering unrequested
+information, minimizing interruptions, and articulating plans at a high level in order to allow
+flexibility in the role of front-line emergency responders. The authors found support for the main
+hypothesis that team coordination strategies will evolve from explicit coordination under low
+workload conditions to implicit coordination as work load increases.
+3.3 Stress is related to information.
+In studies of escape from underground mine fires, researchers have identified several human
+behavioral and organizational dimensions relevant to understanding decision-making under duress.
+First, initial warnings in dangerous situations are often unclear, sometimes due to the way
+technology behaves, and sometimes due to faulty communication. This can lead to different
+interpretations of the problem. Second, people frequently fail to gather the right kinds of
+information, which prevents them from making appropriate responses. Third, once a decision is
+made, individuals respond well to a leader; however, if leadership is lacking people tend to become
+confused. Finally, apparatus (e.g., those used in mine emergencies) may not work as expected or
+may fail. Thus, emergency decision-makers under stress not only have the effects of their own
+stress response and its resulting consequences, the information they must base their judgments on is
+often unclear, faulty, and incomplete (NIOSH, 2000).
+2.4 Stress narrows the focus of attention.
+A primary conclusion of the experts at the Congressional hearing was that stress narrows one's
+focus. Time pressure studies, where the subject is given a task and a specific, usually
+unreasonable, time to complete it, generally support this conclusion. Other studies, however,
+indicate inconclusive results for this conclusion (Hammond, 2000). Negative informati017 gains
+become important under time pressure, because they need to be evaluated and discarded. If a
+situation involves risk (as in response to an emergency), time pressure studies show that the subject
+becomes more cautious and adopts risk-avoiding behavior with an importance placed on avoiding
+losses (Flanagan, 1954). These studies have shown that under time pressure the subject adopts a
+simpler inode of ilzfonnation processing in which alternatives are not explored fully, and certain
+important "cues" are used to determine the decision. From these studies, the experts conclude that
+stress tzarrows the focus of attention. In other words, the focus of attention shrinks, and the
+individual focuses just on critical issues and elements. This focused attention was assumed to be
+bad, but it actually may be good because it can eliminate nonessential information and highlight the
+most important sources.
+Citing two studies reported in 1993, Gillis (1993) did not find support for the "narrowing of
+attention" hypothesis. Keinan et al. (1987) tested the proposition that deficient decision-making
+under stress is due largely to an individual's failure to fulfill adequately a most elementary
+requirement of the decision-making process, i.e., the systematic consideration of all relevant
+decision alternatives. In their study, which required participants to solve decision problems while
+under stress, one group was put under stress and compared to a non-stress control group. Stress
+was found to induce a tendency to offer solutions before all decision alternatives had been
+considered and to scan such alternatives in a non-systematic fashion.
+2.5 Dynamic environments impact decision-making.
+According to Kerstholt (1994), decision-making behavior is considerably affected by the dynamics
+of environment, because most natural dynamic situations contain much uncertainty. He notes that
+a dynamic situation continually changes, and thus a decision-maker has to take temporal changes
+into consideration. He further notes that a decision- maker can use feedback on the effect of
+his/her actions on the system. In other words, as decisions are made and action is taken, the results
+of the decision may be taken into consideration and the information used in subsequent decisions.
+Additionally, in dealing with the uncertainty of a continually changing environment, the decision
+maker must achieve a trade-off between the cost of action versus the risk of non-action.
+To test his hypothesis Kerstholt conducted a computer experiment in which subjects had to control
+a system that changed over time. In this experiment, the subjects had to monitor the continuously
+changing fitness level of a simulated athlete, and prevent himher from collapsing. Information
+requests were treated as costs in the subjects' incentive system, and correct treatments were treated
+as benefits. The decision-making strategy remained constant. False alarms and "real" change in
+system parameters represented sources of deterioration in the system. Time pressure in the study
+was related to the development of the situation itself, and the allocation of time had to be correlated
+to the risk of negative consequences and the cost of delaying further information requests. The
+results showed a general speed-up of information processing as time pressure increased. Under
+high levels of time pressure, this strategy led to a significant increase in system crashes.
+It is interesting to note that requests for information were not congruent with conditions - subjects
+tended to wait until an already deteriorating situation had further deteriorated before acting. It can
+be assumed that if information is expensive in time, and actions are cheap, subjects will be more
+inclined to use an action-oriented strategy. To the contrary, subjects did not select the most
+efficient strategy - they chose further information over action. Results indicated that selection of a
+decision strategy in dynamic tasks is less adaptive than is generally concluded from studies with
+static tasks.
+Kidd et a1 (1996) linked stress and injury in another dynamic environment - farming. In a three-
+step secondary analysis of focus group data, one of their conclusions stated, the dimensions of
+workload that were particularly important included job and task complexity and lack of time. Both
+of these dimensions are relevant to the emergency worker. Further, as a preventative measure, the
+researchers suggested that a decrease in the number of roles performed exclusively by one
+individual could improve successful task performance.
+2.6 Stress affects behavior in emergencies.
+There are limited studies regarding the eflects of stress on behavior in emergencies. Researchers
+working with the United States mining industry have explored the issues of traumatic incident
+stress in mine disasters (Kowalski, 1995), burnout (Kowalski and Podlesny, 2000) stress levels
+related to training during a simulated escape through smoke (Vaught et al., 1997), and behaviors in
+underground mine fires (NIOSH, 2000). In the training study, small groups of miners were
+fequired to don self-contained self-rescuers (breathing apparatus), enter an area of an underground
+limestone mine that had been filled with non-toxic theatrical smoke, and travel approximately 270
+meters to a door, through which they exited into fresh air. Individual subjects then provided a self-
+report of their experiences on questionnaires administered immediately upon completion of their
+walk through smoke. The general finding was that miners who had more experience or training
+also tended to report less stress during the exercise.
+In the study of worker behaviors in underground mine fires, researchers examined eight cases in
+which groups of miners had escaped their workplaces through smoke. One goal was to determine
+whether it would be possible to model those factors that impact one's ability to make good
+decisions during an emergency. The researchers suggested that any person engaged in decision-
+making is actively involved in a process characterized by certain elements: 1) detection of a
+problem; 2) definition or diagnosis; 3) consideration of available options; 4) choice of what is seen
+to be the best option given the perceived needs; and 5 ) execution of the choice based on what has
+transpired. At any moment in this process, several factors significantly impact one's ability to solve
+complex problems in a limited time: 1) psychomotor skills, knowledge, and attitudes; 2)
+information quality and completeness; 3) stress - generated both by the problem at hand and any
+existing background problem; and 4) the complexity of elements that must be attended to. The
+resulting model posited interactions among the major components, so that heightened stress, for
+instance, might interfere with an accurate diagnosis, while an accurate diagnosis would lead to
+lowered stress levels.
+
+3.0    Analytical vs. intuitive judgment under stress
+There is an assumption that the best decisions are rational -based on logic and factual information.
+This assumption has implications for the discussion of judgment and decision-making under stress.
+Researchers have tended to look at reason and emotion separately. A value has been placed on
+decisions made with reason: " . . . it is a careless - but common - usage to suggest that when we
+make bad decisions, they are based on emotion, but when we arrive at good decisions, they are
+based solely on reason" (Lazarus and Lazarus, 1994, p.199). Hammond posited that different
+situations demand different forms of cognitive activity, some calling for increased analytical
+cognition, and others calling for increased reliance on intuition. Both situational analysis and
+people's reactions to them are key as we learn about judgment and stress.
+It is instructive to examine some instances of judgment under stress in which decision-makers
+followed different paths but achieved successful outcomes. Hammond describes the following:
+        Case I: The USS Samuel B. Roberts, operating in the Persian Gulf, struck a mine, caught
+        fire, and began to sink. The Roberts' captain, Commander P.X. Rinn, drawing upon his
+        training and experience, analyzed the situation and determined a course of action directly
+        opposed to Navy protocol. Realizing, from his knowledge of how much water the ship
+        could take on and still stay afloat, that the Roberts would sink before his crew could
+        extinguish the fire, Commander Rinn made a decision to focus on keeping the ship afloat
+        and give the fire second priority. He is on record as having arrived at his decision
+        analytically, based on available information, training, and operational experience.
+        Case 2: A United DC-10, on its way from Denver to Chicago, lost its hydraulic fluid, and
+        hence, its controllability. Captain A1 Hayes and his crew had to discover an alternative
+        way to fly the plane by using the throttles - something their training had not prepared them
+        for - and do it with few of the cues usually available to pilots. That they were able to land
+        with minimal loss of life may be attributed to intuitive decision-making under stress.
+The two cases cited by Hammond portray decision-making under stress within two scenarios: one
+where the training of the decision-maker was readily applicable, and one where the decision
+makers' training had not prepared them for the exigency they faced. Yet, both instances involved
+individuals who were highly trained. In many dynamic settings, such as mining, those who are
+forced to make decisions in emergency situations have little training. That is because mines,
+fishing boats, and logging operations, among others, are dedicated to production activities rather
+than to emergencies. Thus, their personnel may have had minimal drilling on how to react during
+crises. Their decisions must, almost of necessity, be based on intuition or fragmentary knowledge.
+Considering this issue of analytical vs. intuitive judgment, a NIOSH (2000) report observed:
+        "The point here is that research which focuses on judgment must include scrutiny not only
+        of decisions that are made, but also of real-world variables that influence them. The quality
+        of any decision may have little or no direct relationship to the eventual outcome of its
+        execution in a given situation. This is because a decision-maker is constrained not only by
+        the stress of the situation or personal knowledge and attitudes, but also because he or she
+        can only weigh information that is available."
+Acbowledging the complex context of concrete decision-making environments and their various
+sources of stress is a f i s t step to understanding the skill of decision-making and learning to
+evaluate the abilities of decision-makers.
+
+4.0    Conclusions and observations
+Growing research interest has led to the question of what factors influence a person's ability to
+make good decisions during an emergency. There is still little agreement on how to define those
+basic concepts, including stress, necessary to assess the soundness of decisions from within both
+environmental and group contexts. The need to better understand judgment and decision-making
+under stress stems from high-risk occasions and emergency situations. The fundamental
+assumption is that, while there are untold successes, there are also notable failures resulting from
+decisions that can be ascribed to one or more errors in judgment. What part, then, does stress play
+in the commission of these errors? From a cognitive perspective, any person engaged in decision-
+making (either alone or in a group) is actively involved in a process characterized by certain
+elements. At any moment in this process, there are factors that have a large impact upon one's
+ability to solve complex problems in a limited time.
+So what is the advice for the emergency manager based on the data? Unfortunately, the authors
+cannot offer a "list" of factors to consider in judgment and decision-making under stress. The
+present, limited data does not support such an approach. There are serious limitations to
+generalizing from laboratory studies to real-life emergencies. We know that there is an interaction,
+that human stress affects human decision-making. What we do not know is the exact nature of that
+interaction.
+The research suggests that successful teams communicate amongst themselves and as the
+emergency intensifies, a flatter communication hierarchy develops with more (unsolicited)
+information coming from the field to the command center. Command Center personnel can
+facilitate and encourage this type of information. Stress is affected by perception; it is the
+perceived experience of stress that an individual reacts to. An implication of this notion is that an
+attempt should be make to minimize distress for the responders by psychological, pharmacological
+or other means before entering the judgmental arena. Contrary to popular opinion, judgment is not
+always compromised under stress. Although stress may narrow the focus of attention (the data is
+inconclusive), this is not necessarily a negative consequence in decision-making, as some studies
+show that the individual adopts a simpler mode of information processing which may help in
+focusing on critical issues. Decisions can only be made based on the information available, and
+studies have shown that many times decisions are made with incomplete information. In addition,
+the issue of training plays a part in stress and decision-making.
+Regarding the development of decision support systems, the authors offer several suggestions.
+Decision support programs should be tested under conditions of stress (time pressure is one option)
+to evaluate their effectiveness. Simulations should be used to replicate stress conditions in the
+field. New simulations should include a stress component, taking into consideration the issues
+presented in this paper. A simulation should also take into account the increased need, as an
+emergency progresses, for explicit and implicit information to be received from the field and
+integrated into the decision-making process.
+This paper has suggested that a better understanding of the interplay between stress and an
+individual's judgment and decision-making activities would yield a better understanding of how
+people reach the choices they make in emergencies. As far as studies of judgment and decision-
+making are concerned, the limited literature in this area suggests a strong need for increased
+attention to the topic.
+Stress is one of the key factors that underlies the demands on decision-makers in most life-or-death
+situations. Whether the individual is a naval commander, an airline pilot, a mineworker, or an
+emergency manager who has access to a decision support system, an emergency makes it necessary
+to deal with an enormous number of variables in a rather short time frame.
+
+References
+Committee on Armed Services, U.S. House of Representatives (1989). Iran air flight 655
+compensation. H.A.S.C. No. 100-1 19. Washington, D.C.: U.S. Government Printing Office.
+Dorner D. and Pfeifer F. (1993). Strategic thinking and stress. Ergonomics 36 ( 11): 1345-1360.
+Flanagan, J. (1954). The critical incident technique. Psychological Bulletin, 5 1, 327-358.
+Gillis, J.S. (1993). Effects of Life Stress and Dysphoria on Complex Judgments. Psychological
+Reports, 72, 1355-1363.
+Hammond, K.R. (2000). Judgments Under Stress, Oxford University Press, Inc. New York, New
+York.
+Keinan, G., Friedland, N. Ben-Porath, Y. (1987). Decision-making Under Stress: Scanning of
+Alternatives Under Physical Threat. Acta Psychologica 64, 219 - 228, Elsevier Science Publishers
+B.V. North Holland.
+Kidd, P., Scharf, T, Veeazie, M. (1996). Linking stress and Injury in the Farming Environment: A
+Secondary Analysis of Qualitative Data. Health Education Quarterly, Vol. 23 (2): 224-237.
+Kontogiannis, T. and Kossiavelou, 2. (1999). Stress and team performance: principles and
+challenges for intelligent decision aids. Safety Science, Vol. 33, Issue 3. December 103 - 128.
+Kowalski, K.M. (1995). A human component to consider in your emergency management plans:
+the critical incident stress factor, Safety Science 20 115-123.
+Kowalski, K.M., Podlesny, A. (2000). The Effects of Disaster on Workers: A Study of Burnout in
+Investigators of Serious Accidents and Fatalities in the U.S. Mining Industry.
+Lazarus, R.S. and Lazarus, B.N. (1994). Passion and reason: Making sense of our emotions. New
+York: Oxford University Press.
+NIOSH (2000). Behavioral and Organizational Dimensions of Underground Mine Fires.
+Information Circular 9450. Authors: Vaught, C., Brnich, M., Mallett, L., Cole, H.,
+Wiehagen, W., Conti, R., Kowalski, K., Litton, C . U.S. Department of Health and Human
+Services, National Institute for Occupational Safety and Health N O S H Publication
+dissemination Cincinnati, OH.
+Poulton, E.C. (1976). Arousing environmental stresses can improve performance, whatever people
+say. Aviation, Space, and Environmental Medicine, 47, 1193-1204.
+Salas, E., Driskell, E., and Hughs, S. (1996). The study of stress and human performance.
+In:Driskell, J.E. and Salas, E. Editors, 1996 Stress and Human Performance Lawrence Erlbaum
+Associates, New Jersey, pp. 1- 45.
+Serfaty, D. and Entin, E.E. (1993). Adaptation to Stress in Team Decision-Making and
+Coordination, Proceedings of the Human Factors and Ergonomics Society 37' Annual Meeting
+Vol. 2, pp 1228 - 1232. Santa Monica, CA: Human Factors and Ergonomics Society.
+Vaught, C., Mallett, L., Kowalski, K. Brnich, M. (1997). Workers Response to Realistic
+Evacuation Training. The International Emergency Management Conference Proceedings, Riso
+National Laboratory, Copenhagen, Denmark.
+
+Author Biographies:
+Kathleen M. Kowalski, P1z.D.         is a Research Psychologist, certified Mine Trainer, and
+psychotherapist. She received her B.S. and M.S. from the University of Wisconsin-Madison and
+her Ph.D. from the University of Pittsburgh. Dr. Kowalski is on the TIEMS Board of Directors and
+Vice-President for Membership.
+Clzarles Vaught, Ph.D. is a Certified Mine Safety Professional with a Ph.D. in the sociology of
+organizations from the University of Kentucky. His memberships include the American
+Sociological Association, the International Society of Mine Safety Professionals, and the United
+States Mine Rescue Association.
+

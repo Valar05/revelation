@@ -1,0 +1,299 @@
+{
+  "title": "One Name, One Wall",
+  "design_goal": "Spoken Institute dispatch commands physically construct walls and seal exits in a transit hub; the squad must break contact with growing masonry, suppress the dispatch terminal under fire, and scatter command authority before the building finishes itself around them.",
+  "source_mechanism": {
+    "source_chunk_id": "babel_one_language_name_tower",
+    "source_action": "A unified people speak one language, make brick and tar, and build upward to make themselves a single unchallengeable name; the act of centralizing speech into one authority is the engine of construction.",
+    "sin_or_transgression": "The Institute's Emergency Dispatch Unification Protocol collapsed all field radio syntax into one approved command vocabulary routed through a single hub terminal, so that no order could be issued without passing through central authority. The architects called it clarity. It was consolidation of name.",
+    "witness_or_judgment": "Every spoken order now lays brick. The building answers the protocol's logic: one voice, one structure, one name above all exits. The judgment is architectural—the thing they built to control speech is finishing the tower they started.",
+    "required_scene_elements": [
+      "wet concrete and stacked brick forms appearing mid-corridor after radio orders are spoken",
+      "a dispatch terminal broadcasting a single approved command syntax on loop",
+      "sealed fire doors and blocked stairwells that did not exist on the floor plan",
+      "mortar dust on personnel who transmitted orders",
+      "scaffolding rising inside a finished building"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "If a spoken order uses the approved Institute dispatch syntax—any phrase routed through the central hub terminal—wet concrete and brick materialize at the nearest structural boundary, sealing it. The more complete and syntactically correct the order, the faster and thicker the wall.",
+    "active_manifestation": "Before the squad arrives, the overnight dispatch operator transmitted six routine evacuation orders in approved syntax. Six corridors on floors two through four of the Meridian Transit Authority hub are now partially or fully bricked over. Civilians are trapped in pockets. The terminal is still broadcasting the approved syntax on a loop. Masonry is still rising.",
+    "escalation": "Each additional approved-syntax transmission adds a new wall segment. If the squad attempts to coordinate using standard Institute radio protocol, they accelerate the construction. A full floor seal is three transmissions away. After that, the stairwell to the roof closes and the building becomes a finished tower with no exit.",
+    "closure_condition": "The dispatch terminal's central syntax authority must be physically destroyed or its signal fragmented into non-routable local channels so that no single approved command phrase can complete a circuit. Closure is not power-off; the language must be scattered—split into handwritten local authority cards, hand signals, and cell-specific codes that no hub can unify."
+  },
+  "room": {
+    "id": "babel_meridian_dispatch",
+    "name": "Meridian Hub — Dispatch Level",
+    "type": "mission",
+    "mission_mode": "action_horror",
+    "description": "A transit authority hub where Institute dispatch commands are physically building walls. Civilians trapped. Terminal still broadcasting.",
+    "first_visit_description": "Torah leads Ross and Owen into the Meridian Transit Authority hub at 0340. The building's emergency lighting is on. Saye is remote on a hardline from the Institute's technical annex—she cannot enter the site because the Institute's own access protocol would require her to transmit an approved-syntax clearance phrase, which would seal the lobby. Ross has the terminal schematics. Owen has the breach kit and is on point. Torah carries the only radio set to receive-only. The floor plan on Ross's tablet does not match what is in front of them: a corridor that should run forty meters to the stairwell ends in a fresh brick wall, mortar still wet, scaffold poles leaning against it from the inside. Dust on the floor. No construction crew. The terminal speaker in the ceiling is cycling a recorded dispatch phrase every ninety seconds.",
+    "return_description": "The hub is quieter now but the walls are still here. The new ones have dried. Personnel move through gaps that were not on any plan. The terminal housing is dark.",
+    "detection_report": "Civilian 911 calls described walls appearing after a PA announcement. First responders found sealed corridors and retreated. Institute monitoring flagged the dispatch terminal's syntax loop at 0310. Saye identified the Babel signature from audio analysis: the loop phrase is grammatically complete, institutionally authorized, and has been transmitting without interruption for ninety minutes.",
+    "current_situation": "Torah, Ross, and Owen are inside the lobby. Two civilian groups are audible through brick—one on the second floor, one near the platform level. The terminal is cycling overhead. Every ninety seconds the walls creak and a new layer of concrete appears at the nearest sealed point. Ross has located the terminal junction box behind the dispatch counter but the counter itself is now half-buried in a brick form that rose while the first responders were still on site. Owen is watching a scaffold pole that was not there sixty seconds ago extend itself horizontally across the stairwell entrance. Saye is on hardline telling Torah that the loop has seventeen minutes before it completes a full syntax sequence, which her model predicts will seal the roof exit.",
+    "action_profile": {
+      "physical_threat": "Brick forms and scaffold poles are materializing in real time. A wall segment can pin or crush a person in a corridor. The stairwell scaffold is extending across the only confirmed exit route. If the roof seals, the squad and civilians have no egress. Mortar dust is accumulating at respiratory hazard levels in sealed pockets where civilians are trapped.",
+      "contact_state": "The squad is inside the building and the building is actively constructing around them. They are not yet cut off but the stairwell will be blocked within minutes. Owen has eyes on the scaffold. Ross is partially exposed at the dispatch counter. Torah is the only one who can move freely without triggering a transmission.",
+      "field_manual_drill": "React to contact: Owen establishes security on the stairwell scaffold and calls the threat. Suppress and fix: Ross must reach the terminal junction without transmitting. Bound: Torah moves civilians through the gap before the next wall segment rises. Breach and clear: Owen physically breaks the scaffold obstruction to hold the stairwell open. Evacuate: civilians move in silence on hand signals only.",
+      "tactical_objective": "Reach and physically destroy or fragment the dispatch terminal's central routing board before the syntax loop completes, while evacuating trapped civilians through corridors that are still passable, without transmitting any approved-syntax radio order.",
+      "symbolic_close": "The terminal's central routing authority must be physically broken and command language redistributed as handwritten local authority cards issued to each squad member and civilian group leader—no single phrase, no single hub, no single name.",
+      "violent_resolution": "The dispatch terminal junction box and its central routing board can be physically breached with Owen's kit: pry the counter masonry, cut the routing board housing, and destroy the board. This stops new wall generation but does not open existing sealed corridors. Existing walls require separate breach. The scaffold pole across the stairwell can be broken with Owen's bar before it fully sets.",
+      "not_monster_of_week": "There is no creature. The threat is the building completing itself according to the logic of centralized command authority. The violence is against architecture and infrastructure that is obeying a protocol. The horror is that the protocol is correct by Institute standards—every wall is a properly authorized order."
+    },
+    "deployment_manifest": [
+      {
+        "officer_id": "torah",
+        "name": "Torah",
+        "mission_role": "Command lead and symbolic asset",
+        "physical_position": "Lobby floor, receive-only radio, between the two civilian pockets",
+        "assigned_reason": "Torah's authority is not routed through the dispatch hub; his orders do not trigger the syntax rule if spoken without a radio transmission",
+        "visible_state": "Moving carefully, not transmitting, watching the ceiling speaker"
+      },
+      {
+        "officer_id": "agent_caleb_ross",
+        "name": "Ross",
+        "mission_role": "Technical specialist and terminal access",
+        "physical_position": "At the dispatch counter, partially exposed, tablet in hand",
+        "assigned_reason": "Ross has the terminal schematics and the junction box access codes from Saye's remote brief",
+        "visible_state": "Crouched behind the counter brick form, dust on his jacket, not speaking"
+      },
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Owen",
+        "mission_role": "Tactical point and breach",
+        "physical_position": "Stairwell entrance, watching the scaffold pole extend",
+        "assigned_reason": "Owen carries the breach kit and is the only squad member rated for structural obstruction removal under time pressure",
+        "visible_state": "Bar in hand, jaw set, not moving yet"
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Saye",
+        "mission_role": "Remote technical consult",
+        "physical_position": "Institute technical annex, hardline only",
+        "assigned_reason": "Saye identified the Babel syntax signature and cannot enter the site without triggering a wall; she is the squad's only analytical support",
+        "visible_state": "Voice only, clipped and precise, timing the loop on her end"
+      }
+    ],
+    "root_sin": "The Institute's Emergency Dispatch Unification Protocol eliminated all local command authority and required every field order to pass through a single approved syntax hub, so that no officer could act without central validation. The architects believed unified language meant unified safety. What it meant was that one voice owned every exit.",
+    "modern_incident_logic": "The Meridian Transit Authority contracted the Institute's dispatch platform for emergency coordination after a multi-agency communication failure two years prior. The platform was installed with full syntax enforcement: any radio order not in approved format was rejected. The overnight operator, following protocol exactly, transmitted six evacuation orders in approved syntax when a fire alarm triggered. The building answered. The operator is now unreachable behind a wall on the second floor.",
+    "closure_test": "The squad must physically destroy the central routing board, issue handwritten local authority cards to each civilian group leader and squad member, and confirm that no single command phrase can complete a circuit through the hub. Saye must verify from the hardline that the syntax loop has gone silent and that the last wall segment has stopped rising.",
+    "religious_pattern": "Babel: unified language enables construction toward a single name; judgment confuses and scatters the language; the tower stops. Here the Institute is the builders, the dispatch protocol is the one language, and the judgment is the building finishing itself.",
+    "anomaly_rule": "Approved-syntax transmissions through the hub terminal generate brick and concrete at the nearest structural boundary. Partial or non-syntax speech does not trigger construction. Physical destruction of the routing board stops new generation. Existing walls do not dissolve; they must be breached manually. The loop transmission is the active engine.",
+    "forbidden_flat_read": "Do not literalize as a haunted building or a malevolent AI. The building is not angry. It is obedient. That is the horror.",
+    "officer_reports": [
+      "Ross: 'Counter is half-buried. I can reach the junction box if Owen clears the scaffold and nobody keys a radio.'",
+      "Owen: 'Pole is moving. I can break it now or I can wait and it closes in four minutes. Your call.'",
+      "Saye (hardline): 'Seventeen minutes to full sequence. The loop phrase is syntactically complete. Every transmission is a vote for the wall.'",
+      "Torah (to himself, not transmitted): 'They built this to make sure no one could speak without permission.'"
+    ],
+    "procedure_hooks": [
+      "Terminal junction box access requires physical breach of the masonry form at the counter—Owen's bar or Ross's pry tool",
+      "Civilian evacuation must use hand signals only; any spoken order in approved syntax triggers a new wall segment",
+      "Saye's hardline is the only safe communication channel; all Institute radio is receive-only",
+      "Local authority cards must be handwritten and distributed before the squad splits to reach both civilian pockets",
+      "Stairwell scaffold must be broken before it fully sets or the egress route closes"
+    ],
+    "character_state_stakes": {
+      "torah": "If Torah transmits a single approved-syntax order, a wall rises and his authority over the squad fractures—they will not trust his voice again in this building",
+      "agent_caleb_ross": "If Ross fails to reach the junction box, he carries the weight of the sealed corridors; his fixation on the schematics becomes a liability if he stops reading the room",
+      "lt_mara_owen": "If Owen hesitates on the scaffold and it sets, she loses the stairwell and her confidence in physical solutions; if she acts too early she may be pinned",
+      "dr_lenora_saye": "If Saye's timing model is wrong and the loop completes early, she loses her credibility as the squad's only analytical anchor"
+    },
+    "interlude_vectors": [
+      "Ross sits with mortar dust on his hands and does not wash it off for an hour",
+      "Owen does not speak during the debrief; she writes her after-action on paper",
+      "Saye asks Torah whether the Institute knew what the protocol would do",
+      "Torah keeps the handwritten authority card in his pocket"
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "babel_one_language_name_tower",
+      "role": "premise",
+      "fingerprint": "One language enables construction toward a single name; the act of building is the act of claiming authority",
+      "transfer": "The Institute dispatch protocol is the one language; every approved-syntax order is a brick; the building is the tower",
+      "visible_details": [
+        "wet mortar on corridor walls that did not exist on the floor plan",
+        "the dispatch terminal cycling one approved phrase on loop"
+      ],
+      "payoff": "Destroying the routing board is the moment the one language is broken; the construction stops mid-course"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "babel_confusion_scattering",
+      "role": "closure",
+      "fingerprint": "Language is confused and scattered; the builders no longer understand one another; the city stops",
+      "transfer": "Closure requires deliberate scattering of command authority into handwritten local cards and hand signals so no single phrase can complete a circuit",
+      "visible_details": [
+        "handwritten authority cards distributed to each civilian group leader",
+        "Owen using hand signals instead of radio at the stairwell"
+      ],
+      "payoff": "The follow-up reveals what the unification protocol was hiding: two prior incidents where local officers were overruled by dispatch and people died"
+    },
+    {
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_chunk_id": "patrol_clear_task_purpose",
+      "role": "procedure",
+      "fingerprint": "Clear task and purpose, corridor security, danger-area crossing, casualties, report-backs",
+      "transfer": "Each squad member has a discrete task with no radio dependency; Owen holds the stairwell, Ross reaches the terminal, Torah moves civilians, Saye times from hardline",
+      "visible_details": [
+        "Owen posted at the stairwell entrance with bar in hand",
+        "Ross moving along the counter wall using the tablet schematic, not speaking"
+      ],
+      "payoff": "If any task owner is cut off, the cell structure means the others can still complete their tasks independently"
+    },
+    {
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_chunk_id": "stress_unclear_information",
+      "role": "escalation",
+      "fingerprint": "Equipment failure, leadership gaps, time pressure, narrowed attention",
+      "transfer": "The squad cannot use standard radio; every decision is made on incomplete information with a seventeen-minute clock; failed plans change the proposing character's mental state",
+      "visible_details": [
+        "Ross checking his tablet schematic against a wall that should not exist",
+        "Saye's voice on the hardline counting down the loop interval"
+      ],
+      "payoff": "A failed plan by Ross or Owen changes their availability in the cooldown and affects the follow-up mission's command structure"
+    }
+  ],
+  "root": {
+    "id": "babel_root_dispatch_contact",
+    "speaker": "SITREP",
+    "line_1": "The Meridian hub dispatch terminal is cycling an approved-syntax phrase every ninety seconds. Each cycle adds masonry to the nearest sealed corridor. Two civilian groups are trapped.",
+    "line_2": "Owen has eyes on a scaffold pole extending across the stairwell. Ross is at the counter. Saye has seventeen minutes on the clock before the roof exit seals.",
+    "queued_line": "The squad must reach the terminal and break its routing authority before the loop completes—without transmitting a single approved-syntax order.",
+    "plans": [
+      {
+        "label": "Ross: breach the terminal",
+        "action": "intercept",
+        "officer_id": "agent_caleb_ross",
+        "primary_skill": "technical access under structural pressure",
+        "tactical_step": "suppress/fix the masonry obstruction at the counter, then breach the junction box housing and cut the routing board",
+        "base_success": 0.65,
+        "intent": "Ross uses his pry tool to clear the brick form at the counter, reaches the junction box, and physically cuts the routing board to stop new wall generation",
+        "yield": "Terminal goes silent mid-cycle; no new walls rise; Saye confirms the loop is broken; Ross has time to help with civilian egress",
+        "risk": "If the counter masonry shifts while Ross is inside it, he is pinned; if he rushes and misreads the schematic, he cuts the wrong board and the loop accelerates",
+        "success_line": "Ross gets the pry tool under the brick form and leans into it. The form cracks along the mortar line and drops. He is at the junction box in eight seconds, tablet propped against the counter, cutting by the diagram. The terminal speaker cuts out mid-phrase. The scaffold pole across the stairwell stops moving. Ross does not look up. He says, quietly, 'That's the board.' Dust settles. The building is still.",
+        "partial_line": "Ross reaches the junction box but the brick form shifts before he can fully clear it. He gets one arm through and cuts two of the three routing leads. The loop slows—cycle time doubles—but it does not stop. New walls are still rising, just slower. Ross is half-pinned at the counter, one shoulder jammed, telling Torah through clenched teeth which lead is left and where the cutters are.",
+        "failure_line": "The brick form collapses inward as Ross pries it. He pulls back but not fast enough; the edge catches his left arm and he goes down behind the counter. The terminal keeps cycling. A new wall segment rises at the base of the stairwell, six inches thick, and Owen has to step back. Ross is on the floor, not transmitting, not speaking, staring at the ceiling with the tablet cracked beside him. Saye's voice on the hardline says: 'Fourteen minutes.'"
+      },
+      {
+        "label": "Owen: hold the stairwell",
+        "action": "combat",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "structural breach under time pressure",
+        "tactical_step": "react to contact with the scaffold, break the pole before it sets, establish security on the stairwell corridor for civilian egress",
+        "base_success": 0.65,
+        "intent": "Owen uses her bar to break the scaffold pole before it fully sets across the stairwell, keeping the egress route open while Ross works the terminal",
+        "yield": "Stairwell stays open; civilians can move; Owen holds the corridor and signals Torah with hand gestures to begin moving the first civilian group",
+        "risk": "If Owen swings too early the pole is still flexible and wraps around the bar; if she waits too long it sets solid and she cannot break it alone",
+        "success_line": "Owen does not wait for a second opinion. She steps into the stairwell entrance, plants her feet, and hits the scaffold pole at the joint where it meets the wall bracket. The pole rings like a bell and snaps at the weld. She kicks the free end clear and turns to face Torah, two fingers up, then pointing at the stairwell: move them now. Her breathing is controlled. She does not say a word.",
+        "partial_line": "Owen breaks the pole but the bracket holds and the stub is still blocking the lower half of the stairwell opening. Civilians can get through if they crouch. Owen is waving them down with one hand and watching the ceiling with the other, because a second pole is beginning to extend from the opposite wall. She has maybe three minutes before the gap closes entirely. She looks at Torah and mouths: faster.",
+        "failure_line": "The pole sets before Owen reaches it. She hits it twice with the bar and it does not move—solid concrete core, scaffold shell, fully bonded to the wall. The stairwell is closed. Owen stands in front of it for a moment, bar at her side, and does not move. Then she turns and walks back to Torah without speaking. She pulls out her notepad and writes one word: roof. She holds it up. That is the only exit left."
+      }
+    ]
+  },
+  "resolution": {
+    "id": "babel_resolution_scatter_authority",
+    "speaker": "Torah",
+    "line_1": "The terminal is down or slowing. Civilians are in the corridor. The building has stopped adding walls but the existing ones are solid. Saye says the syntax loop left a residue—if any Institute radio transmits approved syntax within range, it can restart.",
+    "line_2": "Torah has the handwritten authority cards. Each civilian group needs one. Each squad member needs one. The language has to be scattered before the squad leaves or the next responder on scene triggers it again.",
+    "queued_line": "Distribute the cards, confirm each group leader understands their local authority, and break contact before the building's residual syntax finds a new voice.",
+    "plans": [
+      {
+        "label": "Torah: scatter authority",
+        "action": "torah_speaks",
+        "officer_id": "torah",
+        "primary_skill": "symbolic close and command redistribution",
+        "tactical_step": "symbolic close: distribute handwritten local authority cards to each civilian group leader and squad member, verbally confirm in non-syntax language, then break contact",
+        "base_success": 0.65,
+        "intent": "Torah writes and distributes authority cards by hand, speaks to each group leader in plain non-approved language, and confirms that no single phrase routes through the hub anymore",
+        "yield": "The syntax residue dissipates; Saye confirms the loop signature is gone; the building is inert; civilians evacuate under their own local authority; the Institute's unification protocol is formally broken at this site",
+        "risk": "If Torah uses any phrase that matches the approved syntax—even accidentally—a final wall rises and the residue locks in; if a civilian group leader panics and keys a radio, the scatter fails",
+        "success_line": "Torah writes the cards at the dispatch counter, pressing hard on the notepad. He hands the first one to the civilian group leader on the second floor through the gap Ross made, and says, in plain words with no Institute cadence: 'You are in charge of your group. No one else.' The man looks at the card. He nods. Torah does the same for the platform group. Saye's voice on the hardline, after a long pause: 'The signature is gone. I'm not reading the loop anymore.' Torah puts the last card in his own pocket. Owen is already at the door.",
+        "partial_line": "Torah distributes the cards but one civilian group leader—a transit worker who has been listening to the terminal loop for two hours—repeats a fragment of the approved phrase back to Torah when confirming his instructions. It is not a full transmission. It is not routed through the hub. But a thin line of mortar appears at the base of the lobby door, and Saye says, carefully: 'It's not gone. It's quiet. Those are different things.' The building is passable. The residue is not resolved. Torah pockets his card and says nothing.",
+        "failure_line": "Torah is halfway through the second card when a first responder outside, unaware of the protocol, transmits a full approved-syntax check-in on the Institute frequency. The lobby wall rises in four seconds—floor to ceiling, solid brick, cutting Torah off from Owen and the stairwell. Torah is on the platform side with one civilian group. Owen and Ross are in the lobby. Saye is saying something on the hardline but the signal is breaking up. Torah looks at the wall. He looks at the card in his hand. He writes on the back of it: find another way out. He slides it under the wall."
+      },
+      {
+        "label": "Saye: fragment the signal",
+        "action": "full_disclosure",
+        "officer_id": "dr_lenora_saye",
+        "primary_skill": "remote technical analysis and syntax disruption",
+        "tactical_step": "suppress the residual syntax signature from the hardline by broadcasting fragmented non-routable channel noise across the hub's frequency range, then confirm scatter",
+        "base_success": 0.6,
+        "intent": "Saye uses the Institute's hardline access to push fragmented channel noise across the hub's dispatch frequency, breaking the syntax residue into non-routable pieces before any outside responder can trigger it",
+        "yield": "The frequency is fragmented; no approved-syntax phrase can complete a circuit through the hub; the building is permanently inert at this site; Torah's card distribution is confirmed and backed by technical closure",
+        "risk": "If Saye's fragmentation is too broad, it kills all Institute radio in the district for an unknown period, which may strand other squads; if it is too narrow, the residue finds a clean channel and the loop restarts",
+        "success_line": "Saye does not ask for permission. Torah hears her on the hardline say, 'I'm going wide,' and then the terminal housing—already dark—emits one short burst of static and goes silent in a different way than before. Not off. Empty. Ross looks up from the floor where he has been sitting with his arm against his chest. He says, 'What did she do?' Torah says, 'She scattered it.' Saye's voice returns: 'You have a clean exit. Move now. I'll explain the frequency gap to command in the morning.' She does not sound like she is looking forward to that conversation.",
+        "partial_line": "Saye fragments the signal but the channel noise is uneven—she got three of the four dispatch frequencies and missed the emergency override band. The building is mostly inert. Mostly. Owen finds a hairline crack in the lobby wall that was not there before she finished, and points at it without speaking. The override band is still live. Any full approved-syntax transmission on that frequency will restart the residue. Saye says, from the hardline: 'I need someone to physically cut the override antenna on the roof before you leave. It's a gray box. You'll know it.' She pauses. 'I'm sorry. I should have caught all four.'",
+        "failure_line": "Saye's fragmentation attempt triggers a feedback loop in the hub's dispatch system. The terminal housing is dark but the frequency is now broadcasting the approved syntax on all four channels simultaneously, louder than before. The walls that had stopped rising begin again. Owen is at the door. Ross is on his feet. Torah is looking at the ceiling. Saye's voice on the hardline is steady but Torah can hear her typing fast: 'I made it worse. Get out. Get everyone out now. I will find another way to close this but not from here and not tonight.' Torah does not argue. He signals Owen: evacuate."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "babel_cooldown_paper_authority",
+    "speaker": "agent_caleb_ross",
+    "line_1": "Ross is at the debrief table with his left arm in a field wrap, the cracked tablet in front of him, and a handwritten authority card he did not give away sitting next to his coffee.",
+    "line_2": "Owen has not spoken since the building. Saye is on the line from the annex, waiting to be asked what she knew about the protocol before tonight.",
+    "interlude_type": "debrief",
+    "state_reads": [
+      "agent_caleb_ross.injury",
+      "lt_mara_owen.mental_state",
+      "dr_lenora_saye.loyalty",
+      "torah.command_authority"
+    ],
+    "state_writes": [
+      "agent_caleb_ross.fixated",
+      "lt_mara_owen.withdrawn",
+      "dr_lenora_saye.strained",
+      "institute.dispatch_protocol_status"
+    ],
+    "featured_characters": [
+      "agent_caleb_ross",
+      "lt_mara_owen",
+      "dr_lenora_saye"
+    ],
+    "visible_text": [
+      "Ross turns the authority card over in his good hand. On the back, in Torah's handwriting: find another way out. He does not know when Torah wrote that or how it ended up in his pocket.",
+      "Owen is writing her after-action by hand. She has not asked for a form. She found paper in her kit and is using that.",
+      "Saye says, from the hardline: 'The protocol was flagged eighteen months ago. Someone at command decided the flag was a calibration error.' She stops. 'I read the flag. I filed a note. I did not escalate it.' Nobody answers her for a long time.",
+      "Ross finally says: 'How many other buildings have the platform installed?' Saye tells him. He puts the card down and does not pick it up again."
+    ],
+    "choices": [
+      "Ask Saye what she is going to tell command",
+      "Let Owen's silence stand",
+      "Have Ross document the flag Saye mentioned"
+    ],
+    "outcomes": [
+      "If Torah asks Saye what she will tell command, she says the truth, and her relationship with the Institute's oversight division becomes a live thread",
+      "If Owen's silence is left alone, she returns to field duty but writes everything by hand from now on and does not explain why",
+      "If Ross documents the flag, it becomes evidence in a follow-up inquiry that command cannot easily suppress"
+    ],
+    "followup_hooks": [
+      "The Institute's dispatch platform is installed in eleven other transit and emergency facilities; each one is a potential Babel site",
+      "The overnight operator who transmitted the six evacuation orders is still unreachable; the wall on the second floor has not been breached",
+      "Saye's unfiled escalation is now on record; command will want to know who else saw the flag",
+      "The override antenna on the roof may still be live if Saye's partial fragmentation was the resolution outcome"
+    ],
+    "corpus_anchors": [
+      "babel_confusion_scattering",
+      "stress_unclear_information"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "branch",
+    "action_horror",
+    "recovery",
+    "random_non_special"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The building is not a monster; it is a protocol completing itself—that distinction must survive into every prose line",
+    "Owen's silence is load-bearing; do not give her a speech in the cooldown",
+    "Saye's admission about the flag is the moral remainder; the anomaly is closed but the institutional failure is not",
+    "The handwritten authority cards are the physical artifact of the closure condition; they should persist as inventory items if the engine supports it"
+  ],
+  "self_critique": [
+    "Ross's partial outcome leaves him pinned and narrating the solution, which risks reducing him to a tutorial voice; the compiler should ensure his injury state actively limits his availability in the follow-up rather than resolving cleanly"
+  ]
+}

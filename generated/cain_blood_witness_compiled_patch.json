@@ -1,0 +1,983 @@
+{
+  "title": "The Ground Keeps Asking",
+  "design_goal": "A falsified care-duty report causes a residential facility floor, soil bed, and threshold to replay a concealed killing until the responsible keeper is named and the evidence is preserved.",
+  "events": [
+    {
+      "room_id": "room_aldermoor_14",
+      "event": {
+        "id": "root_aldermoor_threshold",
+        "type": "choice",
+        "speaker": "SITREP",
+        "line_1": "Brooks holds the threshold of Room 14. The door has struck him once. The floor inside is seeping and the outline is still growing.",
+        "line_2": "Ross bags the evidence log at the nurse's station. Iyad reports the clearance signature is different ink. The keeper is not named.",
+        "buttons": [
+          {
+            "label": "Brooks forces the threshold",
+            "action": "intercept",
+            "preview": "Brooks times the door's four-minute cycle, takes the impact window, and forces entry—shoulder to panel, through..."
+          },
+          {
+            "label": "Ross seals the evidence chain",
+            "action": "seal",
+            "preview": "Ross bags the duty log formally, walks it to Room 14, and hands it to Torah..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Brooks forces the threshold",
+            "action": "intercept",
+            "officer_id": "brooks",
+            "primary_skill": "threshold entry under anomalous resistance",
+            "tactical_step": "suppress/fix the door anomaly by forced breach, establish sector security inside Room 14, hold the room for evidence delivery",
+            "intent": "Brooks times the door's four-minute cycle, takes the impact window, and forces entry—shoulder to panel, through the frame, sector left, sector right, announces clear so Ross can bring the log in",
+            "base_success": 0.65,
+            "yield": "Room 14 is open and held; Ross can deliver the duty log; the naming can proceed",
+            "risk": "If Brooks mistimes the cycle, the door strikes him on entry—wrist, shoulder, or ribs—and the entry collapses; the seepage accelerates while the team regroups",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Brooks hits the door at the exact moment the pressure drops. It gives. He's through in two steps, moving left along the wall, and his voice comes back flat and immediate over comms: 'Clear left. Clear right. Bring the log.' The floor is wet under his boots but it holds. He does not look at the outline."
+                ],
+                "environment_state_changes": [
+                  "root_aldermoor_threshold.intercept.success"
+                ],
+                "resource_changes": {
+                  "character.brooks.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Brooks gets through but the door catches his right arm on the frame—not a break, but he pulls it back hard and stands inside the room with his teeth together, breathing through it. 'I'm in,' he says. 'Bring the log. Don't wait.' He is favoring the arm. He does not say how bad it is."
+                ],
+                "environment_state_changes": [
+                  "root_aldermoor_threshold.intercept.partial"
+                ],
+                "resource_changes": {
+                  "character.brooks.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The door hits Brooks full across the shoulder and drives him back into the corridor. He goes down on one knee and stays there for a moment, one hand on the floor. When he looks up his expression is controlled but his eyes are somewhere else. 'Door's faster than I read it,' he says quietly. Torah has to make a new call."
+                ],
+                "environment_state_changes": [
+                  "root_aldermoor_threshold.intercept.failure"
+                ],
+                "resource_changes": {
+                  "character.brooks.stress": "+2",
+                  "character.brooks.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Ross seals the evidence chain",
+            "action": "seal",
+            "officer_id": "agent_caleb_ross",
+            "primary_skill": "evidence custody and document transport under pressure",
+            "tactical_step": "secure the physical duty log, transport it to Room 14 under Torah's authorization, establish evidence chain before the naming",
+            "intent": "Ross bags the duty log formally, walks it to Room 14, and hands it to Torah inside the room—the physical document must be present for the naming to carry weight",
+            "base_success": 0.65,
+            "yield": "The duty log is inside Room 14 in proper evidence custody; the naming can proceed with the document as witness",
+            "risk": "If Ross is intercepted by facility management or if Voss is moved toward the corridor before Ross reaches Room 14, the evidence chain breaks and the naming cannot be completed this phase",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Ross walks the forty meters without hurrying. He has the log in a clear evidence bag, chain-of-custody label already filled out in his neat block print. He hands it to Torah at the threshold without a word. Then he steps inside and stands against the wall, watching the outline on the floor. He does not look away from it."
+                ],
+                "environment_state_changes": [
+                  "root_aldermoor_threshold.seal.success"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Ross gets the log to the threshold but facility management has followed him down the corridor—a night supervisor demanding to know what is in the bag. Ross holds the bag behind his back and looks at Torah. He is not going to lie. He is waiting for Torah to handle it. The delay costs two minutes and the seepage line crosses the threshold edge."
+                ],
+                "environment_state_changes": [
+                  "root_aldermoor_threshold.seal.partial"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Voss has been moved. Someone—Ross doesn't know who—walked him out of the manager's office and toward the east wing. Ross is in the corridor with the log when he sees Voss twenty meters away, and the floor between them goes dark with fluid all at once. Ross stops. He does not advance. He gets on comms: 'Torah. We have a problem.'"
+                ],
+                "environment_state_changes": [
+                  "root_aldermoor_threshold.seal.failure"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+2",
+                  "character.agent_caleb_ross.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Brooks hits the door at the exact moment the pressure drops. It gives. He's through in two steps, moving left along the wall, and his voice comes back flat and immediate over comms: 'Clear left. Clear right. Bring the log.' The floor is wet under his boots but it holds. He does not look at the outline."
+            ],
+            "environment_state_changes": [
+              "root_aldermoor_threshold.intercept.success"
+            ],
+            "resource_changes": {
+              "character.brooks.morale": "+1"
+            }
+          },
+          "seal": {
+            "lines": [
+              "Ross walks the forty meters without hurrying. He has the log in a clear evidence bag, chain-of-custody label already filled out in his neat block print. He hands it to Torah at the threshold without a word. Then he steps inside and stands against the wall, watching the outline on the floor. He does not look away from it."
+            ],
+            "environment_state_changes": [
+              "root_aldermoor_threshold.seal.success"
+            ],
+            "resource_changes": {
+              "character.agent_caleb_ross.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_aldermoor_naming",
+            "queued_line": "Someone has to go through that door with the document before the floor reaches the corridor.",
+            "trigger_key": "resolution_aldermoor_naming",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          },
+          "seal": {
+            "event_id": "resolution_aldermoor_naming",
+            "queued_line": "Someone has to go through that door with the document before the floor reaches the corridor.",
+            "trigger_key": "resolution_aldermoor_naming",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "cain_sin_door_blood_cries",
+            "source_moment": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+            "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+            "room_application": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+            "structural_transfer": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+            "required_visible_details": [
+              "dark fluid seeping upward through sealed concrete with no plumbing source",
+              "the fluid traces a human outline near the east wall, expanding slowly outward"
+            ],
+            "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "cain_mark_wandering",
+            "source_moment": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+            "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+            "room_application": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+            "structural_transfer": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+            "required_visible_details": [
+              "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+              "Voss held in the facility manager's office, not yet in custody, not yet named"
+            ],
+            "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+          },
+          {
+            "source_id": "army_ranger_handbook_sh_21_76",
+            "source_title": "Army Ranger Handbook Sh 21 76",
+            "source_chunk_id": "clear_room_noncombatants",
+            "source_moment": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+            "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+            "room_application": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+            "structural_transfer": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+            "required_visible_details": [
+              "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+              "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+            ],
+            "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+            "source_chunk_id": "stress_dynamic_diagnosis",
+            "source_moment": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+            "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+            "room_application": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+            "structural_transfer": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+            "required_visible_details": [
+              "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+              "Ross reading the duty log three times, each time returning to the signature line"
+            ],
+            "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "cain_sin_door_blood_cries",
+            "anchor_role": "premise",
+            "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+            "playable_transform": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+            "required_visible_details": [
+              "dark fluid seeping upward through sealed concrete with no plumbing source",
+              "the fluid traces a human outline near the east wall, expanding slowly outward"
+            ],
+            "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "cain_mark_wandering",
+            "anchor_role": "closure",
+            "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+            "playable_transform": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+            "required_visible_details": [
+              "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+              "Voss held in the facility manager's office, not yet in custody, not yet named"
+            ],
+            "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+          },
+          {
+            "source_id": "army_ranger_handbook_sh_21_76",
+            "source_chunk_id": "clear_room_noncombatants",
+            "anchor_role": "procedure",
+            "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+            "playable_transform": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+            "required_visible_details": [
+              "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+              "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+            ],
+            "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_chunk_id": "stress_dynamic_diagnosis",
+            "anchor_role": "escalation",
+            "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+            "playable_transform": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+            "required_visible_details": [
+              "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+              "Ross reading the duty log three times, each time returning to the signature line"
+            ],
+            "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_aldermoor_naming",
+      "type": "resolution",
+      "speaker": "SITREP",
+      "line_1": "The log is in Room 14. Iyad documents the ink discrepancy over comms. Torah stands at the east wall above the outline.",
+      "line_2": "The floor still moves. Torah documents the name test at the corridor edge before the seepage reaches the hall.",
+      "buttons": [
+        {
+          "label": "Torah names the keeper",
+          "action": "torah_speaks",
+          "preview": "Torah reads Iyad's timestamp finding aloud, names Voss, names the act—struck the resident, left him, filed..."
+        },
+        {
+          "label": "Ross forces Voss to the room",
+          "action": "intercept",
+          "preview": "Ross retrieves Voss from wherever he has been moved, brings him to the threshold under physical..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Torah names the keeper",
+          "action": "torah_speaks",
+          "officer_id": "torah",
+          "primary_skill": "credible witness, command authority, symbolic close",
+          "tactical_step": "symbolic close—speak the keeper's name and the specific act of denial aloud inside Room 14 with the falsified document present, completing the ground's testimony",
+          "intent": "Torah reads Iyad's timestamp finding aloud, names Voss, names the act—struck the resident, left him, filed a false clearance—and states it as fact in the room where it was denied",
+          "base_success": 0.7,
+          "yield": "The seepage stops. The threshold releases. The outline fixes in place as evidence. The manifestation closes locally.",
+          "risk": "If Torah's statement is incomplete—missing the specific act, or naming the wrong element of the falsification—the floor does not stop and the seepage accelerates into the corridor; the window closes and the team must evacuate",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Torah reads from Iyad's notes without inflection. Voss's name. The time gap. The ballpoint line. What was done to the resident and what was filed instead. The room is very quiet while Torah speaks. The fluid stops moving before the last sentence is finished. It does not recede—it fixes, dries at the edges, holds the outline exactly as it was. Ross photographs it without being asked. Brooks stands at the door and does not move until Torah says they are done."
+              ],
+              "environment_state_changes": [
+                "resolution_aldermoor_naming.torah_speaks.success"
+              ],
+              "resource_changes": {
+                "character.torah.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Torah gets through most of it but the specific act—what Voss did before he filed the report—is not in Iyad's notes, only implied. The floor slows but does not stop. The outline holds but the seepage continues at the edges, thin and patient. Iyad's voice comes over comms: 'You need the action, not just the time. What he did, not when.' Torah has one more attempt before the window closes."
+              ],
+              "environment_state_changes": [
+                "resolution_aldermoor_naming.torah_speaks.partial"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Torah speaks but the statement is built on Iyad's preliminary read, and one timestamp is wrong—the gap is forty-one minutes, not thirty-eight, and the floor knows the difference. The seepage surges outward, fast, and the threshold slams shut. Brooks is inside. Ross is outside. Torah is in the corridor with the door between them and the outline spreading toward the walls. Iyad is already pulling the original nurse call log. 'Get Brooks out,' she says. 'I need four minutes.'"
+              ],
+              "environment_state_changes": [
+                "resolution_aldermoor_naming.torah_speaks.failure"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+2",
+                "character.torah.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Ross forces Voss to the room",
+          "action": "intercept",
+          "officer_id": "agent_caleb_ross",
+          "primary_skill": "physical custody, threshold force option",
+          "tactical_step": "force option—physically move Voss to the threshold of Room 14 and compel him to hear the naming; this is the violent resolution option and carries escalation risk",
+          "intent": "Ross retrieves Voss from wherever he has been moved, brings him to the threshold under physical control, and forces him to stand at the door while Torah names the act—the keeper's proximity to the testimony is the force option",
+          "base_success": 0.5,
+          "yield": "Voss at the threshold amplifies the naming; the floor responds faster and the closure is more complete; Voss cannot deny what the room shows him",
+          "risk": "If Voss resists and the struggle happens at the threshold, the door anomaly treats the physical conflict as a new act of violence at the same location and spikes—the door can injure both Ross and Voss; the manifestation feeds on the violence and the seepage accelerates rather than stopping; Voss must be brought under control before he crosses the threshold or the option backfires",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Ross finds Voss in the stairwell, already trying to leave the building. He does not explain. He puts Voss against the wall, gets his arm, and walks him back down the corridor to Room 14. Voss sees the floor through the door panel and stops talking. Ross holds him at the threshold—not inside, just at the line—while Torah speaks. When the floor stops moving, Voss is looking at the outline and his face has gone the color of old concrete. Ross documents the custody transfer in his field log before he does anything else."
+              ],
+              "environment_state_changes": [
+                "resolution_aldermoor_naming.combat.success"
+              ],
+              "resource_changes": {
+                "character.agent_caleb_ross.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Ross gets Voss to the corridor but Voss pulls back at the threshold and the door slams between them—the anomaly reads the struggle as another act at the door and the frame shudders. Ross holds Voss against the opposite wall, away from the door, and calls to Torah: 'Do it now. He's here but I can't hold the threshold.' Torah speaks with the door between them and Voss. The floor slows. The outline holds. It is not a clean close—the seepage at the corridor edge does not fully stop—but the room releases Brooks."
+              ],
+              "environment_state_changes": [
+                "resolution_aldermoor_naming.combat.partial"
+              ],
+              "resource_changes": {
+                "character.agent_caleb_ross.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Voss fights Ross at the threshold and the door hits them both. Ross takes it across the back and goes down. Voss runs. The floor inside Room 14 surges—the outline expands to the walls and the fluid reaches the corridor in a wide dark line. Brooks is inside, standing in it, and the drag sensation hits him hard enough that he grabs the windowsill. Torah calls the evacuation. Ross gets up slowly, one hand on the wall, and does not say anything for a long time."
+              ],
+              "environment_state_changes": [
+                "resolution_aldermoor_naming.combat.failure"
+              ],
+              "resource_changes": {
+                "character.agent_caleb_ross.stress": "+2",
+                "character.agent_caleb_ross.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "torah_speaks": {
+          "lines": [
+            "Torah reads from Iyad's notes without inflection. Voss's name. The time gap. The ballpoint line. What was done to the resident and what was filed instead. The room is very quiet while Torah speaks. The fluid stops moving before the last sentence is finished. It does not recede—it fixes, dries at the edges, holds the outline exactly as it was. Ross photographs it without being asked. Brooks stands at the door and does not move until Torah says they are done."
+          ],
+          "environment_state_changes": [
+            "resolution_aldermoor_naming.torah_speaks.success"
+          ],
+          "resource_changes": {
+            "character.torah.morale": "+1"
+          }
+        },
+        "intercept": {
+          "lines": [
+            "Ross finds Voss in the stairwell, already trying to leave the building. He does not explain. He puts Voss against the wall, gets his arm, and walks him back down the corridor to Room 14. Voss sees the floor through the door panel and stops talking. Ross holds him at the threshold—not inside, just at the line—while Torah speaks. When the floor stops moving, Voss is looking at the outline and his face has gone the color of old concrete. Ross documents the custody transfer in his field log before he does anything else."
+          ],
+          "environment_state_changes": [
+            "resolution_aldermoor_naming.combat.success"
+          ],
+          "resource_changes": {
+            "character.agent_caleb_ross.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "torah_speaks": {
+          "event_id": "cooldown_aldermoor_debrief",
+          "queued_line": "Iyad's findings have to be said aloud in this room, against this document, with Voss's name attached to the act.",
+          "trigger_key": "cooldown_aldermoor_debrief",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        },
+        "intercept": {
+          "event_id": "cooldown_aldermoor_debrief",
+          "queued_line": "Iyad's findings have to be said aloud in this room, against this document, with Voss's name attached to the act.",
+          "trigger_key": "cooldown_aldermoor_debrief",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "cain_sin_door_blood_cries",
+          "source_moment": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "room_application": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "structural_transfer": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "required_visible_details": [
+            "dark fluid seeping upward through sealed concrete with no plumbing source",
+            "the fluid traces a human outline near the east wall, expanding slowly outward"
+          ],
+          "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "cain_mark_wandering",
+          "source_moment": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "room_application": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "structural_transfer": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "required_visible_details": [
+            "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+            "Voss held in the facility manager's office, not yet in custody, not yet named"
+          ],
+          "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_title": "Army Ranger Handbook Sh 21 76",
+          "source_chunk_id": "clear_room_noncombatants",
+          "source_moment": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "room_application": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "structural_transfer": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "required_visible_details": [
+            "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+            "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+          ],
+          "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "stress_dynamic_diagnosis",
+          "source_moment": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "room_application": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "structural_transfer": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "required_visible_details": [
+            "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+            "Ross reading the duty log three times, each time returning to the signature line"
+          ],
+          "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "cain_sin_door_blood_cries",
+          "anchor_role": "premise",
+          "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "playable_transform": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "required_visible_details": [
+            "dark fluid seeping upward through sealed concrete with no plumbing source",
+            "the fluid traces a human outline near the east wall, expanding slowly outward"
+          ],
+          "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "cain_mark_wandering",
+          "anchor_role": "closure",
+          "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "playable_transform": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "required_visible_details": [
+            "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+            "Voss held in the facility manager's office, not yet in custody, not yet named"
+          ],
+          "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "clear_room_noncombatants",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "playable_transform": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "required_visible_details": [
+            "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+            "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+          ],
+          "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "stress_dynamic_diagnosis",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "playable_transform": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "required_visible_details": [
+            "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+            "Ross reading the duty log three times, each time returning to the signature line"
+          ],
+          "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_aldermoor_debrief",
+      "type": "interlude",
+      "speaker": "brooks",
+      "line_1": "Brooks is at the nurse's station with his jacket off. His right arm has a pressure bruise from the door frame, documented now, not before.",
+      "line_2": "Ross is still in the corridor outside Room 14 with the evidence bag. He has not filed the chain-of-custody form. Torah asked him twice.",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Brooks holds the ice pack against his arm and looks at the wall. He says: 'The door had a rhythm. I should have read it faster.'",
+            "Ross finally fills out the chain-of-custody form but he writes Voss's name in the wrong field first and has to cross it out. He does not explain why.",
+            "Iyad sends a memo at 0600: 'Confirm mission audio captured the naming statement in full. Required for evidentiary record.' She does not sign off on the mission log until Torah confirms.",
+            "The outline in Room 14 is dry now. Facilities has been told not to clean it. Nobody argues."
+          ],
+          "environment_state_changes": [
+            "brooks.fatigue_plus",
+            "agent_caleb_ross.fixated",
+            "torah.command_weight_plus",
+            "dr_samira_iyad.withdrawn"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "debrief",
+      "state_reads": [
+        "brooks.injury_status",
+        "agent_caleb_ross.mental_state",
+        "torah.command_fatigue",
+        "dr_samira_iyad.availability"
+      ],
+      "state_writes": [
+        "brooks.fatigue_plus",
+        "agent_caleb_ross.fixated",
+        "torah.command_weight_plus",
+        "dr_samira_iyad.withdrawn"
+      ],
+      "featured_characters": [
+        "brooks",
+        "agent_caleb_ross",
+        "dr_samira_iyad"
+      ],
+      "visible_text": [
+        "Brooks holds the ice pack against his arm and looks at the wall. He says: 'The door had a rhythm. I should have read it faster.'",
+        "Ross finally fills out the chain-of-custody form but he writes Voss's name in the wrong field first and has to cross it out. He does not explain why.",
+        "Iyad sends a memo at 0600: 'Confirm mission audio captured the naming statement in full. Required for evidentiary record.' She does not sign off on the mission log until Torah confirms.",
+        "The outline in Room 14 is dry now. Facilities has been told not to clean it. Nobody argues."
+      ],
+      "choices": [
+        "Torah can check on Brooks at the nurse's station or let him sit.",
+        "Torah can ask Ross what he is thinking about or leave him in the corridor."
+      ],
+      "outcomes": [
+        "If Torah checks on Brooks: Brooks says the arm is fine. Then, after a pause, he says the door felt like it was waiting for him specifically. He does not elaborate. He puts his jacket back on.",
+        "If Torah leaves Ross alone: Ross files the form eventually and slides it under the evidence bag. When Torah picks it up later, the handwriting on the last line is different from the rest—smaller, pressed harder into the paper.",
+        "If Iyad's naming was the instrument of closure: she is not on comms for the debrief. She sends one message at 0700: 'Timestamp confirmed. Forty-one minutes. I had it wrong the first time.' Nothing after that until the next shift."
+      ],
+      "followup_hooks": [
+        "Voss's custody transfer to local authority generates a formal inquiry; the Institute's involvement in the naming procedure will require explanation",
+        "The fluid outline in Room 14 is now a documented anomalous evidence artifact; Iyad requests a site return for material sampling",
+        "Brooks's door-timing error is in his own field notes but not in the official report; Ross knows and has not said anything",
+        "The facility has two other residents whose incident reports were filed by Voss; Iyad flags them in her 0600 memo without comment"
+      ],
+      "corpus_anchors": [
+        "cain_sin_door_blood_cries",
+        "cain_mark_wandering"
+      ],
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "cain_sin_door_blood_cries",
+          "source_moment": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "room_application": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "structural_transfer": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "required_visible_details": [
+            "dark fluid seeping upward through sealed concrete with no plumbing source",
+            "the fluid traces a human outline near the east wall, expanding slowly outward"
+          ],
+          "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "cain_mark_wandering",
+          "source_moment": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "room_application": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "structural_transfer": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "required_visible_details": [
+            "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+            "Voss held in the facility manager's office, not yet in custody, not yet named"
+          ],
+          "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_title": "Army Ranger Handbook Sh 21 76",
+          "source_chunk_id": "clear_room_noncombatants",
+          "source_moment": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "room_application": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "structural_transfer": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "required_visible_details": [
+            "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+            "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+          ],
+          "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "stress_dynamic_diagnosis",
+          "source_moment": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "room_application": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "structural_transfer": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "required_visible_details": [
+            "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+            "Ross reading the duty log three times, each time returning to the signature line"
+          ],
+          "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "cain_sin_door_blood_cries",
+          "anchor_role": "premise",
+          "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "playable_transform": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "required_visible_details": [
+            "dark fluid seeping upward through sealed concrete with no plumbing source",
+            "the fluid traces a human outline near the east wall, expanding slowly outward"
+          ],
+          "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "cain_mark_wandering",
+          "anchor_role": "closure",
+          "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "playable_transform": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "required_visible_details": [
+            "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+            "Voss held in the facility manager's office, not yet in custody, not yet named"
+          ],
+          "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "clear_room_noncombatants",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "playable_transform": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "required_visible_details": [
+            "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+            "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+          ],
+          "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "stress_dynamic_diagnosis",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "playable_transform": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "required_visible_details": [
+            "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+            "Ross reading the duty log three times, each time returning to the signature line"
+          ],
+          "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "room_aldermoor_14",
+      "name": "Room 14 — Aldermoor Annex",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A sealed residential care room. The floor is seeping. The door won't stay open. Night staff are out. Someone filed a clean report.",
+      "first_visit_description": "Torah's team deploys at 0140 to the Aldermoor Residential Care Annex, a converted Victorian building now operating as a low-dependency adult care facility. The Institute received a facilities alert at 2230: anomalous fluid seepage in Room 14, east wing, ground floor. Local management evacuated the wing and locked it down. Torah is on-site command, standing in the east corridor twenty meters from Room 14. Brooks is at the threshold of Room 14, point position, having already confirmed the door anomaly firsthand—he is not going through it alone. Dr. Iyad is remote, patched in via comms from the Institute lab, reviewing the facility's incident records and the duty log filed for the night of the 14th. Ross is inside the building but back at the nurse's station, forty meters west, securing the evacuated residents' welfare log and holding the only physical copy of the disputed duty report. The keeper named in that report—night-shift supervisor Harlan Voss—is currently in the facility manager's office under informal hold, not yet in custody.",
+      "return_description": "Room 14 is quieter now but not clean. The outline on the floor has dried to a fixed stain. The threshold opens freely. The duty log sits in an evidence bag on the windowsill where Ross left it. The room smells of damp concrete and something older.",
+      "detection_report": "Facilities sensor log: sustained upward moisture pressure through sealed concrete, east wall quadrant, Room 14. No plumbing within four meters. Door-frame pressure sensor: intermittent lateral load, 40–90 kg equivalent, no physical source. Institute field scanner: symbolic resonance class 2, rising. Iyad remote: duty log timestamp inconsistent with nurse call-out record by 38 minutes. Ross on-site: the log bears Voss's signature on a line that was added after the original filing.",
+      "current_situation": "Brooks is at the threshold of Room 14. The door has swung shut against him twice. Through the reinforced glass panel he can see the floor: a dark stain spreading outward from the east wall in the rough shape of a person lying on their side. The fluid is moving slowly, tracing the outline's edges. The corridor floor under Torah's feet is dry. The line between dry and wet is the threshold. Iyad is reading the duty log aloud over comms, cross-referencing timestamps. She stops mid-sentence and says: 'The clearance note is in different ink.' Ross is at the nurse's station with the physical document. Voss has not been told what the floor is doing.",
+      "action_profile": {
+        "physical_threat": "The threshold of Room 14 exerts sudden lateral force—door-frame pressure equivalent to a heavy body slamming the door from inside—capable of crushing a hand, breaking a wrist, or knocking a person off their feet if they attempt to cross without preparation. The floor inside the room is softening in the seepage zone; anyone standing in it without warning risks a sudden drag sensation and loss of footing on what should be solid concrete.",
+        "contact_state": "Brooks is already in contact at the threshold—the door has struck him once and he is bracing. The squad is seconds from a forced entry decision. The seepage line is expanding toward the corridor.",
+        "field_manual_drill": "Threshold control and room entry: treat the door as a live danger area, establish sectors before crossing, announce clear status, protect the noncombatant evidence chain, and maintain a designated security position in the corridor while the entry element is inside.",
+        "tactical_objective": "Cross the threshold safely, reach the east wall seepage origin, and hold the room long enough for the naming procedure to be completed without personnel injury.",
+        "symbolic_close": "The falsified duty log must be physically present inside Room 14 and the keeper's name must be spoken aloud against the record by a credible witness while standing in the room. Force alone cannot stop the threshold or the seepage.",
+        "violent_resolution": "The threshold door itself can be breached—Brooks can force it with a controlled shoulder charge or a ram if available, breaking the anomalous resistance mechanically. This stops the door from injuring personnel during entry but does not close the manifestation; the floor continues and the seepage accelerates if the naming is not completed within the window the breach buys.",
+        "not_monster_of_week": "There is no creature. The threat is a room that has become a witness. The door is not haunted; it is behaving like the sin crouching at the threshold—a weight of unacknowledged guilt that physically resists anyone trying to enter and look at what happened. The floor is not bleeding; it is testifying. The squad is not fighting a monster; they are entering a room that is trying to make someone answer for what was done in it."
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "brooks",
+          "name": "Brooks",
+          "mission_role": "Tactical point, threshold entry lead",
+          "physical_position": "East corridor, directly at the threshold of Room 14, bracing against the door",
+          "assigned_reason": "Senior field agent, designated entry lead for anomalous-access situations; Torah assigned him point because the door anomaly was already active on arrival",
+          "visible_state": "Jaw set, one hand flat on the door panel. He has not spoken in ninety seconds. He is counting the door's rhythm."
+        },
+        {
+          "officer_id": "torah",
+          "name": "Torah",
+          "mission_role": "On-site command",
+          "physical_position": "East corridor, ten meters back from Room 14 threshold, line of sight to Brooks",
+          "assigned_reason": "Mission command; all plan authorizations route through Torah",
+          "visible_state": "Watching Brooks. Listening to Iyad on comms. Has not yet given the entry order."
+        },
+        {
+          "officer_id": "agent_caleb_ross",
+          "name": "Ross",
+          "mission_role": "Evidence custody and witness management",
+          "physical_position": "Nurse's station, forty meters west, holding the physical duty log",
+          "assigned_reason": "Assigned evidence chain because he arrived first and secured the document before management could move it; also holding the informal hold on Voss",
+          "visible_state": "Gloved hands on the duty log. He has read it three times. He keeps looking at the signature line."
+        },
+        {
+          "officer_id": "dr_samira_iyad",
+          "name": "Dr. Iyad",
+          "mission_role": "Remote technical and documentary analysis",
+          "physical_position": "Institute lab, patched in via comms",
+          "assigned_reason": "Anomaly classification and document forensics; her lab has the facility's digital records and she identified the timestamp inconsistency before the team entered",
+          "visible_state": "Her voice on comms is careful and flat. She stopped reading aloud when she found the ink discrepancy. She is waiting for someone to ask her what it means."
+        }
+      ],
+      "root_sin": "Night-shift supervisor Harlan Voss struck a resident under his care during a behavioral incident, left the resident on the floor, and filed a falsified incident report attributing the death to an unwitnessed fall. He signed the clearance himself. He told no one. The ground has been trying to say so ever since.",
+      "modern_incident_logic": "Aldermoor Annex is a functioning care facility with sealed concrete floors, electronic door sensors, and a paper-and-digital incident reporting system. The anomaly manifests as upward fluid seepage through sealed concrete—physically impossible without a source—and as anomalous door-frame pressure. Both are measurable by existing facility sensors, which is why the alert reached the Institute. The falsified duty log is a real document in evidence custody. Voss is a real person on-site. The manifestation is site-specific to Room 14 because that is where the denial was made physical: Voss filed the report at the nurse's station but the act of denial—leaving the resident, closing the door, walking away—happened at that threshold. The ground is responding to the location of the sin, not to a supernatural object.",
+      "closure_test": "The physical duty log must be carried into Room 14. Iyad's timestamp analysis must be spoken aloud inside the room, naming Voss and the specific falsification, by a witness with standing—Torah or Ross. The seepage stops when the denial is formally contradicted in the space where it was enacted.",
+      "religious_pattern": "Cain kills Abel, denies keeper-duty when asked directly, and the ground becomes a witness that speaks what the killer will not. The manifestation is the ground's testimony. Closure is not punishment but naming: the killing must be acknowledged by someone with authority to hear it, in the place it was denied.",
+      "anomaly_rule": "The manifestation is proportional to the active denial. As long as the falsified record stands unchallenged in the space, the floor testifies with increasing force. The threshold resists entry because the sin was enacted at the threshold—Voss crossed it and closed it behind him. The anomaly does not pursue; it holds its ground and demands an answer.",
+      "forbidden_flat_read": "Do not literalize as a ghost of the victim, a supernatural attacker, or a haunting entity. The victim is not present as a spirit. The ground is the witness, not the dead.",
+      "officer_reports": [
+        "Brooks, threshold: 'Door's on a cycle. Every four minutes, give or take. It's not random—it's waiting.'",
+        "Ross, nurse's station: 'The signature on line seven is in ballpoint. The rest of the form is gel ink. Voss uses ballpoint. I checked his pen.'",
+        "Iyad, remote: 'Nurse call-out log shows the on-call nurse was paged at 0312. The duty log says the fall was reported at 0350. Thirty-eight minutes. Someone waited.'",
+        "Torah, corridor: 'The seepage line moved six centimeters while we were talking. It's not slowing down.'"
+      ],
+      "procedure_hooks": [
+        "Threshold entry: treat door as live danger area, establish corridor security before Brooks crosses",
+        "Evidence chain: Ross must transport the physical duty log from nurse's station to Room 14 under Torah's authorization",
+        "Naming procedure: Iyad's forensic findings must be spoken aloud inside the room by a credible witness—comms relay is insufficient, physical presence required",
+        "Seepage documentation: the fluid outline must be photographed and sealed before the room is cleared",
+        "Voss custody: Voss must not be brought into Room 14 before the naming is complete—the anomaly's escalation rule responds to the keeper's proximity"
+      ],
+      "character_state_stakes": {
+        "brooks": "If the threshold injures Brooks during entry, his availability drops and he carries a physical reminder of what the room cost. If he holds the door successfully, he is steady but quiet for the rest of the mission—he does not discuss what he felt when the door hit him.",
+        "agent_caleb_ross": "If Ross delivers the duty log to Room 14 successfully, he is the one who hands it to Torah and watches the floor stop. If he fails or the log is lost, he fixates on the signature line for days afterward—he keeps seeing it when he closes his eyes.",
+        "dr_samira_iyad": "If Iyad's analysis is the instrument of closure, she logs the outcome in three words and goes silent on comms. If her analysis is wrong or incomplete and the naming fails, she requests a full document review from command and does not sleep until she finds what she missed.",
+        "torah": "Torah's decision on when to send Brooks through the door is the load-bearing command call. A wrong timing injures Brooks. A right timing opens the room. Torah carries the weight of that call into cooldown."
+      },
+      "interlude_vectors": [
+        "Ross sits with the evidence bag after the room clears and does not immediately file the chain-of-custody form—Torah has to ask him twice",
+        "Brooks does not report the wrist impact from the door until the clinic check; he logged it as a bruise in his own notes",
+        "Iyad sends a follow-up memo at 0600 asking whether the naming was recorded on the mission audio log, for evidentiary completeness",
+        "Voss is removed from the facility by local authority; the squad does not see it happen"
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "Night-shift supervisor Harlan Voss struck a resident under his care during a behavioral incident, left the resident on the floor, and filed a falsified incident report attributing the death to an unwitnessed fall. He signed the clearance himself. He told no one. The ground has been trying to say so ever since.",
+        "modern_incident_logic": "Aldermoor Annex is a functioning care facility with sealed concrete floors, electronic door sensors, and a paper-and-digital incident reporting system. The anomaly manifests as upward fluid seepage through sealed concrete—physically impossible without a source—and as anomalous door-frame pressure. Both are measurable by existing facility sensors, which is why the alert reached the Institute. The falsified duty log is a real document in evidence custody. Voss is a real person on-site. The manifestation is site-specific to Room 14 because that is where the denial was made physical: Voss filed the report at the nurse's station but the act of denial—leaving the resident, closing the door, walking away—happened at that threshold. The ground is responding to the location of the sin, not to a supernatural object.",
+        "closure_test": "The physical duty log must be carried into Room 14. Iyad's timestamp analysis must be spoken aloud inside the room, naming Voss and the specific falsification, by a witness with standing—Torah or Ross. The seepage stops when the denial is formally contradicted in the space where it was enacted."
+      },
+      "religious_subtext": {
+        "source_pattern": "Cain kills Abel, denies keeper-duty when asked directly, and the ground becomes a witness that speaks what the killer will not. The manifestation is the ground's testimony. Closure is not punishment but naming: the killing must be acknowledged by someone with authority to hear it, in the place it was denied.",
+        "transformed_rule": "The manifestation is proportional to the active denial. As long as the falsified record stands unchallenged in the space, the floor testifies with increasing force. The threshold resists entry because the sin was enacted at the threshold—Voss crossed it and closed it behind him. The anomaly does not pursue; it holds its ground and demands an answer.",
+        "forbidden_flat_read": "Do not literalize as a ghost of the victim, a supernatural attacker, or a haunting entity. The victim is not present as a spirit. The ground is the witness, not the dead."
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Ross sits with the evidence bag after the room clears and does not immediately file the chain-of-custody form—Torah has to ask him twice",
+        "Brooks does not report the wrist impact from the door until the clinic check; he logged it as a bruise in his own notes",
+        "Iyad sends a follow-up memo at 0600 asking whether the naming was recorded on the mission audio log, for evidentiary completeness",
+        "Voss is removed from the facility by local authority; the squad does not see it happen"
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "room_aldermoor_14",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "cain_sin_door_blood_cries",
+          "source_moment": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "room_application": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "structural_transfer": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "required_visible_details": [
+            "dark fluid seeping upward through sealed concrete with no plumbing source",
+            "the fluid traces a human outline near the east wall, expanding slowly outward"
+          ],
+          "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "cain_mark_wandering",
+          "source_moment": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "room_application": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "structural_transfer": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "required_visible_details": [
+            "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+            "Voss held in the facility manager's office, not yet in custody, not yet named"
+          ],
+          "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_title": "Army Ranger Handbook Sh 21 76",
+          "source_chunk_id": "clear_room_noncombatants",
+          "source_moment": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "room_application": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "structural_transfer": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "required_visible_details": [
+            "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+            "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+          ],
+          "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "stress_dynamic_diagnosis",
+          "source_moment": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "room_application": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "structural_transfer": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "required_visible_details": [
+            "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+            "Ross reading the duty log three times, each time returning to the signature line"
+          ],
+          "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "cain_sin_door_blood_cries",
+          "anchor_role": "premise",
+          "source_fingerprint": "Blood cries from the ground; the ground becomes a witness to the killing the killer will not name",
+          "playable_transform": "The floor of Room 14 seeps fluid upward through sealed concrete, tracing the outline of the victim's body—the ground is testifying to what Voss will not say",
+          "required_visible_details": [
+            "dark fluid seeping upward through sealed concrete with no plumbing source",
+            "the fluid traces a human outline near the east wall, expanding slowly outward"
+          ],
+          "followup_payoff": "The seepage stops only when the denial is formally contradicted inside the room—the ground's testimony is answered"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "cain_mark_wandering",
+          "anchor_role": "closure",
+          "source_fingerprint": "Closure is not mob vengeance; the killer is marked and removed, not destroyed, and the evidence is preserved",
+          "playable_transform": "Voss must be taken into custody alive; the duty log must be preserved as evidence; uncontrolled force against Voss or the room feeds the anomaly rather than closing it",
+          "required_visible_details": [
+            "the falsified duty log in Ross's gloved hands, the added signature line visible under field light",
+            "Voss held in the facility manager's office, not yet in custody, not yet named"
+          ],
+          "followup_payoff": "If the squad attempts to confront Voss physically inside Room 14 before the naming, the threshold force spikes and injures personnel"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "clear_room_noncombatants",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Threshold control, sector entry, noncombatant protection, clear status, evidence custody",
+          "playable_transform": "Brooks holds the threshold as a live danger area; Ross maintains evidence chain from nurse's station; Torah authorizes entry by sector; Iyad provides remote clear-status confirmation before the naming",
+          "required_visible_details": [
+            "Brooks bracing at the door panel, counting the door's four-minute pressure cycle",
+            "Ross at the nurse's station with gloved hands on the duty log, holding the evidence chain"
+          ],
+          "followup_payoff": "A failed threshold entry injures Brooks and collapses the entry window, forcing a reroute through the resolution phase"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "stress_dynamic_diagnosis",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Failed diagnosis sends responders after the wrong target; stress degrades accurate identification of the root cause",
+          "playable_transform": "If the squad misidentifies the anomaly as a plumbing failure or a haunting and acts on that diagnosis, the naming fails and the seepage accelerates—the floor repeats the death with greater force",
+          "required_visible_details": [
+            "Iyad's voice going flat and careful on comms when she finds the ink discrepancy—she is rechecking her own diagnosis",
+            "Ross reading the duty log three times, each time returning to the signature line"
+          ],
+          "followup_payoff": "A correct diagnosis—keeper-denial, falsified record, specific threshold—is required before the naming will close the manifestation"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "room_aldermoor_14"
+    },
+    {
+      "pool": "branch",
+      "room_id": "room_aldermoor_14"
+    },
+    {
+      "pool": "straight_noncombat",
+      "room_id": "room_aldermoor_14"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "room_aldermoor_14"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The door's four-minute pressure cycle gives Brooks a concrete tactical read—it is not random horror, it is a rhythm that can be learned and beaten or mistimed",
+    "Voss never enters Room 14; his proximity is a force-option amplifier, not a required element—this keeps the closure about naming, not confrontation",
+    "Iyad's remote role means her forensic work is the instrument of the naming but she cannot deliver it herself—Torah must carry her findings into the room, which is a load-bearing dependency",
+    "The partial outcomes preserve the anomaly locally rather than fully closing it, giving the compiler a remainder state for follow-up hooks"
+  ],
+  "self_critique": [
+    "The force option (Ross brings Voss to the threshold) risks feeling punitive rather than procedural if the failure line is read as the 'correct' moral outcome—the compiler should ensure the success line for that plan reads as custody, not coercion, and that the backfire is mechanical (door anomaly feeds on threshold violence) rather than moral judgment on Ross"
+  ]
+}

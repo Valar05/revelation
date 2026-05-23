@@ -1,0 +1,986 @@
+{
+  "title": "Offering Floor",
+  "design_goal": "A contractor shelter has built a functioning idol from donated rings and badges; the squad deploys under active symbolic attack to suppress the idol, sever the offering loop, and contain fragments before the powder propagates.",
+  "events": [
+    {
+      "room_id": "offering_floor_01",
+      "event": {
+        "id": "root_offering_floor",
+        "type": "choice",
+        "speaker": "SITREP",
+        "line_1": "Owen reports the east wall pinned, two officers down, and eleven civilians on the offering line. Squad has one surge window.",
+        "line_2": "The floor gauge logs metal pull from gear. Park clears the door with containment before the next pressure wave.",
+        "buttons": [
+          {
+            "label": "Owen: Suppress the Line",
+            "action": "intercept",
+            "preview": "Owen uses her fire team to suppress the offering line perimeter—noise, movement, directed light—fixing civilians in..."
+          },
+          {
+            "label": "Saye: Call the Window",
+            "action": "torah_speaks",
+            "preview": "Saye uses her real-time emission read to call the four-minute window between surges, giving the squad..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Owen: Suppress the Line",
+            "action": "intercept",
+            "officer_id": "lt_mara_owen",
+            "primary_skill": "tactical fire command under anomalous contact",
+            "tactical_step": "suppress and fix the offering line perimeter, establish sectors, hold civilians back without crossing the line, create a bound lane to the core for Park",
+            "intent": "Owen uses her fire team to suppress the offering line perimeter—noise, movement, directed light—fixing civilians in place without crossing the line, opening a lane for Park to reach the core",
+            "base_success": 0.65,
+            "yield": "Offering line is fixed; civilians stop moving forward; Park can bound to the core in the next window; Owen's sector hold gives Torah time to begin the disclosure",
+            "risk": "If the fix breaks or a civilian surges, Owen has to cross the line to intercept; the idol hits her with a pressure wave; she takes a rib injury and her availability drops for the resolution phase",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Owen's voice cuts through the hum: 'Sectors set. Nobody moves.' The fire team's lights sweep the offering line and the civilians stop, blinking, some of them looking at their own hands like they forgot what they were carrying. The hum does not stop but it does not climb. Park is already moving."
+                ],
+                "environment_state_changes": [
+                  "root_offering_floor.combat.success"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "The line holds for twenty seconds. Then a man near the back—older, contractor vest, no badge left on his chest—takes one step forward and Owen has to step into the lane to block him. The idol registers her. The pressure hits her left side. She goes down on one knee, gets back up, does not say anything on comms for three seconds. 'Line is partial. Park, move now.'"
+                ],
+                "environment_state_changes": [
+                  "root_offering_floor.combat.partial"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Owen's sector sweep breaks when two civilians surge simultaneously from opposite ends of the line. She crosses to intercept the nearer one and the idol hits her full. She goes into the east wall hard enough to crack the drywall. Her comms are live—Torah can hear her breathing—but she does not speak. Park is still at the door. The offering line is moving again."
+                ],
+                "environment_state_changes": [
+                  "root_offering_floor.combat.failure"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+2",
+                  "character.lt_mara_owen.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Saye: Call the Window",
+            "action": "torah_speaks",
+            "officer_id": "dr_lenora_saye",
+            "primary_skill": "remote emission analysis and surge-window timing",
+            "tactical_step": "Saye reads the emission pattern from the van and calls the exact surge window, giving Torah and Owen the timing to coordinate suppress, bound, and breach without being caught in the peak",
+            "intent": "Saye uses her real-time emission read to call the four-minute window between surges, giving the squad a timed lane to move and breach without the broadcast at peak strength",
+            "base_success": 0.65,
+            "yield": "Squad has a confirmed window; Owen's suppress plan and Park's breach are coordinated; the idol cannot hit at full strength during the window; base success of the resolution phase improves",
+            "risk": "If Saye's read is wrong or her comms are cut by the broadcast, the squad moves on a false window and hits the surge at full strength; Park is exposed at the core during peak emission",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Saye's voice is flat and exact on comms: 'Window opens in eight seconds. It runs forty-two seconds. Do not be at the core when it closes.' Torah relays it to Owen. Owen relays it to Park. For forty-two seconds the hum drops half a register and the pull on Torah's badge eases. It is enough."
+                ],
+                "environment_state_changes": [
+                  "root_offering_floor.torah_speaks.success"
+                ],
+                "resource_changes": {
+                  "character.dr_lenora_saye.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Saye calls the window but the broadcast clips her comms at the twenty-second mark. Torah gets half the timing. Owen moves on the partial call and reaches the core with twelve seconds left in the window. Park is ten steps behind. 'I'm not going to make it in the window,' Park says, not panicking, just stating it. She makes it in eleven seconds. The surge hits as she seals the first containment unit. Her hands shake afterward but the seal holds."
+                ],
+                "environment_state_changes": [
+                  "root_offering_floor.torah_speaks.partial"
+                ],
+                "resource_changes": {
+                  "character.dr_lenora_saye.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Saye's monitoring equipment pulls a false read—the anomalous scrap in the core is interfering with her baseline. She calls the window four seconds early. Owen and Park move. The surge hits at full strength while Park is at the core housing. The pressure wave throws Park back six feet. She keeps hold of one containment unit. The kit is on the floor, open, three units cracked. Saye says, quietly, on comms: 'I had the wrong baseline. I'm sorry.' She does not say anything else for two minutes."
+                ],
+                "environment_state_changes": [
+                  "root_offering_floor.torah_speaks.failure"
+                ],
+                "resource_changes": {
+                  "character.dr_lenora_saye.stress": "+2",
+                  "character.dr_lenora_saye.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Owen's voice cuts through the hum: 'Sectors set. Nobody moves.' The fire team's lights sweep the offering line and the civilians stop, blinking, some of them looking at their own hands like they forgot what they were carrying. The hum does not stop but it does not climb. Park is already moving."
+            ],
+            "environment_state_changes": [
+              "root_offering_floor.combat.success"
+            ],
+            "resource_changes": {
+              "character.lt_mara_owen.morale": "+1"
+            }
+          },
+          "torah_speaks": {
+            "lines": [
+              "Saye's voice is flat and exact on comms: 'Window opens in eight seconds. It runs forty-two seconds. Do not be at the core when it closes.' Torah relays it to Owen. Owen relays it to Park. For forty-two seconds the hum drops half a register and the pull on Torah's badge eases. It is enough."
+            ],
+            "environment_state_changes": [
+              "root_offering_floor.torah_speaks.success"
+            ],
+            "resource_changes": {
+              "character.dr_lenora_saye.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_offering_floor",
+            "queued_line": "The window between surges is closing; Owen needs the line cleared before she can move on the core.",
+            "trigger_key": "resolution_offering_floor",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          },
+          "torah_speaks": {
+            "event_id": "resolution_offering_floor",
+            "queued_line": "The window between surges is closing; Owen needs the line cleared before she can move on the core.",
+            "trigger_key": "resolution_offering_floor",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "calf_delay_jewelry_molten_image",
+            "source_moment": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+            "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+            "room_application": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+            "structural_transfer": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+            "required_visible_details": [
+              "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+              "civilians actively walking toward the offering line during the squad's entry"
+            ],
+            "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "calf_noise_war_destroy_powder",
+            "source_moment": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+            "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+            "room_application": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+            "structural_transfer": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+            "required_visible_details": [
+              "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+              "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+            ],
+            "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+          },
+          {
+            "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+            "source_title": "Army Atp 3 21 8 Infantry Platoon Squad",
+            "source_chunk_id": "support_by_fire_shift_lift",
+            "source_moment": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+            "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+            "room_application": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+            "structural_transfer": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+            "required_visible_details": [
+              "Owen running sector counts from behind the workbench",
+              "Park holding the stairwell door until Owen's signal"
+            ],
+            "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+            "source_chunk_id": "stress_unclear_information",
+            "source_moment": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+            "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+            "room_application": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+            "structural_transfer": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+            "required_visible_details": [
+              "Saye's voice on comms is faster than usual as the surge window closes",
+              "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+            ],
+            "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "calf_delay_jewelry_molten_image",
+            "anchor_role": "premise",
+            "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+            "playable_transform": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+            "required_visible_details": [
+              "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+              "civilians actively walking toward the offering line during the squad's entry"
+            ],
+            "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "calf_noise_war_destroy_powder",
+            "anchor_role": "procedure",
+            "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+            "playable_transform": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+            "required_visible_details": [
+              "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+              "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+            ],
+            "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+          },
+          {
+            "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+            "source_chunk_id": "support_by_fire_shift_lift",
+            "anchor_role": "procedure",
+            "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+            "playable_transform": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+            "required_visible_details": [
+              "Owen running sector counts from behind the workbench",
+              "Park holding the stairwell door until Owen's signal"
+            ],
+            "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_chunk_id": "stress_unclear_information",
+            "anchor_role": "escalation",
+            "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+            "playable_transform": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+            "required_visible_details": [
+              "Saye's voice on comms is faster than usual as the surge window closes",
+              "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+            ],
+            "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_offering_floor",
+      "type": "resolution",
+      "speaker": "SITREP",
+      "line_1": "Park reports the core breach window open. The floor gauge logs the idol stripping small metal from squad gear.",
+      "line_2": "Fragments must be sealed before the floor drain or ventilation pulls powder. Disclosure to civilians must happen before they are evacuated.",
+      "buttons": [
+        {
+          "label": "Park: Breach and Seal",
+          "action": "destroy",
+          "preview": "Park breaches the idol core in a controlled sequence—cut housing, apply thermal charge at low yield..."
+        },
+        {
+          "label": "Torah: Break the Offering",
+          "action": "full_disclosure",
+          "preview": "Torah uses his presence as the ranking Institute authority to sever the offering behavior—not by force..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Park: Breach and Seal",
+          "action": "destroy",
+          "officer_id": "specialist_mina_park",
+          "primary_skill": "anomalous material breach and fragment containment",
+          "tactical_step": "breach the core housing with cutting tool and thermal charge, reduce the fused metal, seal all fragments and powder in non-conductive containment units before any particle reaches the floor drain or ventilation, identify and separately seal the original anomalous scrap fragment",
+          "intent": "Park breaches the idol core in a controlled sequence—cut housing, apply thermal charge at low yield, collect all fragments and powder into sealed non-conductive units, identify the original anomalous scrap by its emission signature, seal it separately",
+          "base_success": 0.65,
+          "yield": "Core is destroyed and fully contained; no powder reaches water or ventilation; the broadcast stops; the offering behavior has no object to return to; the room is clearable",
+          "risk": "If Park rushes the breach or a containment unit fails, powder scatters toward the floor drain; Saye flags a secondary emission from the building water system; a follow-up containment mission is queued and squad contamination state rises",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Park does not announce the breach. She cuts the housing in two passes, applies the charge, and the core comes apart in a controlled collapse—gold-bright fragments dropping into the containment unit like coins into a box. The hum stops between one breath and the next. The civilians near the offering line look up, confused, the way people look when a sound they stopped noticing suddenly ends. Park seals the last unit, labels it, sets it aside, and picks up the anomalous scrap fragment with tongs. 'Got the original,' she says. 'Sealing separately.' Her hands are steady."
+              ],
+              "environment_state_changes": [
+                "resolution_offering_floor.destroy.success"
+              ],
+              "resource_changes": {
+                "character.specialist_mina_park.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "The breach goes clean but one containment unit's seal fails on the third fragment load—a hairline crack Park did not catch in the low light. Powder reaches the floor. Park drops to her knees and sweeps it manually into a backup unit, working fast, not looking up. She gets most of it. Saye, on comms, says the emission is dropping but not to zero. 'There's residue in the drain,' Saye says. 'Not enough to propagate on its own. Probably.' Park stands up. There is gold-colored dust on her gloves. She does not take them off."
+              ],
+              "environment_state_changes": [
+                "resolution_offering_floor.destroy.partial"
+              ],
+              "resource_changes": {
+                "character.specialist_mina_park.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "The thermal charge yield is wrong—Park set it for the housing mass, not accounting for the anomalous scrap's density. The core does not collapse; it fractures outward. Fragments hit the floor, the wall, the drain grate. The hum spikes for three seconds and then drops to silence, but the silence is wrong—too complete, like the broadcast moved rather than stopped. Park seals what she can reach. Saye's voice on comms is careful: 'I'm reading a secondary emission from the building water system. It's faint. It's there.' Park looks at the drain. 'I know,' she says."
+              ],
+              "environment_state_changes": [
+                "resolution_offering_floor.destroy.failure"
+              ],
+              "resource_changes": {
+                "character.specialist_mina_park.stress": "+2",
+                "character.specialist_mina_park.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Torah: Break the Offering",
+          "action": "full_disclosure",
+          "officer_id": "torah",
+          "primary_skill": "command authority and symbolic accountability",
+          "tactical_step": "Torah addresses the civilians directly before evacuation, names the six-day command failure, acknowledges what was surrendered and why, documents all offered property for return or sealed custody, and files the command-failure disclosure report as part of the formal closure record",
+          "intent": "Torah uses his presence as the ranking Institute authority to sever the offering behavior—not by force but by accountability; he names the failure that caused it, acknowledges the community's fear as legitimate, and formally documents the surrendered property so the offering loop has no object and no unacknowledged debt",
+          "base_success": 0.65,
+          "yield": "Offering behavior is formally severed; civilians cooperate with evacuation; surrendered property is documented; the command-failure disclosure is on record; the idol has no community to enforce its assignment; closure condition is fully satisfied",
+          "risk": "If Torah's disclosure is incomplete or the civilians do not accept it, some of them refuse to leave the offering line; the evacuation stalls; Owen has to physically move people; the idol's pull intensifies on anyone still near the pile; Torah's symbolic authority in future missions is noted as contested",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Torah does not raise his voice. He stands at the midpoint of the room, badge still vibrating, and he says: 'Institute command did not answer you for six days. That failure is documented and it is mine to carry. What you built here, you built because we were absent. I am asking you to step back from the line.' He pauses. 'Your property will be logged and returned or sealed. Nothing you gave will be lost without record.' The man in the contractor vest—the one Owen had to block—looks at Torah for a long moment. Then he steps back. The others follow, not quickly, but they follow. Vasquez picks up her welfare report from the floor and hands it to Torah without speaking."
+              ],
+              "environment_state_changes": [
+                "resolution_offering_floor.full_disclosure.success"
+              ],
+              "resource_changes": {
+                "character.torah.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Torah gets through the disclosure but stumbles on the six-day figure—command's actual response log shows five days and eighteen hours, and a civilian near the back catches it. 'You said six days,' she says. 'The log says five.' Torah does not correct himself fast enough. Three civilians stay at the line. Owen has to move them physically, carefully, one at a time. The evacuation takes eleven minutes longer than planned. Torah files the disclosure report with the corrected figure. He does not look at Owen when he hands it to Park to courier."
+              ],
+              "environment_state_changes": [
+                "resolution_offering_floor.full_disclosure.partial"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Torah begins the disclosure and the idol's pull spikes—his badge tears free of his jacket and hits the offering pile with a sound like a struck bell. The civilians near the line go still, then several of them step forward again, reading it as a sign. Torah's voice does not break but it does not carry either. Owen, from across the room, says quietly on comms: 'Sir. You need to get your badge back or get off the floor.' Torah retrieves the badge. The disclosure is filed but three civilians will not leave voluntarily. The evacuation is forced. Vasquez does not hand Torah the welfare report. She folds it and puts it in her pocket."
+              ],
+              "environment_state_changes": [
+                "resolution_offering_floor.full_disclosure.failure"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+2",
+                "character.torah.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "destroy": {
+          "lines": [
+            "Park does not announce the breach. She cuts the housing in two passes, applies the charge, and the core comes apart in a controlled collapse—gold-bright fragments dropping into the containment unit like coins into a box. The hum stops between one breath and the next. The civilians near the offering line look up, confused, the way people look when a sound they stopped noticing suddenly ends. Park seals the last unit, labels it, sets it aside, and picks up the anomalous scrap fragment with tongs. 'Got the original,' she says. 'Sealing separately.' Her hands are steady."
+          ],
+          "environment_state_changes": [
+            "resolution_offering_floor.destroy.success"
+          ],
+          "resource_changes": {
+            "character.specialist_mina_park.morale": "+1"
+          }
+        },
+        "full_disclosure": {
+          "lines": [
+            "Torah does not raise his voice. He stands at the midpoint of the room, badge still vibrating, and he says: 'Institute command did not answer you for six days. That failure is documented and it is mine to carry. What you built here, you built because we were absent. I am asking you to step back from the line.' He pauses. 'Your property will be logged and returned or sealed. Nothing you gave will be lost without record.' The man in the contractor vest—the one Owen had to block—looks at Torah for a long moment. Then he steps back. The others follow, not quickly, but they follow. Vasquez picks up her welfare report from the floor and hands it to Torah without speaking."
+          ],
+          "environment_state_changes": [
+            "resolution_offering_floor.full_disclosure.success"
+          ],
+          "resource_changes": {
+            "character.torah.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "destroy": {
+          "event_id": "cooldown_offering_floor",
+          "queued_line": "If the core is breached clean and the offering behavior is severed, the broadcast stops; if fragments escape, Saye flags a secondary emission within forty-eight hours.",
+          "trigger_key": "cooldown_offering_floor",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        },
+        "full_disclosure": {
+          "event_id": "cooldown_offering_floor",
+          "queued_line": "If the core is breached clean and the offering behavior is severed, the broadcast stops; if fragments escape, Saye flags a secondary emission within forty-eight hours.",
+          "trigger_key": "cooldown_offering_floor",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "calf_delay_jewelry_molten_image",
+          "source_moment": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "room_application": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "structural_transfer": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "required_visible_details": [
+            "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+            "civilians actively walking toward the offering line during the squad's entry"
+          ],
+          "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "calf_noise_war_destroy_powder",
+          "source_moment": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "room_application": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "structural_transfer": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "required_visible_details": [
+            "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+            "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+          ],
+          "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_title": "Army Atp 3 21 8 Infantry Platoon Squad",
+          "source_chunk_id": "support_by_fire_shift_lift",
+          "source_moment": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "room_application": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "structural_transfer": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "required_visible_details": [
+            "Owen running sector counts from behind the workbench",
+            "Park holding the stairwell door until Owen's signal"
+          ],
+          "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "stress_unclear_information",
+          "source_moment": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "room_application": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "structural_transfer": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "required_visible_details": [
+            "Saye's voice on comms is faster than usual as the surge window closes",
+            "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+          ],
+          "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "calf_delay_jewelry_molten_image",
+          "anchor_role": "premise",
+          "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "playable_transform": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "required_visible_details": [
+            "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+            "civilians actively walking toward the offering line during the squad's entry"
+          ],
+          "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "calf_noise_war_destroy_powder",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "playable_transform": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "required_visible_details": [
+            "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+            "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+          ],
+          "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_chunk_id": "support_by_fire_shift_lift",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "playable_transform": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "required_visible_details": [
+            "Owen running sector counts from behind the workbench",
+            "Park holding the stairwell door until Owen's signal"
+          ],
+          "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "stress_unclear_information",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "playable_transform": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "required_visible_details": [
+            "Saye's voice on comms is faster than usual as the surge window closes",
+            "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+          ],
+          "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_offering_floor",
+      "type": "interlude",
+      "speaker": "dr_lenora_saye",
+      "line_1": "Saye is in the staging van with the containment log open. Park is outside on the step. Owen has not come out yet.",
+      "line_2": "The command-failure disclosure is filed. The six-day log is attached. Nobody has said what happens to the officer who did not answer.",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Saye closes the emission log and opens the property inventory. Forty-three items. Rings, badges, a child's bracelet, two Institute-issue lanyards. She starts entering them one by one.",
+            "Park comes to the van door and leans against the frame. She still has the gold-colored dust on one glove. She has not taken it off. She does not say anything for a while. Then: 'It felt like it was waiting for me to give it something.'",
+            "Saye does not look up from the inventory. 'It was.' She enters another item. 'That's what it was built to do.'",
+            "Owen comes out last. She is holding her left side but not favoring it visibly. She looks at the van, at Park, at the street. She says: 'The disclosure names the blackout. It doesn't name who caused it.' She is not asking a question.",
+            "Saye saves the inventory file. 'No,' she says. 'It doesn't.'",
+            "Owen nods once and walks to the far end of the staging area. She does not come back to the van."
+          ],
+          "environment_state_changes": [
+            "character.lt_mara_owen.fatigue_plus",
+            "character.specialist_mina_park.fixated",
+            "institute.accountability_plus",
+            "squad.morale_strained"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "evidence_review",
+      "state_reads": [
+        "character.lt_mara_owen.injury",
+        "character.specialist_mina_park.contamination",
+        "character.dr_lenora_saye.mental_state",
+        "institute.accountability"
+      ],
+      "state_writes": [
+        "character.lt_mara_owen.fatigue_plus",
+        "character.specialist_mina_park.fixated",
+        "institute.accountability_plus",
+        "squad.morale_strained"
+      ],
+      "featured_characters": [
+        "dr_lenora_saye",
+        "specialist_mina_park",
+        "lt_mara_owen"
+      ],
+      "visible_text": [
+        "Saye closes the emission log and opens the property inventory. Forty-three items. Rings, badges, a child's bracelet, two Institute-issue lanyards. She starts entering them one by one.",
+        "Park comes to the van door and leans against the frame. She still has the gold-colored dust on one glove. She has not taken it off. She does not say anything for a while. Then: 'It felt like it was waiting for me to give it something.'",
+        "Saye does not look up from the inventory. 'It was.' She enters another item. 'That's what it was built to do.'",
+        "Owen comes out last. She is holding her left side but not favoring it visibly. She looks at the van, at Park, at the street. She says: 'The disclosure names the blackout. It doesn't name who caused it.' She is not asking a question.",
+        "Saye saves the inventory file. 'No,' she says. 'It doesn't.'",
+        "Owen nods once and walks to the far end of the staging area. She does not come back to the van."
+      ],
+      "choices": [
+        "File a supplemental report naming the responsible officer",
+        "Log the command failure as systemic and unattributed",
+        "Request a command review through formal channels"
+      ],
+      "outcomes": [
+        "If the supplemental report is filed: institute.accountability rises sharply; a command review is queued; Owen's loyalty to Institute command is noted as under pressure",
+        "If logged as systemic: the accountability record is incomplete; a follow-up mission involving the same command gap is more likely; Park's fixation on the dust on her glove does not resolve",
+        "If a command review is requested: the review is acknowledged but not scheduled; Saye notes the acknowledgment timestamp in the property inventory file as the last entry"
+      ],
+      "followup_hooks": [
+        "Secondary emission from building water system if Park's breach was partial",
+        "Command review triggered by Torah's disclosure filing",
+        "Vasquez's welfare report, if retained by her, surfaces in a later mission as evidence in an unrelated accountability case",
+        "The child's bracelet in the property inventory is not claimed; it remains in Institute custody"
+      ],
+      "corpus_anchors": [
+        "calf_delay_jewelry_molten_image",
+        "calf_noise_war_destroy_powder",
+        "stress_unclear_information"
+      ],
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "calf_delay_jewelry_molten_image",
+          "source_moment": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "room_application": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "structural_transfer": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "required_visible_details": [
+            "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+            "civilians actively walking toward the offering line during the squad's entry"
+          ],
+          "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "calf_noise_war_destroy_powder",
+          "source_moment": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "room_application": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "structural_transfer": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "required_visible_details": [
+            "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+            "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+          ],
+          "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_title": "Army Atp 3 21 8 Infantry Platoon Squad",
+          "source_chunk_id": "support_by_fire_shift_lift",
+          "source_moment": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "room_application": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "structural_transfer": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "required_visible_details": [
+            "Owen running sector counts from behind the workbench",
+            "Park holding the stairwell door until Owen's signal"
+          ],
+          "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "stress_unclear_information",
+          "source_moment": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "room_application": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "structural_transfer": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "required_visible_details": [
+            "Saye's voice on comms is faster than usual as the surge window closes",
+            "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+          ],
+          "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "calf_delay_jewelry_molten_image",
+          "anchor_role": "premise",
+          "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "playable_transform": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "required_visible_details": [
+            "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+            "civilians actively walking toward the offering line during the squad's entry"
+          ],
+          "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "calf_noise_war_destroy_powder",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "playable_transform": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "required_visible_details": [
+            "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+            "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+          ],
+          "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_chunk_id": "support_by_fire_shift_lift",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "playable_transform": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "required_visible_details": [
+            "Owen running sector counts from behind the workbench",
+            "Park holding the stairwell door until Owen's signal"
+          ],
+          "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "stress_unclear_information",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "playable_transform": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "required_visible_details": [
+            "Saye's voice on comms is faster than usual as the surge window closes",
+            "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+          ],
+          "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "offering_floor_01",
+      "name": "Offering Floor",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A contractor shelter on sub-level two. The floor is warm. A fused metal object the size of a filing cabinet stands at the center, gold-bright under work lights. People are still walking toward it.",
+      "first_visit_description": "Torah leads Owen, Park, and Saye down the stairwell to sub-level two. Saye is remote on comms from the staging van—her equipment cannot safely enter the broadcast radius yet. Owen is on point with a two-person fire team. Park carries the containment kit and is positioned at the stairwell door. Two Institute officers, Reyes and Cho, are visible on the floor near the east wall, not moving. The idol stands at the room's center: a fused column of rings, ID badges, tool handles, and anomalous scrap, surface warm to the eye, gold-colored weld lines running floor to ceiling. Approximately thirty civilians are present. Eleven are actively moving toward the offering line. The broadcast is audible as a low hum that sits behind the sternum. Torah's badge vibrates against his chest.",
+      "return_description": "The floor is quieter. The offering line is gone. Scorch marks and containment tape mark where the core stood. The smell of hot metal has not left.",
+      "detection_report": "Institute monitoring flagged a sustained low-frequency emission from sub-level two at 0340. Field logs from Reyes and Cho show normal entry at 0312, then silence. A civilian contractor named Vasquez filed a welfare report at 0200 stating that Institute command had not responded to three emergency requests over six days; the report notes that shelter residents began pooling property on day four.",
+      "current_situation": "The idol is active. The broadcast is climbing. Owen reports the two downed officers are breathing but unresponsive. Civilians near the offering line are not hostile but will not move back. Anyone who steps between a civilian and the offering line receives a directed pressure wave from the idol—Park clocked it at enough force to crack a rib. Saye is on comms reading the emission pattern from the van. Torah has thirty seconds before the next offering surge.",
+      "action_profile": {
+        "physical_threat": "The idol emits directed pressure waves at non-worshippers who cross the offering line; force is sufficient to fracture ribs, rupture eardrums, or throw a person into a wall. Metal objects on squad gear are being drawn toward the core at increasing pull strength.",
+        "contact_state": "Squad is inside the broadcast radius; Owen's fire team is suppressed at the east wall behind a workbench; Park is at the stairwell door outside the worst of the field; Saye is remote in the van; Torah is exposed at the room's midpoint.",
+        "field_manual_drill": "Suppress and fix the offering line crowd, bound to the core under covering fire, breach the core housing, clear fragments into containment, evacuate civilians, break contact before powder dispersal.",
+        "tactical_objective": "Reach the idol core, breach and reduce it under controlled conditions, seal all fragments, and evacuate civilians off the offering line before the broadcast frequency peaks.",
+        "symbolic_close": "Force alone cannot close the room; the offering behavior must be severed—civilians physically removed from the offering line and their surrendered property documented and returned or sealed—before the core is breached, or fragments will carry the field.",
+        "violent_resolution": "The idol core is a physical fused-metal object that can be breached with cutting tools and thermal charge; Owen can suppress the crowd perimeter and bound to the core; Park can breach the housing; the core can be destroyed, but careless destruction scatters conductive powder that reactivates in water or ventilation.",
+        "not_monster_of_week": "The threat is not a creature; it is an object built by frightened people from donated trust when command went silent. The fight is about who gets credited with rescue. The idol attacks because it was assigned authority it was never meant to hold, and it enforces that assignment on anyone who refuses it."
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "lt_mara_owen",
+          "name": "Lt. Mara Owen",
+          "mission_role": "tactical lead, fire team command",
+          "physical_position": "East wall behind workbench, suppressed, fire team of two with her",
+          "assigned_reason": "Owen is the senior tactical officer on shift; she entered first and established the only covered position in the room",
+          "visible_state": "Owen is flat behind the bench, not panicking, running sector counts in a low voice; she has not offered anything and has not been hit yet because she has not crossed the line"
+        },
+        {
+          "officer_id": "specialist_mina_park",
+          "name": "Specialist Mina Park",
+          "mission_role": "containment and breach specialist",
+          "physical_position": "Stairwell door, outside the worst of the broadcast radius, containment kit staged",
+          "assigned_reason": "Park holds the only non-conductive fragment containment rated for anomalous metal; she was ordered to hold the door until the offering line is clear",
+          "visible_state": "Park is watching the offering line count on her tablet, updating Owen every thirty seconds; her jaw is tight"
+        },
+        {
+          "officer_id": "dr_lenora_saye",
+          "name": "Dr. Lenora Saye",
+          "mission_role": "remote symbolic analyst and broadcast monitor",
+          "physical_position": "Institute staging van, street level, connected by encrypted comms",
+          "assigned_reason": "Saye's monitoring equipment cannot enter the broadcast radius without being pulled into the offering field; she is the only person who can read the emission pattern in real time",
+          "visible_state": "Saye's voice on comms is controlled but she is speaking faster than usual; she has already flagged that the frequency is climbing"
+        },
+        {
+          "officer_id": "torah",
+          "name": "Torah",
+          "mission_role": "command authority and symbolic asset",
+          "physical_position": "Room midpoint, exposed, between Owen's position and the offering line",
+          "assigned_reason": "Torah is the ranking Institute authority present; his presence is the counter-claim to the idol's assigned authority",
+          "visible_state": "Torah's badge is vibrating; he has not moved toward the offering line and has not been hit yet"
+        }
+      ],
+      "root_sin": "When Institute command failed to answer six days of emergency requests, the shelter community replaced absent authority with an object they built themselves from donated rings, badges, and anomalous scrap. They assigned deliverance to it. The idol now enforces that assignment.",
+      "modern_incident_logic": "A contractor shelter on a secured sub-level lost comms with Institute command during a six-day blackout. Residents pooled metal property as a practical act—marking a central object as a community anchor. The anomalous scrap in the pile was a recovered fragment from a prior Institute operation, catalogued but not neutralized. Contact between the fragment and the donated metal under sustained collective intent produced a fused object with an active broadcast field. The idol is not supernatural in origin; it is the product of fear, donated trust, and an improperly closed prior case.",
+      "closure_test": "The offering behavior must be severed before the core is breached; fragments must be sealed in non-conductive containment; the original anomalous scrap fragment must be identified and separately contained; the six-day command failure must be documented and disclosed to the civilians present.",
+      "religious_pattern": "Exodus golden calf: absent authority, donated gold, fashioned image, assigned deliverance, noise mistaken for safety, destruction by burning and grinding, powder scattered, offering behavior severed.",
+      "anomaly_rule": "The idol broadcasts a comfort field to anyone who has offered property and a directed pressure field to anyone who has not; it pulls metal toward itself at increasing strength as the offering surge climbs; if destroyed without severing the offering behavior first, the powder carries the field into water and ventilation.",
+      "forbidden_flat_read": "Do not literalize as a demon or possessing entity; the idol has no will of its own—it enforces the assignment the community gave it.",
+      "officer_reports": [
+        "Owen, comms: 'Reyes and Cho are breathing. Cho has a broken arm. I have eyes on eleven civilians in the offering line and the number is going up. I need the line cleared before I can move.'",
+        "Park, comms: 'Containment kit is staged. I have six sealed units rated for anomalous metal. If the core scatters on breach I need thirty seconds to seal before anyone opens a vent or runs water.'",
+        "Saye, comms: 'The emission is not random—it peaks every four minutes on the offering surge. You have a window between surges. The window is closing.'"
+      ],
+      "procedure_hooks": [
+        "Suppress and fix the offering line before bounding to the core",
+        "Breach the core housing under controlled conditions with Park staged at the door",
+        "Seal all fragments in non-conductive containment before any particle reaches water or ventilation",
+        "Document and return or seal all surrendered property to sever the offering behavior",
+        "File a command-failure disclosure report as part of closure"
+      ],
+      "character_state_stakes": {
+        "lt_mara_owen": "If Owen's plan fails or partially succeeds, she takes a pressure-wave hit; injury raises her fatigue and reduces her availability for the resolution phase",
+        "specialist_mina_park": "If Park's containment is breached or rushed, fragment contamination raises squad contamination state and forces a clinic event",
+        "dr_lenora_saye": "If Saye's remote read is wrong or her comms are cut, the squad loses the surge-window timing and the next plan's base success drops",
+        "torah": "If Torah is pulled into the offering line or loses a badge to the idol's pull, his symbolic authority in the room is compromised and the closure condition becomes harder to satisfy"
+      },
+      "interlude_vectors": [
+        "Post-mission evidence review: the six-day command log and Vasquez's welfare report become a formal accountability document",
+        "Smoke break: Owen and Park do not speak for two minutes; Park eventually says the idol felt like it was waiting for her to give it something",
+        "Clinic: Cho's broken arm and Reyes's concussion are documented; Saye reviews their entry logs and finds they were not briefed on the anomalous scrap fragment"
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "When Institute command failed to answer six days of emergency requests, the shelter community replaced absent authority with an object they built themselves from donated rings, badges, and anomalous scrap. They assigned deliverance to it. The idol now enforces that assignment.",
+        "modern_incident_logic": "A contractor shelter on a secured sub-level lost comms with Institute command during a six-day blackout. Residents pooled metal property as a practical act—marking a central object as a community anchor. The anomalous scrap in the pile was a recovered fragment from a prior Institute operation, catalogued but not neutralized. Contact between the fragment and the donated metal under sustained collective intent produced a fused object with an active broadcast field. The idol is not supernatural in origin; it is the product of fear, donated trust, and an improperly closed prior case.",
+        "closure_test": "The offering behavior must be severed before the core is breached; fragments must be sealed in non-conductive containment; the original anomalous scrap fragment must be identified and separately contained; the six-day command failure must be documented and disclosed to the civilians present."
+      },
+      "religious_subtext": {
+        "source_pattern": "Exodus golden calf: absent authority, donated gold, fashioned image, assigned deliverance, noise mistaken for safety, destruction by burning and grinding, powder scattered, offering behavior severed.",
+        "transformed_rule": "The idol broadcasts a comfort field to anyone who has offered property and a directed pressure field to anyone who has not; it pulls metal toward itself at increasing strength as the offering surge climbs; if destroyed without severing the offering behavior first, the powder carries the field into water and ventilation.",
+        "forbidden_flat_read": "Do not literalize as a demon or possessing entity; the idol has no will of its own—it enforces the assignment the community gave it."
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Post-mission evidence review: the six-day command log and Vasquez's welfare report become a formal accountability document",
+        "Smoke break: Owen and Park do not speak for two minutes; Park eventually says the idol felt like it was waiting for her to give it something",
+        "Clinic: Cho's broken arm and Reyes's concussion are documented; Saye reviews their entry logs and finds they were not briefed on the anomalous scrap fragment"
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "offering_floor_01",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "calf_delay_jewelry_molten_image",
+          "source_moment": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "room_application": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "structural_transfer": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "required_visible_details": [
+            "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+            "civilians actively walking toward the offering line during the squad's entry"
+          ],
+          "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "calf_noise_war_destroy_powder",
+          "source_moment": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "room_application": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "structural_transfer": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "required_visible_details": [
+            "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+            "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+          ],
+          "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_title": "Army Atp 3 21 8 Infantry Platoon Squad",
+          "source_chunk_id": "support_by_fire_shift_lift",
+          "source_moment": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "room_application": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "structural_transfer": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "required_visible_details": [
+            "Owen running sector counts from behind the workbench",
+            "Park holding the stairwell door until Owen's signal"
+          ],
+          "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_title": "Cdc Niosh Judgment Decision Stress Emergency Managers",
+          "source_chunk_id": "stress_unclear_information",
+          "source_moment": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "room_application": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "structural_transfer": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "required_visible_details": [
+            "Saye's voice on comms is faster than usual as the surge window closes",
+            "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+          ],
+          "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "calf_delay_jewelry_molten_image",
+          "anchor_role": "premise",
+          "source_fingerprint": "People surrender gold rings, craftsman fashions image, community assigns deliverance to it",
+          "playable_transform": "Civilians surrender rings and badges to a fused metal object after command goes silent; the object is credited with shelter safety and attacks anyone who does not credit it",
+          "required_visible_details": [
+            "gold-colored weld lines on the idol surface made from fused rings and ID badges",
+            "civilians actively walking toward the offering line during the squad's entry"
+          ],
+          "followup_payoff": "If the offering behavior is not severed before breach, the idol's assignment transfers to the fragments"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "calf_noise_war_destroy_powder",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Calf burned, ground to powder, scattered on water; noise mistaken for safety",
+          "playable_transform": "The idol's broadcast is mistaken for safety by worshippers; destruction is viable but must be procedural—isolate, breach, reduce, seal powder before it reaches water or ventilation",
+          "required_visible_details": [
+            "the broadcast hum sits behind the sternum and reads as comfort to anyone who has offered",
+            "Park's containment kit is the only equipment rated to seal the powder before it reaches the drain"
+          ],
+          "followup_payoff": "Careless breach scatters powder into the floor drain; Saye flags a secondary emission from the building water system within forty-eight hours"
+        },
+        {
+          "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+          "source_chunk_id": "support_by_fire_shift_lift",
+          "anchor_role": "procedure",
+          "source_fingerprint": "Support by fire: sectors, fire superiority, shift and lift, avoid masking friendly movement",
+          "playable_transform": "Owen's plan uses suppress-and-fix on the offering line perimeter, bounds to the core, and requires Park to hold the door until Owen lifts the fix so Park can breach without being masked",
+          "required_visible_details": [
+            "Owen running sector counts from behind the workbench",
+            "Park holding the stairwell door until Owen's signal"
+          ],
+          "followup_payoff": "If Owen's fix is lifted too early, a civilian surges the line and takes a pressure wave hit attributed to the squad"
+        },
+        {
+          "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+          "source_chunk_id": "stress_unclear_information",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Unclear emergency information, equipment failure, time pressure narrows attention, leadership affects confusion",
+          "playable_transform": "The six-day command silence is the root stress event; each failed plan narrows the squad's decision window and raises the probability that civilians surrender more property or turn on the squad",
+          "required_visible_details": [
+            "Saye's voice on comms is faster than usual as the surge window closes",
+            "Vasquez's welfare report on the floor near the offering line, pages fanned open"
+          ],
+          "followup_payoff": "If the command-failure disclosure is not filed at closure, institute.accountability rises and a follow-up command review is queued"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "offering_floor_01"
+    },
+    {
+      "pool": "action_horror",
+      "room_id": "offering_floor_01"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "offering_floor_01"
+    },
+    {
+      "pool": "branch",
+      "room_id": "offering_floor_01"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The idol has no will; it enforces the assignment the community gave it—this keeps the horror procedural and theologically grounded",
+    "The six-day command failure is the actual root cause; the idol is the symptom; the disclosure is the closure",
+    "Park's contaminated glove is the remainder—the case is closed but not clean",
+    "Owen's silence at the end of the cooldown is the morale read; she is not broken, she is waiting to see what Torah does with the disclosure"
+  ],
+  "self_critique": [
+    "The suppress-and-fix plan uses combat as its action id, which is the closest implemented action to the procedure described, but the compiler should verify that combat supports non-lethal crowd-fix applications; if not, intercept may be a safer mapping"
+  ]
+}

@@ -1,0 +1,434 @@
+[gd_scene format=3 uid="uid://mfsmn5wqj0pf"]
+
+[ext_resource type="Shader" uid="uid://b5d1b3kk0njao" path="res://RoomPulse.gdshader" id="1_aqk2v"]
+[ext_resource type="Texture2D" uid="uid://chwovk6l7px4q" path="res://red_corridor.png" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://do62t4oe4qwa6" path="res://Fleshpunk-dashboard.png" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://bqu8qbvhurro6" path="res://hymn.tscn" id="3_tlwt5"]
+[ext_resource type="Shader" uid="uid://b3ivt3wdfg5tp" path="res://EnemySpriteShader.gdshader" id="4_gbfbk"]
+[ext_resource type="Script" uid="uid://b3wedvxuec884" path="res://world.gd" id="4_qmcvn"]
+[ext_resource type="Shader" uid="uid://cv6uxfuduvtch" path="res://SpriteShader.gdshader" id="4_wse8f"]
+[ext_resource type="Texture2D" uid="uid://cngjv16lbwupj" path="res://Merchant.png" id="5_ic0uy"]
+[ext_resource type="Script" uid="uid://8fl2de6cjqph" path="res://ship_dashboard.gd" id="6_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://c0yuhc10bsy6t" path="res://blood_hunter.tscn" id="7_vrj2k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_036b0"]
+shader = ExtResource("1_aqk2v")
+shader_parameter/progress = 0.0
+shader_parameter/pulse_amount = 1.0
+shader_parameter/pulse_center = Vector2(0.5, 0.5)
+shader_parameter/max_radius = 0.62
+shader_parameter/ring_width = 0.49200002337
+shader_parameter/front_edge_width = 0.018
+shader_parameter/stretch_strength = 0.0190000009025
+shader_parameter/band_curve = 1.35
+shader_parameter/pinch_width = 0.18
+shader_parameter/pinch_curve = 1.9
+shader_parameter/compensation_strength = 0.18
+
+[sub_resource type="Animation" id="Animation_036b0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RoomSprite:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RoomSprite:material:shader_parameter/pulse_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RoomSprite:material:shader_parameter/stretch_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0190000009025]
+}
+
+[sub_resource type="Animation" id="Animation_aqk2v"]
+resource_name = "pulse"
+length = 0.33
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RoomSprite:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RoomSprite:material:shader_parameter/pulse_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RoomSprite:material:shader_parameter/stretch_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0190000009025]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dwbse"]
+_data = {
+&"RESET": SubResource("Animation_036b0"),
+&"pulse": SubResource("Animation_aqk2v")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k3n1d"]
+shader = ExtResource("4_wse8f")
+shader_parameter/dissolve_progress = 0.0
+shader_parameter/dissolve_noise_scale = 1.0
+shader_parameter/dissolve_noise_offset = Vector2(0, 0)
+shader_parameter/glow_radius = 6.0
+shader_parameter/glow_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color_inner = Color(1, 1, 1, 1)
+shader_parameter/outline_color_outer = Color(1, 1, 1, 0)
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/use_gradient_remap = false
+shader_parameter/overall_size = 1.0
+shader_parameter/top_stretch = 0.0
+shader_parameter/bottom_stretch = 0.0
+shader_parameter/left_stretch = 0.0
+shader_parameter/right_stretch = 0.0
+shader_parameter/top_falloff = 0.5
+shader_parameter/bottom_falloff = 0.5
+shader_parameter/left_falloff = 0.5
+shader_parameter/right_falloff = 0.5
+shader_parameter/black_threshold = 0.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pkg7o"]
+shader = ExtResource("4_gbfbk")
+shader_parameter/dissolve_progress = 0.0
+shader_parameter/dissolve_noise_scale = 1.0
+shader_parameter/dissolve_noise_offset = Vector2(0, 0)
+shader_parameter/glow_radius = 1.0000000475
+shader_parameter/glow_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color_inner = Color(1, 1, 1, 0)
+shader_parameter/outline_color_outer = Color(1, 1, 1, 0)
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/use_gradient_remap = false
+shader_parameter/overall_size = 1.0
+shader_parameter/top_stretch = 0.0
+shader_parameter/bottom_stretch = 0.0
+shader_parameter/left_stretch = 0.0
+shader_parameter/right_stretch = 0.0
+shader_parameter/top_falloff = 0.5
+shader_parameter/bottom_falloff = 0.5
+shader_parameter/left_falloff = 0.5
+shader_parameter/right_falloff = 0.5
+shader_parameter/black_threshold = 0.05
+
+[sub_resource type="Animation" id="Animation_gbfbk"]
+resource_name = "Idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(542, 1681), Vector2(542, 1681)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.0765766, 1.1328828), Vector2(1.0765766, 1.1328828)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:material:shader_parameter/top_stretch")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5333333, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.01499990571250009, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:material:shader_parameter/bottom_stretch")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:material:shader_parameter/right_stretch")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:material:shader_parameter/left_stretch")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ioo17"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(542, 1681)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.0765766, 1.1328828)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:material:shader_parameter/top_stretch")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:material:shader_parameter/bottom_stretch")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:material:shader_parameter/right_stretch")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:material:shader_parameter/left_stretch")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wse8f"]
+_data = {
+&"Idle": SubResource("Animation_gbfbk"),
+&"RESET": SubResource("Animation_ioo17")
+}
+
+[node name="World" type="Node2D" unique_id=1710477273]
+script = ExtResource("4_qmcvn")
+
+[node name="RoomSprite" type="Sprite2D" parent="." unique_id=1350678070]
+material = SubResource("ShaderMaterial_036b0")
+position = Vector2(546.5, 814.25)
+scale = Vector2(1.0693359, 1.0693359)
+texture = ExtResource("1_f3sb7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RoomSprite" unique_id=402455994]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_dwbse")
+
+[node name="Merchant" type="Sprite2D" parent="." unique_id=591818842]
+visible = false
+material = SubResource("ShaderMaterial_k3n1d")
+position = Vector2(565, 769)
+scale = Vector2(0.8103849, 0.810385)
+texture = ExtResource("5_ic0uy")
+
+[node name="ShipDashboard" type="Sprite2D" parent="." unique_id=1941817050]
+material = SubResource("ShaderMaterial_pkg7o")
+position = Vector2(542, 1681)
+scale = Vector2(1.0765766, 1.1328828)
+texture = ExtResource("2_fj7yv")
+script = ExtResource("6_pkg7o")
+
+[node name="Console" type="ScrollContainer" parent="ShipDashboard" unique_id=205798554]
+offset_left = -342.0
+offset_top = -164.0
+offset_right = 342.0
+offset_bottom = 146.0
+
+[node name="ConsoleContent" type="VBoxContainer" parent="ShipDashboard/Console" unique_id=1041607878]
+custom_minimum_size = Vector2(660, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="CommandInput" type="LineEdit" parent="ShipDashboard"]
+layout_mode = 2
+offset_left = -342.0
+offset_top = 84.0
+offset_right = 342.0
+offset_bottom = 132.0
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ShipDashboard" unique_id=1239525770]
+libraries/ = SubResource("AnimationLibrary_wse8f")
+
+[node name="PlayerAvatar" parent="." unique_id=1299038758 instance=ExtResource("3_tlwt5")]
+position = Vector2(302, 1050)
+scale = Vector2(0.665, 0.665)
+
+[node name="PlayerSpot" type="Marker2D" parent="." unique_id=1519982020]
+position = Vector2(302, 1050)
+
+[node name="Enemy" parent="." unique_id=1772218716 instance=ExtResource("7_vrj2k")]
+visible = false
+position = Vector2(740, 1047)
+scale = Vector2(-0.665, 0.665)
+
+[node name="PlacementSpot" type="Marker2D" parent="." unique_id=1023120997]
+position = Vector2(740, 1047)
+
+[node name="TTSPlayer" type="AudioStreamPlayer" parent="." unique_id=1521343737]
+volume_db = 0.758
+
+[editable path="PlayerAvatar"]
+[editable path="Enemy"]

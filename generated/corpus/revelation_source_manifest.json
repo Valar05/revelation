@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "project": "Revelation",
+  "policy": "Only include public-domain, U.S. federal government, CC0, or explicitly approved permissive/attribution sources in the active corpus. Keep SCP/CC-BY-SA material out of the active corpus unless the project deliberately accepts share-alike obligations.",
+  "sources": [
+    {
+      "id": "world_english_bible",
+      "title": "World English Bible",
+      "category": "scripture_bible",
+      "source_url": "https://www.gutenberg.org/ebooks/8294",
+      "download_url": "https://www.gutenberg.org/ebooks/8294.txt.utf-8",
+      "local_path": "generated/corpus/texts/world_english_bible_gutenberg_8294.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Public-domain English Bible translation via Project Gutenberg. Use as symbolic and scriptural motif source; avoid long direct quotation in generated prose."
+    },
+    {
+      "id": "jps_1917_tanakh",
+      "title": "JPS TaNaKH 1917",
+      "category": "scripture_tanakh_torah",
+      "source_url": "https://ebible.org/engjps/",
+      "download_url": "https://ebible.org/Scriptures/engjps_usfm.zip",
+      "local_path": "generated/corpus/source_docs/engjps_usfm.zip",
+      "license": "Public Domain",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "1917 Jewish Publication Society translation. Public-domain Tanakh/Torah anchor; eBible details page also offers HTML, EPUB, plain-text chapter files, VPL, USFX, and USFM packages."
+    },
+    {
+      "id": "quran_rodwell_gutenberg_2800",
+      "title": "The Koran, translated by J. M. Rodwell",
+      "category": "scripture_quran_translation",
+      "source_url": "https://www.gutenberg.org/ebooks/2800",
+      "download_url": "https://www.gutenberg.org/ebooks/2800.txt.utf-8",
+      "local_path": "generated/corpus/texts/quran_rodwell_gutenberg_2800.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Project Gutenberg public-domain USA Quran translation. Translation style is older; use primarily for motifs and structure."
+    },
+    {
+      "id": "fema_nims_2017",
+      "title": "National Incident Management System, Third Edition",
+      "category": "procedure_incident_command",
+      "source_url": "https://www.fema.gov/emergency-managers/nims",
+      "download_url": "https://www.fema.gov/sites/default/files/2020-07/fema_nims_doctrine-2017.pdf",
+      "local_path": "generated/corpus/source_docs/fema_nims_doctrine_2017.pdf",
+      "license": "U.S. federal government work / public domain in the U.S. unless third-party material is marked",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Procedural realism source for command, coordination, incident management, resource flow, and SITREP structure. Check document for third-party marks before quoting."
+    },
+    {
+      "id": "fema_eoc_quick_reference",
+      "title": "Emergency Operations Center Quick Reference Guide",
+      "category": "procedure_emergency_operations",
+      "source_url": "https://www.fema.gov/",
+      "download_url": "https://www.fema.gov/sites/default/files/documents/fema_eoc-quick-reference-guide.pdf",
+      "local_path": "generated/corpus/source_docs/fema_eoc_quick_reference_guide.pdf",
+      "license": "U.S. federal government work / public domain in the U.S. unless third-party material is marked",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Procedural source for operations center language, reporting roles, and interagency coordination."
+    },
+    {
+      "id": "osha_hazardous_waste_operations",
+      "title": "OSHA Hazardous Waste Operations and Emergency Response guidance",
+      "category": "procedure_hazmat_containment",
+      "source_url": "https://www.osha.gov/emergency-preparedness/hazardous-waste-operations",
+      "download_url": "https://www.osha.gov/emergency-preparedness/hazardous-waste-operations",
+      "local_path": "generated/corpus/texts/osha_hazardous_waste_operations.html",
+      "license": "U.S. federal government work / public domain in the U.S. unless third-party material is marked",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Containment and field-safety procedural language. Use for PPE, zones, decontamination, and response posture."
+    },
+    {
+      "id": "scp_wiki_cc_by_sa_reference_only",
+      "title": "SCP Wiki material",
+      "category": "excluded_copyleft_reference",
+      "source_url": "https://scp-wiki.wikidot.com/licensing-guide",
+      "download_url": "",
+      "local_path": "",
+      "license": "CC BY-SA 3.0",
+      "allowed_use": [
+        "reference_only_until_approved"
+      ],
+      "attribution_required": true,
+      "active": false,
+      "notes": "Excluded from active corpus for now. Add only if the project accepts attribution and share-alike obligations for derivative content. Avoid SCP-173 former image."
+    },
+    {
+      "id": "usmc_mcrp_3_10a4_marine_rifle_squad",
+      "title": "MCRP 3-10A.4 Marine Rifle Squad",
+      "category": "tactical_squad_operations",
+      "source_url": "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/2472229/mcrp-3-10a4/",
+      "download_url": "https://www.marines.mil/Portals/1/Publications/MCRP%203-10A.4.pdf",
+      "local_path": "generated/corpus/source_docs/mcrp_3_10a4_marine_rifle_squad.pdf",
+      "license": "U.S. federal government work / public domain in the U.S.; publicly releasable Marine Corps doctrine",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": false,
+      "notes": "Small-unit tactical source for squad roles, formations, actions on contact, fire/maneuver, and field vocabulary. Use for procedural texture, not tactical instruction to players. Inactive for now: official source verified, but direct terminal download returned HTTP 403 in Termux; do not use mirror copies without review."
+    },
+    {
+      "id": "usmc_mcrp_3_10a3_marine_infantry_platoon",
+      "title": "MCRP 3-10A.3 Marine Infantry Platoon",
+      "category": "tactical_platoon_operations",
+      "source_url": "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/2500719/mcrp-3-10a3/",
+      "download_url": "https://www.marines.mil/Portals/1/Publications/MCRP%203-10A.3%20%28SECURED%29.pdf",
+      "local_path": "generated/corpus/source_docs/mcrp_3_10a3_marine_infantry_platoon.pdf",
+      "license": "U.S. federal government work / public domain in the U.S.; publicly releasable Marine Corps doctrine",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": false,
+      "notes": "Platoon-level planning and operating considerations for patrols, security, movement, coordination, and leader decision language. Inactive for now: official source verified, but direct terminal download returned HTTP 403 in Termux; do not use mirror copies without review."
+    },
+    {
+      "id": "usmc_mcrp_3_30_7_commanders_tactical_handbook",
+      "title": "MCRP 3-30.7 Commander\u2019s Tactical Handbook",
+      "category": "tactical_command_procedure",
+      "source_url": "https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/899844/mcrp-3-307/",
+      "download_url": "https://www.marines.mil/Portals/1/Publications/MCRP%203-30.7%20GN.pdf?ver=2020-08-06-133248-667",
+      "local_path": "generated/corpus/source_docs/mcrp_3_30_7_commanders_tactical_handbook.pdf",
+      "license": "U.S. federal government work / public domain in the U.S.; distribution statement A, approved for public release",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": false,
+      "notes": "Useful for five-paragraph orders, troop-leading steps, patrol planning, cordon/search, roadblocks, communications, and concise command language. Inactive for now: official source verified, but direct terminal download returned HTTP 403 in Termux; do not use mirror copies without review."
+    },
+    {
+      "id": "cdc_isolation_precautions_2007_2023",
+      "title": "Guideline for Isolation Precautions: Preventing Transmission of Infectious Agents in Healthcare Settings",
+      "category": "medical_isolation_quarantine",
+      "source_url": "https://stacks.cdc.gov/view/cdc/134941",
+      "download_url": "https://stacks.cdc.gov/view/cdc/134941/cdc_134941_DS1.pdf",
+      "local_path": "generated/corpus/source_docs/cdc_isolation_precautions_2007_2023.pdf",
+      "license": "Public Domain / U.S. federal government CDC work",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Isolation, transmission-based precautions, PPE, infection-control escalation, and quarantine-adjacent procedures."
+    },
+    {
+      "id": "cdc_environmental_infection_control_2019",
+      "title": "Guidelines for Environmental Infection Control in Health-Care Facilities",
+      "category": "medical_environmental_containment",
+      "source_url": "https://stacks.cdc.gov/view/cdc/134940",
+      "download_url": "https://stacks.cdc.gov/view/cdc/134940/cdc_134940_DS1.pdf",
+      "local_path": "generated/corpus/source_docs/cdc_environmental_infection_control_2019.pdf",
+      "license": "Public Domain / U.S. federal government CDC work",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Air, water, surface, environmental sampling, remediation, and facility infection-control language."
+    },
+    {
+      "id": "cdc_radiological_mass_casualty_guidelines",
+      "title": "Interim Guidelines for Hospital Response to Mass Casualties from a Radiological Incident",
+      "category": "medical_mass_casualty_triage_decon",
+      "source_url": "https://www.cdc.gov/radiation-emergencies/hcp/clinical-guidance/index.html",
+      "download_url": "https://www.cdc.gov/radiation-emergencies/media/pdfs/MassCasualtiesGuidelines.pdf",
+      "local_path": "generated/corpus/source_docs/cdc_radiological_mass_casualty_guidelines.pdf",
+      "license": "U.S. federal government work / public domain in the U.S. unless third-party material is marked",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Hospital surge, self-triage, contamination screening, assessment centers, decontamination, and crisis communications under mass-casualty pressure."
+    },
+    {
+      "id": "samhsa_responder_stress_guide_2022",
+      "title": "A Guide to Managing Stress for Disaster Responders and First Responders",
+      "category": "psych_responder_stress",
+      "source_url": "https://library.samhsa.gov/product/guide-managing-stress-disaster-responders-and-first-responders/pep22-01-01-003",
+      "download_url": "https://store.samhsa.gov/sites/default/files/pep22-01-01-003.pdf",
+      "local_path": "generated/corpus/source_docs/samhsa_responder_stress_guide_2022.pdf",
+      "license": "U.S. federal government work / public domain in the U.S. unless third-party material is marked",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": false,
+      "notes": "Responder fatigue, organizational stress management, symptoms, peer support, supervisor intervention, and return-to-work texture. Inactive for now: official source verified, but direct terminal download returns HTTP 403 in this environment."
+    },
+    {
+      "id": "samhsa_preventing_managing_stress_2023",
+      "title": "Tips for Disaster Responders: Preventing and Managing Stress",
+      "category": "psych_responder_stress_field_sheet",
+      "source_url": "https://library.samhsa.gov/product/tips-disaster-responders-preventing-managing-stress/pep23-01-01-006",
+      "download_url": "https://library.samhsa.gov/sites/default/files/tips-preventing-managing-stress-pep23-01-01-006.pdf",
+      "local_path": "generated/corpus/source_docs/samhsa_preventing_managing_stress_2023.pdf",
+      "license": "U.S. federal government work / public domain in the U.S. unless third-party material is marked",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": false,
+      "notes": "Short field-oriented stress signs and management strategies for emergency responders. Inactive for now: official source verified, but direct terminal download returns HTTP 403 in this environment."
+    },
+    {
+      "id": "frazer_golden_bough_gutenberg_3623",
+      "title": "The Golden Bough: A Study of Magic and Religion",
+      "category": "folklore_magic_religion_comparative",
+      "source_url": "https://www.gutenberg.org/ebooks/3623",
+      "download_url": "https://www.gutenberg.org/ebooks/3623.txt.utf-8",
+      "local_path": "generated/corpus/texts/frazer_golden_bough_gutenberg_3623.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Comparative motifs: sacred kingship, ritual substitution, contagious/sympathetic magic, taboos, seasonal death/rebirth. Treat Frazer as historical source, not modern anthropology."
+    },
+    {
+      "id": "ginzberg_legends_jews_v1_gutenberg_1493",
+      "title": "The Legends of the Jews, Volume 1",
+      "category": "folklore_jewish_biblical_legend",
+      "source_url": "https://www.gutenberg.org/ebooks/1493",
+      "download_url": "https://www.gutenberg.org/ebooks/1493.txt.utf-8",
+      "local_path": "generated/corpus/texts/ginzberg_legends_jews_v1_gutenberg_1493.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Midrashic/legendary expansion around Genesis figures and events; useful for symbolic variants without relying only on canonical scripture."
+    },
+    {
+      "id": "enoch_laurence_gutenberg_77815",
+      "title": "The Book of Enoch the Prophet, Richard Laurence translation",
+      "category": "apocrypha_apocalyptic_angelology",
+      "source_url": "https://www.gutenberg.org/ebooks/77815",
+      "download_url": "https://www.gutenberg.org/ebooks/77815.txt.utf-8",
+      "local_path": "generated/corpus/texts/enoch_laurence_gutenberg_77815.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Apocalyptic and angelological motifs: Watchers, heavenly gates, judgment, measurement, celestial order, forbidden instruction."
+    },
+    {
+      "id": "lesser_key_solomon_gutenberg_72679",
+      "title": "The Lesser Key of Solomon, Goetia",
+      "category": "occult_grimoire_demonology",
+      "source_url": "https://www.gutenberg.org/ebooks/72679",
+      "download_url": "https://www.gutenberg.org/ebooks/72679.txt.utf-8",
+      "local_path": "generated/corpus/texts/lesser_key_solomon_gutenberg_72679.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Occult structure source for seals, names, offices, protective implements, procedural ritual language, and dangerous catalog logic. Do not copy ritual sequences wholesale."
+    },
+    {
+      "id": "lovecraft_colour_out_of_space_pg68236",
+      "title": "The Colour Out of Space",
+      "category": "weird_cosmic_horror_environmental_anomaly",
+      "source_url": "https://www.gutenberg.org/ebooks/68236",
+      "download_url": "https://www.gutenberg.org/ebooks/68236.txt.utf-8",
+      "local_path": "generated/corpus/texts/lovecraft_colour_out_of_space_pg68236.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Environmental anomaly source for contaminated wells, agricultural blight, family deterioration, impossible color, delayed evidence, and official uncertainty. Use for SCP-adjacent investigation texture, not named mythos."
+    },
+    {
+      "id": "lovecraft_dunwich_horror_pg50133",
+      "title": "The Dunwich Horror",
+      "category": "weird_cosmic_horror_rural_occult_lineage",
+      "source_url": "https://www.gutenberg.org/ebooks/50133",
+      "download_url": "https://www.gutenberg.org/ebooks/50133.txt.utf-8",
+      "local_path": "generated/corpus/texts/lovecraft_dunwich_horror_pg50133.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Rural archive, hidden lineage, oversized absence, livestock signs, restricted books, and partial expert interpretation. Keep the output restrained and avoid reproducing period prejudice or dialect caricature."
+    },
+    {
+      "id": "lovecraft_shadow_over_innsmouth_pg73181",
+      "title": "The Shadow over Innsmouth",
+      "category": "weird_cosmic_horror_contaminated_community",
+      "source_url": "https://www.gutenberg.org/ebooks/73181",
+      "download_url": "https://www.gutenberg.org/ebooks/73181.txt.utf-8",
+      "local_path": "generated/corpus/texts/lovecraft_shadow_over_innsmouth_pg73181.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Community-scale contamination, institutional delay, local secrecy, maritime pressure, genealogy, and raid aftermath. Use as structure for civil containment and inherited anomaly arcs, not as creature lore."
+    },
+    {
+      "id": "lovecraft_at_mountains_of_madness_pg70652",
+      "title": "At the Mountains of Madness",
+      "category": "weird_cosmic_horror_expedition_archaeology",
+      "source_url": "https://www.gutenberg.org/ebooks/70652",
+      "download_url": "https://www.gutenberg.org/ebooks/70652.txt.utf-8",
+      "local_path": "generated/corpus/texts/lovecraft_at_mountains_of_madness_pg70652.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Expedition reports, impossible architecture, scientific caution, field notes, fossil/biological ambiguity, and awe under professional language. Use for Institute survey cadence and scale mismatch."
+    },
+    {
+      "id": "lovecraft_shunned_house_pg31469",
+      "title": "The Shunned House",
+      "category": "weird_cosmic_horror_site_investigation",
+      "source_url": "https://www.gutenberg.org/ebooks/31469",
+      "download_url": "https://www.gutenberg.org/ebooks/31469.txt.utf-8",
+      "local_path": "generated/corpus/texts/lovecraft_shunned_house_pg31469.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Single-site anomaly investigation, recurring sickness, cellar focus, municipal history, instrumentation, and procedural descent. Useful for contained mission rooms and follow-up escalation."
+    },
+    {
+      "id": "lovecraft_charles_dexter_ward_pg73547",
+      "title": "The Case of Charles Dexter Ward",
+      "category": "weird_cosmic_horror_archive_identity_resurrection",
+      "source_url": "https://www.gutenberg.org/ebooks/73547",
+      "download_url": "https://www.gutenberg.org/ebooks/73547.txt.utf-8",
+      "local_path": "generated/corpus/texts/lovecraft_charles_dexter_ward_pg73547.txt",
+      "license": "Public Domain in the USA",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Archive investigation, identity drift, names as operational hazards, old correspondence, hidden laboratories, and case-file structure. Good fit for Revelation records, naming, and resurrection motifs."
+    },
+    {
+      "id": "army_ranger_handbook_sh_21_76",
+      "title": "SH 21-76 Ranger Handbook",
+      "category": "tactical_squad_platoon_patrolling",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TC_3-21.76_Ranger_Handbook_(2017).pdf",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TC_3-21.76_Ranger_Handbook_(2017).pdf",
+      "local_path": "generated/corpus/source_docs/army_ranger_handbook_sh_21_76.pdf",
+      "license": "Public Domain in the USA; Wikimedia Commons file identifies this as a U.S. Army government work and links the official Army source",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Tactical source for patrol structure, leader duties, movement, security, communications, and concise field language. Downloaded via Wikimedia Commons because official Army endpoints failed from Termux; Commons metadata identifies the source as U.S. Government public domain."
+    },
+    {
+      "id": "army_atp_3_06_urban_operations",
+      "title": "ATP 3-06 Urban Operations",
+      "category": "tactical_urban_operations",
+      "source_url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN6452_ATP%203-06%20FINAL%20WEB.pdf",
+      "download_url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN6452_ATP%203-06%20FINAL%20WEB.pdf",
+      "local_path": "generated/corpus/source_docs/army_atp_3_06_urban_operations.pdf",
+      "license": "U.S. federal government work / public domain in the U.S. unless third-party material is marked",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": false,
+      "notes": "Urban operation doctrine for dense terrain, buildings, civilians, infrastructure, movement constraints, and command/control friction. Inactive for now: official Army Publishing download returned an HTML error page in this environment."
+    },
+    {
+      "id": "army_call_21_14_building_cohesive_teams",
+      "title": "CALL 21-14 Building Cohesive Teams",
+      "category": "tactical_team_morale_leadership",
+      "source_url": "https://www.army.mil/article/247552/21_14_building_cohesive_teams",
+      "download_url": "https://api.army.mil/e2/c/downloads/2022/03/10/77766142/21-14.pdf",
+      "local_path": "generated/corpus/source_docs/army_call_21_14_building_cohesive_teams.pdf",
+      "license": "U.S. federal government work / public domain in the U.S.; approved for public release",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Leadership, conflict, team climate, stressors, compliance vs commitment. Useful for squad morale, refusal, concessions, and mutiny-adjacent mechanics."
+    },
+    {
+      "id": "army_atp_3_21_8_infantry_platoon_squad",
+      "title": "ATP 3-21.8 Infantry Rifle Platoon and Squad",
+      "category": "tactical_squad_platoon_operations",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ATP_3-21.8_Infantry_Rifle_Platoon_and_Squad_Janary_2024_(Change_1).pdf",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ATP_3-21.8_Infantry_Rifle_Platoon_and_Squad_Janary_2024_(Change_1).pdf",
+      "local_path": "generated/corpus/source_docs/army_atp_3_21_8_infantry_platoon_squad.pdf",
+      "license": "Public Domain in the USA; Wikimedia Commons file identifies this as a U.S. Army government work and links the official Army source",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Small-unit doctrine for squad/platoon roles, planning, responsibilities, control, movement, sustainment, and tactical reporting vocabulary. Use for fictional procedural texture, not player-facing tactical instruction."
+    },
+    {
+      "id": "cdc_niosh_traumatic_incident_stress_responders",
+      "title": "Traumatic Incident Stress: Information for Emergency Response Workers",
+      "category": "psych_responder_traumatic_stress",
+      "source_url": "https://stacks.cdc.gov/view/cdc/5589",
+      "download_url": "https://stacks.cdc.gov/view/cdc/5589/cdc_5589_DS1.pdf",
+      "local_path": "generated/corpus/source_docs/cdc_niosh_traumatic_incident_stress_responders.pdf",
+      "license": "Public Domain / U.S. federal government CDC-NIOSH work",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Short responder stress source covering symptoms, on-site response, home recovery, and when stress becomes operationally relevant."
+    },
+    {
+      "id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "category": "psych_decision_making_under_stress",
+      "source_url": "https://stacks.cdc.gov/view/cdc/9732",
+      "download_url": "https://stacks.cdc.gov/view/cdc/9732/cdc_9732_DS1.pdf",
+      "local_path": "generated/corpus/source_docs/cdc_niosh_judgment_decision_stress_emergency_managers.pdf",
+      "license": "Public Domain / U.S. federal government CDC-NIOSH work",
+      "allowed_use": [
+        "commercial",
+        "modification",
+        "redistribution",
+        "indexing"
+      ],
+      "attribution_required": false,
+      "active": true,
+      "notes": "Emergency decision-making under stress; useful for hidden-stat officer/squad outcomes, hesitation, overload, tunnel vision, and degraded command judgment."
+    }
+  ]
+}

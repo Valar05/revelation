@@ -1,0 +1,70 @@
+{
+  "name": "Job Accusation-Engine Source Packet",
+  "purpose": "Selected public-domain anchors for a Revelation room where institutional testing, suffering, and accusation become a measurable force. The scenario should be psychological and procedural with at least one concrete physical hazard.",
+  "fragments": [
+    {
+      "id": "job_accuser_trial_without_cause",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00694",
+      "source_circumstance": "Job is described as upright. The accuser argues that his faith is protected by a hedge and proposes that loss will expose him.",
+      "source_excerpt": "The accuser asks whether Job fears God for nothing, pointing to the hedge around him, and predicts loss will make him renounce.",
+      "nightmare_room_seed": "An Institute stress-evaluation system treats protection, success, and loyalty as suspect. It begins removing safeguards to prove whether Torah's squad is genuine.",
+      "escalation_thread": "First the system flags comfort as contamination. Then it escalates hardship as evidence. Finally every injury is treated as proof that the next test is deserved.",
+      "suggested_actions": ["full_disclosure", "torah_speaks", "repair", "clinic"],
+      "generation_rules": [
+        "Name the sin: using suffering as evidence of guilt, loyalty, or fitness.",
+        "Make the accuser logic institutional, not a horned villain.",
+        "Visible anchors should include tests, protection removed, audit language, and the wordless pressure of being evaluated."
+      ]
+    },
+    {
+      "id": "job_skin_sores_silence",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00695",
+      "source_circumstance": "The accuser says skin for skin. Job is struck with sores, scrapes himself among ashes, and his friends sit with him in silence for seven days.",
+      "source_excerpt": "Skin for skin. Job is struck with painful sores, sits among ashes, and companions sit silently because his grief is very great.",
+      "nightmare_room_seed": "The physical hazard can be pressure sores, heat rash, ash-like particulate, or skin lesions created by the evaluation chamber's accusation field.",
+      "escalation_thread": "Talk can worsen the trial if it becomes accusation. Silence, witness, and refusal to draw false guilt from pain can lower the field.",
+      "suggested_actions": ["clinic", "seal", "recover", "torah_speaks"],
+      "generation_rules": [
+        "Give Iyad a serious medical/psych plan.",
+        "Keep the tone restrained; no courtroom melodrama.",
+        "Closure should stop the false trial logic while leaving theology unresolved."
+      ]
+    },
+    {
+      "id": "stress_dynamic_diagnosis",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+      "source_circumstance": "Emergency decisions involve problem detection, diagnosis, option consideration, choice, execution, and interactions among stress, information quality, and task complexity.",
+      "source_excerpt": "Stress, incomplete information, knowledge, attitudes, and complexity affect detection, diagnosis, options, choice, and execution under time pressure.",
+      "nightmare_room_seed": "Each plan should reflect a professional diagnosis: medical halt, systems shutdown, command refusal, symbolic witness, or tactical extraction.",
+      "escalation_thread": "A bad diagnosis causes the system to punish another squad member, hide a choice, or turn the team's own report language against them.",
+      "suggested_actions": ["clinic", "repair", "full_disclosure", "support_owen"],
+      "generation_rules": [
+        "Each plan must be owned by a named character and phrased as a plan.",
+        "Failure must alter an individual mental/morale/stress/injury state.",
+        "No visible reward labels or numeric odds."
+      ]
+    },
+    {
+      "id": "patrol_report_condition",
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_title": "ATP 3-21.8 Infantry Rifle Platoon and Squad",
+      "source_chunk_id": "army_atp_3_21_8_infantry_platoon_squad:00189",
+      "source_circumstance": "A patrol returns to the main body and reports its actions, observations, and condition after completing the mission.",
+      "source_excerpt": "After a patrol, the leader reports actions, observations, and condition to the commander; patrols need clear task and purpose.",
+      "nightmare_room_seed": "The debrief/fallout should matter: the squad's condition report must not be converted into an indictment by the accusation engine.",
+      "escalation_thread": "If the report uses blame language, the anomaly continues into the interlude. If it uses condition and responsibility, the local trial collapses.",
+      "suggested_actions": ["recover", "full_disclosure", "clinic", "torah_speaks"],
+      "generation_rules": [
+        "Include a cooldown/debrief vector where characters reflect their state.",
+        "Resolution should explain what sin caused the anomaly and how the squad broke its local rule.",
+        "Do not fully explain God, Satan, or suffering."
+      ]
+    }
+  ]
+}

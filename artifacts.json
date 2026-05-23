@@ -1,0 +1,46 @@
+{
+  "artifacts": [
+    {
+      "id": "covenant_lock_remnant",
+      "name": "Covenant Lock Remnant",
+      "category": "evidence",
+      "tags": ["vow", "body", "false-consecration"],
+      "description": "A sealed remnant of the false hair-sign recovered from Iron & Covenant Fitness. It still tightens when a command is phrased as an oath."
+    },
+    {
+      "id": "handwritten_authority_cards",
+      "name": "Handwritten Authority Cards",
+      "category": "procedure",
+      "tags": ["command", "language", "decentralization"],
+      "description": "Local command cards issued during the Meridian dispatch incident. They prove a field order can hold without one central voice."
+    },
+    {
+      "id": "aldermoor_duty_log",
+      "name": "Aldermoor Duty Log",
+      "category": "evidence",
+      "tags": ["blood", "keeper-duty", "custody"],
+      "description": "The Room 14 duty log, sealed by Ross. The ink discrepancy remains visible under ordinary light."
+    },
+    {
+      "id": "sealed_idol_fragment",
+      "name": "Sealed Idol Fragment",
+      "category": "artifact",
+      "tags": ["offering", "manufactured-god", "metal"],
+      "description": "A non-conductive containment unit holding the original anomalous scrap from Offering Floor."
+    },
+    {
+      "id": "voided_faction_tokens",
+      "name": "Voided Faction Tokens",
+      "category": "warning",
+      "tags": ["authority", "badge", "rebellion"],
+      "description": "Forged command tokens logged as void after Sub-Level 3. Their edges remain heat-warped."
+    },
+    {
+      "id": "file_7c_dispute_record",
+      "name": "File 7-C Dispute Record",
+      "category": "record",
+      "tags": ["accusation", "stress", "trial"],
+      "description": "A sealed dispute record proving Chamber Seven's evaluation system treated suffering as evidence."
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "title": "Nehushtan Ward",
+  "design_goal": "A bronze medical artifact that once produced genuine healing has become an idol generating bite wounds to sustain its own authority; the squad must breach the treatment bay under active contact and choose between controlled destruction and symbolic containment.",
+  "source_mechanism": {
+    "source_chunk_id": "nehushtan_broken",
+    "source_action": "Hezekiah breaks the bronze serpent Moses made because Israel has begun burning incense to it; the authorized healing sign is destroyed when devotion to the sign replaces trust in the source of healing",
+    "sin_or_transgression": "Clinical staff and patients transferred their dependence from recovery to the object itself—documenting outcomes as the artifact's merit, scheduling ward rounds around its display case, and attributing remissions to proximity rather than treatment; the sign became the thing worshipped",
+    "witness_or_judgment": "The artifact now generates the wound it was meant to cure; bite injuries appear on patients who have not been near any animal, and the wounds close only when the injured person is positioned facing the display case—the object has made itself necessary by producing the need",
+    "required_scene_elements": [
+      "a bronze or copper-toned medical artifact mounted on a vertical support or IV pole in a treatment bay",
+      "puncture wounds appearing on patients with no mechanical cause",
+      "wound closure contingent on directed attention toward the object",
+      "staff who cannot explain why they keep returning to stand near the case",
+      "a visible record of escalating bite admissions over the past seventy-two hours"
+    ]
+  },
+  "symbolic_rule": {
+    "rule": "While the artifact is intact and displayed, any person in the ward who sustains a bite wound will not close the wound unless they face the object; if the object is destroyed or its authority is formally stripped, the wounds close without it and no new bites occur",
+    "active_manifestation": "Bay 4 of Meridian Outpatient Clinic has been in soft lockdown for eleven hours; three patients have presented with bilateral forearm punctures consistent with a large-gauge fang pattern, no animal found on premises; nursing staff report they cannot bring themselves to cover the display case or move patients away from line-of-sight to it; a fourth patient bit overnight is refusing transfer because she says the pain stops when she can see the case",
+    "escalation": "If the squad delays beyond one decision cycle, a fifth patient is bitten; staff fixation deepens into ritual positioning—nurses begin angling beds without being asked; the artifact's copper surface shows fresh oxidation in a spiral pattern that was not present at installation; one staff member has begun keeping a handwritten log of who looked at it and when",
+    "closure_condition": "Either the artifact is physically destroyed under controlled procedure and the site is cleared and documented, or the artifact's authority is formally and publicly stripped by a named act of renaming and sealing that breaks the attention loop—force alone without the symbolic act leaves fragments that can reconstitute the pattern"
+  },
+  "room": {
+    "id": "nehushtan_ward",
+    "name": "Meridian Outpatient — Bay 4",
+    "type": "mission",
+    "mission_mode": "action_horror",
+    "description": "A locked treatment bay where patients are developing unexplained bite wounds that only close when they face a bronze medical artifact on display. Staff cannot explain why they keep positioning themselves around it.",
+    "first_visit_description": "Torah leads the entry team through the clinic's service corridor at 0340. Lt. Owen is on point with Brooks covering the bay door; Dr. Saye is staged in the ambulance bay with the casualty evacuation kit and a direct line to Institute medical. Specialist Park is remote, pulling the artifact's acquisition record and the clinic's incident log from the last ninety-six hours. The ward charge nurse met Owen at the perimeter and handed over a paper log before going silent—she has not spoken since. Inside Bay 4: four occupied beds, two patients awake and oriented toward the east wall where a copper-toned serpent figure is mounted on a modified IV pole inside a locked acrylic case. The case is not original equipment. Someone installed it after the artifact arrived. The two awake patients are not looking at Owen or Torah. They are looking at the case.",
+    "return_description": "Bay 4 smells of antiseptic and something older, metallic and warm. The case is gone or sealed. The beds are still occupied. The staff who were here have not fully returned to themselves.",
+    "detection_report": "Meridian's charge nurse filed an anomalous injury report at 1800 yesterday: three patients with identical bilateral puncture wounds, no animal vector identified, no shared exposure history. Institute triage flagged it at 2200 when a fourth admission matched the pattern exactly. Park's remote pull found the artifact was donated eight months ago by a private foundation with no traceable board; the clinic director's notes describe it as 'therapeutically significant' without clinical citation. Bite admissions have increased each week since installation.",
+    "current_situation": "Owen has the bay door on a three-count. Brooks is stacked behind her. Through the door's narrow window Torah can see the case is lit from inside—no external power source is visible. One of the awake patients has turned her head toward the door, tracking the sound of the team. Her left forearm is bandaged. The bandage is wet. The case is glowing faintly copper in the dark bay.",
+    "action_profile": {
+      "physical_threat": "The artifact generates bite wounds spontaneously; punctures appear on exposed skin of anyone in the bay who breaks line-of-sight with the case for more than approximately ninety seconds; wounds are deep, bleed freely, and do not respond to pressure dressing while the artifact is active—Owen and Brooks are at immediate risk on entry",
+      "contact_state": "The squad is about to breach an occupied treatment bay with four patients, two of whom are ambulatory; the artifact is active and will begin injuring personnel within two minutes of entry if they do not maintain facing or move to close it; Brooks has already noted a pressure sensation in his right hand through the door",
+      "field_manual_drill": "Breach and clear with sector security: Owen leads entry and clears left sector, Brooks clears right and establishes security on the case; Torah controls the center and manages patient evacuation vectors; Dr. Saye executes casualty evacuation from the ambulance bay on Torah's call; sectors must be held until the artifact is either destroyed or sealed",
+      "tactical_objective": "Breach Bay 4, establish sector security, evacuate non-ambulatory patients before the artifact can wound them further, reach the case, and execute either controlled destruction or symbolic containment before personnel casualties accumulate",
+      "symbolic_close": "Force alone does not satisfy closure: the artifact must be either physically destroyed with its authority publicly named as broken, or formally stripped of its name and sealed so that no one in the ward is positioned facing it—the attention loop must be explicitly severed, not just interrupted",
+      "violent_resolution": "The acrylic case and its IV-pole mount can be breached with Brooks's entry kit; the bronze figure inside can be struck, broken, and the fragments bagged under evidence protocol; destruction closes the anomaly locally but releases oxidized copper dust that is a contamination risk to patients and personnel, and fragments retain residual symbolic charge until documented and removed from site",
+      "not_monster_of_week": "There is no creature. The threat is a corrupted remedy: an object that was once a genuine sign of healing has made itself indispensable by producing the wound it cures. The horror is that the patients do not want it removed. The staff have been quietly worshipping it for eight months. The violence is against a medical display case in a treatment ward, and it is still the hardest thing the squad will do tonight."
+    },
+    "deployment_manifest": [
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Lt. Mara Owen",
+        "mission_role": "tactical point, breach lead",
+        "physical_position": "stacked at Bay 4 door, point position",
+        "assigned_reason": "Owen requested the lead after reviewing the injury pattern; she recognized the wound geometry from a prior Institute file and did not explain further to the team",
+        "visible_state": "Owen is quiet in a way that reads as controlled rather than calm; she has checked her entry kit twice since the perimeter"
+      },
+      {
+        "officer_id": "brooks",
+        "name": "Brooks",
+        "mission_role": "sector security, case breach",
+        "physical_position": "stacked behind Owen at Bay 4 door, covering right sector on entry",
+        "assigned_reason": "Brooks is the team's primary breach asset and the only one rated for controlled object destruction under Institute protocol",
+        "visible_state": "Brooks told Torah his hand has been tingling since he got within ten meters of the bay; he said it like a maintenance report, not a complaint"
+      },
+      {
+        "officer_id": "torah",
+        "name": "Torah",
+        "mission_role": "command lead, decision authority",
+        "physical_position": "center stack, controlling entry and patient evacuation vectors",
+        "assigned_reason": "Torah holds decision authority on destruction versus containment; Institute protocol requires command-level authorization for artifact destruction",
+        "visible_state": "Torah is the only one who has read the full acquisition file Park pulled; he has not shared what the foundation's name translates to"
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Dr. Lenora Saye",
+        "mission_role": "casualty evacuation, medical authority",
+        "physical_position": "ambulance bay, staged with evac kit and direct Institute medical line",
+        "assigned_reason": "Saye is the team's medical officer; she is also the only one who can authorize patient transfer over clinical staff objection",
+        "visible_state": "Saye has been on the phone with the charge nurse for forty minutes and has gotten nothing useful; she told Torah the nurse sounds like someone reciting from memory"
+      },
+      {
+        "officer_id": "specialist_mina_park",
+        "name": "Specialist Mina Park",
+        "mission_role": "remote technical, artifact provenance",
+        "physical_position": "remote, Institute operations center",
+        "assigned_reason": "Park is pulling acquisition records, incident logs, and the artifact's chain of custody in real time",
+        "visible_state": "Park flagged that the artifact's installation date matches the first week the clinic's bite-wound admissions began; she sent the note without comment"
+      }
+    ],
+    "root_sin": "Clinical staff transferred their trust from medicine to the object; they began attributing outcomes to proximity to the artifact, scheduling care around its display, and recording its presence as a treatment variable—the sign became the object of dependence, and dependence became the engine of harm",
+    "modern_incident_logic": "A private foundation donated a bronze medical artifact to a cash-strapped outpatient clinic eight months ago with documentation describing it as therapeutically significant; the clinic director, under pressure to show outcomes, began noting patient improvement in proximity to the display; staff internalized the correlation as causation; patients began requesting bed placement near it; the artifact's symbolic charge accumulated through sustained directed attention until it crossed the threshold from inert object to active anomaly—it now produces the wound it was credited with healing, because the wound is what makes it necessary",
+    "closure_test": "The squad must either destroy the artifact under controlled procedure and document the act formally, or strip its authority through a named public act that severs the attention loop and seals the case so no patient or staff member is positioned facing it; in either case, the wound pattern must be observed to close without the artifact's involvement before the squad can stand down",
+    "religious_pattern": "Nehushtan: the authorized healing sign that becomes an idol when devotion to the sign replaces trust in the source; Hezekiah's response is destruction, not study or preservation; the act of breaking is itself the closure",
+    "anomaly_rule": "The artifact generates bite wounds on exposed skin of anyone in the bay who breaks line-of-sight with it for more than approximately ninety seconds; wounds close only when the injured person faces the case; if the artifact is destroyed, all active wounds close within minutes and no new wounds occur; if the artifact is only moved or covered without a formal act of stripping its authority, the pattern reconstitutes around its new location within forty-eight hours",
+    "forbidden_flat_read": "Do not literalize as a snake monster or serpent creature; the artifact is bronze and inert in appearance; the horror is the wound appearing on clean skin with no animal present, and the staff's inability to want it gone",
+    "officer_reports": [
+      "Owen, at the door: 'Four patients. Two ambulatory. Case is lit and I don't see a power source. We go on your count.'",
+      "Brooks, quiet: 'My hand stopped tingling when I looked at the window. Started again when I looked away. Noting that for the record.'",
+      "Park, remote: 'Foundation name on the donation paperwork is a transliteration. Rough English equivalent is something like the-thing-of-brass. Clinic director signed for it personally.'",
+      "Saye, from the ambulance bay: 'Charge nurse just told me the patients ask for it by name. She couldn't tell me what name. She said they just ask for it.'"
+    ],
+    "procedure_hooks": [
+      "Breach and clear: Owen leads left sector, Brooks right sector, Torah center with patient evac authority",
+      "Sector security: Brooks holds the case in his sector until Torah authorizes destruction or containment",
+      "Casualty evacuation: Saye executes patient transfer from ambulance bay on Torah's call; non-ambulatory patients first",
+      "Controlled object destruction: Brooks uses entry kit to breach the acrylic case; bronze figure is struck and fragmented; fragments are bagged under evidence protocol with contamination precautions for copper dust",
+      "Symbolic containment alternative: the case is sealed with Institute-standard barrier tape, the artifact is formally renamed in the log as inert material, and all staff and patients are repositioned so no one faces it; Torah reads the renaming into the incident record"
+    ],
+    "character_state_stakes": {
+      "lt_mara_owen": "If Owen's breach goes wrong and a patient is wounded during entry, her controlled affect breaks; she will not report it but Park will note she stops giving status updates",
+      "brooks": "If Brooks executes destruction and takes copper dust contamination, his hand injury becomes a persistent state flag; he will not ask for medical attention unless Torah orders it",
+      "torah": "Torah's decision between destruction and containment is the moral weight of the mission; either choice has a remainder; the choice follows him into the cooldown",
+      "dr_lenora_saye": "If Saye cannot get patients evacuated before the artifact wounds them further, she will file a formal objection to the Institute's response timeline; it will be the first time she has done that"
+    },
+    "interlude_vectors": [
+      "Brooks sitting outside the ambulance bay afterward, looking at his hand",
+      "Saye writing her objection in the parking lot before she gets in the vehicle",
+      "Owen not debriefing, just cleaning her kit in silence",
+      "Torah reading Park's note about the foundation name again on his phone"
+    ]
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "nehushtan_broken",
+      "role": "premise",
+      "fingerprint": "Hezekiah destroys the bronze serpent because Israel has been burning incense to it; the authorized sign has become an idol",
+      "transfer": "The artifact is a genuine medical object that produced real outcomes; it became an idol through accumulated clinical dependence; destruction is the valid closure act",
+      "visible_details": [
+        "bronze or copper-toned figure mounted on a modified IV pole inside a locked acrylic case",
+        "clinic director's notes describing the artifact as therapeutically significant without clinical citation"
+      ],
+      "payoff": "Destruction closes the anomaly but leaves fragments with residual charge; the remainder is that the clinic staff will not understand why it stopped working"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "fiery_serpents_healing_standard",
+      "role": "escalation",
+      "fingerprint": "The bitten live when they look at the serpent on the standard; the cure is real but the dependence is dangerous",
+      "transfer": "Wound closure is contingent on directed attention toward the case; the healing function is real enough that patients resist evacuation",
+      "visible_details": [
+        "patients positioned facing the east wall where the case is mounted",
+        "bandaged forearm wound that is wet and will not close while the patient faces away"
+      ],
+      "payoff": "The attention-dependence mechanism means evacuation is actively resisted by patients who believe looking away will kill them"
+    },
+    {
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_chunk_id": "ranger_clear_room",
+      "role": "procedure",
+      "fingerprint": "Enter and clear a room; leader controls security and clearing teams; sectors assigned; minimize friendly casualties",
+      "transfer": "Owen leads breach and clears left sector; Brooks clears right and establishes security on the case; Torah controls center and patient evac vectors; sectors held until closure",
+      "visible_details": [
+        "Owen on point at Bay 4 door calling sector assignments before entry",
+        "Brooks holding right sector on the case until Torah authorizes the next action"
+      ],
+      "payoff": "If sector discipline breaks—patient panics, staff interferes, Brooks is wounded—the clear fails and the artifact has time to wound additional personnel"
+    },
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "josiah_purge_objects",
+      "role": "closure",
+      "fingerprint": "Objects are brought out, burned, beaten to dust, cast away; places of harmful ritual are defiled so the practice cannot resume",
+      "transfer": "Controlled destruction procedure: breach the case, strike and fragment the figure, bag fragments under evidence protocol, document the act formally in the incident record, clear the site",
+      "visible_details": [
+        "Brooks using entry kit to breach the acrylic case",
+        "copper dust contamination risk noted in the evidence bag procedure"
+      ],
+      "payoff": "If fragments are not fully removed from site, the pattern can reconstitute; the remainder is a future mission hook"
+    }
+  ],
+  "root": {
+    "id": "nehushtan_ward_root",
+    "speaker": "lt_mara_owen",
+    "line_1": "Owen: Bay 4 is hot. Case is lit, no power source visible. Four patients inside, two ambulatory. We are going on your count.",
+    "line_2": "Brooks reports hand pressure through the door. A fifth patient was just admitted to triage with the same wound pattern. We are out of time.",
+    "queued_line": "Torah has to decide whether Brooks breaches the case and destroys what is inside, or whether the squad clears the bay, evacuates patients, and seals the artifact under a formal stripping of its authority.",
+    "plans": [
+      {
+        "label": "Breach and clear",
+        "action": "destroy",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "tactical entry, sector control under contact",
+        "tactical_step": "Owen leads breach, clears left sector; Brooks clears right and establishes security on the case; Torah controls center and calls patient evacuation to Saye in the ambulance bay; sectors held until Brooks reaches the case",
+        "base_success": 0.62,
+        "intent": "Owen wants to get the squad inside, get patients out, and give Brooks a clean line to the case before anyone else is wounded",
+        "yield": "Clean breach, patients evacuated before additional wounds, Brooks reaches the case with sector security intact",
+        "risk": "The artifact wounds Owen or Brooks during the ninety-second exposure window before they can reach it; copper dust from destruction contaminates the bay and requires decontamination of personnel",
+        "success_line": "Owen goes through the door low and fast, calling left sector clear before the door finishes swinging. Brooks is on the case in eleven seconds, right sector locked. The two ambulatory patients stand up and turn toward the case as if pulled; Torah steps between them and the wall and says, quietly, that it is time to go. Saye has the first gurney moving before Torah finishes the sentence. Brooks looks at Torah. Torah nods. The sound the case makes when Brooks's kit hits it is not glass breaking. It is something older, a tone that drops and does not echo. The figure inside fractures along its length. The copper dust catches the bay's fluorescent light. The wet bandage on the patient Saye is wheeling out goes dry in the corridor. She does not look back.",
+        "partial_line": "Owen clears left sector but the second ambulatory patient will not move; she is standing with her back to the wall and her eyes on the case and she is saying something too quiet to hear. Brooks reaches the case but his right hand is bleeding—a clean puncture, no animal, appeared while he was crossing the room. He breaches the case anyway. The figure cracks but does not fully fragment; one section holds. The new wounds in the bay stop appearing. The old wounds do not close. Saye gets three patients out. The fourth, the one who would not move, is still standing at the wall when the dust settles. She is looking at the broken case. Her bandage is still wet.",
+        "failure_line": "Owen calls left sector clear and then stops moving. She is standing in the middle of the bay looking at the case. She does not respond to Torah's call. Brooks gets to right sector and his hand is bleeding before he takes three steps—two punctures, clean, no source. He pulls back to the door. The patients are all awake now and all facing the case. Saye cannot get the gurneys through because the staff in the corridor have formed a line, not blocking deliberately, just standing there, facing the bay. Torah is the only one still moving. The case is still lit."
+      },
+      {
+        "label": "Seal and rename",
+        "action": "seal",
+        "officer_id": "torah",
+        "primary_skill": "symbolic authority, incident documentation",
+        "tactical_step": "Torah enters the bay, repositions all patients and staff so no one faces the case, reads a formal renaming of the artifact into the incident record as inert material, and applies Institute-standard barrier seal to the case; Brooks and Owen hold sector security during the repositioning",
+        "base_success": 0.65,
+        "intent": "Torah wants to strip the artifact's authority without destruction, preserving the object for study and avoiding copper dust contamination of patients",
+        "yield": "Attention loop severed, wounds close without destruction, artifact preserved under seal for Institute analysis, no contamination risk to patients",
+        "risk": "If any patient or staff member breaks position and faces the case during the renaming, the loop reconstitutes; the seal holds locally but the artifact retains residual charge and will require a follow-up mission within forty-eight hours",
+        "success_line": "Torah goes in without a weapon drawn. Owen and Brooks hold the door sectors. Torah moves to each bed and repositions it, not asking, just moving, and the patients let him—they are tired and the wounds hurt and somewhere under the fixation they know something is wrong. The last one, the woman who would not move, Torah turns her chair himself. She does not fight it. He reads the renaming into his recorder in a flat operational voice: artifact designation, date, location, status reclassified as inert material, authority of designation revoked. He applies the seal tape to the case in an X. The light inside the case goes out. The wet bandage on the woman's arm goes dry. She looks at her arm for a long time. Then she looks at Torah and says, what was it. Torah says, it was a piece of metal. It was never anything else.",
+        "partial_line": "Torah repositions three of the four patients without incident. The fourth, the woman at the wall, will not turn. She says she can feel it when she looks away and she is not going to look away. Torah reads the renaming anyway, over her objection, into the recorder. The case light dims but does not go out. The wounds on the three repositioned patients close. The woman's wound does not. The seal tape holds. Saye gets the three closed-wound patients to the ambulance bay. The woman stays. She is not in danger—the new bites have stopped—but she will not leave the bay, and when Torah looks back from the corridor she is still facing the sealed case in the dark.",
+        "failure_line": "Torah gets two patients repositioned before the charge nurse comes through the corridor door. She is not aggressive. She just stands in the bay and says, in a voice that does not sound like someone who has been awake all night, that the patients need to be facing east for their treatment. Owen moves to intercept her and the nurse stops, but the two patients Torah had repositioned have already turned back. Torah reads the renaming into the recorder. Nothing changes. The case is still lit. Brooks, from the door, says: Torah. The fifth patient from triage is being wheeled down the corridor. Her forearm is already bandaged."
+      }
+    ]
+  },
+  "resolution": {
+    "id": "nehushtan_ward_resolution",
+    "speaker": "brooks",
+    "line_1": "Brooks, from the door: 'Case is breached or sealed. Patients are out or repositioned. Tell me what we're doing with the fragments or the tape, because I am not leaving them here.'",
+    "line_2": "Park is remote: acquisition records show the foundation donated three other objects to two other clinics in the last eighteen months. Neither clinic has filed anomaly reports yet.",
+    "queued_line": "The squad has to decide whether to document and remove everything from site tonight or hold position and wait for Institute collection, knowing Park's information means this is not the only one.",
+    "plans": [
+      {
+        "label": "Full removal, document now",
+        "action": "full_disclosure",
+        "officer_id": "dr_lenora_saye",
+        "primary_skill": "evidence custody, medical documentation",
+        "tactical_step": "Saye directs fragment bagging or case removal under evidence protocol; Torah reads the full incident into the record including the foundation name and Park's finding; Brooks and Owen hold site security until Institute collection arrives",
+        "base_success": 0.68,
+        "intent": "Saye wants a clean chain of custody and a documented record that forces the Institute to act on the other two clinics tonight, not in a week",
+        "yield": "Complete evidence custody, formal record that triggers Institute action on the other sites, no residual charge left on site",
+        "risk": "Saye's formal objection to the response timeline goes into the record alongside the incident report; it will create friction with Institute command; the documentation of the foundation name may trigger a classification review that delays action on the other clinics",
+        "success_line": "Saye comes into the bay in gloves and a mask and she is already writing. She bags the fragments or photographs the sealed case with the tape intact, labels everything with time and chain of custody, and reads the foundation name into the record herself when Torah hesitates. She says, for the record, that the Institute's response time tonight was eleven hours from first report to entry and that is not acceptable given the injury pattern. Brooks watches her write the objection. He does not say anything. Owen holds the door. When the Institute collection team arrives at 0520, Saye hands them the bag and the documentation and tells them the other two clinics need a call before 0600. The collection officer looks at the bag and then at Saye and says he will pass it up. Saye says, make sure you do. She does not say it loudly.",
+        "partial_line": "Saye gets the fragments bagged and the record started but the Institute collection team is delayed—a vehicle issue, they say, two hours out. Torah has to decide whether to hold the site with Owen and Brooks for two hours or transfer custody to the clinic director, who is now in the corridor and who has been asking, very quietly, whether the object can be returned to the display case when the Institute is done with it. Saye writes the objection. She writes the foundation name. She does not write the clinic director's question because she does not trust herself to write it neutrally. Brooks stays at the door. Owen stays at the door. They wait.",
+        "failure_line": "Saye starts the documentation and the clinic director comes in and says the foundation has a legal representative on the phone who is asking about the artifact's status. Saye keeps writing. The legal representative, through the director's phone, says the foundation considers the object a donated medical asset and any destruction or removal without consent is a liability issue. Saye looks at Torah. Torah looks at the bag or the sealed case. The legal representative is still talking. Brooks, from the door, says: Torah, Park is saying the other two clinics just filed injury reports. Both of them. Tonight."
+      },
+      {
+        "label": "Break contact, hold for Institute",
+        "action": "recover",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "site security, personnel accountability",
+        "tactical_step": "Owen establishes a cordon around Bay 4, pulls all personnel back to the corridor, holds sector security until Institute collection arrives, and runs a personnel accountability check for wounds before anyone leaves the building",
+        "base_success": 0.7,
+        "intent": "Owen wants the squad out of the bay and accounted for before anyone takes additional exposure; she does not trust the site to be stable and she wants bodies counted and wounds logged before the adrenaline wears off",
+        "yield": "Personnel accountability complete, no additional exposure, cordon holds until collection, squad exits with no unlogged injuries",
+        "risk": "Holding the cordon for two hours with a potentially active site means Owen and Brooks are in proximity longer than necessary; if the seal or destruction was partial, the artifact may wound someone in the cordon before collection arrives",
+        "success_line": "Owen pulls everyone to the corridor and runs the count herself. She checks Brooks's hand first—he lets her, which means it hurts more than he said. Clean puncture, no debris, she tapes it and logs it. She checks Torah and Saye and the two ambulatory patients who came out with them. She finds a small puncture on her own left forearm that she did not feel during the entry. She logs it without comment. The cordon holds. At 0520 the collection team arrives and Owen walks them through the bay herself, sector by sector, the way she would walk anyone through a cleared room. When they ask her what happened she says: object was active, we closed it, here is the documentation. She does not say anything else. In the parking lot afterward she sits on the bumper of the Institute vehicle and cleans her kit. She does not debrief.",
+        "partial_line": "Owen pulls the squad back and runs the count. Brooks has the hand wound. Torah is clean. Saye is clean. The two ambulatory patients are clean. Owen finds nothing on herself and logs that. The cordon holds for ninety minutes and then one of the clinic's night-shift nurses walks through it—not aggressively, just walks through, says she needs to check on her patients. Owen stops her and the nurse looks at Owen with an expression that is not hostile, just confused, and says: I just need to see it. Owen says no. The nurse stands in the corridor for twenty minutes before she goes back to the nursing station. Owen does not log the interaction. She should.",
+        "failure_line": "Owen pulls the squad back and runs the count and finds a puncture on Brooks's left forearm that was not there when they entered—different from the hand, deeper, and the wound is not closing. Brooks is looking at it with the expression he uses when something is wrong with equipment he is responsible for. Owen looks at the bay door. The seal tape or the fragment bag is still in there. The cordon is two people and a corridor. Owen calls Saye. Saye comes back in and looks at the wound and says, quietly, that they need to get Brooks out of the building now. Owen agrees. She does not say it out loud but she agrees."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "nehushtan_ward_cooldown",
+    "speaker": "dr_lenora_saye",
+    "line_1": "Saye is in the parking lot at 0540, sitting on a concrete barrier, writing on a tablet. The objection is three paragraphs. She keeps revising the second one.",
+    "line_2": "Brooks is twenty meters away, looking at the tape on his hand. Owen has not come out of the building yet. Torah is reading something on his phone.",
+    "interlude_type": "debrief",
+    "state_reads": [
+      "brooks.injury_flag",
+      "torah.decision_weight",
+      "lt_mara_owen.controlled_affect_status",
+      "dr_lenora_saye.institutional_friction"
+    ],
+    "state_writes": [
+      "dr_lenora_saye.objection_filed",
+      "brooks.hand_wound_logged",
+      "torah.foundation_name_known",
+      "lt_mara_owen.debrief_skipped"
+    ],
+    "featured_characters": [
+      "dr_lenora_saye",
+      "brooks",
+      "lt_mara_owen"
+    ],
+    "visible_text": [
+      "Saye looks up from the tablet when Torah walks over. She says: I filed it. He says: I know. She says: the other two clinics. He says: Park is already on it. She looks back at the tablet. She says: eleven hours. He does not answer that.",
+      "Brooks, when Torah walks over to him: 'It stopped hurting when we cleared the bay. Started again about ten minutes ago. Low-grade. I'm noting it.' Torah says he'll have Saye look at it. Brooks says Saye already looked at it. He says it like that settles it.",
+      "Owen comes out at 0610. She has her kit bag over one shoulder. She walks to the vehicle, puts the bag in, and sits in the passenger seat. She does not look at anyone. Torah watches her through the windshield. She is looking at her hands."
+    ],
+    "choices": [
+      "Ask Saye if the objection names the Institute by name",
+      "Check on Brooks before the vehicle leaves",
+      "Go to Owen"
+    ],
+    "outcomes": [
+      "If Torah asks Saye about the objection: she says yes, it names the response timeline and the triage flag delay; she says it without apology; she goes back to revising the second paragraph",
+      "If Torah checks on Brooks: Brooks shows him the hand without being asked; the puncture is clean and taped; Brooks says, I've had worse; he means it, which is the problem",
+      "If Torah goes to Owen: she looks up when he opens the door; she says, the patients are going to ask for it back; Torah says he knows; she says, the ones who were never bitten are going to ask for it back too; she means the staff; Torah says he knows that too; Owen looks back at her hands"
+    ],
+    "followup_hooks": [
+      "Park's finding: two other clinics received foundation donations; neither has filed anomaly reports yet but both filed injury reports tonight; a follow-up mission is now in the queue",
+      "The clinic director's request to have the artifact returned when the Institute is done with it is in the incident record; it will require a formal response",
+      "Brooks's hand wound is logged but not fully explained; if the artifact's residual charge is real, the wound may not fully close",
+      "Saye's objection is filed; Institute command will respond; the response will tell Torah something about how the Institute handles its own timeline failures"
+    ],
+    "corpus_anchors": [
+      "nehushtan_broken",
+      "josiah_purge_objects"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "action_horror",
+    "recovery",
+    "branch"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The wound-closure-contingent-on-attention mechanic makes evacuation an active tactical problem, not just a logistics step",
+    "The foundation's other donations create a natural campaign thread without requiring this mission to overexplain it",
+    "Saye's objection is the moral remainder: the Institute was slow and she is going to say so",
+    "Owen's silence in the vehicle is the emotional remainder: she recognized the wound geometry before the mission and did not explain why"
+  ],
+  "self_critique": [
+    "The partial outcomes for both root plans leave one patient still in the bay facing the sealed case; this is intentional as a remainder but the runtime must handle the edge case where that patient is never resolved—a follow-up hook should be explicit enough to trigger a branch mission rather than a dead state flag"
+  ],
+  "_validation_errors": [
+    "symbolic_rule.active_manifestation must state what is actively happening before the squad arrives"
+  ]
+}

@@ -1,0 +1,992 @@
+{
+  "title": "Borrowed Separation",
+  "design_goal": "A counterfeit Nazirite wig sold as performance equipment is actively tearing apart a commercial gym's structural frame while the wearer believes they cannot be bound, forcing the squad to choose between cutting the wig under contact or burning it with symbolic release before the building fails.",
+  "events": [
+    {
+      "room_id": "room_borrowed_separation",
+      "event": {
+        "id": "root_borrowed_separation",
+        "type": "choice",
+        "speaker": "lt_mara_owen",
+        "line_1": "Owen reports Column C-4 failing; Reiss is at its base, three restraint sets broken on the floor.",
+        "line_2": "Park marks collapse tape; Brooks holds left sector; Torah must decide before the next fracture event.",
+        "buttons": [
+          {
+            "label": "Brooks: Pin and Cut",
+            "action": "intercept",
+            "preview": "Brooks leads a direct contact approach: he and Owen drive Reiss back from the column, pin..."
+          },
+          {
+            "label": "Park: Controlled Burn",
+            "action": "destroy",
+            "preview": "Park's plan uses the bodily cost window—the tremor and thirst that follow each burst—to approach Reiss..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Brooks: Pin and Cut",
+            "action": "intercept",
+            "officer_id": "brooks",
+            "primary_skill": "contact suppression under structural hazard",
+            "tactical_step": "suppress/fix Reiss with combined physical pressure, breach the column zone, hold him stationary while Park cuts the wig with the thermal cutter, CASEVAC immediately after",
+            "intent": "Brooks leads a direct contact approach: he and Owen drive Reiss back from the column, pin him against the far wall, and hold him stationary long enough for Park to cut the wig free with the thermal cutter. Fast, violent, procedurally clean if it works.",
+            "base_success": 0.65,
+            "yield": "Wig is cut. Reiss is separated from the sign. Strength discharges—but without the burn, the discharge is uncontrolled. The column takes a final stress pulse. The building holds, barely. Reiss collapses into tremor and thirst. CASEVAC proceeds.",
+            "risk": "If Brooks cannot hold Reiss stationary—if the pin fails—Reiss redirects force into whoever is closest. The column fracture accelerates. The mezzanine becomes an active collapse risk. Brooks takes the first injury.",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Brooks hits Reiss low and hard, driving him off the column and into the far wall. Owen is on the right side a half-second later. Reiss does not fight them—he pushes, the way a door pushes when the pressure behind it is too great. Brooks locks his arms and does not let go. Park is already moving. The thermal cutter takes four seconds. The hair separates from the scalp with a sound that is not mechanical. Reiss goes limp between them. The column makes one loud crack and then goes quiet. Dust falls. Brooks is breathing through his teeth. His left forearm is bent at an angle it should not be. He does not mention it until they are outside."
+                ],
+                "environment_state_changes": [
+                  "root_borrowed_separation.intercept.success"
+                ],
+                "resource_changes": {
+                  "character.brooks.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Brooks gets Reiss off the column. That part works. The pin does not hold—Reiss's arm comes free and his hand finds the squat rack frame, which folds. Park cuts the wig but not cleanly; a section of the base remains adhered to the scalp. The strength drops but does not end. Reiss is on his knees, shaking, bleeding from the scalp, and the column is still cracking. Owen calls the partial CASEVAC: Ross brings the carry route in from the east. They get Reiss out. The column is shored with the temporary props. The anomaly is suppressed, not closed. The remaining hair section is in an evidence bag. Park is very quiet on the drive back."
+                ],
+                "environment_state_changes": [
+                  "root_borrowed_separation.intercept.partial"
+                ],
+                "resource_changes": {
+                  "character.brooks.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Brooks makes contact and Reiss moves. Not toward Brooks—just moves, the way a man moves when he is finishing a set and someone is in the way. Brooks goes into the wall. Owen calls break contact before the echo stops. The column fracture runs another twenty centimeters in the next thirty seconds. Brooks is on the floor, not unconscious but not standing. Owen pulls him back to the breach point. Reiss returns to the column. The ceiling above Bay 3 groans. Ross is on comms asking for a status update and getting silence. Owen looks at Torah and does not say anything. She does not need to."
+                ],
+                "environment_state_changes": [
+                  "root_borrowed_separation.intercept.failure"
+                ],
+                "resource_changes": {
+                  "character.brooks.stress": "+2",
+                  "character.brooks.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Park: Controlled Burn",
+            "action": "destroy",
+            "officer_id": "specialist_mina_park",
+            "primary_skill": "anomalous material destruction, controlled burn protocol",
+            "tactical_step": "establish sector security at collapse radius, suppress Reiss's movement with verbal and positional pressure during a post-burst tremor window, breach the column zone to stage the burn frame, cut and burn the wig with deliberate release intent, CASEVAC Reiss after discharge",
+            "intent": "Park's plan uses the bodily cost window—the tremor and thirst that follow each burst—to approach Reiss when his output is lowest. She stages the fire-suppression blanket as a burn frame, cuts the wig, and burns it in place. The burn requires Reiss to be stationary and requires Torah to verbally acknowledge the end of the false vow as the fire takes.",
+            "base_success": 0.65,
+            "yield": "The wig burns. The strength discharges into the fire. The column fracture stops. Reiss is conscious, confused, and in significant pain from the scalp adhesion removal, but ambulatory. The anomaly closes cleanly. CASEVAC is a carry-assist, not an emergency extract.",
+            "risk": "If Reiss moves during the burn—if the tremor window closes early—the fire-suppression blanket is not enough to contain the discharge. The burn becomes uncontrolled. Park is inside the collapse radius when it happens. The column may not survive the discharge pulse.",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Park watches Reiss's hands. After the third contact event with the column, they start to shake. She moves before Owen can stop her—not running, walking, the way you walk when you have already decided. She sets the blanket frame in a three-meter square around Reiss and the column base. He looks at her. She says, quietly, 'You're done. Let me finish it.' He does not agree. He does not disagree. He is very thirsty and his scalp is bleeding and he has been here for a long time. Park cuts the hair. Torah speaks the release. The fire takes the hair in under ten seconds. The column crack does not widen. The discharge goes into the smoke. Reiss sits down on the gym floor and asks for water. Park gives him her bottle. She does not look at the evidence container when she seals it."
+                ],
+                "environment_state_changes": [
+                  "root_borrowed_separation.destroy.success"
+                ],
+                "resource_changes": {
+                  "character.specialist_mina_park.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Park reaches Reiss in the tremor window. The burn frame goes up. The cut is clean. But Torah's release acknowledgment comes a half-second late—the fire takes the hair but the discharge pulse is not fully contained by the blanket. The column takes a final stress event: the crack runs to the floor. The temporary props hold it. Reiss is down, conscious, scalp raw and bleeding. Park gets him to the breach point. Ross brings the carry route in. The building stands. The anomaly is closed but the column is condemned. Park files her report that night and notes the timing error without attributing it to anyone."
+                ],
+                "environment_state_changes": [
+                  "root_borrowed_separation.destroy.partial"
+                ],
+                "resource_changes": {
+                  "character.specialist_mina_park.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The tremor window closes faster than Park's thermal data predicted. Reiss straightens up while she is still staging the blanket frame. He does not see her as a threat. He sees her as an obstacle between him and the column, and he moves her the way you move a chair. Park hits the floor hard. Owen calls CASEVAC immediately—Ross is through the east entrance in forty seconds. Park is conscious and furious and has two cracked ribs. Reiss returns to the column. The crack is now floor-to-ceiling. Owen gets everyone out. The building does not collapse, but it is close. The anomaly is still active when the squad exits. Ross sets the outer cordon and calls Saye. Saye has been quiet for six minutes. She picks up on the first ring."
+                ],
+                "environment_state_changes": [
+                  "root_borrowed_separation.destroy.failure"
+                ],
+                "resource_changes": {
+                  "character.specialist_mina_park.stress": "+2",
+                  "character.specialist_mina_park.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Brooks hits Reiss low and hard, driving him off the column and into the far wall. Owen is on the right side a half-second later. Reiss does not fight them—he pushes, the way a door pushes when the pressure behind it is too great. Brooks locks his arms and does not let go. Park is already moving. The thermal cutter takes four seconds. The hair separates from the scalp with a sound that is not mechanical. Reiss goes limp between them. The column makes one loud crack and then goes quiet. Dust falls. Brooks is breathing through his teeth. His left forearm is bent at an angle it should not be. He does not mention it until they are outside."
+            ],
+            "environment_state_changes": [
+              "root_borrowed_separation.intercept.success"
+            ],
+            "resource_changes": {
+              "character.brooks.morale": "+1"
+            }
+          },
+          "destroy": {
+            "lines": [
+              "Park watches Reiss's hands. After the third contact event with the column, they start to shake. She moves before Owen can stop her—not running, walking, the way you walk when you have already decided. She sets the blanket frame in a three-meter square around Reiss and the column base. He looks at her. She says, quietly, 'You're done. Let me finish it.' He does not agree. He does not disagree. He is very thirsty and his scalp is bleeding and he has been here for a long time. Park cuts the hair. Torah speaks the release. The fire takes the hair in under ten seconds. The column crack does not widen. The discharge goes into the smoke. Reiss sits down on the gym floor and asks for water. Park gives him her bottle. She does not look at the evidence container when she seals it."
+            ],
+            "environment_state_changes": [
+              "root_borrowed_separation.destroy.success"
+            ],
+            "resource_changes": {
+              "character.specialist_mina_park.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_borrowed_separation",
+            "queued_line": "Whatever happens next happens under a ceiling that is already deciding whether to come down.",
+            "trigger_key": "resolution_borrowed_separation",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          },
+          "destroy": {
+            "event_id": "resolution_borrowed_separation",
+            "queued_line": "Whatever happens next happens under a ceiling that is already deciding whether to come down.",
+            "trigger_key": "resolution_borrowed_separation",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "nazirite_vow_hair_sign",
+            "source_moment": "The hair is the visible sign of separation; strength follows the sign, not the person",
+            "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+            "room_application": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+            "structural_transfer": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+            "required_visible_details": [
+              "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+              "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+            ],
+            "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "nazirite_hair_burned_on_completion",
+            "source_moment": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+            "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+            "room_application": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+            "structural_transfer": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+            "required_visible_details": [
+              "Park's fire-suppression blanket staged as a containment frame for the burn",
+              "The smell of burning synthetic hair as the anomaly's close condition"
+            ],
+            "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "samson_breaks_ropes_jawbone",
+            "source_moment": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+            "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+            "room_application": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+            "structural_transfer": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+            "required_visible_details": [
+              "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+              "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+            ],
+            "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "samson_birth_no_razor",
+            "source_moment": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+            "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+            "room_application": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+            "structural_transfer": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+            "required_visible_details": [
+              "Reiss speaking quietly to himself between contact events, not to the squad",
+              "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+            ],
+            "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "nazirite_vow_hair_sign",
+            "anchor_role": "premise",
+            "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+            "playable_transform": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+            "required_visible_details": [
+              "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+              "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+            ],
+            "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "nazirite_hair_burned_on_completion",
+            "anchor_role": "closure",
+            "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+            "playable_transform": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+            "required_visible_details": [
+              "Park's fire-suppression blanket staged as a containment frame for the burn",
+              "The smell of burning synthetic hair as the anomaly's close condition"
+            ],
+            "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "samson_breaks_ropes_jawbone",
+            "anchor_role": "escalation",
+            "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+            "playable_transform": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+            "required_visible_details": [
+              "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+              "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+            ],
+            "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "samson_birth_no_razor",
+            "anchor_role": "evidence",
+            "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+            "playable_transform": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+            "required_visible_details": [
+              "Reiss speaking quietly to himself between contact events, not to the squad",
+              "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+            ],
+            "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_borrowed_separation",
+      "type": "resolution",
+      "speaker": "SITREP",
+      "line_1": "SITREP reports Reiss contained, wig evidence cut or burned, and Column C-4 shored or still failing.",
+      "line_2": "The Separation Athletics packaging is on the bench. The protocol guide is open to a highlighted page. Someone needs to decide what happens to the evidence and what happens to...",
+      "buttons": [
+        {
+          "label": "Saye: Full Disclosure",
+          "action": "full_disclosure",
+          "preview": "Saye comes off remote comms and enters the site to take custody of the evidence personally..."
+        },
+        {
+          "label": "Torah: Release the Vow",
+          "action": "torah_speaks",
+          "preview": "Torah speaks the release directly—not as a religious performance but as the symbolic authority the anomaly..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Saye: Full Disclosure",
+          "action": "full_disclosure",
+          "officer_id": "dr_lenora_saye",
+          "primary_skill": "anomaly pattern documentation, symbolic evidence analysis",
+          "tactical_step": "evidence custody of wig remains and Separation Athletics materials, formal anomaly report with manufacturer identification, CASEVAC handoff to Institute medical with full disclosure of anomaly mechanism",
+          "intent": "Saye comes off remote comms and enters the site to take custody of the evidence personally. She documents the wig remains, the protocol guide, and the manufacturer's materials as a complete anomaly package. She gives Reiss a full account of what happened to him—not a cover story. She files the manufacturer's identity with the Institute for follow-up action.",
+          "base_success": 0.65,
+          "yield": "Complete evidence chain. Reiss understands what was done to him. The Institute has the manufacturer's identity. The anomaly is documented in a way that prevents recurrence. Saye's silence during the mission is explained by what she found in the data—she was building the disclosure package.",
+          "risk": "Full disclosure means the Institute's involvement is on record. The manufacturer has resources. The department head who denied the wig remains request is now on notice. Saye's report creates institutional pressure that may not resolve in the squad's favor.",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Saye is in Bay 3 within eight minutes of the all-clear. She does not look at the column. She looks at the bench—the packaging, the guide, the crushed water bottle. She photographs everything before she touches anything. When she sits down next to Reiss, she does not use clinical language. She tells him what the product was, what it did, and why it is not his fault. Reiss listens. He does not say anything for a long time. Then he asks who made it. Saye tells him. She has already filed the name. On the drive back, she tells Torah what she found in the thermal data that made her go quiet—a second heat signature, consistent with a second unit of the product, sold to a second buyer, location unknown. She says it the way you say something you have been holding for two hours."
+              ],
+              "environment_state_changes": [
+                "resolution_borrowed_separation.full_disclosure.success"
+              ],
+              "resource_changes": {
+                "character.dr_lenora_saye.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Saye takes custody of the evidence. The disclosure to Reiss is partial—she tells him enough to explain the physical symptoms, not enough to explain the full anomaly mechanism. She is not lying; she is managing what he can absorb right now. The manufacturer's identity goes into the Institute file. The department head's denial of the wig remains request is noted but not escalated. The second heat signature is in Saye's personal notes, not the official report. She will decide later whether to include it. That decision will follow her."
+              ],
+              "environment_state_changes": [
+                "resolution_borrowed_separation.full_disclosure.partial"
+              ],
+              "resource_changes": {
+                "character.dr_lenora_saye.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Saye arrives on site and the evidence is already compromised—the protocol guide is missing from the bench, removed by a civilian first responder who thought it was personal property before Ross could stop them. The wig remains are in the evidence container but the chain of custody has a gap. Saye files what she has. The manufacturer's identity is in the report but the physical evidence is incomplete. Reiss is in Institute medical and has not been told anything. Saye sits in the vehicle for a long time after filing. Ross finds her there an hour later. He does not ask what she is thinking. He already knows."
+              ],
+              "environment_state_changes": [
+                "resolution_borrowed_separation.full_disclosure.failure"
+              ],
+              "resource_changes": {
+                "character.dr_lenora_saye.stress": "+2",
+                "character.dr_lenora_saye.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Torah: Release the Vow",
+          "action": "torah_speaks",
+          "officer_id": "torah",
+          "primary_skill": "symbolic authority, vow acknowledgment, anomaly closure",
+          "tactical_step": "symbolic close—Torah formally acknowledges the false vow's end in the presence of the wig remains, establishing that the separation is completed and the obligation discharged, followed by CASEVAC handoff and building clearance",
+          "intent": "Torah speaks the release directly—not as a religious performance but as the symbolic authority the anomaly requires to close. The false vow was imposed without consent; Torah's acknowledgment that the separation is ended, in the presence of the remains, is the condition the anomaly's logic requires. This is the closure condition that force cannot provide.",
+          "base_success": 0.65,
+          "yield": "The anomaly closes completely. Any residual strength in the wig remains dissipates. Reiss's body begins to recover. The column fracture stops propagating. The squad has a clean close. Torah carries the weight of having spoken into something they do not fully understand.",
+          "risk": "If Torah speaks the release and the anomaly does not close—if the wig was not sufficiently destroyed, or if the burn was incomplete—the discharge pulse reads Torah's authority as a challenge rather than a completion. The residual force redirects. The squad is inside the building when it does.",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Torah stands at the column base with the evidence container open in front of them. The wig remains are inside—cut, partially burned, still warm. Owen is at the breach point. Brooks is outside. Park is watching the column. Torah does not perform anything. They say, plainly, that the separation is ended, that the obligation is discharged, that what was taken without consent is returned. The warmth in the container goes out. The column does not make another sound. Reiss, on the stretcher at the east entrance, stops shaking. Ross reports from the perimeter that the instrument readings have dropped to baseline. Saye, on comms, exhales. It is the first sound she has made in twenty minutes. Owen does not say anything. She marks the building clear and starts the CASEVAC handoff. She will not talk about this part of the debrief."
+              ],
+              "environment_state_changes": [
+                "resolution_borrowed_separation.torah_speaks.success"
+              ],
+              "resource_changes": {
+                "character.torah.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Torah speaks the release. The anomaly responds—the warmth in the container drops, the column fracture stops—but the close is incomplete. A section of the wig's base is still adhered to Reiss's scalp, in Institute medical custody now, and the obligation has not fully discharged. Reiss's tremor continues at a lower level. The instrument readings drop but do not reach baseline. The anomaly is suppressed. It is not closed. Saye flags the residual in her report. The evidence container goes into restricted storage. Torah knows, without being told, that this will come back."
+              ],
+              "environment_state_changes": [
+                "resolution_borrowed_separation.torah_speaks.partial"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Torah speaks the release and the container gets hot. Not warm—hot, the kind of heat that makes Park step back and Owen call everyone to the breach point. The discharge pulse moves through the floor. The temporary column props hold but one of them buckles. The building alarm triggers. Everyone exits. The container is left inside—too hot to carry. Ross seals the east entrance. The instrument readings spike and then drop to a level that Saye, on comms, describes as 'not baseline.' She does not elaborate. The building is condemned. The container is inside it. Torah stands at the cordon line and does not speak for the rest of the operation. Owen files the after-action report. She leaves Torah's role in the resolution section blank and sends it to Saye to complete."
+              ],
+              "environment_state_changes": [
+                "resolution_borrowed_separation.torah_speaks.failure"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+2",
+                "character.torah.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "full_disclosure": {
+          "lines": [
+            "Saye is in Bay 3 within eight minutes of the all-clear. She does not look at the column. She looks at the bench—the packaging, the guide, the crushed water bottle. She photographs everything before she touches anything. When she sits down next to Reiss, she does not use clinical language. She tells him what the product was, what it did, and why it is not his fault. Reiss listens. He does not say anything for a long time. Then he asks who made it. Saye tells him. She has already filed the name. On the drive back, she tells Torah what she found in the thermal data that made her go quiet—a second heat signature, consistent with a second unit of the product, sold to a second buyer, location unknown. She says it the way you say something you have been holding for two hours."
+          ],
+          "environment_state_changes": [
+            "resolution_borrowed_separation.full_disclosure.success"
+          ],
+          "resource_changes": {
+            "character.dr_lenora_saye.morale": "+1"
+          }
+        },
+        "torah_speaks": {
+          "lines": [
+            "Torah stands at the column base with the evidence container open in front of them. The wig remains are inside—cut, partially burned, still warm. Owen is at the breach point. Brooks is outside. Park is watching the column. Torah does not perform anything. They say, plainly, that the separation is ended, that the obligation is discharged, that what was taken without consent is returned. The warmth in the container goes out. The column does not make another sound. Reiss, on the stretcher at the east entrance, stops shaking. Ross reports from the perimeter that the instrument readings have dropped to baseline. Saye, on comms, exhales. It is the first sound she has made in twenty minutes. Owen does not say anything. She marks the building clear and starts the CASEVAC handoff. She will not talk about this part of the debrief."
+          ],
+          "environment_state_changes": [
+            "resolution_borrowed_separation.torah_speaks.success"
+          ],
+          "resource_changes": {
+            "character.torah.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "full_disclosure": {
+          "event_id": "cooldown_borrowed_separation",
+          "queued_line": "The building is standing, for now, and the squad is outside or at the breach point, and the question of what was sold and who sold it is still open.",
+          "trigger_key": "cooldown_borrowed_separation",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        },
+        "torah_speaks": {
+          "event_id": "cooldown_borrowed_separation",
+          "queued_line": "The building is standing, for now, and the squad is outside or at the breach point, and the question of what was sold and who sold it is still open.",
+          "trigger_key": "cooldown_borrowed_separation",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "nazirite_vow_hair_sign",
+          "source_moment": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "room_application": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "structural_transfer": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "required_visible_details": [
+            "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+            "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+          ],
+          "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "nazirite_hair_burned_on_completion",
+          "source_moment": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "room_application": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "structural_transfer": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "required_visible_details": [
+            "Park's fire-suppression blanket staged as a containment frame for the burn",
+            "The smell of burning synthetic hair as the anomaly's close condition"
+          ],
+          "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "samson_breaks_ropes_jawbone",
+          "source_moment": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "room_application": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "structural_transfer": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "required_visible_details": [
+            "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+            "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+          ],
+          "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "samson_birth_no_razor",
+          "source_moment": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "room_application": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "structural_transfer": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "required_visible_details": [
+            "Reiss speaking quietly to himself between contact events, not to the squad",
+            "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+          ],
+          "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "nazirite_vow_hair_sign",
+          "anchor_role": "premise",
+          "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "playable_transform": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "required_visible_details": [
+            "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+            "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+          ],
+          "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "nazirite_hair_burned_on_completion",
+          "anchor_role": "closure",
+          "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "playable_transform": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "required_visible_details": [
+            "Park's fire-suppression blanket staged as a containment frame for the burn",
+            "The smell of burning synthetic hair as the anomaly's close condition"
+          ],
+          "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "samson_breaks_ropes_jawbone",
+          "anchor_role": "escalation",
+          "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "playable_transform": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "required_visible_details": [
+            "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+            "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+          ],
+          "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "samson_birth_no_razor",
+          "anchor_role": "evidence",
+          "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "playable_transform": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "required_visible_details": [
+            "Reiss speaking quietly to himself between contact events, not to the squad",
+            "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+          ],
+          "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_borrowed_separation",
+      "type": "interlude",
+      "speaker": "brooks",
+      "line_1": "Brooks is sitting on the vehicle's rear step with his forearm wrapped, watching Ross redirect a news crew away from the cordon. He has not filed his report.",
+      "line_2": "Park comes out of the building with the evidence container and sets it in the cargo bay without looking at Brooks. He watches her do it and does not ask...",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Brooks says, to no one in particular: 'He wasn't trying to hurt anyone.' Park does not answer. Ross comes back from the cordon and sits on the bumper next to Brooks. He says: 'Did Reiss know what he bought?' Brooks looks at his wrapped arm. 'He knew what it promised.' Ross nods. He does not ask the follow-up question. Owen is inside the vehicle, writing. She has been writing for forty minutes. She has not come out. Saye's channel has been quiet since the close. Park opens the cargo bay, checks the container seal, closes it again. She does this three times before she stops. Nobody mentions it."
+          ],
+          "environment_state_changes": [
+            "brooks.mental_state.fixated",
+            "specialist_mina_park.stress.elevated",
+            "lt_mara_owen.morale.strained",
+            "squad.morale.strained",
+            "dr_lenora_saye.withdrawn"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "smoke_break",
+      "state_reads": [
+        "brooks.injury",
+        "specialist_mina_park.stress",
+        "lt_mara_owen.morale",
+        "agent_caleb_ross.availability",
+        "dr_lenora_saye.mental_state"
+      ],
+      "state_writes": [
+        "brooks.mental_state.fixated",
+        "specialist_mina_park.stress.elevated",
+        "lt_mara_owen.morale.strained",
+        "squad.morale.strained",
+        "dr_lenora_saye.withdrawn"
+      ],
+      "featured_characters": [
+        "brooks",
+        "specialist_mina_park",
+        "agent_caleb_ross"
+      ],
+      "visible_text": [
+        "Brooks says, to no one in particular: 'He wasn't trying to hurt anyone.' Park does not answer. Ross comes back from the cordon and sits on the bumper next to Brooks. He says: 'Did Reiss know what he bought?' Brooks looks at his wrapped arm. 'He knew what it promised.' Ross nods. He does not ask the follow-up question. Owen is inside the vehicle, writing. She has been writing for forty minutes. She has not come out. Saye's channel has been quiet since the close. Park opens the cargo bay, checks the container seal, closes it again. She does this three times before she stops. Nobody mentions it."
+      ],
+      "choices": [
+        "Ask Brooks what he felt when the wall cracked",
+        "Ask Park what the second heat signature means",
+        "Let it go"
+      ],
+      "outcomes": [
+        "If you ask Brooks: he tells you, flatly, that it felt like pushing against something that had already decided. He does not elaborate. He goes back to watching Ross.",
+        "If you ask Park: she shows you her tablet. The second signature is there—same thermal profile, different location, timestamp from six days ago. She does not know where it is. She filed it in her personal notes. She has not told Saye yet. She is telling you now.",
+        "If you let it go: Owen comes out of the vehicle with her report. She hands it to Torah without comment. The resolution section has one line: 'Anomaly closed. Remainder unresolved. Manufacturer identity filed for follow-up.' She goes back inside."
+      ],
+      "followup_hooks": [
+        "The second heat signature in Park's personal notes: a second Covenant Lock unit, sold to an unknown buyer, active six days ago at an unidentified location",
+        "The department head who denied the wig remains request: Saye's full disclosure report will reach them; their response is not yet known",
+        "Reiss's recovery: he is in Institute medical and has been told something, but not everything; what he does with what he knows is open",
+        "The Separation Athletics manufacturer: the Institute has the name; what the Institute does with it, and how fast, is not Torah's decision"
+      ],
+      "corpus_anchors": [
+        "nazirite_vow_hair_sign",
+        "nazirite_hair_burned_on_completion",
+        "samson_breaks_ropes_jawbone",
+        "samson_birth_no_razor"
+      ],
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "nazirite_vow_hair_sign",
+          "source_moment": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "room_application": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "structural_transfer": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "required_visible_details": [
+            "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+            "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+          ],
+          "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "nazirite_hair_burned_on_completion",
+          "source_moment": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "room_application": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "structural_transfer": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "required_visible_details": [
+            "Park's fire-suppression blanket staged as a containment frame for the burn",
+            "The smell of burning synthetic hair as the anomaly's close condition"
+          ],
+          "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "samson_breaks_ropes_jawbone",
+          "source_moment": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "room_application": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "structural_transfer": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "required_visible_details": [
+            "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+            "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+          ],
+          "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "samson_birth_no_razor",
+          "source_moment": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "room_application": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "structural_transfer": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "required_visible_details": [
+            "Reiss speaking quietly to himself between contact events, not to the squad",
+            "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+          ],
+          "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "nazirite_vow_hair_sign",
+          "anchor_role": "premise",
+          "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "playable_transform": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "required_visible_details": [
+            "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+            "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+          ],
+          "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "nazirite_hair_burned_on_completion",
+          "anchor_role": "closure",
+          "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "playable_transform": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "required_visible_details": [
+            "Park's fire-suppression blanket staged as a containment frame for the burn",
+            "The smell of burning synthetic hair as the anomaly's close condition"
+          ],
+          "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "samson_breaks_ropes_jawbone",
+          "anchor_role": "escalation",
+          "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "playable_transform": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "required_visible_details": [
+            "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+            "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+          ],
+          "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "samson_birth_no_razor",
+          "anchor_role": "evidence",
+          "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "playable_transform": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "required_visible_details": [
+            "Reiss speaking quietly to himself between contact events, not to the squad",
+            "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+          ],
+          "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "room_borrowed_separation",
+      "name": "Iron & Covenant Fitness — Bay 3",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A commercial gym mid-renovation. One patron. One wig. One load-bearing column developing cracks at a rate that should take years.",
+      "first_visit_description": "Torah's squad deploys to Iron & Covenant Fitness on a structural emergency call that civilian engineers flagged as physically impossible. Lt. Mara Owen leads the ground element: herself, Brooks, and Specialist Mina Park are physically inside Bay 3, having breached the emergency exit after staff evacuation. Agent Caleb Ross is holding the perimeter cordon outside with two civilian first responders he has redirected away from the building. Dr. Lenora Saye is remote—she is on comms from the Institute vehicle, running the anomaly profile in real time. Torah is on-site command, positioned at the breach point. The wearer—a man named Dov Reiss, mid-thirties, gym regular—is standing at the center column with both palms flat against the concrete. His scalp is bleeding where the wig's base has fused to skin. He is not shouting. He is breathing slowly and deliberately, like someone finishing a set. The column behind him has a diagonal crack running forty centimeters from the base. Dust is still falling.",
+      "return_description": "Bay 3 is cordoned. The column is shored with temporary steel props. The smell of burned synthetic hair has not left the ventilation system. Dov Reiss is in Institute medical custody. The wig's remains are in a sealed evidence container. The room feels smaller than it did.",
+      "detection_report": "Structural engineer's emergency call: 'Column C-4 is showing stress fracture propagation consistent with a sustained load of approximately forty metric tons. There is one person in the room. He is not using equipment.' Institute instrument sweep confirmed anomalous tensile force emanating from the subject's scalp region. Civilian CCTV shows three sets of steel restraints applied and failed in the preceding ninety minutes.",
+      "current_situation": "Dov Reiss is pressing the column. The crack is widening. Owen has her team in a staggered line twelve meters back—close enough to move, far enough that a sudden structural shift will not catch everyone. Brooks is watching the ceiling. Park has a thermal cutter and a fire-suppression blanket staged on the floor beside her. Saye's voice is in everyone's ear: 'The hair is the load path. Everything else is secondary.' Ross is outside keeping the perimeter clean. Torah is at the breach point with line of sight to Owen.",
+      "action_profile": {
+        "physical_threat": "Column C-4 is failing. If it goes, the mezzanine floor drops onto Bay 3. Additionally, Dov Reiss can redirect his grip to any person or object within reach; he has already bent a steel door frame without apparent effort. Contact with him at full output is a casualty event.",
+        "contact_state": "The squad is inside the building with the active threat. They are not yet in physical contact with Reiss but are within the collapse radius. Every second the column degrades further. The squad is under structural contact, not yet under direct physical assault, but that changes the moment Reiss moves.",
+        "field_manual_drill": "React to contact, establish sector security, suppress/fix the subject's movement, breach and clear the column zone, CASEVAC Reiss after resolution, maintain structural caution throughout.",
+        "tactical_objective": "Stop Reiss from further damaging the column, remove or neutralize the wig, and evacuate the building before structural failure.",
+        "symbolic_close": "The wig must be destroyed under conditions that acknowledge the false vow's end—cutting alone discharges the stored force violently; burning with deliberate release dissipates it. Force can pin Reiss temporarily but cannot end the anomaly.",
+        "violent_resolution": "The wig itself—fused synthetic hair and scalp-adhesive base—can be cut with Park's thermal cutter, burned with the fire-suppression blanket staged as a controlled burn frame, or the column zone can be forcibly cleared by driving Reiss back with combined physical pressure. Each option has structural and personnel consequences.",
+        "not_monster_of_week": "Reiss is not a creature. He is a man who bought a product that promised him something sacred and got the obligation without the covenant. The fight is about what happens when a sign is separated from its meaning and sold. The squad is not killing a monster; they are trying to end a vow that was never made."
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "lt_mara_owen",
+          "name": "Lt. Mara Owen",
+          "mission_role": "Ground element lead, tactical command inside Bay 3",
+          "physical_position": "Twelve meters from Reiss, staggered line with Brooks and Park, direct line of sight to column C-4",
+          "assigned_reason": "Owen runs breach-and-clear operations; this is a contained-space active-threat scenario requiring someone who can hold a team together under structural pressure",
+          "visible_state": "Standing very still. She has not given a movement order in ninety seconds. She is watching the crack."
+        },
+        {
+          "officer_id": "brooks",
+          "name": "Brooks",
+          "mission_role": "Tactical point, physical intervention lead",
+          "physical_position": "Left flank of Owen's line, closest to Reiss, watching the ceiling joists",
+          "assigned_reason": "Brooks is the squad's primary contact operator; if anyone is going hands-on with Reiss, it is Brooks",
+          "visible_state": "He has not looked at Reiss once. He is watching the ceiling. That is not reassurance."
+        },
+        {
+          "officer_id": "specialist_mina_park",
+          "name": "Specialist Mina Park",
+          "mission_role": "Technical specialist, thermal cutter and controlled burn",
+          "physical_position": "Right flank, thermal cutter and fire-suppression blanket staged at her feet",
+          "assigned_reason": "Park handles anomalous material destruction; the wig requires either precision cutting or controlled burn, both within her field kit",
+          "visible_state": "She has already run a thermal profile on the wig from distance. She has not shared the result yet."
+        },
+        {
+          "officer_id": "agent_caleb_ross",
+          "name": "Agent Caleb Ross",
+          "mission_role": "Perimeter cordon, civilian management",
+          "physical_position": "Outside the building, east entrance, holding two civilian first responders at the cordon line",
+          "assigned_reason": "Ross keeps the perimeter clean and prevents civilian casualties if the building fails or the anomaly exits",
+          "visible_state": "His radio check-ins are clipped and regular. He is not asking what is happening inside."
+        },
+        {
+          "officer_id": "dr_lenora_saye",
+          "name": "Dr. Lenora Saye",
+          "mission_role": "Remote anomaly analysis, symbolic pattern identification",
+          "physical_position": "Institute vehicle, parking structure across the street, live comms",
+          "assigned_reason": "Saye identified the Nazirite pattern from the CCTV footage and the instrument sweep; she is the reason the squad knows what they are dealing with",
+          "visible_state": "She has been talking steadily since the squad entered. She stopped talking two minutes ago."
+        }
+      ],
+      "root_sin": "A manufacturer identified the Nazirite hair-sign as a marketable strength vector, stripped it from its vow context, synthesized it into a wearable product, and sold it through fitness supplement channels. The sin is not Reiss's; it is the commodification of consecration—making a sacred obligation into transferable equipment for anyone willing to pay.",
+      "modern_incident_logic": "Iron & Covenant Fitness is a mid-market gym that stocks performance supplements and equipment from a boutique supplier called Separation Athletics. The supplier's flagship product, the 'Covenant Lock' wig system, was marketed as a 'heritage strength protocol' with no religious disclosure. Reiss purchased it six weeks ago, wore it during every training session, and reported strength gains that his coach flagged as physiologically impossible. This morning he arrived for a standard session, put on the wig, and has not been able to take it off. The building's structural engineer was on-site for a renovation inspection and called emergency services when the column cracked.",
+      "closure_test": "The squad must either physically destroy the wig under controlled conditions or bring Reiss to a state where he voluntarily releases the false vow—acknowledged by Torah's symbolic authority—before the column fails. The anomaly ends when the sign is formally ended, not merely suppressed.",
+      "religious_pattern": "Nazirite vow: the hair is the sign of separation; strength is the consequence of the vow, not the cause; the vow ends when the hair is cut and burned at the place of offering; a vow imposed without consent cannot be completed by the wearer and will enforce itself until destroyed.",
+      "anomaly_rule": "The wig imposes the outward sign of a Nazirite separation on the wearer. The sign reads the wearer as bound. Conventional restraints fail because the sign says the wearer cannot be bound. Strength output scales with the sign's integrity. The sign cannot be removed by the wearer because removal would complete the vow, which the wearer never made and therefore cannot complete. Only external destruction under the correct symbolic conditions ends the cycle.",
+      "forbidden_flat_read": "Do not literalize Reiss as Samson. He is not a hero or a judge. He is a man who bought a product. The strength is not his gift; it is a debt he did not agree to carry.",
+      "officer_reports": [
+        "Owen: 'Column C-4. Forty centimeters of diagonal fracture. I am not moving my team closer until I know what happens when we touch him.'",
+        "Brooks: 'I put my hand on his shoulder twenty minutes before you arrived. He didn't react. The wall behind him cracked.'",
+        "Park: 'Thermal profile on the hair shows a heat signature that should not be possible for synthetic fiber. It is running warm. Consistently warm.'",
+        "Saye (remote): 'The adhesive is not chemical. It is positional. The hair is where it is supposed to be. That is the problem.'"
+      ],
+      "procedure_hooks": [
+        "Sector security: Owen assigns Brooks left, Park right, Torah at breach—no one enters the column zone without a clear line of retreat",
+        "Structural caution: Park marks the collapse radius with tape before any approach; the mezzanine load path is identified and communicated",
+        "CASEVAC staging: Ross is briefed on a two-person carry route from Bay 3 to the east exit before any contact attempt",
+        "Controlled burn protocol: Park's fire-suppression blanket is staged to contain a localized burn; she needs thirty seconds of Reiss being stationary to execute",
+        "Evidence custody: the wig's remains, whatever their condition, go into a sealed container before the building is cleared"
+      ],
+      "character_state_stakes": {
+        "lt_mara_owen": "If Owen's plan fails or partially succeeds, she carries the structural decision—she chose when to move and when to hold. A collapse on her watch changes how she gives orders afterward.",
+        "brooks": "Brooks has already made contact once and watched a wall crack. A second failed contact attempt will not read as bad luck to him. It will read as confirmation of something he does not want to name.",
+        "specialist_mina_park": "Park's thermal data is already anomalous. If the burn goes wrong—if the discharge injures someone—she will spend the cooldown reviewing her own numbers, looking for what she missed.",
+        "agent_caleb_ross": "Ross is outside. He will hear everything on comms and see nothing. That gap between hearing and seeing is where his stress accumulates.",
+        "dr_lenora_saye": "Saye stopped talking. If the mission ends badly, the question of why she stopped talking—what she saw in the data that she did not say—will follow her into the next debrief."
+      },
+      "interlude_vectors": [
+        "Park reviews her thermal data in the vehicle and finds a second heat signature she did not report during the mission",
+        "Owen and Brooks do not debrief together; they file separate reports that contradict each other on the timeline of the column fracture",
+        "Saye requests the wig remains for Institute analysis; the request is denied by a department head Torah has not met",
+        "Ross asks Torah, quietly, whether Reiss knew what he was buying"
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "A manufacturer identified the Nazirite hair-sign as a marketable strength vector, stripped it from its vow context, synthesized it into a wearable product, and sold it through fitness supplement channels. The sin is not Reiss's; it is the commodification of consecration—making a sacred obligation into transferable equipment for anyone willing to pay.",
+        "modern_incident_logic": "Iron & Covenant Fitness is a mid-market gym that stocks performance supplements and equipment from a boutique supplier called Separation Athletics. The supplier's flagship product, the 'Covenant Lock' wig system, was marketed as a 'heritage strength protocol' with no religious disclosure. Reiss purchased it six weeks ago, wore it during every training session, and reported strength gains that his coach flagged as physiologically impossible. This morning he arrived for a standard session, put on the wig, and has not been able to take it off. The building's structural engineer was on-site for a renovation inspection and called emergency services when the column cracked.",
+        "closure_test": "The squad must either physically destroy the wig under controlled conditions or bring Reiss to a state where he voluntarily releases the false vow—acknowledged by Torah's symbolic authority—before the column fails. The anomaly ends when the sign is formally ended, not merely suppressed."
+      },
+      "religious_subtext": {
+        "source_pattern": "Nazirite vow: the hair is the sign of separation; strength is the consequence of the vow, not the cause; the vow ends when the hair is cut and burned at the place of offering; a vow imposed without consent cannot be completed by the wearer and will enforce itself until destroyed.",
+        "transformed_rule": "The wig imposes the outward sign of a Nazirite separation on the wearer. The sign reads the wearer as bound. Conventional restraints fail because the sign says the wearer cannot be bound. Strength output scales with the sign's integrity. The sign cannot be removed by the wearer because removal would complete the vow, which the wearer never made and therefore cannot complete. Only external destruction under the correct symbolic conditions ends the cycle.",
+        "forbidden_flat_read": "Do not literalize Reiss as Samson. He is not a hero or a judge. He is a man who bought a product. The strength is not his gift; it is a debt he did not agree to carry."
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Park reviews her thermal data in the vehicle and finds a second heat signature she did not report during the mission",
+        "Owen and Brooks do not debrief together; they file separate reports that contradict each other on the timeline of the column fracture",
+        "Saye requests the wig remains for Institute analysis; the request is denied by a department head Torah has not met",
+        "Ross asks Torah, quietly, whether Reiss knew what he was buying"
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "room_borrowed_separation",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "nazirite_vow_hair_sign",
+          "source_moment": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "room_application": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "structural_transfer": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "required_visible_details": [
+            "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+            "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+          ],
+          "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "nazirite_hair_burned_on_completion",
+          "source_moment": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "room_application": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "structural_transfer": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "required_visible_details": [
+            "Park's fire-suppression blanket staged as a containment frame for the burn",
+            "The smell of burning synthetic hair as the anomaly's close condition"
+          ],
+          "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "samson_breaks_ropes_jawbone",
+          "source_moment": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "room_application": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "structural_transfer": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "required_visible_details": [
+            "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+            "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+          ],
+          "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "samson_birth_no_razor",
+          "source_moment": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "room_application": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "structural_transfer": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "required_visible_details": [
+            "Reiss speaking quietly to himself between contact events, not to the squad",
+            "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+          ],
+          "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "nazirite_vow_hair_sign",
+          "anchor_role": "premise",
+          "source_fingerprint": "The hair is the visible sign of separation; strength follows the sign, not the person",
+          "playable_transform": "The wig counterfeits the sign; the anomaly enforces the sign's obligations on whoever wears it",
+          "required_visible_details": [
+            "Long synthetic hair fused to Reiss's scalp, bleeding at the adhesion line",
+            "Reiss moving with the deliberate calm of someone fulfilling an obligation, not attacking"
+          ],
+          "followup_payoff": "The squad cannot end the anomaly by stopping Reiss; they must end the sign"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "nazirite_hair_burned_on_completion",
+          "anchor_role": "closure",
+          "source_fingerprint": "The hair of separation is cut and burned at the place of offering when the vow is complete",
+          "playable_transform": "Park's controlled burn is the field version of the completion ritual; it requires the hair to be cut first, then burned, with deliberate intent",
+          "required_visible_details": [
+            "Park's fire-suppression blanket staged as a containment frame for the burn",
+            "The smell of burning synthetic hair as the anomaly's close condition"
+          ],
+          "followup_payoff": "If the burn is executed correctly, the strength discharges into the fire rather than into the building"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "samson_breaks_ropes_jawbone",
+          "anchor_role": "escalation",
+          "source_fingerprint": "New ropes fail; every failed restraint confirms the sign's authority; the body pays afterward with tremor and thirst",
+          "playable_transform": "Each failed restraint attempt by the squad increases Reiss's output and the column's fracture rate; after the burst, Reiss shows tremor, bleeding scalp, and extreme thirst",
+          "required_visible_details": [
+            "Three sets of failed steel restraints visible on the gym floor before the squad arrived",
+            "Reiss's hands shaking between contact events; a water bottle crushed flat near his feet"
+          ],
+          "followup_payoff": "The bodily cost after each burst is the window for intervention—Reiss is briefly reachable"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "samson_birth_no_razor",
+          "anchor_role": "evidence",
+          "source_fingerprint": "The wearer becomes convinced they were selected, not infected; removal feels like apostasy",
+          "playable_transform": "Reiss does not believe he is in danger; he believes he is completing something; this makes verbal de-escalation partially viable but also makes him resistant to voluntary removal",
+          "required_visible_details": [
+            "Reiss speaking quietly to himself between contact events, not to the squad",
+            "His gym bag open on the bench: the Separation Athletics packaging, a printed 'protocol guide,' a highlighted passage about 'completing the separation'"
+          ],
+          "followup_payoff": "The protocol guide is evidence of the manufacturer's intent and becomes a custody item for the Institute"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "room_borrowed_separation"
+    },
+    {
+      "pool": "action_horror",
+      "room_id": "room_borrowed_separation"
+    },
+    {
+      "pool": "branch",
+      "room_id": "room_borrowed_separation"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "room_borrowed_separation"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The wig as a product—not a curse, not a weapon, but a marketed item with a protocol guide—keeps the sin legible as modern commodification rather than ancient malice",
+    "The bodily cost window (tremor, thirst, bleeding scalp) after each burst gives the squad a tactical rhythm without requiring a monster health bar",
+    "Saye going quiet mid-mission is a character tell that pays off in both resolution and cooldown without requiring exposition",
+    "The second heat signature in Park's notes is a remainder that does not resolve in this room"
+  ],
+  "self_critique": [
+    "The partial outcomes for both root plans both end with the anomaly suppressed but not closed, which is correct symbolically but may feel repetitive to a player who gets two partials in sequence; the compiler should ensure the resolution plans' partial outcomes feel meaningfully different in consequence rather than just degree"
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "title": "Brother's Door",
+  "design_goal": "Force accountability for a falsified municipal evacuation clearance that left named residents to die in a smoke-filled stairwell.",
+  "room": {
+    "id": "brothers_door",
+    "name": "Stairwell 4-C, Harmon Municipal Building",
+    "type": "mission",
+    "description": "A municipal stairwell is actively repeating a false clearance: names vanish from records, red circles appear around the living, and the floor-5 door relatches from the stair side.",
+    "first_visit_description": "Harmon Municipal reopened for a routine safety recertification at 0310. Twelve minutes later, Inspector Lena Cho radioed that the floor-5 door had latched behind her from the stair side. Brooks now holds the ground-floor entry with Torah behind the line. Owen watches the floor-5 landing; Park works the PA panel below; Saye reads evacuation and reinspection records from the van. Red chalk still circles the three residents erased by Dren Vaas's original clearance report. A fourth circle has started around Cho's badge number.",
+    "return_description": "The fourth circle is darker now. Cho's badge number remains half-written beside the old resident names, and the floor-5 latch has reset despite the wedge Owen left in place.",
+    "detection_report": "Symbolic resonance spiked when Harmon Municipal attempted to recertify the old clearance. The PA repeats fragments of Cho's live radio traffic beside names from the fire record. Thermal imaging shows a living heat signature moving between floor 5 and the sealed room. Every 14 minutes, the floor-5 door relatches from the stair side.",
+    "current_situation": "Brooks holds the exit while Torah waits behind him until the factual record is established. Owen is staged one landing up for a floor-5 rescue. Park is in the basement utility corridor at the battery-backed PA panel. Saye monitors Cho's body cam and Vaas's clearance file from the Institute van. The mission is not an audit: the stairwell is trying to make a new missing person fit the old lie.",
+    "root_sin": "A municipal safety officer filed a false clearance report to avoid the delay and liability of a difficult floor-5 search. The named residents were alive when the suppression order was issued. The anomaly is the site's refusal to accept the false record as final.",
+    "modern_incident_logic": "The building's internal PA system, which runs on a separate battery circuit, is replaying fragmented audio captured during the fire event. The chalk markings were added by a surviving neighbor who knew the residents and returned before the site was sealed. The thermal anomaly on floor 5 is residual heat from a sealed room that was never ventilated. The anomaly is not supernatural in origin; it is a site that has not been allowed to close because the official record is false. The Institute's involvement is triggered because the PA loop has begun naming people who were not in the building, and the chalk circles are appearing without a known author.",
+    "closure_test": "The squad must recover physical evidence from floor 5 that contradicts Vaas's clearance timestamp, establish the correct fate of the three named residents, and force the false report into an accountable record. The PA loop stops when the correct names are entered into the Institute's evidence chain. The chalk circles stop appearing when Vaas's report is formally flagged.",
+    "religious_pattern": "Cain and Abel structure: a keeper denies responsibility for a named person; the ground itself becomes witness; the guilty party is marked; resolution requires the accusation to be heard and answered, not suppressed.",
+    "anomaly_rule": "The PA loop intensifies when the squad attempts to leave without completing the evidence chain. The chalk circles appear on surfaces near squad members who have handled the false clearance report without flagging it. Both effects cease when the corrected record is filed and Vaas is named in the Institute's accountability chain. One effect persists regardless: the empty fourth circle does not disappear.",
+    "forbidden_flat_read": "Do not literalize the PA loop as a ghost or haunting. It is a battery-powered audio system replaying captured sound. The anomaly is the pattern, not the mechanism.",
+    "officer_reports": [
+      "lt_mara_owen: The 14-minute gap is not a clerical error. That is a decision window. Someone chose not to go up.",
+      "specialist_mina_park: Floor 5 door shows heat scoring on the interior frame. That door was closed from the outside after the fire started.",
+      "brooks: The PA circuit should have died with the main power. It did not. I am not going to speculate about why.",
+      "dr_lenora_saye: The chalk handwriting on the name circles does not match any notation style in the fire department's field manual. It is not official. Someone came back here."
+    ],
+    "procedure_hooks": [
+      "Evidence custody: the chalk markings must be photographed and logged before any floor movement disturbs them.",
+      "Stairwell clearance: fatal funnel at each landing door requires designated point, cover, and rear security before threshold crossing.",
+      "Timestamp audit: the 14-minute gap in the evacuation log must be cross-referenced against Vaas's radio transmissions.",
+      "Casualty accounting: the three named residents must be traced to a confirmed outcome before the site can be closed.",
+      "PA circuit isolation: the internal audio loop must be documented and the source recording preserved as evidence before the circuit is cut."
+    ],
+    "character_state_stakes": {
+      "lt_mara_owen": "If Owen leads the floor-5 push and it goes wrong, her stress rises and she becomes fixated on the door-scoring evidence, refusing to leave until it is logged.",
+      "specialist_mina_park": "If Park handles the PA circuit and the loop names someone she recognizes from a prior case, she becomes withdrawn and her availability drops for the next mission.",
+      "brooks": "If Brooks is asked to explain the PA anomaly and cannot, his fatigue increases and he begins ritualizing small procedural checks.",
+      "dr_lenora_saye": "If Saye is present when the fourth chalk circle appears, her mental_state shifts to fixated and she begins cross-referencing the empty circle against the Institute's open missing-persons cases."
+    },
+    "interlude_vectors": [
+      "Post-mission debrief: who files the corrected record and whether Vaas is named determines institute.pressure change.",
+      "Smoke break: Brooks and Park discuss whether the PA loop was evidence or something else; outcome depends on their current stress.",
+      "Clinic: if a squad member was injured on the floor-5 push, Saye's debrief includes the door-scoring detail and it enters the case file.",
+      "Command review: if the corrected record is filed, institute.accountability_pressure rises; if it is suppressed, squad.morale drops and the empty circle reappears at the next civic-site mission."
+    ],
+    "deployment_manifest": [
+      {
+        "officer_id": "brooks",
+        "name": "Brooks",
+        "mission_role": "field command lead",
+        "physical_position": "ground-floor stairwell entry, maintaining exit control and radio discipline",
+        "assigned_reason": "keeps Torah and the tactical element inside Institute procedure while civilian records are contested",
+        "visible_state": "dry, quiet, checking the same latch twice before authorizing movement"
+      },
+      {
+        "officer_id": "lt_mara_owen",
+        "name": "Owen",
+        "mission_role": "tactical point for stairwell movement",
+        "physical_position": "one landing above Brooks, watching the floor-5 door and heat scoring",
+        "assigned_reason": "trained for fatal-funnel movement and evidence-sensitive entry",
+        "visible_state": "steady but angry; she keeps her light on the door frame instead of the empty stairwell"
+      },
+      {
+        "officer_id": "specialist_mina_park",
+        "name": "Park",
+        "mission_role": "technical evidence specialist",
+        "physical_position": "basement utility corridor at the PA control panel",
+        "assigned_reason": "the battery-backed PA loop may hold the only timestamp independent of Vaas’s report",
+        "visible_state": "withdrawn, wearing headphones around her neck and not putting them on until ordered"
+      },
+      {
+        "officer_id": "torah",
+        "name": "Torah",
+        "mission_role": "symbolic asset held behind the tactical line",
+        "physical_position": "ground-floor landing behind Brooks, not allowed past the first flight until evidence is logged",
+        "assigned_reason": "the anomaly may respond to naming and accountability once the factual record is established",
+        "visible_state": "calm, hands visible, waiting for someone else to say the names first"
+      },
+      {
+        "officer_id": "dr_lenora_saye",
+        "name": "Saye",
+        "mission_role": "remote case-file and medical consult",
+        "physical_position": "Institute van outside Harmon Municipal Building, monitoring body cams and casualty records",
+        "assigned_reason": "cross-checks evacuation records, missing-person files, and squad exposure without crowding the stairwell",
+        "visible_state": "voice clipped on radio; she stops speaking whenever the fourth circle is mentioned"
+      }
+    ],
+    "scenario_generation_contract": {
+      "root_sin": "A municipal safety officer filed a false clearance report to avoid the delay and liability of a difficult floor-5 search. Named residents were alive when the suppression order was issued. The symbolic manifestation began when the city tried to certify that same false record again.",
+      "modern_incident_logic": "The Institute deploys because the stairwell is actively repeating the abandonment pattern. Inspector Lena Cho, sent to recertify the building, is trapped above floor 4 while her badge number writes itself beside the three erased residents. The PA uses real battery-backed audio hardware, but the impossible pattern is symbolic: it adds living keepers to the false record whenever they accept the old clearance without answering it.",
+      "closure_test": "The squad must recover Cho, document the original false clearance, establish the correct fate of the three named residents, and force Vaas's report into an accountable record. The manifestation closes only when the living inspector is no longer being made to carry the old sin and the erased names are restored to the file."
+    },
+    "religious_subtext": {
+      "source_pattern": "Cain and Abel structure: a keeper denies responsibility for a named person; the ground itself becomes witness; the guilty party is marked; resolution requires the accusation to be heard and answered, not suppressed.",
+      "transformed_rule": "The stairwell treats any official who accepts the false clearance as the next keeper. Red circles move from dead residents to living responders. Doors relatch from the outside, PA audio repeats names, and the site tries to create another gap in the record until the denied responsibility is named.",
+      "forbidden_flat_read": "Do not stage the event as a ghost investigation or paperwork audit. The PA and latch are physical systems, but the repeating pattern, timing, and name-transfer are symbolic manifestations of the original sin."
+    }
+  },
+  "anchors": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "world_english_bible:00005",
+      "role": "premise",
+      "fingerprint": "Keeper denial becomes ground testimony; guilty party is marked; resolution requires accountability not suppression",
+      "transfer": "Vaas's false clearance is the keeper denial. The chalk circles and PA loop are the ground testimony. Resolution requires naming Vaas in the record, not just closing the site.",
+      "visible_details": [
+        "Chalk circles around resident names drawn by someone who returned to witness",
+        "Empty fourth circle that does not disappear regardless of resolution outcome"
+      ],
+      "payoff": "If Vaas is never named, the empty circle reappears at the next civic-site mission as a persistent state flag."
+    },
+    {
+      "source_id": "enoch_laurence_gutenberg_77815",
+      "source_chunk_id": "enoch_laurence_gutenberg_77815:00028",
+      "role": "escalation",
+      "fingerprint": "Separated dead accuse from assigned place; accusation persists until answered",
+      "transfer": "The PA loop transmits from floor 5, the separated zone. It repeats names. It stops only when the names are entered into the evidence chain, i.e., answered.",
+      "visible_details": [
+        "PA loop cycling partial names on the building's internal frequency",
+        "Loop intensifies when the squad attempts to leave without completing the evidence chain"
+      ],
+      "payoff": "If the loop is cut without logging the recording, the audio resurfaces in a later Institute evidence review as an unexplained file."
+    },
+    {
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_chunk_id": "army_ranger_handbook_sh_21_76:00156",
+      "role": "procedure",
+      "fingerprint": "Stairwell fatal funnel, three-dimensional security, obstacle marking, site exploitation reveals false clearance",
+      "transfer": "Each landing door is a fatal funnel requiring point-cover-rear flow. The floor-5 door's heat scoring is site exploitation evidence. Momentum versus evidence custody is the tactical tension.",
+      "visible_details": [
+        "Heat scoring on interior frame of floor-5 door",
+        "Chalk markings that must be logged before floor movement disturbs them"
+      ],
+      "payoff": "If the squad rushes the floor-5 push without proper clearance flow, injury risk rises and the door-scoring evidence may be compromised."
+    },
+    {
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+      "role": "evidence",
+      "fingerprint": "Stress degrades diagnosis; bad information produces bad clearance; accurate diagnosis lowers pressure",
+      "transfer": "Vaas's false clearance is the product of a stress-degraded decision. Squad members under high stress may misread the PA loop or the thermal data, producing a second false conclusion. Accurate diagnosis by a low-stress officer closes the pressure loop.",
+      "visible_details": [
+        "14-minute gap in evacuation log as the diagnostic anchor",
+        "Thermal imaging contradiction as the stress-independent physical evidence"
+      ],
+      "payoff": "If the diagnosing officer is high-stress, the partial outcome produces an ambiguous record that leaves the accountability chain incomplete."
+    },
+    {
+      "source_id": "lovecraft_colour_out_of_space_pg68236",
+      "source_chunk_id": "lovecraft_colour_out_of_space_pg68236:00002",
+      "role": "closure",
+      "fingerprint": "Official explanation contradicted by physical residue, instrument data, local testimony, and delayed realization; local closure with remaining uncertainty",
+      "transfer": "The official clearance report is the insufficient explanation. The chalk, the thermal data, the PA loop, and the door scoring are the physical residue. Closure is local: the record is corrected, Vaas is named, the loop stops. The empty circle remains.",
+      "visible_details": [
+        "Official clearance report versus chalk markings as the central contradiction",
+        "Empty fourth circle as the unresolved remainder"
+      ],
+      "payoff": "The empty circle is a persistent state flag that triggers a follow-up hook in future civic-site missions."
+    }
+  ],
+  "root": {
+    "id": "brothers_door_root",
+    "speaker": "SITREP",
+    "line_1": "Stairwell 4-C. Official clearance says empty. Chalk on the wall names three residents. Floor-5 door shows heat scoring. PA loop is running.",
+    "line_2": "The 14-minute gap between Vaas's clearance call and the suppression order is in the log. Someone needs to go up and find out what that gap contains.",
+    "queued_line": "The evidence is on floor 5. The question is whether the squad reaches it intact and whether what they find can be made to stick.",
+    "plans": [
+      {
+        "label": "Owen leads floor-5 push",
+        "action": "proceed",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "tactical threshold clearance under stress",
+        "base_success": 0.65,
+        "intent": "Owen takes point on the floor-5 stairwell push, using proper fatal-funnel flow to reach the sealed room and recover physical evidence before the smoke residue degrades it further.",
+        "yield": "Squad reaches floor 5 intact. Door-scoring is photographed and logged. Sealed room is opened. Physical evidence of occupied status at suppression time is recovered and enters the evidence chain.",
+        "risk": "If Owen's stress is elevated or the push is rushed, the door-scoring may be disturbed before logging, or a squad member takes a smoke-inhalation injury that pulls them from the next phase.",
+        "success_line": "Owen takes the landing door at a controlled pace, two behind her, one watching the stairs below. The floor-5 door opens inward. The sealed room beyond it is small: a bathroom, towels stuffed under the door from the inside, a child's shoe near the drain. Owen photographs everything before anyone steps in. She does not say anything for a moment. Then she calls it in.",
+        "partial_line": "The push reaches floor 5 but the door-scoring is disturbed when a squad member's equipment catches the frame. Owen logs what she can. The sealed room is documented, but the physical evidence of the door being closed from outside is now ambiguous. The record will hold, but a defense attorney could argue it.",
+        "failure_line": "The smoke on the upper landing is heavier than the thermal read suggested. One squad member goes down with inhalation symptoms before the floor-5 door is reached. Owen pulls back. The sealed room is not accessed. The evidence is still up there, but the squad is not going back today."
+      },
+      {
+        "label": "Park audits the PA circuit",
+        "action": "observe",
+        "officer_id": "specialist_mina_park",
+        "primary_skill": "electronic evidence recovery and circuit documentation",
+        "base_success": 0.65,
+        "intent": "Park isolates the PA circuit, extracts the source recording from the battery-backed system, and documents the audio loop as evidence before it degrades or is cut by building management.",
+        "yield": "The source recording is extracted and logged. The audio contains a timestamp that places at least one named resident alive on floor 5 after Vaas's clearance call. The loop stops. The recording enters the evidence chain as a second contradiction of the official report.",
+        "risk": "If Park is withdrawn or fatigued, she may cut the circuit before extracting the recording, destroying the audio evidence. If the loop names someone from a prior case she recognizes, her availability drops for the resolution phase.",
+        "success_line": "Park finds the PA control panel in the basement utility corridor. The battery circuit is a separate unit, still at 40 percent charge. She pulls the source file without cutting power first. The recording is 22 minutes long. At minute 8, a child's voice says a floor number. At minute 9, a woman's voice says a name. The timestamp reads four minutes after Vaas's clearance call. Park labels the file and does not listen to the rest of it.",
+        "partial_line": "Park extracts the recording but the file is partially corrupted, the first six minutes unreadable. The timestamp is intact. The child's voice is intact. The woman's name is not recoverable. The evidence is usable but incomplete: it places someone alive after the clearance call, but cannot confirm which resident.",
+        "failure_line": "Park cuts the main circuit before she realizes the source file is stored on a separate module. The recording is gone. The PA loop stops, but not because the evidence was preserved. The loop stops because the power is dead. The only remaining contradiction is the chalk and the thermal data."
+      }
+    ]
+  },
+  "resolution": {
+    "id": "brothers_door_resolution",
+    "speaker": "SITREP",
+    "line_1": "Evidence is in hand. The 14-minute gap is documented. Vaas's clearance report is contradicted by physical record and audio timestamp. The squad must decide what to do with it.",
+    "line_2": "Filing the corrected record names Vaas and raises Institute pressure. Suppressing it closes the site quietly but the empty circle will not go away.",
+    "queued_line": "Whatever the squad files tonight will determine whether this site closes or follows them.",
+    "plans": [
+      {
+        "label": "File the corrected record",
+        "action": "full_disclosure",
+        "officer_id": "lt_mara_owen",
+        "primary_skill": "evidence chain integrity and command accountability",
+        "base_success": 0.65,
+        "intent": "Owen compiles the physical evidence, the audio timestamp, and the log gap into a formal corrected record that names Vaas as the responsible officer and enters the case into the Institute's accountability chain.",
+        "yield": "The corrected record is filed. Vaas is named. The PA loop does not return. The chalk circles stop appearing. The empty fourth circle remains but does not propagate. Institute accountability pressure rises. Squad morale holds or improves because the work meant something.",
+        "risk": "If Owen's stress is high or the evidence from the root phase was partial, the corrected record is flagged as contested. Vaas's department pushes back. Institute pressure rises faster and the squad may be called to a command review before the next mission.",
+        "success_line": "Owen submits the file at 0340. The corrected record lists the three names, the timestamp contradiction, the door-scoring photographs, and the audio extract. Vaas is named as the responsible officer. The building's PA circuit, which Park left on battery, goes silent sometime before 0400. No one is in the building to hear it stop. The chalk circles are still on the wall when the site team photographs them at dawn. The empty fourth circle is still there too.",
+        "partial_line": "The corrected record is filed but the contested evidence means it enters the system as a preliminary finding, not a confirmed one. Vaas is named but not yet formally accountable. The Institute flags the case for follow-up. The PA loop does not return. The chalk circles stop. The empty circle remains. Owen sits with the partial outcome for a long time before she signs off on it.",
+        "failure_line": "The corrected record is rejected at intake because the evidence chain has a gap the root phase left open. The case is logged as inconclusive. Vaas's original report stands pending review. The PA loop does not return, but the chalk circles begin appearing on surfaces in the Institute's own building within the week. The empty circle is now two."
+      },
+      {
+        "label": "Torah names Vaas directly",
+        "action": "torah_speaks",
+        "officer_id": "torah",
+        "primary_skill": "direct moral confrontation and witness testimony",
+        "base_success": 0.6,
+        "intent": "Torah bypasses the formal filing process and names Vaas directly to Institute command, using the squad's field authority to force an immediate accountability review rather than waiting for the evidence chain to process.",
+        "yield": "Vaas is pulled for review within 24 hours. The case moves faster than the formal record would allow. The anomaly closes completely, including the empty circle. Institute pressure spikes sharply but the squad's standing with command improves because Torah acted on evidence rather than procedure.",
+        "risk": "If Torah's direct naming is not supported by sufficient evidence from the root phase, command treats it as an accusation without a record. Torah's credibility takes a hit. The case stalls. The anomaly does not close. The empty circle multiplies.",
+        "success_line": "Torah makes the call at 0410. No report, no intake form. A name, a building, a time gap, and three people who were alive when they should not have been left. Command is quiet for eleven seconds. Then they say they will send someone to find Vaas. The empty circle is still on the wall in the photograph. It does not appear anywhere else.",
+        "partial_line": "Torah names Vaas and command acknowledges it, but without the full evidence chain they cannot act immediately. Vaas is flagged for monitoring, not review. The case is open. The anomaly is partially closed: the PA loop stays silent, the chalk circles stop, but the empty circle appears once more in an unexpected location before it settles. Torah does not mention it in the debrief.",
+        "failure_line": "Torah names Vaas and command asks for the record. The record has a gap. Command cannot move on a name alone. The call ends without resolution. Vaas's report stands. The empty circle appears on the wall of the debrief room before the squad leaves the building. No one draws attention to it. Everyone sees it."
+      }
+    ]
+  },
+  "cooldown": {
+    "id": "brothers_door_cooldown",
+    "speaker": "lt_mara_owen",
+    "line_1": "Owen is in the parking structure outside the Harmon building at 0430, not smoking, just standing. Park finds her there. Neither of them says anything for a while.",
+    "line_2": "The case is filed or it is not. The name is in the record or it is not. The empty circle is still in the photograph either way.",
+    "interlude_type": "smoke_break",
+    "state_reads": [
+      "character.lt_mara_owen.stress",
+      "character.specialist_mina_park.mental_state",
+      "institute.accountability_pressure",
+      "squad.morale"
+    ],
+    "state_writes": [
+      "character.lt_mara_owen.stress_reduced_if_record_filed",
+      "character.specialist_mina_park.withdrawn_if_audio_lost",
+      "institute.accountability_pressure_tick_up_if_vaas_named",
+      "squad.morale_tick_up_if_full_disclosure",
+      "brothers_door.empty_circle_flag_persistent"
+    ],
+    "featured_characters": [
+      "lt_mara_owen",
+      "specialist_mina_park"
+    ],
+    "visible_text": [
+      "Owen: The door was closed from outside. That is not ambiguous.",
+      "Park: I know.",
+      "Owen: Someone decided fourteen minutes was too long to spend on floor five.",
+      "Park: The recording had a kid counting floors. I did not listen past that.",
+      "Owen: Good."
+    ],
+    "choices": [
+      "Let Owen file the after-action note herself.",
+      "Ask Park what she heard before she stopped listening.",
+      "Say nothing and drive back."
+    ],
+    "outcomes": [
+      "If Owen files the note: her stress drops, she is available for the next mission, and the corrected record gains a second signature.",
+      "If Park is asked: her mental_state shifts to fixated for one mission, but she adds a detail to the case file that strengthens the evidence chain.",
+      "If the squad says nothing: morale holds but Owen's stress does not clear, and she begins a small ritualizing behavior around door-frame checks on future missions."
+    ],
+    "followup_hooks": [
+      "If Vaas was named: a command review is scheduled and the squad may be called to testify before the next civic-site mission.",
+      "If the empty circle flag is persistent: it appears as a visual detail in the next civic-site mission's first_visit_description, no explanation given.",
+      "If the audio was lost: Park requests access to the Institute's prior case files involving the PA frequency, opening a secondary investigation thread.",
+      "If the record was contested: Vaas's department files a counter-report and institute.pressure rises by one tick before the next mission briefing."
+    ],
+    "corpus_anchors": [
+      "world_english_bible:00005",
+      "enoch_laurence_gutenberg_77815:00028"
+    ]
+  },
+  "deck_pools": [
+    "mission",
+    "straight_noncombat",
+    "evidence_review",
+    "recovery"
+  ],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The 14-minute gap is the moral center; every branch should touch it.",
+    "The empty fourth circle is the unresolved remainder; it should never be explained, only witnessed.",
+    "Vaas is never seen; accountability works through record and name, not confrontation.",
+    "The PA loop is battery-powered audio, not supernatural; the anomaly is the pattern of recurrence and the chalk circles, which have no confirmed author."
+  ],
+  "self_critique": [
+    "The two root plans cover different evidence types (physical vs. audio) which is good, but if both fail the resolution phase has very thin evidentiary support; the compiler should consider a fallback state that lets Torah proceed to resolution with degraded evidence rather than a hard block."
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "title": "Brothers' Door Stairwell",
+  "design_goal": "Procedurally depict the consequences of official abandonment in a fatal stairwell, fusing Cain/Abel threshold motif, high-stress site exploitation, and unresolvable evidence.",
+  "room_records": [
+    {
+      "id": "brothers_door_stairwell",
+      "name": "Brothers' Door Stairwell",
+      "first_visit_description": "Dim stairwell. The door threshold is marked with official tape and a heavy stain at the landing. Field instruments note a cleared evacuation, but unofficial notes list two civilian names not accounted for. Static overlays the radio. The floor below is sealed. Procedure flags a fatal funnel. Command wants site evidence. Local staff avoid questions.",
+      "return_description": "The stairwell remains sealed at the lower level. Bloodstain is duller now. Tape mark redefined as 'evidence hold, unresolved.' Unclaimed wristbands remain in a tray by the landing.",
+      "current_situation": "Operation team stands at the threshold. Civilian names hover on the manifest. Smoke residue faded, yet the air tastes metallic. Instruments register incomplete evacuation. Official tape says 'All Clear.' Unofficial, written name tags do not."
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "brothers_door_stairwell"
+    }
+  ],
+  "events": [
+    {
+      "room_id": "brothers_door_stairwell",
+      "event": {
+        "id": "brothers_stairwell_root_choice",
+        "type": "choice",
+        "speaker": "Field Lead",
+        "line_1": "Field gauge reports the north stairwell landing secure. The record tape is stained, and two wristband names remain unclaimed.",
+        "line_2": "Procedure conflict: the evacuation record says all civilians exited. Brooks reports smoke pressure at the door and requests an order.",
+        "buttons": [
+          {
+            "label": "Push through, clear the landing",
+            "action": "send_party",
+            "voice_aliases": [
+              "send party",
+              "clear landing",
+              "push through",
+              "through clear",
+              "clear"
+            ]
+          },
+          {
+            "label": "Lock down the threshold, audit records",
+            "action": "observe",
+            "voice_aliases": [
+              "observe",
+              "down threshold",
+              "lock down",
+              "threshold audit",
+              "audit"
+            ]
+          },
+          {
+            "label": "Evacuate, review casualty procedure",
+            "action": "recall_party",
+            "voice_aliases": [
+              "recall party",
+              "evacuate secure",
+              "secure zone",
+              "zone review",
+              "evacuate"
+            ]
+          }
+        ],
+        "corpus_influences": [
+          "world_english_bible:00005",
+          "army_ranger_handbook_sh_21_76:00156",
+          "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+          "lovecraft_colour_out_of_space_pg68236:00002"
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "00005",
+            "anchor_role": "religious_what",
+            "source_fingerprint": "Cain/Abel—keeper at the threshold, accusing ground",
+            "playable_transform": "Stained landing marked as witness, unclaimed civilian wristbands at the door",
+            "required_visible_details": "Official tape, blood/soil stain, wristbands, missing names",
+            "followup_payoff": "Ground testimony triggers follow-up if abandoned"
+          },
+          {
+            "source_id": "army_ranger_handbook_sh_21_76",
+            "source_chunk_id": "00156",
+            "anchor_role": "procedural_how",
+            "source_fingerprint": "Stairwell fatal funnel, clearance and casualty risk",
+            "playable_transform": "Assault order report pad; team movement mapped; evidence tag kit used at threshold",
+            "required_visible_details": "Marked entry, fire procedure chart, evidence marker card",
+            "followup_payoff": "Clearing/containing alters casualty/contamination pressure"
+          },
+          {
+            "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+            "source_chunk_id": "00007",
+            "anchor_role": "hidden_state_resolution",
+            "source_fingerprint": "Smoke/stress alters decision quality and odds, raising risks",
+            "playable_transform": "Smudge on face shield, stress tracking tag, delayed response transmission",
+            "required_visible_details": "Field mask, responder stress notepad",
+            "followup_payoff": "Character stress/mental_state affected by plan result"
+          },
+          {
+            "source_id": "lovecraft_colour_out_of_space_pg68236",
+            "source_chunk_id": "00002",
+            "anchor_role": "weird_fiction_structure",
+            "source_fingerprint": "Official clearance neat, site evidence contradicts",
+            "playable_transform": "Archive printout, personal note pinned under tape",
+            "required_visible_details": "Official log, informal memo, unexplained residue",
+            "followup_payoff": "Unresolved evidence persists or local testimony unsettled"
+          }
+        ],
+        "story_followups": [
+          {
+            "trigger_key": "brothers_stairwell_resolve",
+            "reactivate_on_reshuffle": false
+          }
+        ],
+        "operation_plans": [
+          {
+            "officer_id": "LT_Brooks",
+            "primary_skill": "tactical_entry",
+            "base_success": 65,
+            "yield": "Rescue missing civilians OR confirm absence, gain primary evidence",
+            "risk": "Injury, stress, possible contamination",
+            "blocked_states": [
+              "character.LT_Brooks.injury",
+              "character.LT_Brooks.mental_state.unsteady"
+            ],
+            "outcomes": {
+              "strong_success": "Both missing civilians located/cleared; landing declared free. Wristbands matched. Field evidence satisfies command.",
+              "success": "Landing cleared. No civilians found, but evidence confirms official record wrong—procedure forced update.",
+              "partial": "Partial clearance: no civilians found, evidence partial, officer reports odd stain persists; local stress up.",
+              "failure": "Entry mishap. Stain contact; team member distressed/injured. Records unresolved, contamination possible.",
+              "catastrophe": "Team member injured AND field evidence destroyed; official record under challenge; officer disturbed."
+            }
+          },
+          {
+            "officer_id": "SGT_Owen",
+            "primary_skill": "records_audit",
+            "base_success": 70,
+            "yield": "Evidence from manifest, stress reduction, possible closure for local staff",
+            "risk": "Missed evidence, pressure from site/superior, potential mental_state fixation",
+            "blocked_states": [
+              "character.SGT_Owen.fatigue",
+              "character.SGT_Owen.stress_high"
+            ],
+            "outcomes": {
+              "strong_success": "Audit reveals falsified clearance, enables local closure, officer relieved.",
+              "success": "Records discrepancy flagged; command notified; closure incomplete.",
+              "partial": "Inconclusive: audit flags gap but cannot explain it. Local staff agitated; officer stress increases.",
+              "failure": "Audit inconclusive; pressure builds. Official story stands, but site staff avoid team.",
+              "catastrophe": "Records destroyed in audit accident; outsider suspicion heightened. SGT_Owen reports recurring voices from landing."
+            }
+          },
+          {
+            "officer_id": "LT_Iyad",
+            "primary_skill": "casualty_evac",
+            "base_success": 60,
+            "yield": "Safe withdrawal, stress relief, external review of casualty handling",
+            "risk": "Lost evidence, pressure on chain of command, site stigma",
+            "blocked_states": [
+              "character.LT_Iyad.stress_high"
+            ],
+            "outcomes": {
+              "strong_success": "Withdrawal safe, team psyche improved, external review opens file for true accountability.",
+              "success": "Withdrawal completed. Evidence left for follow-up team. Closure delayed, rumors begin.",
+              "partial": "Evacuation disorderly; one wristband unaccounted. Floor sealed, local unrest.",
+              "failure": "Order breaks, badge count wrong; team criticized. LT_Iyad stress worsens.",
+              "catastrophe": "Evac incomplete, official note contradicts team report; stigma attaches to both team and site."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "room_id": "brothers_door_stairwell",
+      "event": {
+        "id": "brothers_stairwell_resolve",
+        "type": "story",
+        "speaker": "Command Log",
+        "line_1": "Command record reports Park's proof: the disabled-care floor was marked clear before responders reached it.",
+        "line_2": "Medical officer recommends answering the false clearance now, before the record assigns missing names to the team.",
+        "buttons": [
+          {
+            "label": "Correct the record",
+            "action": "observe",
+            "voice_aliases": [
+              "correct record",
+              "fix record",
+              "audit record",
+              "record"
+            ]
+          },
+          {
+            "label": "Retrieve the missing",
+            "action": "send_party",
+            "voice_aliases": [
+              "retrieve missing",
+              "rescue missing",
+              "send party",
+              "retrieve"
+            ]
+          },
+          {
+            "label": "Torah bears witness",
+            "action": "torah_speaks",
+            "voice_aliases": [
+              "torah speaks",
+              "bear witness",
+              "torah witness",
+              "witness"
+            ]
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "enoch_laurence_gutenberg_77815",
+            "source_chunk_id": "00028",
+            "anchor_role": "religious_what",
+            "source_fingerprint": "Accusing voice from separated dead; name repetition",
+            "playable_transform": "Echoing civilian names on radio and printout",
+            "required_visible_details": "Log repeats name, local staff overhear",
+            "followup_payoff": "Unsettled survivor testimony persists"
+          },
+          {
+            "source_id": "lovecraft_colour_out_of_space_pg68236",
+            "source_chunk_id": "00002",
+            "anchor_role": "weird_fiction_structure",
+            "source_fingerprint": "Closure with remaining uncertainty, physical stain",
+            "playable_transform": "Dull stain not removed, archive stamped 'Case Open'",
+            "required_visible_details": "Stain visible, evidence file not stamped closed",
+            "followup_payoff": "Room will haunt file reviews"
+          }
+        ],
+        "story_followups": [
+          {
+            "trigger_key": "brothers_stairwell_cooldown_interlude",
+            "reactivate_on_reshuffle": false
+          }
+        ],
+        "operation_plans": [
+          {
+            "officer_id": "Park",
+            "primary_skill": "records_audit",
+            "base_success": 78,
+            "yield": "The false clearance is corrected in the municipal record; the stairwell stops treating the team as abandoners.",
+            "risk": "Delay under smoke pressure; Park may fixate on missing footage.",
+            "blocked_states": [
+              "character.Park.fatigue",
+              "character.Park.mental_state.fixated"
+            ],
+            "outcomes": {
+              "strong_success": "Park attaches badge scans, camera gaps, and wristband evidence. The PA drops the missing names.",
+              "success": "Record corrected. The pressure at the threshold falls enough for rescue movement.",
+              "partial": "Record flagged but not accepted. Park gains stress; the stairwell remains unstable.",
+              "failure": "The audit stalls. Park hears a missing name in the command headset.",
+              "catastrophe": "The system assigns Park to the abandoned roster until a later interlude clears it."
+            }
+          },
+          {
+            "officer_id": "Brooks",
+            "primary_skill": "rescue_command",
+            "base_success": 64,
+            "yield": "Living and dead civilians are physically accounted for before any cleared mark is accepted.",
+            "risk": "Smoke exposure, injury, and tactical delay.",
+            "blocked_states": [
+              "character.Brooks.injury",
+              "character.Brooks.stress_high"
+            ],
+            "outcomes": {
+              "strong_success": "Brooks brings the last survivor out with the wristband still attached. The stain dulls at once.",
+              "success": "The floor is accounted for. Rescue cost is high but the local anomaly loses its anchor.",
+              "partial": "One person is recovered and one remains uncertain. Brooks gains stress.",
+              "failure": "The team breaks formation. Brooks is injured holding the stair door.",
+              "catastrophe": "A rescuer is marked as unaccounted and must be pulled from duty."
+            }
+          },
+          {
+            "officer_id": "Torah",
+            "primary_skill": "symbolic_resonance",
+            "base_success": 58,
+            "yield": "Torah accepts keeper responsibility long enough for the team to move.",
+            "risk": "Contamination, threshold mark, future anomaly attention.",
+            "blocked_states": [
+              "character.Torah.contamination_high",
+              "character.Torah.availability.false"
+            ],
+            "outcomes": {
+              "strong_success": "Torah names the abandoned without quoting the source text. The door unlocks and the radio clears.",
+              "success": "The stairwell permits movement, but Torah carries a threshold mark into later missions.",
+              "partial": "The team crosses. Torah gains contamination and tremor.",
+              "failure": "The stairwell treats Torah as the guilty witness. His stress rises sharply.",
+              "catastrophe": "Torah is assigned one of the missing names and becomes unavailable for the cooldown beat."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "room_id": "brothers_door_stairwell",
+      "event": {
+        "id": "brothers_stairwell_cooldown_interlude",
+        "type": "transition",
+        "speaker": "Clinic Log",
+        "line_1": "Medical officer reports next shift: Saye cleans soot from tags while Brooks refuses any record marked all clear.",
+        "line_2": "Audio record tests clean, yet one missing name sounds under the static at twelve-minute intervals.",
+        "buttons": [
+          {
+            "label": "Proceed",
+            "action": "proceed",
+            "voice_aliases": [
+              "advance",
+              "carry on",
+              "go forward",
+              "move on",
+              "proceed"
+            ]
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "00005",
+            "anchor_role": "religious_what",
+            "source_fingerprint": "Ground as witness, stain persists, unresolved mark",
+            "playable_transform": "Wristband partially blotted yet still tagged to case file",
+            "required_visible_details": "Clinical report, tagged wristband",
+            "followup_payoff": "Next shift recognises mark in records"
+          }
+        ]
+      }
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "Restructuring Cain/Abel motif into an official 'keeper' protocol at a stairwell threshold—sin at the door becomes abandonment at a landing with physical evidence.",
+    "Field stress and smoke from CDC/NIOSH procedural rules, but not shown as odds—implied by officer state and instrument feedback.",
+    "Resolution can never entirely satisfy—physical stain, radio voices, and survivor testimony outlast neat closure.",
+    "Use wristbands, tape, printouts, and stains as concrete anchor items for motif, evidence, and follow-up."
+  ],
+  "self_critique": [
+    "Operation plans tie directly to procedural anchors and room physical evidence, but navigation between them could use more fine-grained player feedback.",
+    "Risk of overt motif if player is familiar with the underlying text, but player-facing prose does not quote or catechize.",
+    "Partial/failure band outcomes may benefit from more specific, character-tailored stress/morale/mental_state notes in future iterations."
+  ],
+  "corpus_influences": [
+    "world_english_bible:00005",
+    "army_ranger_handbook_sh_21_76:00156",
+    "cdc_niosh_judgment_decision_stress_emergency_managers:00007",
+    "lovecraft_colour_out_of_space_pg68236:00002",
+    "enoch_laurence_gutenberg_77815:00028"
+  ],
+  "corpus_anchor_points": [
+    {
+      "source_id": "world_english_bible",
+      "source_chunk_id": "00005",
+      "anchor_role": "religious_what",
+      "source_fingerprint": "Cain/Abel—keeper at the threshold, accusing ground",
+      "playable_transform": "Stained landing marked as witness, unclaimed civilian wristbands at the door",
+      "required_visible_details": "Official tape, blood/soil stain, wristbands, missing names",
+      "followup_payoff": "Ground testimony triggers follow-up if abandoned"
+    },
+    {
+      "source_id": "army_ranger_handbook_sh_21_76",
+      "source_chunk_id": "00156",
+      "anchor_role": "procedural_how",
+      "source_fingerprint": "Stairwell fatal funnel, clearance and casualty risk",
+      "playable_transform": "Assault order report pad; team movement mapped; evidence tag kit used at threshold",
+      "required_visible_details": "Marked entry, fire procedure chart, evidence marker card",
+      "followup_payoff": "Clearing/containing alters casualty/contamination pressure"
+    },
+    {
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_chunk_id": "00007",
+      "anchor_role": "hidden_state_resolution",
+      "source_fingerprint": "Smoke/stress alters decision quality and odds, raising risks",
+      "playable_transform": "Smudge on face shield, stress tracking tag, delayed response transmission",
+      "required_visible_details": "Field mask, responder stress notepad",
+      "followup_payoff": "Character stress/mental_state affected by plan result"
+    },
+    {
+      "source_id": "lovecraft_colour_out_of_space_pg68236",
+      "source_chunk_id": "00002",
+      "anchor_role": "weird_fiction_structure",
+      "source_fingerprint": "Official clearance neat, site evidence contradicts",
+      "playable_transform": "Archive printout, personal note pinned under tape",
+      "required_visible_details": "Official log, informal memo, unexplained residue",
+      "followup_payoff": "Unresolved evidence persists or local testimony unsettled"
+    },
+    {
+      "source_id": "enoch_laurence_gutenberg_77815",
+      "source_chunk_id": "00028",
+      "anchor_role": "religious_what",
+      "source_fingerprint": "Accusing voice from separated dead; name repetition",
+      "playable_transform": "Echoing civilian names on radio and printout",
+      "required_visible_details": "Log repeats name, local staff overhear",
+      "followup_payoff": "Unsettled survivor testimony persists"
+    }
+  ],
+  "religious_subtext": {
+    "motif": "Keeper at the door, sin at the threshold, accusing ground",
+    "primary_sources": [
+      "Genesis 4: Cain/Abel—keeper, threshold, accusing blood/ground",
+      "1 Enoch: separated dead, accusing voice from below"
+    ],
+    "subtext": "The stairwell threshold cannot be safely or fully crossed while any named and officially registered party is missing or left behind. The ground records every crossing and will bear witness if abandonment is hidden under a false report. The door, the stain, and the unclaimed names operate as both procedural evidence and as accusation.",
+    "visible_requirements": [
+      "Stain at stairwell landing/door",
+      "Civilian wristbands (named) not checked out",
+      "Official tape label 'ALL CLEAR' contradicts manifest"
+    ]
+  },
+  "scenario_generation_contract": {
+    "what_from": "The anomaly is the unpassable/accusing stairwell threshold, rooted in the Cain/Abel motif (keeper, sin at the door, ground testimony for the abandoned).",
+    "how_from": "Stairwell entry is managed as a fatal funnel: request operates through marked tape, evidence tag, manifest, casualty check and overwatch, per Ranger and CDC/NIOSH procedures.",
+    "structure_from": "Weird fiction arc: the site carries a local stain, affected staff, an official record too tidy, and recurring discrepancies (via stains, radio echoes, and survivor witness). Final closure is not achievable—case and stain persist.",
+    "rule_summary": "No personnel or civilians officially cleared unless physically accounted for; if evidence and record contradict, the threshold itself becomes hazardous. Accountability must be attempted through choice of immediate rescue, procedural audit, or safe withdrawal."
+  },
+  "_normalization_notes": [
+    "Generated by scenario_agent.py using compact corpus fragments, then structurally normalized after validation.",
+    "Resolution event expanded from one acknowledge button to three character-owned resolution plans.",
+    "Report lines adjusted to satisfy the current readability gate, which still contains some inherited ship-report heuristics."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Babel Language-Collapse Source Packet",
+  "purpose": "Selected public-domain anchors for a Revelation room where a modern command-language system becomes a tower-making anomaly. The room should treat centralized speech, name-making, construction, and scattering as active mechanics.",
+  "fragments": [
+    {
+      "id": "babel_one_language_name_tower",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00012",
+      "source_circumstance": "The people have one language, settle in Shinar, make bricks and tar, build a city and tower, and say they will make themselves a name so they will not be scattered.",
+      "source_excerpt": "The whole earth had one language. They made brick and tar, built a city and tower, and sought to make themselves a name.",
+      "nightmare_room_seed": "An Institute emergency-command platform forces all radio orders into one approved syntax. The words begin making walls, ramps, and evacuation routes obey a single name.",
+      "escalation_thread": "First radio orders translate badly. Then spoken commands produce physical construction. Finally every attempt to coordinate raises a tower-like stack of doors, scaffolds, and bodies.",
+      "suggested_actions": ["torah_speaks", "seal", "repair", "intercept"],
+      "generation_rules": [
+        "Name the sin: centralizing command language to make institutional authority unchallengeable.",
+        "Make construction materials visible: brick, tar, concrete, wet mortar, scaffolds, lift doors, or stacked forms.",
+        "Closure must scatter, localize, or humble the command language rather than simply power off a machine."
+      ]
+    },
+    {
+      "id": "babel_confusion_scattering",
+      "source_id": "world_english_bible",
+      "source_title": "World English Bible",
+      "source_chunk_id": "world_english_bible:00013",
+      "source_circumstance": "Language is confused, the builders no longer understand one another, the city stops, and the people are scattered from Babel.",
+      "source_excerpt": "Their speech was confused so they could not understand one another. They stopped building, and were scattered from Babel.",
+      "nightmare_room_seed": "The solution can require deliberate decentralization: independent hand signals, handwritten local authority, separate evacuation cells, and refusal to let one command phrase rule the site.",
+      "escalation_thread": "If the team tries one more perfect command, the anomaly climbs. If they accept partial speech and distributed command, the structure loses coherence.",
+      "suggested_actions": ["full_disclosure", "seal", "repair", "recover"],
+      "generation_rules": [
+        "Let the follow-up reveal what one-language policy was hiding.",
+        "Do not make the room a generic translator glitch; tie speech to institutional pride and construction.",
+        "The revelation should be a concrete moral diagnosis, not a vague statement about language."
+      ]
+    },
+    {
+      "id": "patrol_clear_task_purpose",
+      "source_id": "army_atp_3_21_8_infantry_platoon_squad",
+      "source_title": "ATP 3-21.8 Infantry Rifle Platoon and Squad",
+      "source_chunk_id": "army_atp_3_21_8_infantry_platoon_squad:00189",
+      "source_circumstance": "Patrols need clear task and purpose, security, navigation, danger-area crossing, reconnaissance, detailed searches, and handling of casualties and detainees.",
+      "source_excerpt": "A patrol has a clear task and purpose, secures itself, searches, deals with casualties and detainees, then reports actions, observations, and condition.",
+      "nightmare_room_seed": "The squad must split command into clear local tasks: secure civilians, mark safe language zones, search dispatch terminals, and report who still understands whom.",
+      "escalation_thread": "Over-centralized orders fail. Small cells with clear task and purpose can still move under Babel pressure.",
+      "suggested_actions": ["intercept", "repair", "recover", "seal"],
+      "generation_rules": [
+        "Use task/purpose, corridor security, searches, casualties, and report-backs as procedural texture.",
+        "Give one character a plan that works only if their own communications hold.",
+        "If a plan fails, change that character's stress or mental state and worsen the command environment."
+      ]
+    },
+    {
+      "id": "stress_unclear_information",
+      "source_id": "cdc_niosh_judgment_decision_stress_emergency_managers",
+      "source_title": "Judgment and Decision Making Under Stress: An Overview for Emergency Managers",
+      "source_chunk_id": "cdc_niosh_judgment_decision_stress_emergency_managers:00005",
+      "source_circumstance": "Emergency warnings are often unclear, equipment may fail, leadership gaps create confusion, and time pressure narrows attention.",
+      "source_excerpt": "Warnings can be unclear, equipment may fail, people respond to leadership, and time pressure narrows attention to critical cues.",
+      "nightmare_room_seed": "The squad cannot trust every radio, screen, or translated order. Character plans should read as professional decisions under incomplete information.",
+      "escalation_thread": "A failed plan turns coordination into more pressure: wrong doors open, civilians follow bad instructions, or one officer stops trusting their own voice.",
+      "suggested_actions": ["support_owen", "full_disclosure", "clinic", "torah_speaks"],
+      "generation_rules": [
+        "Do not expose numeric odds or reward labels.",
+        "Every choice must be a named character's plan with a clear intended action.",
+        "Backfires should affect the proposing character when appropriate."
+      ]
+    }
+  ]
+}

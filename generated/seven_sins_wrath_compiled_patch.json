@@ -1,0 +1,996 @@
+{
+  "title": "The Forty-Day Window",
+  "design_goal": "A justified grievance calcified into collective punishment manifests as a wrath-echo that the squad must physically break and then confess through to close.",
+  "events": [
+    {
+      "room_id": "room_forty_day_window",
+      "event": {
+        "id": "root_forty_day_window",
+        "type": "choice",
+        "speaker": "SITREP",
+        "line_1": "Owen reports Floor 3 active. Six casualties show sword-pattern lacerations, no attacker on camera, and one survivor behind press unit four.",
+        "line_2": "Ross reports ready to bound. The aisle cabinet is padlocked. Saye needs wound data to confirm the targeting pattern.",
+        "buttons": [
+          {
+            "label": "Ross: bound to survivor",
+            "action": "intercept",
+            "preview": "Get the survivor out of the kill zone before the echo completes its next pass"
+          },
+          {
+            "label": "Owen: hold the aisle",
+            "action": "intercept",
+            "preview": "Keep the echo from completing its pass while Ross extracts the survivor; buy Torah time to..."
+          }
+        ],
+        "operation_plans": [
+          {
+            "label": "Ross: bound to survivor",
+            "action": "intercept",
+            "officer_id": "agent_caleb_ross",
+            "primary_skill": "tactical movement under contact",
+            "tactical_step": "suppress/fix then bound: Owen fixes the echo with suppressive action on its last known position while Ross bounds to press unit four, extracts the survivor, and moves her to the stairwell door",
+            "intent": "Get the survivor out of the kill zone before the echo completes its next pass",
+            "base_success": 0.65,
+            "yield": "Survivor extracted; Ross relays wound measurements to Saye; Saye confirms targeting pattern; squad has confirmed data for the symbolic close",
+            "risk": "If Owen's suppression breaks early, Ross is in the open during the bound and takes contact",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Ross moves the moment Owen calls clear. He keeps low, uses the press housings as cover, and reaches the worker in four seconds. She is conscious, one hand pressed to a shallow laceration on her forearm. He gets her up and moving. Behind him, Owen holds the aisle, and the repeating impact sound tracks toward her position and then stops, as if it has lost the scent. Ross gets the worker to the stairwell door and keys his comms: 'Saye, I'm sending you measurements now. Left forearm, seven centimeters, clean edge. Same as the others?' Saye's answer comes back flat: 'Same as the others. It's not selecting. It's just moving through.'"
+                ],
+                "environment_state_changes": [
+                  "root_forty_day_window.combat.success"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Ross makes the bound but the echo reorients faster than Owen can track. It catches him in the open for one step. He takes a glancing contact on his left shoulder, a shallow laceration that burns immediately, and he keeps moving. He gets the worker out. He does not mention the shoulder until Saye asks why his breathing changed. Owen, from the aisle: 'I had it. I had it for three seconds.' She does not say anything else."
+                ],
+                "environment_state_changes": [
+                  "root_forty_day_window.combat.partial"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "Owen's suppression holds for two seconds and then the echo splits its path. Ross is halfway to press unit four when it finds him. The laceration opens across his right forearm, deep enough to matter. He goes down to one knee. The worker is still behind the press unit. Torah calls Owen back and Ross pulls himself to cover. Saye, over comms, very quiet: 'Ross. Tell me your depth.' Ross tells her. There is a pause. 'You need to close that before you do anything else.' The survivor is still in the kill zone."
+                ],
+                "environment_state_changes": [
+                  "root_forty_day_window.combat.failure"
+                ],
+                "resource_changes": {
+                  "character.agent_caleb_ross.stress": "+2",
+                  "character.agent_caleb_ross.fatigue": "+1"
+                }
+              }
+            }
+          },
+          {
+            "label": "Owen: hold the aisle",
+            "action": "intercept",
+            "officer_id": "lt_mara_owen",
+            "primary_skill": "suppressive field security",
+            "tactical_step": "fix the echo's movement on the center aisle using the press units as cover positions; deny the echo a clear pass while Ross bounds; maintain position until Ross calls clear",
+            "intent": "Keep the echo from completing its pass while Ross extracts the survivor; buy Torah time to reach the archive terminal",
+            "base_success": 0.65,
+            "yield": "Echo's movement is fixed; Ross extracts safely; Torah reaches the supervisor's desk and opens the HR archive",
+            "risk": "If Owen holds too long without relief, she takes contact on the echo's second pass; the echo does not tire",
+            "outcomes": {
+              "success": {
+                "lines": [
+                  "Owen does not move from the aisle. She tracks the sound, adjusts her position twice, and each time the echo's path deflects around her. It is not avoiding her. It is moving to the next available target and she is denying it the angle. When Ross calls clear, she steps back one position and keys Torah: 'Archive is open. Cabinet key is on the supervisor. Second body, left coat pocket.' She found it while holding. She does not explain when she had time to look."
+                ],
+                "environment_state_changes": [
+                  "root_forty_day_window.intercept.success"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.morale": "+1"
+                }
+              },
+              "partial": {
+                "lines": [
+                  "Owen holds for one full pass and most of a second. On the second pass the echo finds a gap in her coverage and she takes contact on her left side, a shallow cut below the ribs that she does not report immediately. She holds the position anyway. When Ross calls clear she steps back and her voice on comms is level but slower than usual. Torah notices. Owen does not acknowledge it."
+                ],
+                "environment_state_changes": [
+                  "root_forty_day_window.intercept.partial"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+1"
+                }
+              },
+              "failure": {
+                "lines": [
+                  "The echo does not behave the way Owen expects. It does not follow a straight path. It angles around her second position and she has to move, and when she moves she loses the fix. The sound is suddenly behind her. She turns and it has already passed. Ross is not yet at the press unit. Torah calls the bound off. Owen, back at the stairwell door, is looking at the center aisle with an expression that is not fear exactly. It is the look of someone recalculating a problem they thought they understood."
+                ],
+                "environment_state_changes": [
+                  "root_forty_day_window.intercept.failure"
+                ],
+                "resource_changes": {
+                  "character.lt_mara_owen.stress": "+2",
+                  "character.lt_mara_owen.fatigue": "+1"
+                }
+              }
+            }
+          }
+        ],
+        "action_results": {
+          "intercept": {
+            "lines": [
+              "Owen does not move from the aisle. She tracks the sound, adjusts her position twice, and each time the echo's path deflects around her. It is not avoiding her. It is moving to the next available target and she is denying it the angle. When Ross calls clear, she steps back one position and keys Torah: 'Archive is open. Cabinet key is on the supervisor. Second body, left coat pocket.' She found it while holding. She does not explain when she had time to look."
+            ],
+            "environment_state_changes": [
+              "root_forty_day_window.intercept.success"
+            ],
+            "resource_changes": {
+              "character.lt_mara_owen.morale": "+1"
+            }
+          }
+        },
+        "story_followups": {
+          "intercept": {
+            "event_id": "resolution_forty_day_window",
+            "queued_line": "The echo completes its pass and reorients toward the squad's position; the decision point is now.",
+            "trigger_key": "resolution_forty_day_window",
+            "delay_rooms": 0,
+            "immediate": true,
+            "reactivate_on_reshuffle": false
+          }
+        },
+        "corpus_influences": [
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:00048",
+            "source_moment": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+            "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+            "room_application": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+            "structural_transfer": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+            "required_visible_details": [
+              "sword-pattern lacerations on all casualties regardless of involvement",
+              "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+              "the HR grievance file documenting the original wrong and the retaliatory scope"
+            ],
+            "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:01146",
+            "source_moment": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+            "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+            "room_application": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+            "structural_transfer": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+            "required_visible_details": [
+              "the grievance file must be read aloud, not just located",
+              "the reader must name the disproportionate scope explicitly, not just the original grievance",
+              "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+            ],
+            "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_title": "World English Bible",
+            "source_chunk_id": "world_english_bible:01145",
+            "source_moment": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+            "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+            "room_application": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+            "structural_transfer": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+            "required_visible_details": [
+              "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+              "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+            ],
+            "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+          },
+          {
+            "source_id": "army_ranger_handbook_sh_21_76",
+            "source_title": "Army Ranger Handbook Sh 21 76",
+            "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+            "source_moment": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+            "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+            "room_application": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+            "structural_transfer": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+            "required_visible_details": [
+              "Owen holds the center aisle with suppressive action while Ross moves",
+              "Ross uses the press units as cover during the bound to the survivor's position",
+              "the squad does not freeze; they execute the drill even though the threat is invisible"
+            ],
+            "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+          }
+        ],
+        "corpus_anchor_points": [
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:00048",
+            "anchor_role": "premise",
+            "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+            "playable_transform": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+            "required_visible_details": [
+              "sword-pattern lacerations on all casualties regardless of involvement",
+              "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+              "the HR grievance file documenting the original wrong and the retaliatory scope"
+            ],
+            "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:01146",
+            "anchor_role": "closure",
+            "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+            "playable_transform": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+            "required_visible_details": [
+              "the grievance file must be read aloud, not just located",
+              "the reader must name the disproportionate scope explicitly, not just the original grievance",
+              "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+            ],
+            "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+          },
+          {
+            "source_id": "world_english_bible",
+            "source_chunk_id": "world_english_bible:01145",
+            "anchor_role": "escalation",
+            "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+            "playable_transform": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+            "required_visible_details": [
+              "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+              "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+            ],
+            "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+          },
+          {
+            "source_id": "army_ranger_handbook_sh_21_76",
+            "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+            "anchor_role": "procedure",
+            "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+            "playable_transform": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+            "required_visible_details": [
+              "Owen holds the center aisle with suppressive action while Ross moves",
+              "Ross uses the press units as cover during the bound to the survivor's position",
+              "the squad does not freeze; they execute the drill even though the threat is invisible"
+            ],
+            "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+          }
+        ]
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "resolution_forty_day_window",
+      "type": "resolution",
+      "speaker": "SITREP",
+      "line_1": "Survivor is out or secured. Echo is suppressed but not closed. HR archive terminal is open on the supervisor's desk. The grievance file is on screen.",
+      "line_2": "Saye reports the file documents the original assault and retaliatory scope. The echo's interval is holding, but not indefinitely.",
+      "buttons": [
+        {
+          "label": "Torah: read the file aloud",
+          "action": "torah_speaks",
+          "preview": "Close the echo by naming the excess; accept the weight of speaking someone else's unconfessed accountability"
+        },
+        {
+          "label": "Destroy the cabinet",
+          "action": "destroy",
+          "preview": "Reduce the echo's lethality by destroying its physical anchor; create a window for Torah to work..."
+        }
+      ],
+      "operation_plans": [
+        {
+          "label": "Torah: read the file aloud",
+          "action": "torah_speaks",
+          "officer_id": "torah",
+          "primary_skill": "symbolic accountability under pressure",
+          "tactical_step": "symbolic close: Torah reads the grievance file aloud on-site, names the original wrong, then explicitly names the retaliatory scope as disproportionate; the echo requires both named, in order",
+          "intent": "Close the echo by naming the excess; accept the weight of speaking someone else's unconfessed accountability",
+          "base_success": 0.65,
+          "yield": "Echo extinguishes; the repeating sound stops; the lacerations on surviving casualties stop deepening; the mission closes with a remainder: the third party who countersigned the closure is named in the file",
+          "risk": "If Torah names the grievance but hesitates on the excess, the echo intensifies for one final pass before Torah can finish; partial naming is worse than silence",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Torah reads the file from the beginning. The original assault. The names. The dates. The retaliatory attack, the four workers who had nothing to do with it, the scope of what the brothers did. Then Torah says it plainly, without editorial: the retaliation was disproportionate. The excess was real. The grievance did not justify the scope. The repeating impact sound slows on the second sentence and stops before the third. The overhead lights do not change. The floor is very quiet. Saye, over comms, after a moment: 'Casualty lacerations are stable. They're not deepening.' Ross is looking at Torah. Owen is looking at the floor. Brooks, from the ground level: 'Is it done?' Torah says yes. There is a name at the bottom of the file, a countersignature on the closure. Torah photographs it before closing the terminal."
+              ],
+              "environment_state_changes": [
+                "resolution_forty_day_window.torah_speaks.success"
+              ],
+              "resource_changes": {
+                "character.torah.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Torah reads the file and names the original wrong clearly. Then Torah reaches the retaliatory scope and the words slow. The excess is there in the document but saying it feels like indicting someone who had a reason. Torah says it, but the phrasing hedges: understandable given the circumstances. The echo does not stop. It makes one more pass, fast, and Owen takes contact on her arm before Torah says it again, without the hedge. The sound stops. Owen is pressing her sleeve against the cut. She does not look at Torah. The file is still open. The countersignature is visible at the bottom."
+              ],
+              "environment_state_changes": [
+                "resolution_forty_day_window.torah_speaks.partial"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Torah reads the grievance and stops at the retaliatory scope. The words are there. Torah does not say them. The echo completes a full pass through the squad's position. Ross takes contact. Owen takes contact. Torah closes the terminal. The sound does not stop. Saye, over comms, her voice stripped of everything except information: 'It's not closing. Whatever you need to say, you need to say it now.' Torah looks at the screen. The terminal is closed. The file is gone from view. The echo is still moving."
+              ],
+              "environment_state_changes": [
+                "resolution_forty_day_window.torah_speaks.failure"
+              ],
+              "resource_changes": {
+                "character.torah.stress": "+2",
+                "character.torah.fatigue": "+1"
+              }
+            }
+          }
+        },
+        {
+          "label": "Destroy the cabinet",
+          "action": "destroy",
+          "officer_id": "agent_caleb_ross",
+          "primary_skill": "forced entry and evidence destruction",
+          "tactical_step": "breach and destroy: Ross forces or breaks the supervisor's cabinet, removes and destroys the cutting tools used in the original retaliation; this suppresses the echo's range and speed but does not close it; buys time for the symbolic close",
+          "intent": "Reduce the echo's lethality by destroying its physical anchor; create a window for Torah to work the archive without contact pressure",
+          "base_success": 0.65,
+          "yield": "Echo's movement range contracts to a five-meter radius around the cabinet's former position; the interval lengthens; squad has a clear window to reach the archive terminal",
+          "risk": "Destroying the tools without the symbolic close leaves the echo suppressed but active; it will re-anchor to the next available object connected to the original act within the facility",
+          "outcomes": {
+            "success": {
+              "lines": [
+                "Ross hits the cabinet lock with the butt of his weapon twice and it gives. The tools inside are industrial, heavy, the kind that leave the marks Saye described. He pulls them out and breaks them against the press housing, one by one. The repeating impact sound does not stop but it contracts, pulling back toward the cabinet's position like something on a leash. The center aisle is clear. Torah has a window. Ross, breathing hard, to Torah: 'You've got maybe four minutes before it finds something else to anchor to. The file. Now.'"
+              ],
+              "environment_state_changes": [
+                "resolution_forty_day_window.destroy.success"
+              ],
+              "resource_changes": {
+                "character.agent_caleb_ross.morale": "+1"
+              }
+            },
+            "partial": {
+              "lines": [
+                "Ross gets the cabinet open but the tools are heavier than expected and the destruction takes longer. He gets two of the three broken before the echo reorients and finds him at the cabinet. The contact is brief, a cut across his knuckles, and he finishes the third tool with his hand bleeding. The echo contracts but not as far as it should. One tool is still intact inside the cabinet, wedged in the back. Ross cannot reach it without his hand inside the echo's contracted range. He steps back. 'Torah. It's suppressed but not contained. The file is your window.'"
+              ],
+              "environment_state_changes": [
+                "resolution_forty_day_window.destroy.partial"
+              ],
+              "resource_changes": {
+                "character.agent_caleb_ross.stress": "+1"
+              }
+            },
+            "failure": {
+              "lines": [
+                "Ross forces the cabinet and the tools are there but the echo does not respond to the destruction the way the pattern suggested it would. It does not contract. It intensifies. The sound gets louder and the interval drops to three seconds. Ross steps back from the cabinet. The tools are broken on the floor and it does not matter. Saye, over comms: 'Ross, the physical anchor isn't the primary anchor. It's the file. The tools were secondary. Get Torah to the terminal.' Ross relays this without commentary. His voice is flat."
+              ],
+              "environment_state_changes": [
+                "resolution_forty_day_window.destroy.failure"
+              ],
+              "resource_changes": {
+                "character.agent_caleb_ross.stress": "+2",
+                "character.agent_caleb_ross.fatigue": "+1"
+              }
+            }
+          }
+        }
+      ],
+      "action_results": {
+        "torah_speaks": {
+          "lines": [
+            "Torah reads the file from the beginning. The original assault. The names. The dates. The retaliatory attack, the four workers who had nothing to do with it, the scope of what the brothers did. Then Torah says it plainly, without editorial: the retaliation was disproportionate. The excess was real. The grievance did not justify the scope. The repeating impact sound slows on the second sentence and stops before the third. The overhead lights do not change. The floor is very quiet. Saye, over comms, after a moment: 'Casualty lacerations are stable. They're not deepening.' Ross is looking at Torah. Owen is looking at the floor. Brooks, from the ground level: 'Is it done?' Torah says yes. There is a name at the bottom of the file, a countersignature on the closure. Torah photographs it before closing the terminal."
+          ],
+          "environment_state_changes": [
+            "resolution_forty_day_window.torah_speaks.success"
+          ],
+          "resource_changes": {
+            "character.torah.morale": "+1"
+          }
+        },
+        "destroy": {
+          "lines": [
+            "Ross hits the cabinet lock with the butt of his weapon twice and it gives. The tools inside are industrial, heavy, the kind that leave the marks Saye described. He pulls them out and breaks them against the press housing, one by one. The repeating impact sound does not stop but it contracts, pulling back toward the cabinet's position like something on a leash. The center aisle is clear. Torah has a window. Ross, breathing hard, to Torah: 'You've got maybe four minutes before it finds something else to anchor to. The file. Now.'"
+          ],
+          "environment_state_changes": [
+            "resolution_forty_day_window.destroy.success"
+          ],
+          "resource_changes": {
+            "character.agent_caleb_ross.morale": "+1"
+          }
+        }
+      },
+      "story_followups": {
+        "torah_speaks": {
+          "event_id": "cooldown_forty_day_window",
+          "queued_line": "Torah has the file. The cabinet is open or destroyed. The question is whether the excess gets named.",
+          "trigger_key": "cooldown_forty_day_window",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        },
+        "destroy": {
+          "event_id": "cooldown_forty_day_window",
+          "queued_line": "Torah has the file. The cabinet is open or destroyed. The question is whether the excess gets named.",
+          "trigger_key": "cooldown_forty_day_window",
+          "delay_rooms": 0,
+          "immediate": true,
+          "reactivate_on_reshuffle": false
+        }
+      },
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00048",
+          "source_moment": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "room_application": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "structural_transfer": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "required_visible_details": [
+            "sword-pattern lacerations on all casualties regardless of involvement",
+            "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+            "the HR grievance file documenting the original wrong and the retaliatory scope"
+          ],
+          "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01146",
+          "source_moment": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "room_application": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "structural_transfer": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "required_visible_details": [
+            "the grievance file must be read aloud, not just located",
+            "the reader must name the disproportionate scope explicitly, not just the original grievance",
+            "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+          ],
+          "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01145",
+          "source_moment": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "room_application": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "structural_transfer": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "required_visible_details": [
+            "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+            "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+          ],
+          "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_title": "Army Ranger Handbook Sh 21 76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+          "source_moment": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "room_application": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "structural_transfer": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "required_visible_details": [
+            "Owen holds the center aisle with suppressive action while Ross moves",
+            "Ross uses the press units as cover during the bound to the survivor's position",
+            "the squad does not freeze; they execute the drill even though the threat is invisible"
+          ],
+          "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00048",
+          "anchor_role": "premise",
+          "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "playable_transform": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "required_visible_details": [
+            "sword-pattern lacerations on all casualties regardless of involvement",
+            "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+            "the HR grievance file documenting the original wrong and the retaliatory scope"
+          ],
+          "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01146",
+          "anchor_role": "closure",
+          "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "playable_transform": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "required_visible_details": [
+            "the grievance file must be read aloud, not just located",
+            "the reader must name the disproportionate scope explicitly, not just the original grievance",
+            "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+          ],
+          "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01145",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "playable_transform": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "required_visible_details": [
+            "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+            "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+          ],
+          "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+          "anchor_role": "procedure",
+          "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "playable_transform": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "required_visible_details": [
+            "Owen holds the center aisle with suppressive action while Ross moves",
+            "Ross uses the press units as cover during the bound to the survivor's position",
+            "the squad does not freeze; they execute the drill even though the threat is invisible"
+          ],
+          "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+        }
+      ]
+    },
+    {
+      "id": "cooldown_forty_day_window",
+      "type": "interlude",
+      "speaker": "brooks",
+      "line_1": "Brooks finds Torah in the stairwell after the floor is cleared. He does not ask for a debrief. He asks what closed it.",
+      "line_2": "When Torah tells him, Brooks is quiet for a long time. Then: 'Someone had to say it. Shouldn't have been you.'",
+      "buttons": [
+        {
+          "label": "Concede",
+          "action": "proceed"
+        },
+        {
+          "label": "Hold Line",
+          "action": "proceed"
+        }
+      ],
+      "action_results": {
+        "proceed": {
+          "lines": [
+            "Owen is sitting on the bottom stair with her jacket off, pressing a field dressing to her arm. She is not looking at anyone. Ross is leaning against the wall across from her, his own dressing already taped. He asks Saye, still on comms, whether the brothers knew what they were starting. Saye says: 'I think they knew exactly what they were starting. I think that was the point.' Ross nods once and does not ask a follow-up. Owen says nothing. She has been saying nothing since the floor went quiet.",
+            "Brooks walks the perimeter of Floor 3 before he comes down. When he does, he has the facility supervisor's key ring in his hand, which he sets on the stair railing without explanation. He looks at Torah. 'The name at the bottom of the file. The countersignature. You get it?' Torah confirms. Brooks: 'That person is at the Harlan secondary site. Forty minutes from here.' He does not say what should be done about it. He does not have to.",
+            "The survivor, a floor worker named Dara, is in the ground-floor break room with two paramedics. She has not asked what happened. She has asked, twice, whether the men who were hurt are going to be all right. Nobody has answered her yet."
+          ],
+          "environment_state_changes": [
+            "character.lt_mara_owen.withdrawn",
+            "character.agent_caleb_ross.strained",
+            "squad.morale",
+            "institute.scrutiny_flag_countersignature"
+          ],
+          "resource_changes": {}
+        }
+      },
+      "interlude_type": "debrief",
+      "state_reads": [
+        "character.agent_caleb_ross.injury",
+        "character.lt_mara_owen.fatigue",
+        "character.lt_mara_owen.mental_state",
+        "character.dr_lenora_saye.morale",
+        "torah.stress"
+      ],
+      "state_writes": [
+        "character.lt_mara_owen.withdrawn",
+        "character.agent_caleb_ross.strained",
+        "squad.morale",
+        "institute.scrutiny_flag_countersignature"
+      ],
+      "featured_characters": [
+        "brooks",
+        "lt_mara_owen",
+        "agent_caleb_ross"
+      ],
+      "visible_text": [
+        "Owen is sitting on the bottom stair with her jacket off, pressing a field dressing to her arm. She is not looking at anyone. Ross is leaning against the wall across from her, his own dressing already taped. He asks Saye, still on comms, whether the brothers knew what they were starting. Saye says: 'I think they knew exactly what they were starting. I think that was the point.' Ross nods once and does not ask a follow-up. Owen says nothing. She has been saying nothing since the floor went quiet.",
+        "Brooks walks the perimeter of Floor 3 before he comes down. When he does, he has the facility supervisor's key ring in his hand, which he sets on the stair railing without explanation. He looks at Torah. 'The name at the bottom of the file. The countersignature. You get it?' Torah confirms. Brooks: 'That person is at the Harlan secondary site. Forty minutes from here.' He does not say what should be done about it. He does not have to.",
+        "The survivor, a floor worker named Dara, is in the ground-floor break room with two paramedics. She has not asked what happened. She has asked, twice, whether the men who were hurt are going to be all right. Nobody has answered her yet."
+      ],
+      "choices": [
+        "'Owen. You held that aisle longer than you needed to.'",
+        "'Ross, Saye said you did the right call on the bound. I'm putting that in the report.'",
+        "'The countersignature. We follow it up or we flag it and let the Institute decide.'"
+      ],
+      "outcomes": [
+        "If Torah acknowledges Owen: she looks up, once, and then back at her hands. She says 'I know' in a tone that means she is not sure she believes it yet. Her fixation on the cabinet does not resolve tonight.",
+        "If Torah acknowledges Ross: he straightens slightly. 'Saye kept me honest on the measurements. Credit her.' He means it. The squad's cohesion holds.",
+        "If Torah flags the countersignature for Institute review: Brooks picks up the key ring and pockets it. 'Then we wait.' His tone makes clear he does not think waiting is the right answer. The follow-up pressure is live.",
+        "If Torah decides to pursue the countersignature directly: Brooks nods. 'Secondary site. I'll pull the layout.' Owen, from the stairs, without looking up: 'Give me an hour.'"
+      ],
+      "followup_hooks": [
+        "The countersignature belongs to a mid-level administrator at the Harlan secondary site who closed the grievance file without reading it; the wrath-echo's remainder is anchored to that unread closure",
+        "Owen's fixation on the cabinet and her silence in the cooldown are early indicators of symbolic contamination; if she deploys to the secondary site without a clinic check, her mental state degrades",
+        "Ross's laceration, if untreated, carries a low-grade symbolic contamination marker that Saye flagged but did not report formally; she will bring it up if Ross is assigned to the follow-up"
+      ],
+      "corpus_anchors": [
+        "world_english_bible:00048",
+        "world_english_bible:01146",
+        "world_english_bible:01145"
+      ],
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00048",
+          "source_moment": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "room_application": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "structural_transfer": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "required_visible_details": [
+            "sword-pattern lacerations on all casualties regardless of involvement",
+            "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+            "the HR grievance file documenting the original wrong and the retaliatory scope"
+          ],
+          "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01146",
+          "source_moment": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "room_application": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "structural_transfer": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "required_visible_details": [
+            "the grievance file must be read aloud, not just located",
+            "the reader must name the disproportionate scope explicitly, not just the original grievance",
+            "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+          ],
+          "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01145",
+          "source_moment": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "room_application": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "structural_transfer": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "required_visible_details": [
+            "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+            "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+          ],
+          "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_title": "Army Ranger Handbook Sh 21 76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+          "source_moment": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "room_application": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "structural_transfer": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "required_visible_details": [
+            "Owen holds the center aisle with suppressive action while Ross moves",
+            "Ross uses the press units as cover during the bound to the survivor's position",
+            "the squad does not freeze; they execute the drill even though the threat is invisible"
+          ],
+          "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00048",
+          "anchor_role": "premise",
+          "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "playable_transform": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "required_visible_details": [
+            "sword-pattern lacerations on all casualties regardless of involvement",
+            "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+            "the HR grievance file documenting the original wrong and the retaliatory scope"
+          ],
+          "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01146",
+          "anchor_role": "closure",
+          "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "playable_transform": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "required_visible_details": [
+            "the grievance file must be read aloud, not just located",
+            "the reader must name the disproportionate scope explicitly, not just the original grievance",
+            "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+          ],
+          "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01145",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "playable_transform": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "required_visible_details": [
+            "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+            "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+          ],
+          "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+          "anchor_role": "procedure",
+          "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "playable_transform": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "required_visible_details": [
+            "Owen holds the center aisle with suppressive action while Ross moves",
+            "Ross uses the press units as cover during the bound to the survivor's position",
+            "the squad does not freeze; they execute the drill even though the threat is invisible"
+          ],
+          "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+        }
+      ]
+    }
+  ],
+  "room_records": [
+    {
+      "id": "room_forty_day_window",
+      "name": "Harlan Processing Facility — Floor 3",
+      "type": "mission",
+      "mission_mode": "action_horror",
+      "description": "A mid-shift industrial floor. Workers down. No attacker on camera. Laceration pattern consistent across all casualties. The clock is running.",
+      "first_visit_description": "Torah leads Ross and Owen through the stairwell door onto Floor 3 of the Harlan Processing Facility at 14:22. The shift was mid-cycle when the calls came in: six workers down in eleven minutes, no intruder on any camera feed, no alarm triggered. Dr. Saye is remote, patched into Torah's comms from the Institute's medical bay with the casualty files already open. Brooks is holding the ground-floor cordon with two facility security officers. The floor smells of machine oil and something older, copper-heavy, that does not belong here. Three bodies are visible from the stairwell door. A fourth worker is crouched behind a press unit, alive, not moving, staring at the center aisle. The overhead lights are steady. Nothing is moving. Then the sound begins: a low rhythmic impact, like a blade finding a sheath, repeating every few seconds from somewhere past the press line.",
+      "return_description": "Floor 3 is quieter now. The press units are still. The center aisle holds the evidence of what happened here, and the facility's HR archive terminal is still open on the supervisor's desk, the grievance file Torah pulled still on screen.",
+      "detection_report": "Facility security flagged six simultaneous medical emergencies at 14:11. Responding paramedics reported laceration injuries inconsistent with any machinery on the floor. No blood trail. No weapon recovered. Institute monitoring flagged a wrath-class symbolic pressure spike at 14:09, two minutes before the first body dropped.",
+      "current_situation": "Torah, Ross, and Owen are inside the kill zone. The echo is active in the center aisle, invisible but audible: that repeating impact sound is moving. The fourth worker is still alive behind the press unit. Dr. Saye is calling casualty status over comms. Brooks is on the ground floor and cannot reach the squad without breaching the stairwell door, which would expose the cordon. The echo has not yet targeted the squad. It will.",
+      "action_profile": {
+        "physical_threat": "The wrath-echo produces sword-pattern lacerations on anyone it reaches; it moves through the center aisle and can injure or kill personnel on contact; it does not distinguish between guilty and bystander",
+        "contact_state": "The squad is inside the active kill zone; the echo is audible and closing; they have seconds before it completes its current pass and reorients",
+        "field_manual_drill": "React to contact: personnel in the kill zone return suppressive action on the echo's position while non-contact personnel fix the survivor and establish a secondary position; bounding overwatch to extract the survivor; symbolic close requires holding position under pressure",
+        "tactical_objective": "Suppress the echo long enough to extract the surviving worker, then locate and read the original grievance file to name the excess and close the phenomenon",
+        "symbolic_close": "The grievance file in the facility HR archive must be read aloud on-site; the reader must explicitly name the disproportionate scope as excess, not as justice; the echo cannot be permanently destroyed by force alone",
+        "violent_resolution": "The echo has a physical anchor: a supervisor's locked cabinet on the center aisle contains a set of industrial cutting tools that were used in a documented workplace assault three years prior and never formally processed; destroying or sealing the cabinet suppresses the echo's movement range and reduces its lethality, buying time for the symbolic close",
+        "not_monster_of_week": "The echo is not a creature; it is the unresolved shape of collective punishment repeating itself; it targets by proximity and indifference, exactly as the original act did; fighting it without confession only mirrors the original sin"
+      },
+      "deployment_manifest": [
+        {
+          "officer_id": "torah",
+          "name": "Torah",
+          "mission_role": "command lead and symbolic asset",
+          "physical_position": "Stairwell entry, Floor 3, forward of Ross and Owen",
+          "assigned_reason": "Torah carries authority to name moral excess; the echo responds to named accountability",
+          "visible_state": "Moving carefully, not frozen; watching the center aisle"
+        },
+        {
+          "officer_id": "agent_caleb_ross",
+          "name": "Caleb Ross",
+          "mission_role": "tactical point, survivor extraction",
+          "physical_position": "Two meters behind Torah, left flank, press line cover",
+          "assigned_reason": "Ross handles physical contact and extraction under fire",
+          "visible_state": "Weapon up, tracking the sound; jaw tight"
+        },
+        {
+          "officer_id": "lt_mara_owen",
+          "name": "Lt. Mara Owen",
+          "mission_role": "tactical security, echo suppression",
+          "physical_position": "Right flank, covering the center aisle approach",
+          "assigned_reason": "Owen manages field security and suppression while Torah works the archive",
+          "visible_state": "Still, professional, but her eyes keep returning to the bodies"
+        },
+        {
+          "officer_id": "dr_lenora_saye",
+          "name": "Dr. Lenora Saye",
+          "mission_role": "remote medical consult and casualty analysis",
+          "physical_position": "Institute medical bay, comms only",
+          "assigned_reason": "Saye is tracking casualty patterns to identify the echo's targeting logic",
+          "visible_state": "Voice is controlled; the pace of her updates is faster than usual"
+        },
+        {
+          "officer_id": "brooks",
+          "name": "Brooks",
+          "mission_role": "ground-floor cordon and perimeter hold",
+          "physical_position": "Ground floor stairwell, holding with two facility security officers",
+          "assigned_reason": "Brooks seals the building and prevents civilian entry or echo egress",
+          "visible_state": "Holding position; has not asked for a status update, which means he is worried"
+        }
+      ],
+      "root_sin": "A workplace assault three years prior was answered by the victim's two brothers with a coordinated attack on the entire night shift, injuring four people who had no involvement; the brothers documented their grievance in an HR complaint but the complaint was closed without acknowledgment of the excess; neither brother was ever asked to account for the scope, only the original wrong",
+      "modern_incident_logic": "The facility is the site of the original assault and the retaliatory attack; the HR archive still holds the closed grievance file; the cutting tools used in the retaliation were confiscated and locked in a supervisor's cabinet but never formally processed or destroyed; the wrath-echo is anchored to the unprocessed tools and the unread file, both physically present on Floor 3",
+      "closure_test": "Locate the HR grievance file, read it aloud on-site, and explicitly name the retaliatory scope as disproportionate; the echo requires the excess to be spoken, not just felt",
+      "religious_pattern": "Simeon and Levi: justified grievance, collective punishment, plunder of the dead, no accounting for the excess; Jonah's anger at mercy: the refusal to accept that restraint is also an answer",
+      "anomaly_rule": "The echo moves through the center aisle on a repeating pass; it cannot be permanently stopped by force; destroying or sealing the tool cabinet reduces its range and speed; reading the grievance file and naming the excess extinguishes it; if the squad mirrors the original act by using disproportionate force without the symbolic close, the echo intensifies",
+      "forbidden_flat_read": "Do not literalize as a ghost of the brothers or a demon; the echo is the shape of the act itself, not a person",
+      "officer_reports": [
+        "Ross, on comms: 'Saye, I'm counting the interval. It's not random. It's moving like it has a route.'",
+        "Owen, low: 'Cabinet on the aisle is padlocked. That wasn't in the facility layout.'",
+        "Saye, remote: 'Laceration depth is consistent across all six. Whatever this is, it doesn't vary its force. That's not rage. That's method.'",
+        "Brooks, ground floor: 'Nobody else comes in. I don't care what they say their badge level is.'"
+      ],
+      "procedure_hooks": [
+        "React-to-contact drill: suppress echo movement, fix survivor position, bound to extraction point",
+        "Evidence custody: the HR grievance file is a document in an active facility archive; reading it aloud constitutes a formal acknowledgment under Institute protocol",
+        "Tool cabinet: sealed evidence item requiring forced entry or key recovery from the facility supervisor's body on the floor",
+        "Casualty triage: Saye needs Ross to relay wound measurements from two bodies to confirm the echo's targeting pattern before the symbolic close"
+      ],
+      "character_state_stakes": {
+        "agent_caleb_ross": "If Ross takes a hit from the echo during extraction, he carries a laceration injury into the next mission and his trust in Torah's judgment drops; if he successfully extracts the survivor, his confidence in the squad's field discipline holds",
+        "lt_mara_owen": "If Owen holds the suppression line alone while Torah works the archive, she exits the mission with elevated fatigue and a quiet fixation on the cabinet; if the suppression fails and she takes contact, she becomes withdrawn in the cooldown",
+        "dr_lenora_saye": "If Saye's casualty analysis correctly identifies the targeting pattern and Torah acts on it, Saye's confidence in remote consult work increases; if the squad ignores her data and takes casualties, she goes silent in the debrief",
+        "torah": "If Torah reads the grievance file and names the excess, the echo closes and Torah carries the weight of having spoken someone else's unconfessed sin; if Torah refuses or delegates, the echo does not close"
+      },
+      "interlude_vectors": [
+        "Cooldown: Owen does not speak during the debrief; she is looking at her hands",
+        "Cooldown: Ross asks Saye whether the brothers knew what they were starting; Saye says she doesn't think that's the right question",
+        "Cooldown: Brooks, when told what closed it, says nothing for a long moment, then: 'Someone had to say it.'",
+        "Future hook: the HR file names a third party who countersigned the closure without reading it; that person is still employed at a connected facility"
+      ],
+      "scenario_generation_contract": {
+        "root_sin": "A workplace assault three years prior was answered by the victim's two brothers with a coordinated attack on the entire night shift, injuring four people who had no involvement; the brothers documented their grievance in an HR complaint but the complaint was closed without acknowledgment of the excess; neither brother was ever asked to account for the scope, only the original wrong",
+        "modern_incident_logic": "The facility is the site of the original assault and the retaliatory attack; the HR archive still holds the closed grievance file; the cutting tools used in the retaliation were confiscated and locked in a supervisor's cabinet but never formally processed or destroyed; the wrath-echo is anchored to the unprocessed tools and the unread file, both physically present on Floor 3",
+        "closure_test": "Locate the HR grievance file, read it aloud on-site, and explicitly name the retaliatory scope as disproportionate; the echo requires the excess to be spoken, not just felt"
+      },
+      "religious_subtext": {
+        "source_pattern": "Simeon and Levi: justified grievance, collective punishment, plunder of the dead, no accounting for the excess; Jonah's anger at mercy: the refusal to accept that restraint is also an answer",
+        "transformed_rule": "The echo moves through the center aisle on a repeating pass; it cannot be permanently stopped by force; destroying or sealing the tool cabinet reduces its range and speed; reading the grievance file and naming the excess extinguishes it; if the squad mirrors the original act by using disproportionate force without the symbolic close, the echo intensifies",
+        "forbidden_flat_read": "Do not literalize as a ghost of the brothers or a demon; the echo is the shape of the act itself, not a person"
+      },
+      "resource_stakes": {
+        "squad.stress": "mission pressure rises if evidence is lost",
+        "institute.political_pressure": "public accountability may increase command scrutiny"
+      },
+      "followup_vectors": [
+        "Cooldown: Owen does not speak during the debrief; she is looking at her hands",
+        "Cooldown: Ross asks Saye whether the brothers knew what they were starting; Saye says she doesn't think that's the right question",
+        "Cooldown: Brooks, when told what closed it, says nothing for a long moment, then: 'Someone had to say it.'",
+        "Future hook: the HR file names a third party who countersigned the closure without reading it; that person is still employed at a connected facility"
+      ],
+      "progression_state": {
+        "early": "The anomaly is treated as a falsified record with symbolic residue.",
+        "mid": "Accountability choices affect squad trust and Institute pressure.",
+        "late": "Unresolved names can return through later evidence reviews."
+      },
+      "room_role": "action_investigation",
+      "encounter_family": "room_forty_day_window",
+      "operation_type": "symbolic_field_mission",
+      "captaincy_role": "authorize_character_plan",
+      "scene_path": "",
+      "corpus_influences": [
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:00048",
+          "source_moment": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "room_application": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "structural_transfer": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "required_visible_details": [
+            "sword-pattern lacerations on all casualties regardless of involvement",
+            "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+            "the HR grievance file documenting the original wrong and the retaliatory scope"
+          ],
+          "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01146",
+          "source_moment": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "room_application": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "structural_transfer": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "required_visible_details": [
+            "the grievance file must be read aloud, not just located",
+            "the reader must name the disproportionate scope explicitly, not just the original grievance",
+            "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+          ],
+          "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_title": "World English Bible",
+          "source_chunk_id": "world_english_bible:01145",
+          "source_moment": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "room_application": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "structural_transfer": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "required_visible_details": [
+            "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+            "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+          ],
+          "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_title": "Army Ranger Handbook Sh 21 76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+          "source_moment": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "room_application": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "structural_transfer": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "required_visible_details": [
+            "Owen holds the center aisle with suppressive action while Ross moves",
+            "Ross uses the press units as cover during the bound to the survivor's position",
+            "the squad does not freeze; they execute the drill even though the threat is invisible"
+          ],
+          "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+        }
+      ],
+      "corpus_anchor_points": [
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:00048",
+          "anchor_role": "premise",
+          "source_fingerprint": "Simeon and Levi enter unsuspecting city, kill all males, plunder the dead, grievance real but scope collective",
+          "playable_transform": "The wrath-echo replicates the indiscriminate scope of the original retaliation; it kills by proximity, not guilt, exactly as the brothers did",
+          "required_visible_details": [
+            "sword-pattern lacerations on all casualties regardless of involvement",
+            "the tool cabinet on the center aisle holding the instruments of the retaliatory attack",
+            "the HR grievance file documenting the original wrong and the retaliatory scope"
+          ],
+          "followup_payoff": "The echo's indiscriminate targeting is the argument the mission makes; force alone mirrors the sin"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01146",
+          "anchor_role": "closure",
+          "source_fingerprint": "Nineveh's people acknowledge the wrong and the king names the excess; mercy follows named accountability",
+          "playable_transform": "The echo closes only when the excess is named aloud on-site; acknowledgment is the procedural close, not destruction",
+          "required_visible_details": [
+            "the grievance file must be read aloud, not just located",
+            "the reader must name the disproportionate scope explicitly, not just the original grievance",
+            "the echo's behavior changes immediately when the naming begins: the repeating impact sound slows"
+          ],
+          "followup_payoff": "The partial close, naming the grievance without naming the excess, leaves the echo suppressed but not extinguished; the remainder is the third party who countersigned the closure"
+        },
+        {
+          "source_id": "world_english_bible",
+          "source_chunk_id": "world_english_bible:01145",
+          "anchor_role": "escalation",
+          "source_fingerprint": "Jonah flees from the presence of judgment; the storm does not stop until the cause is named and accepted",
+          "playable_transform": "The echo does not stop escalating until someone accepts the weight of naming it; avoidance or flight intensifies the pressure",
+          "required_visible_details": [
+            "the echo's interval shortens if the squad moves toward the stairwell without engaging",
+            "Brooks reports the ground-floor pressure increasing if the squad delays beyond two passes"
+          ],
+          "followup_payoff": "If the squad breaks contact without the symbolic close, the echo follows the Institute's scent; it becomes a follow-up threat"
+        },
+        {
+          "source_id": "army_ranger_handbook_sh_21_76",
+          "source_chunk_id": "army_ranger_handbook_sh_21_76:00094",
+          "anchor_role": "procedure",
+          "source_fingerprint": "React to contact: return fire, assault through kill zone, suppressive fire from non-contact personnel",
+          "playable_transform": "Owen suppresses the echo's movement while Ross bounds to the survivor; Torah works the archive under fire; the drill is the frame for the root event",
+          "required_visible_details": [
+            "Owen holds the center aisle with suppressive action while Ross moves",
+            "Ross uses the press units as cover during the bound to the survivor's position",
+            "the squad does not freeze; they execute the drill even though the threat is invisible"
+          ],
+          "followup_payoff": "The drill succeeds or fails based on Owen's hold; if she breaks, Ross is exposed during the bound"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "deck_pool_updates": [
+    {
+      "pool": "mission",
+      "room_id": "room_forty_day_window"
+    },
+    {
+      "pool": "action_horror",
+      "room_id": "room_forty_day_window"
+    },
+    {
+      "pool": "straight_noncombat",
+      "room_id": "room_forty_day_window"
+    },
+    {
+      "pool": "recovery",
+      "room_id": "room_forty_day_window"
+    }
+  ],
+  "mutations": [],
+  "symbiotes": [],
+  "enemies": [],
+  "required_engine_changes": [],
+  "inspiration_notes": [
+    "The echo's indiscriminate targeting is the theological argument: collective punishment cannot distinguish the guilty from the bystander, and neither can the echo",
+    "The cabinet destruction is a real force option that is consequential but incomplete; it creates the window for the symbolic close without replacing it",
+    "Jonah's anger at mercy is embedded in the hesitation moment: Torah can hedge the naming, which is the Jonah move, and the echo answers it",
+    "The countersignature remainder ensures the mission does not fully close; the unread file is the Nineveh that did not fast"
+  ],
+  "self_critique": [
+    "The echo's behavior, contracting on cabinet destruction but not closing, requires the runtime to track two simultaneous suppression states; if the engine cannot hold both the physical suppression and the symbolic open state at once, the partial cabinet success outcome may need to be simplified to a flat timer rather than a range contraction"
+  ]
+}
