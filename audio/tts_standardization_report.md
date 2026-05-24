@@ -1,10 +1,10 @@
 # TTS Standardization Report
 
-- Cues: 3854
-- Unique spoken texts: 2810
-- Unique speaker/text clips: 2821
+- Cues: 5666
+- Unique spoken texts: 3452
+- Unique speaker/text clips: 3463
 - Speaker profiles: 12
-- Deduped clip savings: 1033
+- Deduped clip savings: 2203
 - Max phrase length: 22 words
 
 ## Speaker Profiles
@@ -24,61 +24,18 @@
 
 ## Direct Quote Cues
 
-- Quote cue count: 321
-- `agent_caleb_ross`: 34
-- `brooks`: 27
-- `dr_lenora_saye`: 64
-- `dr_samira_iyad`: 25
-- `lt_mara_owen`: 33
-- `narrator`: 100
-- `torah`: 38
+- Quote cue count: 383
+- `agent_caleb_ross`: 35
+- `brooks`: 28
+- `dr_lenora_saye`: 81
+- `dr_samira_iyad`: 36
+- `lt_mara_owen`: 43
+- `narrator`: 118
+- `torah`: 42
 
 ## Findings
 
-- **medium** `special_events.pressure_command_review.buttons[0]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_command_review.buttons[1]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_command_review.buttons[2]`: long button label (10 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_artifact_custody.buttons[2]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_symbolic_contamination.buttons[1]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_symbolic_contamination.buttons[2]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_squad_fracture.buttons[0]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_squad_fracture.buttons[2]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_closure_debt.buttons[0]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_closure_debt.buttons[2]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_clinic.buttons[0]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.pressure_public_exposure.buttons[2]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_borrowed_separation.buttons[0]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_borrowed_separation.buttons[1]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.babel_cooldown_paper_authority.buttons[0]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.babel_cooldown_paper_authority.buttons[2]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_aldermoor_debrief.buttons[0]`: long button label (13 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_aldermoor_debrief.buttons[1]`: long button label (15 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_offering_floor.buttons[0]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_offering_floor.buttons[1]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_offering_floor.buttons[2]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_censers_seams.buttons[1]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_censers_seams.buttons[2]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_chamber_seven_debrief.buttons[0]`: long button label (20 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_chamber_seven_debrief.buttons[1]`: long button label (17 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_chamber_seven_debrief.buttons[2]`: long button label (18 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_seven_times_over.buttons[1]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_devoted_property.buttons[1]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_roofline_debrief.buttons[0]`: long button label (10 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_roofline_debrief.buttons[1]`: long button label (15 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_roofline_debrief.buttons[2]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_shaft_seven_debrief.buttons[0]`: long button label (11 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_shaft_seven_debrief.buttons[1]`: long button label (13 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_forty_day_window.buttons[0]`: long button label (10 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_forty_day_window.buttons[1]`: long button label (17 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_forty_day_window.buttons[2]`: long button label (15 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_enough_until_morning.buttons[0]`: long button label (12 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_enough_until_morning.buttons[1]`: long button label (15 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_enough_until_morning.buttons[2]`: long button label (13 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_kaph_debrief.buttons[0]`: long button label (10 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_kaph_debrief.buttons[1]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_kaph_debrief.buttons[2]`: long button label (7 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_borrowed_separation_clean.buttons[0]`: long button label (9 words) Recommendation: Move nuance into narration; keep spoken choices short.
-- **medium** `special_events.cooldown_borrowed_separation_clean.buttons[1]`: long button label (8 words) Recommendation: Move nuance into narration; keep spoken choices short.
+No standardization findings.
 
 ## Generation Notes
 
